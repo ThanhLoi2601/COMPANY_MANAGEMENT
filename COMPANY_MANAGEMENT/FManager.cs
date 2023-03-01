@@ -16,5 +16,9 @@ namespace COMPANY_MANAGEMENT
         {
             InitializeComponent();
         }
+
+        private void btKPI_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
