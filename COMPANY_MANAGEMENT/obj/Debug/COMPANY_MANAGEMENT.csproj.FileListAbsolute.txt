@@ -1,0 +1,12 @@
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\bin\Debug\COMPANY_MANAGEMENT.exe.config
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\bin\Debug\COMPANY_MANAGEMENT.exe
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\bin\Debug\COMPANY_MANAGEMENT.pdb
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.AssemblyReference.cache
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FLogin.resources
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.Properties.Resources.resources
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.GenerateResource.cache
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.CoreCompileInputs.cache
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.exe
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.pdb
+C:\Users\DELL\OneDrive\Máy tính\LapTrinhTrenWin\COMPANY_MANAGEMENT\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FManager.resources
