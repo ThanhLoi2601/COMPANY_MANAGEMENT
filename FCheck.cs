@@ -16,5 +16,20 @@ namespace COMPANY_MANAGEMENT
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToLongTimeString().ToString();
+        }
+
+        private void FCheck_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void FCheck_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer1.Stop();
+        }
     }
 }

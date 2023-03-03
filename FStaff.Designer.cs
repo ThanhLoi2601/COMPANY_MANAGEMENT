@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.dataStaff = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btCheckInOut = new System.Windows.Forms.Button();
+            this.btLetter = new System.Windows.Forms.Button();
+            this.btPayroll = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textOp = new System.Windows.Forms.Label();
+            this.btInform = new System.Windows.Forms.Button();
+            this.btChangePass = new System.Windows.Forms.Button();
+            this.grOption = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).BeginInit();
+            this.grOption.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataStaff
@@ -46,106 +47,112 @@
             this.dataStaff.Name = "dataStaff";
             this.dataStaff.RowHeadersWidth = 51;
             this.dataStaff.RowTemplate.Height = 24;
-            this.dataStaff.Size = new System.Drawing.Size(736, 470);
+            this.dataStaff.Size = new System.Drawing.Size(747, 437);
             this.dataStaff.TabIndex = 14;
             // 
-            // button1
+            // btCheckInOut
             // 
-            this.button1.Location = new System.Drawing.Point(869, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "CheckIn/Out";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btCheckInOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCheckInOut.Location = new System.Drawing.Point(0, 45);
+            this.btCheckInOut.Name = "btCheckInOut";
+            this.btCheckInOut.Size = new System.Drawing.Size(196, 61);
+            this.btCheckInOut.TabIndex = 21;
+            this.btCheckInOut.Text = "CHECK IN/OUT";
+            this.btCheckInOut.UseVisualStyleBackColor = true;
+            this.btCheckInOut.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btLetter
             // 
-            this.button2.Location = new System.Drawing.Point(869, 135);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Absence letter";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLetter.Location = new System.Drawing.Point(0, 112);
+            this.btLetter.Name = "btLetter";
+            this.btLetter.Size = new System.Drawing.Size(196, 56);
+            this.btLetter.TabIndex = 22;
+            this.btLetter.Text = "ABSENCE LETTER";
+            this.btLetter.UseVisualStyleBackColor = true;
+            this.btLetter.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btPayroll
             // 
-            this.button3.Location = new System.Drawing.Point(869, 215);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(196, 23);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Payroll";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btPayroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPayroll.Location = new System.Drawing.Point(0, 174);
+            this.btPayroll.Name = "btPayroll";
+            this.btPayroll.Size = new System.Drawing.Size(196, 55);
+            this.btPayroll.TabIndex = 23;
+            this.btPayroll.Text = "PAYROLL";
+            this.btPayroll.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(869, 299);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 235);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(196, 23);
+            this.button4.Size = new System.Drawing.Size(196, 57);
             this.button4.TabIndex = 24;
-            this.button4.Text = "Assigned work";
+            this.button4.Text = "ASSINGED WORK";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button6
+            // btInform
             // 
-            this.button6.Location = new System.Drawing.Point(869, 387);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(196, 23);
-            this.button6.TabIndex = 26;
-            this.button6.Text = "View personal information";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btInform.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInform.Location = new System.Drawing.Point(0, 298);
+            this.btInform.Name = "btInform";
+            this.btInform.Size = new System.Drawing.Size(196, 55);
+            this.btInform.TabIndex = 26;
+            this.btInform.Text = "VIEW PERSONAL INFORMATION";
+            this.btInform.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btChangePass
             // 
-            this.button7.Location = new System.Drawing.Point(869, 458);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(196, 23);
-            this.button7.TabIndex = 27;
-            this.button7.Text = "Change password";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btChangePass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btChangePass.Location = new System.Drawing.Point(0, 359);
+            this.btChangePass.Name = "btChangePass";
+            this.btChangePass.Size = new System.Drawing.Size(196, 58);
+            this.btChangePass.TabIndex = 27;
+            this.btChangePass.Text = "CHANGE PASSWORD";
+            this.btChangePass.UseVisualStyleBackColor = true;
             // 
-            // textOp
+            // grOption
             // 
-            this.textOp.AutoSize = true;
-            this.textOp.Location = new System.Drawing.Point(866, 11);
-            this.textOp.Name = "textOp";
-            this.textOp.Size = new System.Drawing.Size(67, 16);
-            this.textOp.TabIndex = 28;
-            this.textOp.Text = "OPTIONS";
-            this.textOp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.grOption.Controls.Add(this.btCheckInOut);
+            this.grOption.Controls.Add(this.btLetter);
+            this.grOption.Controls.Add(this.btChangePass);
+            this.grOption.Controls.Add(this.btPayroll);
+            this.grOption.Controls.Add(this.btInform);
+            this.grOption.Controls.Add(this.button4);
+            this.grOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grOption.Location = new System.Drawing.Point(843, 11);
+            this.grOption.Name = "grOption";
+            this.grOption.Size = new System.Drawing.Size(196, 437);
+            this.grOption.TabIndex = 29;
+            this.grOption.TabStop = false;
+            this.grOption.Text = "OPTION";
             // 
             // FStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 493);
-            this.Controls.Add(this.textOp);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1073, 472);
+            this.Controls.Add(this.grOption);
             this.Controls.Add(this.dataStaff);
             this.Name = "FStaff";
             this.Text = "Staff";
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).EndInit();
+            this.grOption.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dataStaff;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btCheckInOut;
+        private System.Windows.Forms.Button btLetter;
+        private System.Windows.Forms.Button btPayroll;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label textOp;
+        private System.Windows.Forms.Button btInform;
+        private System.Windows.Forms.Button btChangePass;
+        private System.Windows.Forms.GroupBox grOption;
     }
 }
 

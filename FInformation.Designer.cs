@@ -237,7 +237,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FInformation";
             this.Text = "Information";
-            this.Load += new System.EventHandler(this.FInformation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

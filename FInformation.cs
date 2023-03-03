@@ -16,9 +16,5 @@ namespace COMPANY_MANAGEMENT
         {
             InitializeComponent();
         }
-
-        private void FInformation_Load(object sender, EventArgs e)
-        {           
-        }
     }
 }
