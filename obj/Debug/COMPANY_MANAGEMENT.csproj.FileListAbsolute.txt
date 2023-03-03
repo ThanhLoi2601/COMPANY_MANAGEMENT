@@ -1,0 +1,16 @@
+C:\Code Windows\COMPANY_MANAGEMENT\bin\Debug\COMPANY_MANAGEMENT.exe.config
+C:\Code Windows\COMPANY_MANAGEMENT\bin\Debug\COMPANY_MANAGEMENT.exe
+C:\Code Windows\COMPANY_MANAGEMENT\bin\Debug\COMPANY_MANAGEMENT.pdb
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.AssemblyReference.cache
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.SuggestedBindingRedirects.cache
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.Properties.Resources.resources
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.GenerateResource.cache
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.CoreCompileInputs.cache
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.exe
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.pdb
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FCheck.resources
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FStaff.resources
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FAbsenceLetter.resources
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FAssignedWork.resources
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FChangePassWord.resources
+C:\Code Windows\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FInformation.resources
