@@ -75,7 +75,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(877, 524);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(917, 511);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // groupBox1
@@ -293,10 +293,11 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(723, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(148, 510);
+            this.groupBox2.Size = new System.Drawing.Size(181, 504);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "OPTION";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btDistribution
             // 
@@ -305,10 +306,11 @@
             this.btDistribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDistribution.Location = new System.Drawing.Point(6, 446);
             this.btDistribution.Name = "btDistribution";
-            this.btDistribution.Size = new System.Drawing.Size(136, 58);
+            this.btDistribution.Size = new System.Drawing.Size(175, 58);
             this.btDistribution.TabIndex = 8;
             this.btDistribution.Text = "DISTRIBUTION";
             this.btDistribution.UseVisualStyleBackColor = false;
+            this.btDistribution.Click += new System.EventHandler(this.btDistribution_Click);
             // 
             // btSalary
             // 
@@ -317,10 +319,11 @@
             this.btSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSalary.Location = new System.Drawing.Point(6, 384);
             this.btSalary.Name = "btSalary";
-            this.btSalary.Size = new System.Drawing.Size(136, 58);
+            this.btSalary.Size = new System.Drawing.Size(175, 58);
             this.btSalary.TabIndex = 7;
             this.btSalary.Text = "SALARY DATAILS";
             this.btSalary.UseVisualStyleBackColor = false;
+            this.btSalary.Click += new System.EventHandler(this.btSalary_Click);
             // 
             // btKPI
             // 
@@ -329,7 +332,7 @@
             this.btKPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKPI.Location = new System.Drawing.Point(6, 336);
             this.btKPI.Name = "btKPI";
-            this.btKPI.Size = new System.Drawing.Size(136, 42);
+            this.btKPI.Size = new System.Drawing.Size(175, 42);
             this.btKPI.TabIndex = 6;
             this.btKPI.Text = "KPI DETAILS";
             this.btKPI.UseVisualStyleBackColor = false;
@@ -342,7 +345,7 @@
             this.btCheckIn_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCheckIn_Out.Location = new System.Drawing.Point(6, 279);
             this.btCheckIn_Out.Name = "btCheckIn_Out";
-            this.btCheckIn_Out.Size = new System.Drawing.Size(136, 51);
+            this.btCheckIn_Out.Size = new System.Drawing.Size(175, 51);
             this.btCheckIn_Out.TabIndex = 5;
             this.btCheckIn_Out.Text = "CHECK IN/OUT";
             this.btCheckIn_Out.UseVisualStyleBackColor = false;
@@ -354,7 +357,7 @@
             this.btDonNghi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDonNghi.Location = new System.Drawing.Point(6, 231);
             this.btDonNghi.Name = "btDonNghi";
-            this.btDonNghi.Size = new System.Drawing.Size(136, 42);
+            this.btDonNghi.Size = new System.Drawing.Size(175, 42);
             this.btDonNghi.TabIndex = 4;
             this.btDonNghi.Text = "ĐƠN NGHỈ";
             this.btDonNghi.UseVisualStyleBackColor = false;
@@ -366,7 +369,7 @@
             this.btListStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btListStaff.Location = new System.Drawing.Point(6, 183);
             this.btListStaff.Name = "btListStaff";
-            this.btListStaff.Size = new System.Drawing.Size(136, 42);
+            this.btListStaff.Size = new System.Drawing.Size(175, 42);
             this.btListStaff.TabIndex = 3;
             this.btListStaff.Text = "DS STAFF";
             this.btListStaff.UseVisualStyleBackColor = false;
@@ -378,7 +381,7 @@
             this.btInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInsert.Location = new System.Drawing.Point(6, 87);
             this.btInsert.Name = "btInsert";
-            this.btInsert.Size = new System.Drawing.Size(136, 42);
+            this.btInsert.Size = new System.Drawing.Size(175, 42);
             this.btInsert.TabIndex = 2;
             this.btInsert.Text = "INSERT";
             this.btInsert.UseVisualStyleBackColor = false;
@@ -390,7 +393,7 @@
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDelete.Location = new System.Drawing.Point(6, 135);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(136, 42);
+            this.btDelete.Size = new System.Drawing.Size(175, 42);
             this.btDelete.TabIndex = 1;
             this.btDelete.Text = "DELETE";
             this.btDelete.UseVisualStyleBackColor = false;
@@ -402,7 +405,7 @@
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUpdate.Location = new System.Drawing.Point(6, 39);
             this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(136, 42);
+            this.btUpdate.Size = new System.Drawing.Size(175, 42);
             this.btUpdate.TabIndex = 0;
             this.btUpdate.Text = "UPDATE";
             this.btUpdate.UseVisualStyleBackColor = false;
@@ -411,7 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 524);
+            this.ClientSize = new System.Drawing.Size(917, 511);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FManager";
             this.Text = "MANAGER";

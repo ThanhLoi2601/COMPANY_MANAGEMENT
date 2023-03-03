@@ -52,6 +52,12 @@
     <Compile Include="FDistribution.Designer.cs">
       <DependentUpon>FDistribution.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDonNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDonNghi.Designer.cs">
+      <DependentUpon>FDonNghi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FDistribution.resx">
       <DependentUpon>FDistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDonNghi.resx">
+      <DependentUpon>FDonNghi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FKPI.resx">
       <DependentUpon>FKPI.cs</DependentUpon>

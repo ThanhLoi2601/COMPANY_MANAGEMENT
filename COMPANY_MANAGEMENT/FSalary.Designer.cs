@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btConfirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +120,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(522, 243);
+            this.label4.Location = new System.Drawing.Point(522, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 18);
             this.label4.TabIndex = 18;
@@ -129,17 +130,30 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(652, 245);
+            this.label5.Location = new System.Drawing.Point(652, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "****";
+            // 
+            // btConfirm
+            // 
+            this.btConfirm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConfirm.Location = new System.Drawing.Point(628, 253);
+            this.btConfirm.Name = "btConfirm";
+            this.btConfirm.Size = new System.Drawing.Size(136, 42);
+            this.btConfirm.TabIndex = 20;
+            this.btConfirm.Text = "CONFIRM";
+            this.btConfirm.UseVisualStyleBackColor = false;
             // 
             // FSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 307);
+            this.Controls.Add(this.btConfirm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
@@ -170,5 +184,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btConfirm;
     }
 }

@@ -19,6 +19,25 @@ namespace COMPANY_MANAGEMENT
 
         private void btKPI_Click(object sender, EventArgs e)
         {
+            FKPI f = new FKPI();
+            f.ShowDialog();
+        }
+
+        private void btSalary_Click(object sender, EventArgs e)
+        {
+            FSalary f = new FSalary();
+            f.ShowDialog();
+        }
+
+        private void btDistribution_Click(object sender, EventArgs e)
+        {
+            FDistribution f = new FDistribution();
+            f.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
