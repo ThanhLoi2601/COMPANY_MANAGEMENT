@@ -79,8 +79,9 @@
             this.btPayroll.Name = "btPayroll";
             this.btPayroll.Size = new System.Drawing.Size(196, 55);
             this.btPayroll.TabIndex = 23;
-            this.btPayroll.Text = "SALARY DETAILS";
+            this.btPayroll.Text = "PAYROLL";
             this.btPayroll.UseVisualStyleBackColor = true;
+            this.btPayroll.Click += new System.EventHandler(this.btPayroll_Click);
             // 
             // btAssingedWork
             // 

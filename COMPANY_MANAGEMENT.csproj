@@ -76,6 +76,12 @@
     <Compile Include="FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSalary.designer.cs">
+      <DependentUpon>FSalary.cs</DependentUpon>
+    </Compile>
     <Compile Include="FStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSalary.resx">
+      <DependentUpon>FSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FStaff.resx">
       <DependentUpon>FStaff.cs</DependentUpon>

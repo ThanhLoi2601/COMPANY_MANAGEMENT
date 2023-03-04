@@ -47,5 +47,11 @@ namespace COMPANY_MANAGEMENT
             FCheck f = new FCheck();
             f.ShowDialog();
         }
+
+        private void btPayroll_Click(object sender, EventArgs e)
+        {
+            FPayroll f = new FPayroll();
+            f.ShowDialog();
+        }
     }
 }
