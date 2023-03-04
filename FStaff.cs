@@ -18,21 +18,33 @@ namespace COMPANY_MANAGEMENT
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btInform_Click(object sender, EventArgs e)
         {
-            FCheck f = new FCheck();
+            FInformation f = new FInformation();
             f.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btChangePass_Click(object sender, EventArgs e)
         {
-            FAbsenceLetter f = new FAbsenceLetter();
-            f.ShowDialog(); 
+            FChangePassWord f = new FChangePassWord();
+            f.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btAssingedWork_Click(object sender, EventArgs e)
         {
-            FAssignedWork f = new FAssignedWork();  
+            FAssignedWork f = new FAssignedWork();
+            f.ShowDialog();
+        }
+
+        private void btLetter_Click(object sender, EventArgs e)
+        {
+            FAbsenceLetter f = new FAbsenceLetter();
+            f.ShowDialog();
+        }
+
+        private void btCheckInOut_Click(object sender, EventArgs e)
+        {
+            FCheck f = new FCheck();
             f.ShowDialog();
         }
     }

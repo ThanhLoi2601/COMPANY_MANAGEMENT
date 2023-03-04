@@ -42,6 +42,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btConfirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -168,11 +169,22 @@
             this.textBox3.Size = new System.Drawing.Size(200, 22);
             this.textBox3.TabIndex = 15;
             // 
+            // btConfirm
+            // 
+            this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConfirm.Location = new System.Drawing.Point(411, 395);
+            this.btConfirm.Name = "btConfirm";
+            this.btConfirm.Size = new System.Drawing.Size(135, 43);
+            this.btConfirm.TabIndex = 22;
+            this.btConfirm.Text = "CONFIRM";
+            this.btConfirm.UseVisualStyleBackColor = true;
+            // 
             // FAbsenceLetter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(584, 450);
+            this.Controls.Add(this.btConfirm);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btConfirm;
     }
 }

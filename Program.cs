@@ -19,4 +19,4 @@ namespace COMPANY_MANAGEMENT
             Application.Run(new FStaff());
         }
     }
-}//
+}

@@ -32,7 +32,7 @@
             this.btCheckInOut = new System.Windows.Forms.Button();
             this.btLetter = new System.Windows.Forms.Button();
             this.btPayroll = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btAssingedWork = new System.Windows.Forms.Button();
             this.btInform = new System.Windows.Forms.Button();
             this.btChangePass = new System.Windows.Forms.Button();
             this.grOption = new System.Windows.Forms.GroupBox();
@@ -59,7 +59,7 @@
             this.btCheckInOut.TabIndex = 21;
             this.btCheckInOut.Text = "CHECK IN/OUT";
             this.btCheckInOut.UseVisualStyleBackColor = true;
-            this.btCheckInOut.Click += new System.EventHandler(this.button1_Click);
+            this.btCheckInOut.Click += new System.EventHandler(this.btCheckInOut_Click);
             // 
             // btLetter
             // 
@@ -70,7 +70,7 @@
             this.btLetter.TabIndex = 22;
             this.btLetter.Text = "ABSENCE LETTER";
             this.btLetter.UseVisualStyleBackColor = true;
-            this.btLetter.Click += new System.EventHandler(this.button2_Click);
+            this.btLetter.Click += new System.EventHandler(this.btLetter_Click);
             // 
             // btPayroll
             // 
@@ -79,19 +79,19 @@
             this.btPayroll.Name = "btPayroll";
             this.btPayroll.Size = new System.Drawing.Size(196, 55);
             this.btPayroll.TabIndex = 23;
-            this.btPayroll.Text = "PAYROLL";
+            this.btPayroll.Text = "SALARY DETAILS";
             this.btPayroll.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btAssingedWork
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 235);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(196, 57);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "ASSINGED WORK";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btAssingedWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAssingedWork.Location = new System.Drawing.Point(0, 235);
+            this.btAssingedWork.Name = "btAssingedWork";
+            this.btAssingedWork.Size = new System.Drawing.Size(196, 57);
+            this.btAssingedWork.TabIndex = 24;
+            this.btAssingedWork.Text = "ASSINGED WORK";
+            this.btAssingedWork.UseVisualStyleBackColor = true;
+            this.btAssingedWork.Click += new System.EventHandler(this.btAssingedWork_Click);
             // 
             // btInform
             // 
@@ -102,6 +102,7 @@
             this.btInform.TabIndex = 26;
             this.btInform.Text = "VIEW PERSONAL INFORMATION";
             this.btInform.UseVisualStyleBackColor = true;
+            this.btInform.Click += new System.EventHandler(this.btInform_Click);
             // 
             // btChangePass
             // 
@@ -112,6 +113,7 @@
             this.btChangePass.TabIndex = 27;
             this.btChangePass.Text = "CHANGE PASSWORD";
             this.btChangePass.UseVisualStyleBackColor = true;
+            this.btChangePass.Click += new System.EventHandler(this.btChangePass_Click);
             // 
             // grOption
             // 
@@ -120,7 +122,7 @@
             this.grOption.Controls.Add(this.btChangePass);
             this.grOption.Controls.Add(this.btPayroll);
             this.grOption.Controls.Add(this.btInform);
-            this.grOption.Controls.Add(this.button4);
+            this.grOption.Controls.Add(this.btAssingedWork);
             this.grOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grOption.Location = new System.Drawing.Point(843, 11);
             this.grOption.Name = "grOption";
@@ -149,7 +151,7 @@
         private System.Windows.Forms.Button btCheckInOut;
         private System.Windows.Forms.Button btLetter;
         private System.Windows.Forms.Button btPayroll;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btAssingedWork;
         private System.Windows.Forms.Button btInform;
         private System.Windows.Forms.Button btChangePass;
         private System.Windows.Forms.GroupBox grOption;

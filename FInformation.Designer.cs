@@ -47,7 +47,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labID = new System.Windows.Forms.Label();
+            this.btUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textKPI
@@ -201,20 +202,31 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Name";
             // 
-            // label1
+            // labID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "ID";
+            this.labID.AutoSize = true;
+            this.labID.Location = new System.Drawing.Point(47, 49);
+            this.labID.Name = "labID";
+            this.labID.Size = new System.Drawing.Size(20, 16);
+            this.labID.TabIndex = 21;
+            this.labID.Text = "ID";
+            // 
+            // btUpdate
+            // 
+            this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.Location = new System.Drawing.Point(367, 470);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(135, 43);
+            this.btUpdate.TabIndex = 43;
+            this.btUpdate.Text = "UPDATE";
+            this.btUpdate.UseVisualStyleBackColor = true;
             // 
             // FInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 534);
+            this.ClientSize = new System.Drawing.Size(514, 534);
+            this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.textKPI);
             this.Controls.Add(this.textSalary);
             this.Controls.Add(this.textManID);
@@ -234,7 +246,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labID);
             this.Name = "FInformation";
             this.Text = "Information";
             this.ResumeLayout(false);
@@ -263,6 +275,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labID;
+        private System.Windows.Forms.Button btUpdate;
     }
 }
