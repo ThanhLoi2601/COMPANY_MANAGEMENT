@@ -46,69 +46,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FAbsenceLetter.cs">
+    <Compile Include="Form\FAbsenceLetter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAbsenceLetter.Designer.cs">
+    <Compile Include="Form\FAbsenceLetter.Designer.cs">
       <DependentUpon>FAbsenceLetter.cs</DependentUpon>
     </Compile>
-    <Compile Include="FAssignedWork.cs">
+    <Compile Include="Form\FAssignedWork.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAssignedWork.Designer.cs">
+    <Compile Include="Form\FAssignedWork.Designer.cs">
       <DependentUpon>FAssignedWork.cs</DependentUpon>
     </Compile>
-    <Compile Include="FChangePassWord.cs">
+    <Compile Include="Form\FChangePassWord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FChangePassWord.Designer.cs">
+    <Compile Include="Form\FChangePassWord.Designer.cs">
       <DependentUpon>FChangePassWord.cs</DependentUpon>
     </Compile>
-    <Compile Include="FCheck.cs">
+    <Compile Include="Form\FCheck.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCheck.Designer.cs">
+    <Compile Include="Form\FCheck.Designer.cs">
       <DependentUpon>FCheck.cs</DependentUpon>
     </Compile>
-    <Compile Include="FInformation.cs">
+    <Compile Include="Form\FInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FInformation.Designer.cs">
+    <Compile Include="Form\FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSalary.cs">
+    <Compile Include="Form\FPayroll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSalary.designer.cs">
-      <DependentUpon>FSalary.cs</DependentUpon>
+    <Compile Include="Form\FPayroll.designer.cs">
+      <DependentUpon>FPayroll.cs</DependentUpon>
     </Compile>
-    <Compile Include="FStaff.cs">
+    <Compile Include="Form\FStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FStaff.Designer.cs">
+    <Compile Include="Form\FStaff.Designer.cs">
       <DependentUpon>FStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FAbsenceLetter.resx">
+    <EmbeddedResource Include="Form\FAbsenceLetter.resx">
       <DependentUpon>FAbsenceLetter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FAssignedWork.resx">
+    <EmbeddedResource Include="Form\FAssignedWork.resx">
       <DependentUpon>FAssignedWork.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FChangePassWord.resx">
+    <EmbeddedResource Include="Form\FChangePassWord.resx">
       <DependentUpon>FChangePassWord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCheck.resx">
+    <EmbeddedResource Include="Form\FCheck.resx">
       <DependentUpon>FCheck.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FInformation.resx">
+    <EmbeddedResource Include="Form\FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSalary.resx">
-      <DependentUpon>FSalary.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FPayroll.resx">
+      <DependentUpon>FPayroll.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FStaff.resx">
+    <EmbeddedResource Include="Form\FStaff.resx">
       <DependentUpon>FStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
