@@ -46,60 +46,84 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FDistribution.cs">
+    <Compile Include="Form\FAbsenceLetter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDistribution.Designer.cs">
+    <Compile Include="Form\FAbsenceLetter.designer.cs">
+      <DependentUpon>FAbsenceLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FCheck.designer.cs">
+      <DependentUpon>FCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FDistribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDistribution.Designer.cs">
       <DependentUpon>FDistribution.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDonNghi.cs">
+    <Compile Include="Form\FDonNghi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDonNghi.Designer.cs">
+    <Compile Include="Form\FDonNghi.Designer.cs">
       <DependentUpon>FDonNghi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLogin.cs">
+    <Compile Include="Form\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLogin.Designer.cs">
+    <Compile Include="Form\FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FManager.cs">
+    <Compile Include="Form\FManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FManager.Designer.cs">
+    <Compile Include="Form\FManager.Designer.cs">
       <DependentUpon>FManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="FKPI.cs">
+    <Compile Include="Form\FKPI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FKPI.Designer.cs">
+    <Compile Include="Form\FKPI.Designer.cs">
       <DependentUpon>FKPI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSalary.cs">
+    <Compile Include="Form\FSalary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSalary.Designer.cs">
+    <Compile Include="Form\FSalary.Designer.cs">
       <DependentUpon>FSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FDistribution.resx">
+    <Compile Include="Form\ShowStaffLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ShowStaffLetter.Designer.cs">
+      <DependentUpon>ShowStaffLetter.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\FAbsenceLetter.resx">
+      <DependentUpon>FAbsenceLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FCheck.resx">
+      <DependentUpon>FCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FDistribution.resx">
       <DependentUpon>FDistribution.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDonNghi.resx">
+    <EmbeddedResource Include="Form\FDonNghi.resx">
       <DependentUpon>FDonNghi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FKPI.resx">
+    <EmbeddedResource Include="Form\FKPI.resx">
       <DependentUpon>FKPI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLogin.resx">
+    <EmbeddedResource Include="Form\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FManager.resx">
+    <EmbeddedResource Include="Form\FManager.resx">
       <DependentUpon>FManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSalary.resx">
+    <EmbeddedResource Include="Form\FSalary.resx">
       <DependentUpon>FSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -111,6 +135,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\ShowStaffLetter.resx">
+      <DependentUpon>ShowStaffLetter.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

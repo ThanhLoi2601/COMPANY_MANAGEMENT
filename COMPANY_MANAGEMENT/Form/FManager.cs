@@ -39,5 +39,17 @@ namespace COMPANY_MANAGEMENT
         {
 
         }
+
+        private void btCheckIn_Out_Click(object sender, EventArgs e)
+        {
+            FCheck f = new FCheck();
+            f.ShowDialog();
+        }
+
+        private void btDonNghi_Click(object sender, EventArgs e)
+        {
+            FDonNghi f = new FDonNghi();
+            f.ShowDialog();
+        }
     }
 }

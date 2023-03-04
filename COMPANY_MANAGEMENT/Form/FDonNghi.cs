@@ -16,5 +16,19 @@ namespace COMPANY_MANAGEMENT
         {
             InitializeComponent();
         }
+
+        private void btConfirm_Click(object sender, EventArgs e)
+        {
+            if(rbCreate.Checked == true )
+            {
+                FAbsenceLetter f = new FAbsenceLetter();
+                f.ShowDialog();
+            }
+            else
+            {
+                FShowStaffLetter f = new FShowStaffLetter();
+                f.ShowDialog();
+            }
+        }
     }
 }

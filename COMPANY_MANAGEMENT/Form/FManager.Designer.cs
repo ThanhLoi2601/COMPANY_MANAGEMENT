@@ -347,6 +347,7 @@
             this.btCheckIn_Out.TabIndex = 5;
             this.btCheckIn_Out.Text = "CHECK IN/OUT";
             this.btCheckIn_Out.UseVisualStyleBackColor = false;
+            this.btCheckIn_Out.Click += new System.EventHandler(this.btCheckIn_Out_Click);
             // 
             // btDonNghi
             // 
@@ -359,6 +360,7 @@
             this.btDonNghi.TabIndex = 4;
             this.btDonNghi.Text = "ĐƠN NGHỈ";
             this.btDonNghi.UseVisualStyleBackColor = false;
+            this.btDonNghi.Click += new System.EventHandler(this.btDonNghi_Click);
             // 
             // btListStaff
             // 

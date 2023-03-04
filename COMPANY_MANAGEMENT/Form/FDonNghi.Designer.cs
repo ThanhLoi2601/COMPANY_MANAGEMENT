@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gbOption = new System.Windows.Forms.GroupBox();
-            this.rbCreate = new System.Windows.Forms.RadioButton();
-            this.rbSeeStaff = new System.Windows.Forms.RadioButton();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btConfirm = new System.Windows.Forms.Button();
+            this.rbSeeStaff = new System.Windows.Forms.RadioButton();
+            this.rbCreate = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,16 +49,18 @@
             this.gbOption.TabStop = false;
             this.gbOption.Text = "OPTION";
             // 
-            // rbCreate
+            // btConfirm
             // 
-            this.rbCreate.AutoSize = true;
-            this.rbCreate.Location = new System.Drawing.Point(15, 49);
-            this.rbCreate.Name = "rbCreate";
-            this.rbCreate.Size = new System.Drawing.Size(120, 29);
-            this.rbCreate.TabIndex = 0;
-            this.rbCreate.TabStop = true;
-            this.rbCreate.Text = "CREATE";
-            this.rbCreate.UseVisualStyleBackColor = true;
+            this.btConfirm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConfirm.Location = new System.Drawing.Point(274, 131);
+            this.btConfirm.Name = "btConfirm";
+            this.btConfirm.Size = new System.Drawing.Size(136, 42);
+            this.btConfirm.TabIndex = 11;
+            this.btConfirm.Text = "CONFIRM";
+            this.btConfirm.UseVisualStyleBackColor = false;
+            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
             // rbSeeStaff
             // 
@@ -71,17 +73,16 @@
             this.rbSeeStaff.Text = "SEE STAFF";
             this.rbSeeStaff.UseVisualStyleBackColor = true;
             // 
-            // btConfirm
+            // rbCreate
             // 
-            this.btConfirm.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(274, 131);
-            this.btConfirm.Name = "btConfirm";
-            this.btConfirm.Size = new System.Drawing.Size(136, 42);
-            this.btConfirm.TabIndex = 11;
-            this.btConfirm.Text = "CONFIRM";
-            this.btConfirm.UseVisualStyleBackColor = false;
+            this.rbCreate.AutoSize = true;
+            this.rbCreate.Location = new System.Drawing.Point(15, 49);
+            this.rbCreate.Name = "rbCreate";
+            this.rbCreate.Size = new System.Drawing.Size(120, 29);
+            this.rbCreate.TabIndex = 0;
+            this.rbCreate.TabStop = true;
+            this.rbCreate.Text = "CREATE";
+            this.rbCreate.UseVisualStyleBackColor = true;
             // 
             // FDonNghi
             // 
