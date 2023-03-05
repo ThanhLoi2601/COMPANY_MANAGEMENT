@@ -33,11 +33,12 @@
             this.rbLeader = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.labMaDN = new System.Windows.Forms.Label();
-            this.txtMaDN = new System.Windows.Forms.TextBox();
+            this.btDNhap = new System.Windows.Forms.Button();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.labMK = new System.Windows.Forms.Label();
-            this.btDNhap = new System.Windows.Forms.Button();
+            this.txtMaDN = new System.Windows.Forms.TextBox();
+            this.labMaDN = new System.Windows.Forms.Label();
+            this.cbHienMK = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +94,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbHienMK);
             this.groupBox2.Controls.Add(this.btDNhap);
             this.groupBox2.Controls.Add(this.txtMK);
             this.groupBox2.Controls.Add(this.labMK);
@@ -107,22 +109,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ĐĂNG NHẬP";
             // 
-            // labMaDN
+            // btDNhap
             // 
-            this.labMaDN.AutoSize = true;
-            this.labMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labMaDN.Location = new System.Drawing.Point(16, 103);
-            this.labMaDN.Name = "labMaDN";
-            this.labMaDN.Size = new System.Drawing.Size(126, 20);
-            this.labMaDN.TabIndex = 5;
-            this.labMaDN.Text = "Mã đăng nhập";
-            // 
-            // txtMaDN
-            // 
-            this.txtMaDN.Location = new System.Drawing.Point(168, 96);
-            this.txtMaDN.Name = "txtMaDN";
-            this.txtMaDN.Size = new System.Drawing.Size(261, 30);
-            this.txtMaDN.TabIndex = 6;
+            this.btDNhap.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btDNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDNhap.Location = new System.Drawing.Point(349, 197);
+            this.btDNhap.Name = "btDNhap";
+            this.btDNhap.Size = new System.Drawing.Size(144, 48);
+            this.btDNhap.TabIndex = 9;
+            this.btDNhap.Text = "Đăng nhập";
+            this.btDNhap.UseVisualStyleBackColor = false;
+            this.btDNhap.Click += new System.EventHandler(this.btDNhap_Click);
             // 
             // txtMK
             // 
@@ -131,6 +129,7 @@
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(261, 27);
             this.txtMK.TabIndex = 8;
+            this.txtMK.Text = "12345678";
             this.txtMK.UseSystemPasswordChar = true;
             // 
             // labMK
@@ -143,17 +142,37 @@
             this.labMK.TabIndex = 7;
             this.labMK.Text = "Mật khẩu";
             // 
-            // btDNhap
+            // txtMaDN
             // 
-            this.btDNhap.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btDNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDNhap.Location = new System.Drawing.Point(349, 197);
-            this.btDNhap.Name = "btDNhap";
-            this.btDNhap.Size = new System.Drawing.Size(144, 48);
-            this.btDNhap.TabIndex = 9;
-            this.btDNhap.Text = "Đăng nhập";
-            this.btDNhap.UseVisualStyleBackColor = false;
+            this.txtMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaDN.Location = new System.Drawing.Point(168, 96);
+            this.txtMaDN.Name = "txtMaDN";
+            this.txtMaDN.Size = new System.Drawing.Size(261, 30);
+            this.txtMaDN.TabIndex = 6;
+            this.txtMaDN.Text = "MAN12345";
+            // 
+            // labMaDN
+            // 
+            this.labMaDN.AutoSize = true;
+            this.labMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labMaDN.Location = new System.Drawing.Point(16, 103);
+            this.labMaDN.Name = "labMaDN";
+            this.labMaDN.Size = new System.Drawing.Size(126, 20);
+            this.labMaDN.TabIndex = 5;
+            this.labMaDN.Text = "Mã đăng nhập";
+            // 
+            // cbHienMK
+            // 
+            this.cbHienMK.AutoSize = true;
+            this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHienMK.Location = new System.Drawing.Point(168, 206);
+            this.cbHienMK.Name = "cbHienMK";
+            this.cbHienMK.Size = new System.Drawing.Size(125, 22);
+            this.cbHienMK.TabIndex = 10;
+            this.cbHienMK.Text = "Hiện mật khẩu";
+            this.cbHienMK.UseVisualStyleBackColor = true;
+            this.cbHienMK.CheckedChanged += new System.EventHandler(this.cbHienMK_TextChanged);
+            this.cbHienMK.TextChanged += new System.EventHandler(this.cbHienMK_TextChanged);
             // 
             // FLogin
             // 
@@ -182,6 +201,7 @@
         private System.Windows.Forms.TextBox txtMaDN;
         private System.Windows.Forms.Label labMaDN;
         private System.Windows.Forms.Button btDNhap;
+        private System.Windows.Forms.CheckBox cbHienMK;
     }
 }
 

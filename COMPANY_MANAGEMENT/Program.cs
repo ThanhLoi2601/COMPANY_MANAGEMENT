@@ -16,7 +16,7 @@ namespace COMPANY_MANAGEMENT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FManager());
+            Application.Run(new FLogin());
         }
     }
 }

@@ -73,7 +73,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(917, 511);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(958, 511);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // groupBox1
@@ -99,7 +99,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 504);
+            this.groupBox1.Size = new System.Drawing.Size(344, 504);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMATION";
@@ -107,9 +107,9 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(90, 418);
+            this.textBox7.Location = new System.Drawing.Point(100, 418);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(232, 24);
+            this.textBox7.Size = new System.Drawing.Size(238, 24);
             this.textBox7.TabIndex = 16;
             this.textBox7.UseSystemPasswordChar = true;
             // 
@@ -126,9 +126,9 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(90, 375);
+            this.textBox6.Location = new System.Drawing.Point(100, 375);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(232, 24);
+            this.textBox6.Size = new System.Drawing.Size(238, 24);
             this.textBox6.TabIndex = 14;
             // 
             // label7
@@ -144,17 +144,17 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(90, 331);
+            this.textBox5.Location = new System.Drawing.Point(100, 331);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(232, 24);
+            this.textBox5.Size = new System.Drawing.Size(238, 24);
             this.textBox5.TabIndex = 7;
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(90, 283);
+            this.textBox4.Location = new System.Drawing.Point(100, 283);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 24);
+            this.textBox4.Size = new System.Drawing.Size(238, 24);
             this.textBox4.TabIndex = 12;
             // 
             // label6
@@ -163,9 +163,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 331);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 18);
+            this.label6.Size = new System.Drawing.Size(88, 18);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Salary";
+            this.label6.Text = "Basic salary";
             // 
             // label5
             // 
@@ -180,9 +180,9 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(90, 178);
+            this.textBox3.Location = new System.Drawing.Point(100, 178);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 24);
+            this.textBox3.Size = new System.Drawing.Size(238, 24);
             this.textBox3.TabIndex = 10;
             // 
             // label4
@@ -198,9 +198,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(90, 235);
+            this.textBox1.Location = new System.Drawing.Point(100, 235);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 24);
+            this.textBox1.Size = new System.Drawing.Size(238, 24);
             this.textBox1.TabIndex = 8;
             // 
             // label3
@@ -216,17 +216,17 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(90, 135);
+            this.dateTimePicker1.Location = new System.Drawing.Point(100, 135);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(232, 24);
+            this.dateTimePicker1.Size = new System.Drawing.Size(238, 24);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(90, 87);
+            this.textBox2.Location = new System.Drawing.Point(100, 87);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 24);
+            this.textBox2.Size = new System.Drawing.Size(238, 24);
             this.textBox2.TabIndex = 5;
             // 
             // label2
@@ -252,9 +252,9 @@
             // txtHoTen
             // 
             this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(90, 39);
+            this.txtHoTen.Location = new System.Drawing.Point(100, 39);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(232, 24);
+            this.txtHoTen.Size = new System.Drawing.Size(238, 24);
             this.txtHoTen.TabIndex = 1;
             // 
             // labHoTen
@@ -270,11 +270,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(337, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(353, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(380, 504);
+            this.dataGridView1.Size = new System.Drawing.Size(410, 504);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
@@ -289,13 +289,12 @@
             this.groupBox2.Controls.Add(this.btDelete);
             this.groupBox2.Controls.Add(this.btUpdate);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(723, 3);
+            this.groupBox2.Location = new System.Drawing.Point(769, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(181, 504);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "OPTION";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btDistribution
             // 
@@ -414,7 +413,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 511);
+            this.ClientSize = new System.Drawing.Size(958, 511);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FManager";
             this.Text = "MANAGER";
