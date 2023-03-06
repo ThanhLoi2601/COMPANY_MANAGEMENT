@@ -8,5 +8,6 @@ namespace COMPANY_MANAGEMENT.Form
 {
     internal class StaffDAO
     {
+        a
     }
 }
