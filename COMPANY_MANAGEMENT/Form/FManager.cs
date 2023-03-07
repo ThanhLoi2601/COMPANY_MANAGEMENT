@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMPANY_MANAGEMENT.OOP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,11 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FManager : Form
     {
+        public string IDMan_receive { get { return txtID.Text; } set { txtID.Text = value; } }
         public FManager()
         {
             InitializeComponent();
         }
-
         private void btKPI_Click(object sender, EventArgs e)
         {
             FKPI f = new FKPI();
@@ -35,11 +36,6 @@ namespace COMPANY_MANAGEMENT
             f.ShowDialog();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btCheckIn_Out_Click(object sender, EventArgs e)
         {
             FCheck f = new FCheck();
@@ -50,6 +46,11 @@ namespace COMPANY_MANAGEMENT
         {
             FDonNghi f = new FDonNghi();
             f.ShowDialog();
+        }
+
+        private void FManager_Load(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

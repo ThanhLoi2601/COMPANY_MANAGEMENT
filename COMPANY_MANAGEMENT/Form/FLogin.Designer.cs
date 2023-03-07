@@ -33,12 +33,12 @@
             this.rbLeader = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbHienMK = new System.Windows.Forms.CheckBox();
             this.btDNhap = new System.Windows.Forms.Button();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.labMK = new System.Windows.Forms.Label();
             this.txtMaDN = new System.Windows.Forms.TextBox();
             this.labMaDN = new System.Windows.Forms.Label();
-            this.cbHienMK = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ĐĂNG NHẬP";
             // 
+            // cbHienMK
+            // 
+            this.cbHienMK.AutoSize = true;
+            this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHienMK.Location = new System.Drawing.Point(168, 206);
+            this.cbHienMK.Name = "cbHienMK";
+            this.cbHienMK.Size = new System.Drawing.Size(125, 22);
+            this.cbHienMK.TabIndex = 10;
+            this.cbHienMK.Text = "Hiện mật khẩu";
+            this.cbHienMK.UseVisualStyleBackColor = true;
+            this.cbHienMK.CheckedChanged += new System.EventHandler(this.cbHienMK_TextChanged);
+            this.cbHienMK.TextChanged += new System.EventHandler(this.cbHienMK_TextChanged);
+            // 
             // btDNhap
             // 
             this.btDNhap.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -124,7 +137,7 @@
             // 
             // txtMK
             // 
-            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.Location = new System.Drawing.Point(168, 153);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(261, 27);
@@ -144,10 +157,10 @@
             // 
             // txtMaDN
             // 
-            this.txtMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDN.Location = new System.Drawing.Point(168, 96);
             this.txtMaDN.Name = "txtMaDN";
-            this.txtMaDN.Size = new System.Drawing.Size(261, 30);
+            this.txtMaDN.Size = new System.Drawing.Size(261, 27);
             this.txtMaDN.TabIndex = 6;
             this.txtMaDN.Text = "MAN12345";
             // 
@@ -160,19 +173,6 @@
             this.labMaDN.Size = new System.Drawing.Size(126, 20);
             this.labMaDN.TabIndex = 5;
             this.labMaDN.Text = "Mã đăng nhập";
-            // 
-            // cbHienMK
-            // 
-            this.cbHienMK.AutoSize = true;
-            this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbHienMK.Location = new System.Drawing.Point(168, 206);
-            this.cbHienMK.Name = "cbHienMK";
-            this.cbHienMK.Size = new System.Drawing.Size(125, 22);
-            this.cbHienMK.TabIndex = 10;
-            this.cbHienMK.Text = "Hiện mật khẩu";
-            this.cbHienMK.UseVisualStyleBackColor = true;
-            this.cbHienMK.CheckedChanged += new System.EventHandler(this.cbHienMK_TextChanged);
-            this.cbHienMK.TextChanged += new System.EventHandler(this.cbHienMK_TextChanged);
             // 
             // FLogin
             // 

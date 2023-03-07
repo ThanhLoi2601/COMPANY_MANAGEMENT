@@ -30,6 +30,7 @@ namespace COMPANY_MANAGEMENT
                 if(ManDao.Login(Man)==true)
                 {
                     FManager f = new FManager();
+                    f.IDMan_receive = txtMaDN.Text;
                     f.ShowDialog();
                 }
             }else
