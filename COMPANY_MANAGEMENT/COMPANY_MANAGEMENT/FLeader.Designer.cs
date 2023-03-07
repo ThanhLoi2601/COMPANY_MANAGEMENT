@@ -1,6 +1,6 @@
 ﻿namespace COMPANY_MANAGEMENT
 {
-    partial class Form1
+    partial class FLeader
     {
         /// <summary>
         ///  Required designer variable.
