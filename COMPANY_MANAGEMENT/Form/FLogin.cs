@@ -29,8 +29,7 @@ namespace COMPANY_MANAGEMENT
                 Manager Man = new Manager(txtMaDN.Text,txtMK.Text);
                 if(ManDao.Login(Man)==true)
                 {
-                    FManager f = new FManager();
-                    f.IDMan_receive = txtMaDN.Text;
+                    FManager f = new FManager(txtMaDN.Text);
                     f.ShowDialog();
                 }
             }else

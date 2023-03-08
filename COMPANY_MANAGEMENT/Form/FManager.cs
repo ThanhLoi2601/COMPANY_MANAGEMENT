@@ -13,7 +13,13 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FManager : Form
     {
-        public string IDMan_receive { get { return txtID.Text; } set { txtID.Text = value; } }
+        ManagerDAO manDAO =new ManagerDAO();
+        Manager man = new Manager();
+        public FManager(string ID)
+        {
+            InitializeComponent();
+            txtID.Text = ID;
+        }
         public FManager()
         {
             InitializeComponent();
@@ -36,21 +42,44 @@ namespace COMPANY_MANAGEMENT
             f.ShowDialog();
         }
 
+        private void btAbsenceLetter_Click(object sender, EventArgs e)
+        {
+            FDonNghi f = new FDonNghi();
+            f.ShowDialog();
+        }
+
         private void btCheckIn_Out_Click(object sender, EventArgs e)
         {
             FCheck f = new FCheck();
             f.ShowDialog();
         }
 
-        private void btDonNghi_Click(object sender, EventArgs e)
-        {
-            FDonNghi f = new FDonNghi();
-            f.ShowDialog();
-        }
-
         private void FManager_Load(object sender, EventArgs e)
         {
-            //
+            man = manDAO.Search(txtID.Text);
+            txtName.Text = man.Name;
+            dtBirth.Value = man.Birth;
+            txtIDCard.Text = man.IDCard;
+            txtEmail.Text = man.Email;
+            txtAddress.Text = man.Address;
+            txtBasicSalary.Text = man.BasicSalary.ToString();
+            txtPass.Text = man.Password;
+        }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            manDAO.Update(man);
+        }
+
+        private void btInsert_Click(object sender, EventArgs e)
+        {
+            manDAO.Insert(man);
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            manDAO.Delete(man);
+            this.Close();
         }
     }
 }

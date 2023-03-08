@@ -15,4 +15,5 @@ INSERT Manager(ID,Name,Birth,ID_Card,Email,Address,Basic_salary,Password) values
 INSERT Manager(ID,Name,Birth,ID_Card,Email,Address,Basic_salary,Password) values ('MAN12348','Nguyen Van D','9/10/1996','0228192995','nvd@gmail.com','TPHCM',100000,'12345678')
 INSERT Manager(ID,Name,Birth,ID_Card,Email,Address,Basic_salary,Password) values ('MAN12349','Nguyen Van E','11/8/1995','0228192996','nve@gmail.com','TPHCM',100000,'12345678')
 
-SELECT COUNT(*) SoUser FROM (SELECT * FROM Manager WHERE ID = 'MAN12345' and Password = '12345678') users;
+SELECT COUNT(*) SoUser FROM Manager WHERE ID = 'MAN12345' and Password = '12345678';
+UPDATE Manager SET Name ='Nguyen Van A', Address = 'Long An' WHERE id = 'MAN12345';

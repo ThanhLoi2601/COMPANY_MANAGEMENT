@@ -54,15 +54,19 @@
             this.btSalary = new System.Windows.Forms.Button();
             this.btKPI = new System.Windows.Forms.Button();
             this.btCheckIn_Out = new System.Windows.Forms.Button();
-            this.btDonNghi = new System.Windows.Forms.Button();
+            this.btAbsenceLetter = new System.Windows.Forms.Button();
             this.btListStaff = new System.Windows.Forms.Button();
             this.btInsert = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -70,14 +74,16 @@
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
+            this.flowLayoutPanel1.Controls.Add(this.btAbsenceLetter);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(958, 511);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1184, 511);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.flowLayoutPanel3);
             this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtKPI);
@@ -99,7 +105,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 504);
+            this.groupBox1.Size = new System.Drawing.Size(412, 504);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMATION";
@@ -270,26 +276,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(353, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(421, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(410, 504);
+            this.dataGridView1.Size = new System.Drawing.Size(568, 504);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btDistribution);
-            this.groupBox2.Controls.Add(this.btSalary);
-            this.groupBox2.Controls.Add(this.btKPI);
-            this.groupBox2.Controls.Add(this.btCheckIn_Out);
-            this.groupBox2.Controls.Add(this.btDonNghi);
-            this.groupBox2.Controls.Add(this.btListStaff);
-            this.groupBox2.Controls.Add(this.btInsert);
-            this.groupBox2.Controls.Add(this.btDelete);
-            this.groupBox2.Controls.Add(this.btUpdate);
+            this.groupBox2.Controls.Add(this.flowLayoutPanel2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(769, 3);
+            this.groupBox2.Location = new System.Drawing.Point(995, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(181, 504);
             this.groupBox2.TabIndex = 0;
@@ -301,7 +299,7 @@
             this.btDistribution.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btDistribution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDistribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDistribution.Location = new System.Drawing.Point(6, 446);
+            this.btDistribution.Location = new System.Drawing.Point(3, 3);
             this.btDistribution.Name = "btDistribution";
             this.btDistribution.Size = new System.Drawing.Size(175, 58);
             this.btDistribution.TabIndex = 8;
@@ -314,7 +312,7 @@
             this.btSalary.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSalary.Location = new System.Drawing.Point(6, 384);
+            this.btSalary.Location = new System.Drawing.Point(3, 67);
             this.btSalary.Name = "btSalary";
             this.btSalary.Size = new System.Drawing.Size(175, 58);
             this.btSalary.TabIndex = 7;
@@ -327,9 +325,9 @@
             this.btKPI.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btKPI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btKPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btKPI.Location = new System.Drawing.Point(6, 336);
+            this.btKPI.Location = new System.Drawing.Point(3, 131);
             this.btKPI.Name = "btKPI";
-            this.btKPI.Size = new System.Drawing.Size(175, 42);
+            this.btKPI.Size = new System.Drawing.Size(175, 58);
             this.btKPI.TabIndex = 6;
             this.btKPI.Text = "KPI DETAILS";
             this.btKPI.UseVisualStyleBackColor = false;
@@ -340,37 +338,37 @@
             this.btCheckIn_Out.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btCheckIn_Out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCheckIn_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCheckIn_Out.Location = new System.Drawing.Point(6, 279);
+            this.btCheckIn_Out.Location = new System.Drawing.Point(3, 258);
             this.btCheckIn_Out.Name = "btCheckIn_Out";
-            this.btCheckIn_Out.Size = new System.Drawing.Size(175, 51);
+            this.btCheckIn_Out.Size = new System.Drawing.Size(175, 68);
             this.btCheckIn_Out.TabIndex = 5;
             this.btCheckIn_Out.Text = "CHECK IN/OUT";
             this.btCheckIn_Out.UseVisualStyleBackColor = false;
             this.btCheckIn_Out.Click += new System.EventHandler(this.btCheckIn_Out_Click);
             // 
-            // btDonNghi
+            // btAbsenceLetter
             // 
-            this.btDonNghi.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btDonNghi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDonNghi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDonNghi.Location = new System.Drawing.Point(6, 231);
-            this.btDonNghi.Name = "btDonNghi";
-            this.btDonNghi.Size = new System.Drawing.Size(175, 42);
-            this.btDonNghi.TabIndex = 4;
-            this.btDonNghi.Text = "ĐƠN NGHỈ";
-            this.btDonNghi.UseVisualStyleBackColor = false;
-            this.btDonNghi.Click += new System.EventHandler(this.btDonNghi_Click);
+            this.btAbsenceLetter.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btAbsenceLetter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAbsenceLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAbsenceLetter.Location = new System.Drawing.Point(3, 513);
+            this.btAbsenceLetter.Name = "btAbsenceLetter";
+            this.btAbsenceLetter.Size = new System.Drawing.Size(175, 48);
+            this.btAbsenceLetter.TabIndex = 4;
+            this.btAbsenceLetter.Text = "ABSENCE LETTER";
+            this.btAbsenceLetter.UseVisualStyleBackColor = false;
+            this.btAbsenceLetter.Click += new System.EventHandler(this.btAbsenceLetter_Click);
             // 
             // btListStaff
             // 
             this.btListStaff.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btListStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btListStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btListStaff.Location = new System.Drawing.Point(6, 183);
+            this.btListStaff.Location = new System.Drawing.Point(3, 195);
             this.btListStaff.Name = "btListStaff";
-            this.btListStaff.Size = new System.Drawing.Size(175, 42);
+            this.btListStaff.Size = new System.Drawing.Size(175, 57);
             this.btListStaff.TabIndex = 3;
-            this.btListStaff.Text = "DS STAFF";
+            this.btListStaff.Text = "STAFF LIST";
             this.btListStaff.UseVisualStyleBackColor = false;
             // 
             // btInsert
@@ -378,42 +376,67 @@
             this.btInsert.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btInsert.Location = new System.Drawing.Point(6, 87);
+            this.btInsert.Location = new System.Drawing.Point(137, 3);
             this.btInsert.Name = "btInsert";
-            this.btInsert.Size = new System.Drawing.Size(175, 42);
+            this.btInsert.Size = new System.Drawing.Size(127, 42);
             this.btInsert.TabIndex = 2;
             this.btInsert.Text = "INSERT";
             this.btInsert.UseVisualStyleBackColor = false;
+            this.btInsert.Click += new System.EventHandler(this.btInsert_Click);
             // 
             // btDelete
             // 
             this.btDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDelete.Location = new System.Drawing.Point(6, 135);
+            this.btDelete.Location = new System.Drawing.Point(270, 3);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(175, 42);
+            this.btDelete.Size = new System.Drawing.Size(128, 42);
             this.btDelete.TabIndex = 1;
             this.btDelete.Text = "DELETE";
             this.btDelete.UseVisualStyleBackColor = false;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btUpdate
             // 
             this.btUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUpdate.Location = new System.Drawing.Point(6, 39);
+            this.btUpdate.Location = new System.Drawing.Point(3, 3);
             this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(175, 42);
+            this.btUpdate.Size = new System.Drawing.Size(128, 42);
             this.btUpdate.TabIndex = 0;
             this.btUpdate.Text = "UPDATE";
             this.btUpdate.UseVisualStyleBackColor = false;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.btDistribution);
+            this.flowLayoutPanel2.Controls.Add(this.btSalary);
+            this.flowLayoutPanel2.Controls.Add(this.btKPI);
+            this.flowLayoutPanel2.Controls.Add(this.btListStaff);
+            this.flowLayoutPanel2.Controls.Add(this.btCheckIn_Out);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 39);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(181, 459);
+            this.flowLayoutPanel2.TabIndex = 9;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.btUpdate);
+            this.flowLayoutPanel3.Controls.Add(this.btInsert);
+            this.flowLayoutPanel3.Controls.Add(this.btDelete);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(6, 453);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(409, 45);
+            this.flowLayoutPanel3.TabIndex = 17;
             // 
             // FManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 511);
+            this.ClientSize = new System.Drawing.Size(1184, 511);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FManager";
             this.Text = "MANAGER";
@@ -423,6 +446,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -454,11 +479,13 @@
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btKPI;
         private System.Windows.Forms.Button btCheckIn_Out;
-        private System.Windows.Forms.Button btDonNghi;
+        private System.Windows.Forms.Button btAbsenceLetter;
         private System.Windows.Forms.Button btListStaff;
         private System.Windows.Forms.Button btInsert;
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btSalary;
         private System.Windows.Forms.Button btDistribution;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }
