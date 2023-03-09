@@ -158,4 +158,3 @@
         private System.Windows.Forms.GroupBox grOption;
     }
 }
-
