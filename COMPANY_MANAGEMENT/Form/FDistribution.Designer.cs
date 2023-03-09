@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtIDStaff = new System.Windows.Forms.TextBox();
+            this.txtIDJob = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -72,19 +72,19 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "ID Staff :";
             // 
-            // textBox1
+            // txtIDStaff
             // 
-            this.textBox1.Location = new System.Drawing.Point(729, 386);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 22);
-            this.textBox1.TabIndex = 6;
+            this.txtIDStaff.Location = new System.Drawing.Point(729, 386);
+            this.txtIDStaff.Name = "txtIDStaff";
+            this.txtIDStaff.Size = new System.Drawing.Size(183, 22);
+            this.txtIDStaff.TabIndex = 6;
             // 
-            // textBox2
+            // txtIDJob
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 384);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtIDJob.Location = new System.Drawing.Point(243, 384);
+            this.txtIDJob.Name = "txtIDJob";
+            this.txtIDJob.Size = new System.Drawing.Size(182, 22);
+            this.txtIDJob.TabIndex = 8;
             // 
             // label4
             // 
@@ -127,6 +127,7 @@
             this.dGVJob.RowTemplate.Height = 24;
             this.dGVJob.Size = new System.Drawing.Size(524, 275);
             this.dGVJob.TabIndex = 3;
+            this.dGVJob.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVJob_CellClick);
             // 
             // dGVStaff
             // 
@@ -145,10 +146,10 @@
             this.ClientSize = new System.Drawing.Size(1160, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dGVJob);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIDStaff);
             this.Controls.Add(this.dGVStaff);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtIDJob);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -167,8 +168,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtIDStaff;
+        private System.Windows.Forms.TextBox txtIDJob;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
