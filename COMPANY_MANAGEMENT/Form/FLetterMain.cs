@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMPANY_MANAGEMENT
 {
-    public partial class FDonNghi : Form
+    public partial class FLetterMain : Form
     {
-        public FDonNghi()
+        public FLetterMain()
         {
             InitializeComponent();
         }

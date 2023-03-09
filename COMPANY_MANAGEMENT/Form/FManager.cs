@@ -14,7 +14,6 @@ namespace COMPANY_MANAGEMENT
     public partial class FManager : Form
     {
         ManagerDAO manDAO =new ManagerDAO();
-        Manager man = new Manager();
         public FManager(string ID)
         {
             InitializeComponent();
@@ -44,7 +43,7 @@ namespace COMPANY_MANAGEMENT
 
         private void btAbsenceLetter_Click(object sender, EventArgs e)
         {
-            FDonNghi f = new FDonNghi();
+            FAbsenceLetter f = new FAbsenceLetter();
             f.ShowDialog();
         }
 
@@ -54,9 +53,20 @@ namespace COMPANY_MANAGEMENT
             f.ShowDialog();
         }
 
+        private void btLetter_Click(object sender, EventArgs e)
+        {
+            FLetterMain f = new FLetterMain();
+            f.ShowDialog();
+        }
+
+        private void btJob_Click(object sender, EventArgs e)
+        {
+            FJob f = new FJob();
+            f.ShowDialog();
+        }
         private void FManager_Load(object sender, EventArgs e)
         {
-            man = manDAO.Search(txtID.Text);
+            Manager man = manDAO.Search(txtID.Text);
             txtName.Text = man.Name;
             dtBirth.Value = man.Birth;
             txtIDCard.Text = man.IDCard;
@@ -68,18 +78,45 @@ namespace COMPANY_MANAGEMENT
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            manDAO.Update(man);
+            if (txtID.Text.Contains("MAN"))
+            {
+                Manager man = new Manager(txtID.Text,txtName.Text,dtBirth.Value,txtIDCard.Text,txtEmail.Text,txtAddress.Text,int.Parse(txtBasicSalary.Text),txtPass.Text);
+                manDAO.Update(man);
+            }
+            else
+            {
+                //
+            }
+            
         }
 
         private void btInsert_Click(object sender, EventArgs e)
         {
-            manDAO.Insert(man);
+            if (txtID.Text.Contains("MAN"))
+            {
+                MessageBox.Show("You're not allowed to add management !!", "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //
+            }
         }
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            manDAO.Delete(man);
-            this.Close();
+            DialogResult result= MessageBox.Show("Are you sure to delete?", "REMIND",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (txtID.Text.Contains("MAN"))
+                {
+                    Manager man = new Manager(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, int.Parse(txtBasicSalary.Text), txtPass.Text);
+                    manDAO.Delete(man);
+                    this.Close();
+                }else
+                {
+                    //
+                }
+            }
         }
     }
 }

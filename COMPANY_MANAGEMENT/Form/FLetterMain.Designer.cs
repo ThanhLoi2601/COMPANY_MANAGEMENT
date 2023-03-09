@@ -1,6 +1,6 @@
 ﻿namespace COMPANY_MANAGEMENT
 {
-    partial class FDonNghi
+    partial class FLetterMain
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,6 @@
             this.btConfirm = new System.Windows.Forms.Button();
             this.rbSeeStaff = new System.Windows.Forms.RadioButton();
             this.rbCreate = new System.Windows.Forms.RadioButton();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,14 +83,14 @@
             this.rbCreate.Text = "CREATE";
             this.rbCreate.UseVisualStyleBackColor = true;
             // 
-            // FDonNghi
+            // FLetterMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 203);
             this.Controls.Add(this.gbOption);
-            this.Name = "FDonNghi";
-            this.Text = "ĐƠN NGHỈ";
+            this.Name = "FLetterMain";
+            this.Text = "ABSENCE LETTER";
             this.gbOption.ResumeLayout(false);
             this.gbOption.PerformLayout();
             this.ResumeLayout(false);
@@ -103,7 +102,6 @@
         private System.Windows.Forms.GroupBox gbOption;
         private System.Windows.Forms.RadioButton rbSeeStaff;
         private System.Windows.Forms.RadioButton rbCreate;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btConfirm;
     }
 }

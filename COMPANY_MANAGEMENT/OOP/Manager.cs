@@ -18,14 +18,14 @@ namespace COMPANY_MANAGEMENT.OOP
         private int basicSalary;
         private string password;
 
-        public string ID { get { return id; } }
-        public string Password { get { return password; } }
-        public string Name { get { return name; } }
-        public DateTime Birth { get { return birth; } }
-        public string IDCard { get { return idCard; } }
-        public string Email { get { return email; } }
-        public string Address { get { return address; } }
-        public int BasicSalary { get { return basicSalary; } }
+        public string ID { get { return id; } set { id = value; } }
+        public string Password { get { return password; } set { password = value; } }
+        public string Name { get { return name; } set { name = value; } }
+        public DateTime Birth { get { return birth; } set { birth = value; } }
+        public string IDCard { get { return idCard; } set { idCard = value; } }
+        public string Email { get { return email; } set{ email = value; } }
+        public string Address { get { return address; } set { address = value; } }
+        public int BasicSalary { get { return basicSalary; } set { basicSalary = value; } }
 
         public Manager()
         {
@@ -57,7 +57,7 @@ namespace COMPANY_MANAGEMENT.OOP
         }
         public string toStringInfo()
         {
-            return string.Format("ID= '{0}', Name= '{1}', Birth= '{2}', ID_Card= '{3}', Email= '{4}', Address= '{5}', Basic_salary= '{6}', Password= '{7}'"
+            return string.Format("ID= '{0}', Name= '{1}', Birth= '{2}', ID_Card= '{3}', Email= '{4}', Address= '{5}', Basic_salary= '{6}', Password= '{7}' "
                 , id, name, birth, idCard, email, address, basicSalary, password);
         }
     }

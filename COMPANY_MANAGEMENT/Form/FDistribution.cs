@@ -16,5 +16,10 @@ namespace COMPANY_MANAGEMENT
         {
             InitializeComponent();
         }
+
+        private void FDistribution_Load(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
