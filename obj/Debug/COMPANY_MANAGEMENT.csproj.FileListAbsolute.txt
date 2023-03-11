@@ -47,3 +47,6 @@ C:\Users\PC\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.GenerateResou
 C:\Users\PC\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.CoreCompileInputs.cache
 C:\Users\PC\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.exe
 C:\Users\PC\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.pdb
+D:\STUDY\LapTrinhTrenWin\COMPANY_MANAGEMENT\bin\Debug\System.Data.SqlClient.dll
+D:\STUDY\LapTrinhTrenWin\COMPANY_MANAGEMENT\bin\Debug\System.Data.SqlClient.xml
+D:\STUDY\LapTrinhTrenWin\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.CopyComplete

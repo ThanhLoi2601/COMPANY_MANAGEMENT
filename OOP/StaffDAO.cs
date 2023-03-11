@@ -9,10 +9,10 @@ namespace COMPANY_MANAGEMENT
     class StaffDAO
     {
         DBConn dB = new DBConn();
-        public bool Login(Staff a)
+        public bool Login(Staff sta)
         {
-            string sqlStr = string.Format("SELECT * FROM Staff WHERE ID = '{0}' and Password = '{1}'", a.ID, a.Password);
-            return dB.Find(sqlStr);
+            string sqlStr = string.Format("SELECT * FROM Staff WHERE ID = '{0}' and Password = '{1}'", sta.ID, sta.Password);
+            return dB.Search(sqlStr);
         }
     }
 }

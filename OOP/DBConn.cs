@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.Common;
 
 namespace COMPANY_MANAGEMENT
 {
@@ -14,7 +14,49 @@ namespace COMPANY_MANAGEMENT
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
 
-        public bool Find(string sqlStr)
+        public DataTable LoadList(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
+        public void Executive(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("SUCCESSFUL EXECUTION !!", "ANNOUNCEMENT", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public bool Search(string sqlStr)
         {
             try
             {
@@ -25,7 +67,7 @@ namespace COMPANY_MANAGEMENT
             }
             catch (Exception ex)
             {
-                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -37,4 +79,3 @@ namespace COMPANY_MANAGEMENT
         }
     }
 }
-
