@@ -35,7 +35,7 @@
             this.txtIDJob = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btConfirm = new System.Windows.Forms.Button();
             this.dGVJob = new System.Windows.Forms.DataGridView();
             this.dGVStaff = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJob)).BeginInit();
@@ -106,17 +106,18 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "assigned to";
             // 
-            // button1
+            // btConfirm
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(987, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 58);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "CONFIRM";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btConfirm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConfirm.Location = new System.Drawing.Point(987, 373);
+            this.btConfirm.Name = "btConfirm";
+            this.btConfirm.Size = new System.Drawing.Size(153, 58);
+            this.btConfirm.TabIndex = 10;
+            this.btConfirm.Text = "CONFIRM";
+            this.btConfirm.UseVisualStyleBackColor = false;
+            this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
             // dGVJob
             // 
@@ -138,6 +139,7 @@
             this.dGVStaff.RowTemplate.Height = 24;
             this.dGVStaff.Size = new System.Drawing.Size(561, 275);
             this.dGVStaff.TabIndex = 0;
+            this.dGVStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVStaff_CellClick);
             // 
             // FDistribution
             // 
@@ -151,7 +153,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIDJob);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btConfirm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FDistribution";
@@ -172,7 +174,7 @@
         private System.Windows.Forms.TextBox txtIDJob;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btConfirm;
         private System.Windows.Forms.DataGridView dGVJob;
         private System.Windows.Forms.DataGridView dGVStaff;
     }

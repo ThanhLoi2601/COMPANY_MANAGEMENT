@@ -14,7 +14,16 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FDistribution : Form
     {
+        string IDReceive;
         JobDAO jobDAO = new JobDAO();
+        StaffDAO staDAO = new StaffDAO();
+        DistributionDAO disDAO = new DistributionDAO();
+
+        public FDistribution(string ID)
+        {
+            InitializeComponent();
+            IDReceive = ID;
+        }
         public FDistribution()
         {
             InitializeComponent();
@@ -22,7 +31,8 @@ namespace COMPANY_MANAGEMENT
 
         private void FDistribution_Load(object sender, EventArgs e)
         {
-            dGVJob.DataSource = jobDAO.LoadList();
+            dGVJob.DataSource = disDAO.LoadListJob();
+            dGVStaff.DataSource = staDAO.LoadList(IDReceive);
         }
 
         private void dGVJob_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -30,6 +40,19 @@ namespace COMPANY_MANAGEMENT
             int r = this.dGVJob.CurrentCell.RowIndex;
             txtIDJob.DataBindings.Clear();
             txtIDJob.Text = dGVJob.Rows[r].Cells[0].Value.ToString();
+        }
+
+        private void dGVStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = this.dGVStaff.CurrentCell.RowIndex;
+            txtIDStaff.DataBindings.Clear();
+            txtIDStaff.Text = dGVStaff.Rows[r].Cells[0].Value.ToString();
+        }
+
+        private void btConfirm_Click(object sender, EventArgs e)
+        {
+            disDAO.Insert(txtIDJob.Text, txtIDStaff.Text);
+            dGVJob.DataSource = disDAO.LoadListJob();
         }
     }
 }

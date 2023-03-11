@@ -114,10 +114,13 @@
       <DependentUpon>FSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="OOP\DBConn.cs" />
+    <Compile Include="OOP\DistributionDAO.cs" />
     <Compile Include="OOP\Job.cs" />
     <Compile Include="OOP\JobDAO.cs" />
     <Compile Include="OOP\Manager.cs" />
     <Compile Include="OOP\ManagerDAO.cs" />
+    <Compile Include="OOP\Staff.cs" />
+    <Compile Include="OOP\StaffDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form\ShowStaffLetter.cs">
@@ -198,6 +201,7 @@
     <Content Include="Database\SQLDistribution.sql" />
     <Content Include="Database\SQLJob.sql" />
     <Content Include="Database\SQLManager.sql" />
+    <Content Include="Database\StaffDB.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

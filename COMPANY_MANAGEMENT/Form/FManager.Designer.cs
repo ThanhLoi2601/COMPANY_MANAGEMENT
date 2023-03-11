@@ -52,13 +52,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.labHoTen = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGVStaff = new System.Windows.Forms.DataGridView();
             this.grOption = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btDistribution = new System.Windows.Forms.Button();
             this.btSalary = new System.Windows.Forms.Button();
             this.btKPI = new System.Windows.Forms.Button();
-            this.btListStaff = new System.Windows.Forms.Button();
+            this.btMyInfo = new System.Windows.Forms.Button();
             this.btCheckIn_Out = new System.Windows.Forms.Button();
             this.btJob = new System.Windows.Forms.Button();
             this.btLetter = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVStaff)).BeginInit();
             this.grOption.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +74,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.grInfo);
-            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
+            this.flowLayoutPanel1.Controls.Add(this.dGVStaff);
             this.flowLayoutPanel1.Controls.Add(this.grOption);
             this.flowLayoutPanel1.Controls.Add(this.btAbsenceLetter);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -324,15 +324,16 @@
             this.labHoTen.TabIndex = 0;
             this.labHoTen.Text = "ID";
             // 
-            // dataGridView1
+            // dGVStaff
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(421, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(568, 504);
-            this.dataGridView1.TabIndex = 0;
+            this.dGVStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVStaff.Location = new System.Drawing.Point(421, 3);
+            this.dGVStaff.Name = "dGVStaff";
+            this.dGVStaff.RowHeadersWidth = 51;
+            this.dGVStaff.RowTemplate.Height = 24;
+            this.dGVStaff.Size = new System.Drawing.Size(568, 504);
+            this.dGVStaff.TabIndex = 0;
+            this.dGVStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVStaff_CellClick);
             // 
             // grOption
             // 
@@ -350,7 +351,7 @@
             this.flowLayoutPanel2.Controls.Add(this.btDistribution);
             this.flowLayoutPanel2.Controls.Add(this.btSalary);
             this.flowLayoutPanel2.Controls.Add(this.btKPI);
-            this.flowLayoutPanel2.Controls.Add(this.btListStaff);
+            this.flowLayoutPanel2.Controls.Add(this.btMyInfo);
             this.flowLayoutPanel2.Controls.Add(this.btCheckIn_Out);
             this.flowLayoutPanel2.Controls.Add(this.btJob);
             this.flowLayoutPanel2.Controls.Add(this.btLetter);
@@ -398,17 +399,18 @@
             this.btKPI.UseVisualStyleBackColor = false;
             this.btKPI.Click += new System.EventHandler(this.btKPI_Click);
             // 
-            // btListStaff
+            // btMyInfo
             // 
-            this.btListStaff.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btListStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btListStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btListStaff.Location = new System.Drawing.Point(3, 195);
-            this.btListStaff.Name = "btListStaff";
-            this.btListStaff.Size = new System.Drawing.Size(175, 57);
-            this.btListStaff.TabIndex = 3;
-            this.btListStaff.Text = "STAFF LIST";
-            this.btListStaff.UseVisualStyleBackColor = false;
+            this.btMyInfo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMyInfo.Location = new System.Drawing.Point(3, 195);
+            this.btMyInfo.Name = "btMyInfo";
+            this.btMyInfo.Size = new System.Drawing.Size(175, 57);
+            this.btMyInfo.TabIndex = 3;
+            this.btMyInfo.Text = "MY INFORMATION";
+            this.btMyInfo.UseVisualStyleBackColor = false;
+            this.btMyInfo.Click += new System.EventHandler(this.btMyInfo_Click);
             // 
             // btCheckIn_Out
             // 
@@ -475,7 +477,7 @@
             this.grInfo.ResumeLayout(false);
             this.grInfo.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVStaff)).EndInit();
             this.grOption.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -491,7 +493,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label labHoTen;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVStaff;
         private System.Windows.Forms.GroupBox grOption;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label8;
@@ -510,7 +512,7 @@
         private System.Windows.Forms.Button btKPI;
         private System.Windows.Forms.Button btCheckIn_Out;
         private System.Windows.Forms.Button btAbsenceLetter;
-        private System.Windows.Forms.Button btListStaff;
+        private System.Windows.Forms.Button btMyInfo;
         private System.Windows.Forms.Button btInsert;
         private System.Windows.Forms.Button btDelete;
         private System.Windows.Forms.Button btSalary;
