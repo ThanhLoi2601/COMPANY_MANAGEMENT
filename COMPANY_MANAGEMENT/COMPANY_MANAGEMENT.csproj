@@ -59,6 +59,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FAssignedWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FAssignedWork.designer.cs">
+      <DependentUpon>FAssignedWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FChangePassWord.Designer.cs">
+      <DependentUpon>FChangePassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FInformation.Designer.cs">
+      <DependentUpon>FInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +125,23 @@
     <Compile Include="Form\FKPI.Designer.cs">
       <DependentUpon>FKPI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FPayroll.designer.cs">
+      <DependentUpon>FPayroll.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FSalary.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FSalary.Designer.cs">
       <DependentUpon>FSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FStaff.Designer.cs">
+      <DependentUpon>FStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="OOP\DBConn.cs" />
     <Compile Include="OOP\DistributionDAO.cs" />
@@ -132,11 +162,20 @@
     <EmbeddedResource Include="Form\FAbsenceLetter.resx">
       <DependentUpon>FAbsenceLetter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FAssignedWork.resx">
+      <DependentUpon>FAssignedWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FChangePassWord.resx">
+      <DependentUpon>FChangePassWord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FCheck.resx">
       <DependentUpon>FCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FDistribution.resx">
       <DependentUpon>FDistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FInformation.resx">
+      <DependentUpon>FInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FJob.resx">
       <DependentUpon>FJob.cs</DependentUpon>
@@ -153,8 +192,14 @@
     <EmbeddedResource Include="Form\FManager.resx">
       <DependentUpon>FManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FPayroll.resx">
+      <DependentUpon>FPayroll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FSalary.resx">
       <DependentUpon>FSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FStaff.resx">
+      <DependentUpon>FStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
