@@ -101,6 +101,12 @@
     <Compile Include="Form\FDistribution.Designer.cs">
       <DependentUpon>FDistribution.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FLeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FLeader.Designer.cs">
+      <DependentUpon>FLeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FLetterMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,7 @@
     <Compile Include="OOP\DistributionDAO.cs" />
     <Compile Include="OOP\Job.cs" />
     <Compile Include="OOP\JobDAO.cs" />
+    <Compile Include="OOP\Leader.cs" />
     <Compile Include="OOP\Manager.cs" />
     <Compile Include="OOP\ManagerDAO.cs" />
     <Compile Include="OOP\Staff.cs" />
@@ -179,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FJob.resx">
       <DependentUpon>FJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FLeader.resx">
+      <DependentUpon>FLeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FLetterMain.resx">
       <DependentUpon>FLetterMain.cs</DependentUpon>
