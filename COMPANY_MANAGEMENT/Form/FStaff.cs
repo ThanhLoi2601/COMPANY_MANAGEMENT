@@ -12,6 +12,14 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FStaff : Form
     {
+        string IDReceive;
+        StaffDAO staDAO = new StaffDAO();
+
+        public FStaff(string ID)
+        {
+            InitializeComponent();
+            IDReceive = ID;
+        }
 
         public FStaff()
         {

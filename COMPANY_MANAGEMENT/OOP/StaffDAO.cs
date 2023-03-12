@@ -13,7 +13,7 @@ namespace COMPANY_MANAGEMENT
         DBConn dB = new DBConn();
         public bool Login(Staff sta)
         {
-            string sqlStr = string.Format("SELECT * FROM Staff WHERE ID = '{0}' and Password = '{1}'", sta.ID, sta.Password);
+            string sqlStr = string.Format("SELECT COUNT(*) SoUser FROM Staff WHERE ID = '{0}' and Password = '{1}'", sta.ID, sta.Password);
             return dB.Search(sqlStr);
         }
 
