@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.grInfo = new System.Windows.Forms.GroupBox();
+            this.rTxtContent = new System.Windows.Forms.RichTextBox();
+            this.txtBunus = new System.Windows.Forms.TextBox();
+            this.labBonus = new System.Windows.Forms.Label();
+            this.dtDateEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtDateStart = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btUpdate = new System.Windows.Forms.Button();
             this.btInsert = new System.Windows.Forms.Button();
@@ -41,21 +46,19 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.labID = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dtDateStart = new System.Windows.Forms.DateTimePicker();
-            this.dtDateEnd = new System.Windows.Forms.DateTimePicker();
-            this.labBonus = new System.Windows.Forms.Label();
-            this.txtBunus = new System.Windows.Forms.TextBox();
-            this.rTxtContent = new System.Windows.Forms.RichTextBox();
             this.tabJobStaff = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dGVJobStaff = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dGVMyJob = new System.Windows.Forms.DataGridView();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabJobStaff.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJobStaff)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVMyJob)).BeginInit();
             this.SuspendLayout();
             // 
             // grInfo
@@ -76,10 +79,54 @@
             this.grInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grInfo.Location = new System.Drawing.Point(3, 3);
             this.grInfo.Name = "grInfo";
-            this.grInfo.Size = new System.Drawing.Size(508, 502);
+            this.grInfo.Size = new System.Drawing.Size(507, 502);
             this.grInfo.TabIndex = 2;
             this.grInfo.TabStop = false;
             this.grInfo.Text = "INFORMATION";
+            // 
+            // rTxtContent
+            // 
+            this.rTxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTxtContent.Location = new System.Drawing.Point(100, 143);
+            this.rTxtContent.Name = "rTxtContent";
+            this.rTxtContent.Size = new System.Drawing.Size(347, 145);
+            this.rTxtContent.TabIndex = 23;
+            this.rTxtContent.Text = "";
+            // 
+            // txtBunus
+            // 
+            this.txtBunus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBunus.Location = new System.Drawing.Point(100, 419);
+            this.txtBunus.Name = "txtBunus";
+            this.txtBunus.Size = new System.Drawing.Size(267, 24);
+            this.txtBunus.TabIndex = 22;
+            // 
+            // labBonus
+            // 
+            this.labBonus.AutoSize = true;
+            this.labBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labBonus.Location = new System.Drawing.Point(6, 419);
+            this.labBonus.Name = "labBonus";
+            this.labBonus.Size = new System.Drawing.Size(51, 18);
+            this.labBonus.TabIndex = 21;
+            this.labBonus.Text = "Bonus";
+            // 
+            // dtDateEnd
+            // 
+            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateEnd.Location = new System.Drawing.Point(100, 361);
+            this.dtDateEnd.Name = "dtDateEnd";
+            this.dtDateEnd.Size = new System.Drawing.Size(267, 24);
+            this.dtDateEnd.TabIndex = 20;
+            // 
+            // dtDateStart
+            // 
+            this.dtDateStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateStart.Location = new System.Drawing.Point(100, 308);
+            this.dtDateStart.Name = "dtDateStart";
+            this.dtDateStart.Size = new System.Drawing.Size(267, 24);
+            this.dtDateStart.TabIndex = 19;
             // 
             // flowLayoutPanel3
             // 
@@ -206,53 +253,9 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 508F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1366, 508);
             this.tableLayoutPanel1.TabIndex = 3;
-            // 
-            // dtDateStart
-            // 
-            this.dtDateStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateStart.Location = new System.Drawing.Point(100, 308);
-            this.dtDateStart.Name = "dtDateStart";
-            this.dtDateStart.Size = new System.Drawing.Size(267, 24);
-            this.dtDateStart.TabIndex = 19;
-            // 
-            // dtDateEnd
-            // 
-            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateEnd.Location = new System.Drawing.Point(100, 361);
-            this.dtDateEnd.Name = "dtDateEnd";
-            this.dtDateEnd.Size = new System.Drawing.Size(267, 24);
-            this.dtDateEnd.TabIndex = 20;
-            // 
-            // labBonus
-            // 
-            this.labBonus.AutoSize = true;
-            this.labBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labBonus.Location = new System.Drawing.Point(6, 419);
-            this.labBonus.Name = "labBonus";
-            this.labBonus.Size = new System.Drawing.Size(51, 18);
-            this.labBonus.TabIndex = 21;
-            this.labBonus.Text = "Bonus";
-            // 
-            // txtBunus
-            // 
-            this.txtBunus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBunus.Location = new System.Drawing.Point(100, 419);
-            this.txtBunus.Name = "txtBunus";
-            this.txtBunus.Size = new System.Drawing.Size(267, 24);
-            this.txtBunus.TabIndex = 22;
-            // 
-            // rTxtContent
-            // 
-            this.rTxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTxtContent.Location = new System.Drawing.Point(100, 143);
-            this.rTxtContent.Name = "rTxtContent";
-            this.rTxtContent.Size = new System.Drawing.Size(347, 145);
-            this.rTxtContent.TabIndex = 23;
-            this.rTxtContent.Text = "";
             // 
             // tabJobStaff
             // 
@@ -263,6 +266,7 @@
             this.tabJobStaff.SelectedIndex = 0;
             this.tabJobStaff.Size = new System.Drawing.Size(849, 505);
             this.tabJobStaff.TabIndex = 4;
+            this.tabJobStaff.SelectedIndexChanged += new System.EventHandler(this.tabJobStaff_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -276,17 +280,6 @@
             this.tabPage1.Text = "STAFF JOB ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(841, 476);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "MY JOB";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // dGVJobStaff
             // 
             this.dGVJobStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -297,6 +290,29 @@
             this.dGVJobStaff.Size = new System.Drawing.Size(841, 476);
             this.dGVJobStaff.TabIndex = 4;
             this.dGVJobStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVJobStaff_CellClick);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dGVMyJob);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(841, 476);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "MY JOB";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dGVMyJob
+            // 
+            this.dGVMyJob.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVMyJob.Location = new System.Drawing.Point(3, 0);
+            this.dGVMyJob.Name = "dGVMyJob";
+            this.dGVMyJob.RowHeadersWidth = 51;
+            this.dGVMyJob.RowTemplate.Height = 24;
+            this.dGVMyJob.Size = new System.Drawing.Size(846, 484);
+            this.dGVMyJob.TabIndex = 5;
+            this.dGVMyJob.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVMyJob_CellClick);
             // 
             // FJob
             // 
@@ -315,6 +331,8 @@
             this.tabJobStaff.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGVJobStaff)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVMyJob)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,5 +361,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dGVJobStaff;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dGVMyJob;
     }
 }
