@@ -36,21 +36,10 @@ namespace COMPANY_MANAGEMENT
                 connection.Open();
 
                 string query = "SELECT Password FROM Staff WHERE ID = @ID";
-                string query1 = "SELECT ID FROM Staff WHERE ID = @ID";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ID", ID);
                 string currentPasswordInDatabase = (string)command.ExecuteScalar();
-
-                SqlCommand command1 = new SqlCommand(query1, connection);
-                command1.Parameters.AddWithValue("@ID", ID);
-                string currentIDInDatabase = (string)command1.ExecuteScalar();
-
-                if (currentIDInDatabase != "EMP12345")
-                {
-                    MessageBox.Show("Mã đăng nhập không đúng");
-                    return;
-                }
 
                 if (currentPasswordInDatabase != currentPassword)
                 {
