@@ -41,7 +41,7 @@
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.textName = new System.Windows.Forms.TextBox();
             this.textID = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textReason = new System.Windows.Forms.TextBox();
             this.btConfirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -162,12 +162,12 @@
             this.textID.Size = new System.Drawing.Size(200, 22);
             this.textID.TabIndex = 14;
             // 
-            // textBox3
+            // textReason
             // 
-            this.textBox3.Location = new System.Drawing.Point(165, 285);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 22);
-            this.textBox3.TabIndex = 15;
+            this.textReason.Location = new System.Drawing.Point(165, 285);
+            this.textReason.Name = "textReason";
+            this.textReason.Size = new System.Drawing.Size(200, 22);
+            this.textReason.TabIndex = 15;
             // 
             // btConfirm
             // 
@@ -186,7 +186,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 450);
             this.Controls.Add(this.btConfirm);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textReason);
             this.Controls.Add(this.textID);
             this.Controls.Add(this.textName);
             this.Controls.Add(this.dateEnd);
@@ -222,7 +222,7 @@
         private System.Windows.Forms.DateTimePicker dateEnd;
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.TextBox textID;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textReason;
         private System.Windows.Forms.Button btConfirm;
     }
 }

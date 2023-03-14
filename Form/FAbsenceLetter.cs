@@ -20,6 +20,25 @@ namespace COMPANY_MANAGEMENT
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
+            string reason = "";
+
+            if (rbRea1.Checked)
+            {
+                reason = rbRea1.Text;
+            }
+            else if (rbRea2.Checked)
+            {
+                reason = rbRea2.Text;
+            }
+            else if (rbRea3.Checked)
+            {
+                reason = rbRea3.Text;
+            }
+            else
+            {
+                reason = textReason.Text;
+            }
+
             string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
 
@@ -28,7 +47,7 @@ namespace COMPANY_MANAGEMENT
 
             command.Parameters.AddWithValue("@ID", textID.Text);
             command.Parameters.AddWithValue("@Name", textName.Text);
-            command.Parameters.AddWithValue("@Reason", rbRea1.Checked ? rbRea1.Text : rbRea2.Text);
+            command.Parameters.AddWithValue("@Reason", reason);
             command.Parameters.AddWithValue("@StartDate", dateStart.Value);
             command.Parameters.AddWithValue("@EndDate", dateEnd.Value);
 
