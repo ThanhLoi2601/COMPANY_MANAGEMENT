@@ -109,5 +109,37 @@ namespace COMPANY_MANAGEMENT.OOP
             }
             return null;
         }
+
+        public Leader FindLeader(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string id = reader.GetString(0);
+                    string name = reader.GetString(1);
+                    DateTime birth = reader.GetDateTime(2);
+                    string id_card = reader.GetString(3);
+                    string email = reader.GetString(4);
+                    string address = reader.GetString(5);
+                    int bSalary = reader.GetInt32(6);
+                    string pass = reader.GetString(7);
+                    return new Leader(id, name, birth, id_card, email, address, bSalary, pass);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
     }
 }

@@ -12,9 +12,17 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FLeader : Form
     {
+        string IDReceive;
+
         public FLeader()
         {
             InitializeComponent();
+        }
+
+        public FLeader(string ID)
+        {
+            InitializeComponent();
+            IDReceive = ID;
         }
     }
 }

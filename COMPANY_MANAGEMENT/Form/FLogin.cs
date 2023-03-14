@@ -15,6 +15,7 @@ namespace COMPANY_MANAGEMENT
     {
         ManagerDAO ManDao = new ManagerDAO();
         StaffDAO StaDAO = new StaffDAO();
+        LeaderDAO LeaDAO = new LeaderDAO();
         public FLogin()
         {
             InitializeComponent();
@@ -40,7 +41,12 @@ namespace COMPANY_MANAGEMENT
                 }
             }else
             {
-                //
+                Leader Lea = new Leader(txtMaDN.Text, txtMK.Text);
+                if (LeaDAO.Login(Lea) == true)
+                {
+                    FLeader f = new FLeader(txtMaDN.Text);
+                    f.ShowDialog();
+                }
             }
         }
 
