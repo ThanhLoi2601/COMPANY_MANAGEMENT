@@ -32,7 +32,6 @@ namespace COMPANY_MANAGEMENT
         private void FDistribution_Load(object sender, EventArgs e)
         {
             dGVJob.DataSource = disDAO.LoadListJob();
-            dGVStaff.DataSource = staDAO.LoadList(IDReceive);
         }
 
         private void dGVJob_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -54,5 +53,17 @@ namespace COMPANY_MANAGEMENT
             disDAO.Insert(txtIDJob.Text, txtIDStaff.Text);
             dGVJob.DataSource = disDAO.LoadListJob();
         }
+
+        private void txtIDJob_TextChanged(object sender, EventArgs e)
+        {
+            LoadTableStaff();
+        }
+
+        private void LoadTableStaff()
+        {
+            Job jb = jobDAO.Search(txtIDJob.Text);
+            dGVStaff.DataSource = disDAO.LoadListStaff(jb, IDReceive);
+        }
+
     }
 }

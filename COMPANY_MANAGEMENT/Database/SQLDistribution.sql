@@ -2,3 +2,16 @@
 	IDJob varchar(10),
 	IDStaff varchar(10)
 );
+
+DELETE Distribution WHERE IDStaff = 'EMP12342'
+
+SELECT IDJob,IDStaff,DateStart,DateEnd FROM Distribution INNER JOIN Job ON IDJob = ID ;
+SELECT ID, DateStart, DateEnd FROM Job WHERE ID = 'JOB2347'
+SELECT * FROM Staff WHERE (ID NOT IN (SELECT IDStaff FROM Distribution) 
+	OR ID NOT IN (SELECT IDStaff
+				FROM Distribution
+				INNER JOIN Job ON IDJob = ID
+				WHERE (DateStart BETWEEN '02/03/2023' AND '02/13/2023')
+					OR (DateEnd BETWEEN '02/03/2023' AND '02/13/2023')
+					OR ('02/03/2023' BETWEEN DateStart AND DateEnd)
+					OR ('02/13/2023' BETWEEN DateStart AND DateEnd)) )AND Manager_ID = 'MAN12345'

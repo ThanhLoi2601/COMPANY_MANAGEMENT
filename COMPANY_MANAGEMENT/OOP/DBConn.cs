@@ -141,5 +141,36 @@ namespace COMPANY_MANAGEMENT.OOP
             }
             return null;
         }
+
+        public Job FindJob(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string id = reader.GetString(0);
+                    string name = reader.GetString(1);
+                    string content = reader.GetString(2);
+                    DateTime datestart = reader.GetDateTime(3);
+                    DateTime dateend = reader.GetDateTime(4);
+                    int bonus = reader.GetInt32(5);
+                    return new Job(id, name, content, datestart, dateend, bonus);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
     }
 }

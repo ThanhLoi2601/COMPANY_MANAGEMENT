@@ -85,6 +85,7 @@
             this.txtIDJob.Name = "txtIDJob";
             this.txtIDJob.Size = new System.Drawing.Size(182, 22);
             this.txtIDJob.TabIndex = 8;
+            this.txtIDJob.TextChanged += new System.EventHandler(this.txtIDJob_TextChanged);
             // 
             // label4
             // 

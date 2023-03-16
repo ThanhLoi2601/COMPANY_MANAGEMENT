@@ -13,57 +13,49 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FJob : Form
     {
+        const string IDjbS = "JOB";
+        const string IDjbM = "JOM";
         JobDAO jobDAO =new JobDAO();
         public FJob()
         {
             InitializeComponent();
         }
 
+        private void ChangeInfo(Action<Job> methodChange)
+        {
+            Job job = new Job(txtID.Text, txtName.Text, rTxtContent.Text, dtDateStart.Value, dtDateEnd.Value, int.Parse(txtBunus.Text));
+            methodChange(job);
+            dGVJobStaff.DataSource = jobDAO.LoadList(IDjbS);
+        }
+
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            if (this.check_Empty() == false && txtID.Text.Contains("JOB")== true)
-            {
-                Job job = new Job(txtID.Text,txtName.Text,rTxtContent.Text,dtDateStart.Value,dtDateEnd.Value,int.Parse(txtBunus.Text));
-                jobDAO.Update(job);
-                dGVJobStaff.DataSource = jobDAO.LoadList("JOB");
-            }
+            if (this.check_Empty() == false && txtID.Text.Contains(IDjbS)== true)
+                ChangeInfo(jobDAO.Update);
             else
-            {
                 MessageBox.Show("Please fill in information !! ");
-            }
         }
 
         private void btInsert_Click(object sender, EventArgs e)
         {
-            if (this.check_Empty() == false && txtID.Text.Contains("JOB") == true)
-            {
-                Job job = new Job(txtID.Text, txtName.Text, rTxtContent.Text, dtDateStart.Value, dtDateEnd.Value, int.Parse(txtBunus.Text));
-                jobDAO.Insert(job);
-                dGVJobStaff.DataSource = jobDAO.LoadList("JOB");
-            }
+            if (this.check_Empty() == false && txtID.Text.Contains(IDjbS) == true)
+                ChangeInfo(jobDAO.Insert);
             else
-            {
                 MessageBox.Show("Please fill in information !! ");
-            }
         }
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            if (txtID.Text.Contains("JOB") == true)
-            {
-                Job job = new Job(txtID.Text, txtName.Text, rTxtContent.Text, dtDateStart.Value, dtDateEnd.Value, int.Parse(txtBunus.Text));
-                jobDAO.Delete(job);
-                dGVJobStaff.DataSource = jobDAO.LoadList("JOB");
-            }else
-            {
+            if (txtID.Text.Contains(IDjbS) == true)
+                ChangeInfo(jobDAO.Delete);
+            else
                 MessageBox.Show("Please fill in ID !! ");
-            }
         }
 
         private void FJob_Load(object sender, EventArgs e)
         {
-            dGVJobStaff.DataSource = jobDAO.LoadList("JOB");
-            dGVMyJob.DataSource = jobDAO.LoadList("JOM");
+            dGVJobStaff.DataSource = jobDAO.LoadList(IDjbS);
+            dGVMyJob.DataSource = jobDAO.LoadList(IDjbM);
         }
 
         private bool check_Empty()
