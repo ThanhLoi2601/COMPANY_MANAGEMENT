@@ -62,7 +62,6 @@
             this.btCheckIn_Out = new System.Windows.Forms.Button();
             this.btJob = new System.Windows.Forms.Button();
             this.btLetter = new System.Windows.Forms.Button();
-            this.btAbsenceLetter = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -76,11 +75,10 @@
             this.flowLayoutPanel1.Controls.Add(this.grInfo);
             this.flowLayoutPanel1.Controls.Add(this.dGVStaff);
             this.flowLayoutPanel1.Controls.Add(this.grOption);
-            this.flowLayoutPanel1.Controls.Add(this.btAbsenceLetter);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1184, 511);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1471, 517);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // grInfo
@@ -331,7 +329,7 @@
             this.dGVStaff.Name = "dGVStaff";
             this.dGVStaff.RowHeadersWidth = 51;
             this.dGVStaff.RowTemplate.Height = 24;
-            this.dGVStaff.Size = new System.Drawing.Size(568, 504);
+            this.dGVStaff.Size = new System.Drawing.Size(849, 504);
             this.dGVStaff.TabIndex = 0;
             this.dGVStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVStaff_CellClick);
             // 
@@ -339,7 +337,7 @@
             // 
             this.grOption.Controls.Add(this.flowLayoutPanel2);
             this.grOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grOption.Location = new System.Drawing.Point(995, 3);
+            this.grOption.Location = new System.Drawing.Point(1276, 3);
             this.grOption.Name = "grOption";
             this.grOption.Size = new System.Drawing.Size(181, 504);
             this.grOption.TabIndex = 0;
@@ -451,24 +449,11 @@
             this.btLetter.UseVisualStyleBackColor = false;
             this.btLetter.Click += new System.EventHandler(this.btLetter_Click);
             // 
-            // btAbsenceLetter
-            // 
-            this.btAbsenceLetter.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btAbsenceLetter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAbsenceLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAbsenceLetter.Location = new System.Drawing.Point(3, 513);
-            this.btAbsenceLetter.Name = "btAbsenceLetter";
-            this.btAbsenceLetter.Size = new System.Drawing.Size(175, 48);
-            this.btAbsenceLetter.TabIndex = 4;
-            this.btAbsenceLetter.Text = "ABSENCE LETTER";
-            this.btAbsenceLetter.UseVisualStyleBackColor = false;
-            this.btAbsenceLetter.Click += new System.EventHandler(this.btAbsenceLetter_Click);
-            // 
             // FManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 511);
+            this.ClientSize = new System.Drawing.Size(1471, 517);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FManager";
             this.Text = "MANAGER";
@@ -511,7 +496,6 @@
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btKPI;
         private System.Windows.Forms.Button btCheckIn_Out;
-        private System.Windows.Forms.Button btAbsenceLetter;
         private System.Windows.Forms.Button btMyInfo;
         private System.Windows.Forms.Button btInsert;
         private System.Windows.Forms.Button btDelete;

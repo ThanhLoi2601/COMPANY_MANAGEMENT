@@ -90,34 +90,33 @@ namespace COMPANY_MANAGEMENT
             txtPass.Text = man.Password;
         }
 
+        private void ChangeInfo(Action<Staff> methodChange)
+        {
+            Staff sta = new Staff(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, IDReceive, int.Parse(txtBasicSalary.Text), txtPass.Text);
+            methodChange(sta);
+            dGVStaff.DataSource = staDAO.LoadList(IDReceive);
+        }
+
+        private void ChangeInfo(Action<Manager> methodChange)
+        {
+            Manager man = new Manager(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, int.Parse(txtBasicSalary.Text), txtPass.Text);
+            methodChange(man);
+        }
+
         private void btUpdate_Click(object sender, EventArgs e)
         {
             if (txtID.Text.Contains("MAN"))
-            {
-                Manager man = new Manager(txtID.Text,txtName.Text,dtBirth.Value,txtIDCard.Text,txtEmail.Text,txtAddress.Text,int.Parse(txtBasicSalary.Text),txtPass.Text);
-                manDAO.Update(man);
-            }
+                ChangeInfo(manDAO.Update);
             else
-            {
-                Staff sta = new Staff(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, IDReceive,int.Parse(txtBasicSalary.Text), txtPass.Text);
-                staDAO.Update(sta);
-                dGVStaff.DataSource = staDAO.LoadList(IDReceive);
-            }
-
+                ChangeInfo(staDAO.Update);
         }
 
         private void btInsert_Click(object sender, EventArgs e)
         {
             if (txtID.Text.Contains("MAN"))
-            {
                 MessageBox.Show("You're not allowed to add management !!", "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             else
-            {
-                Staff sta = new Staff(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, IDReceive, int.Parse(txtBasicSalary.Text), txtPass.Text);
-                staDAO.Insert(sta);
-                dGVStaff.DataSource = staDAO.LoadList(IDReceive);
-            }
+                ChangeInfo(staDAO.Insert);
         }
 
         private void btDelete_Click(object sender, EventArgs e)
@@ -127,15 +126,10 @@ namespace COMPANY_MANAGEMENT
             {
                 if (txtID.Text.Contains("MAN"))
                 {
-                    Manager man = new Manager(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, int.Parse(txtBasicSalary.Text), txtPass.Text);
-                    manDAO.Delete(man);
+                    ChangeInfo(manDAO.Delete);
                     this.Close();
                 }else
-                {
-                    Staff sta = new Staff(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, IDReceive, int.Parse(txtBasicSalary.Text), txtPass.Text);
-                    staDAO.Delete(sta);
-                    dGVStaff.DataSource = staDAO.LoadList(IDReceive);
-                }
+                    ChangeInfo(staDAO.Delete);
             }
         }
 
