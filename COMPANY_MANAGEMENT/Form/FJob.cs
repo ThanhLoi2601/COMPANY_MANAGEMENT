@@ -55,7 +55,7 @@ namespace COMPANY_MANAGEMENT
         private void FJob_Load(object sender, EventArgs e)
         {
             dGVJobStaff.DataSource = jobDAO.LoadList(IDjbS);
-            dGVMyJob.DataSource = jobDAO.LoadList(IDjbM);
+            dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
         }
 
         private bool check_Empty()
@@ -91,9 +91,9 @@ namespace COMPANY_MANAGEMENT
             dGV_CellClick(this.dGVJobStaff);
         }
 
-        private void dGVMyJob_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGVMyProject_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dGV_CellClick(this.dGVMyJob);
+            dGV_CellClick(this.dGVMyProject);
         }
 
         private void tabJobStaff_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,6 +102,12 @@ namespace COMPANY_MANAGEMENT
                 grInfo.Enabled = true;
             else
                 grInfo.Enabled = false;
+        }
+
+        private void btComp_Click(object sender, EventArgs e)
+        {
+            DateTime DateComp = DateTime.Now;
+            
         }
     }
 }

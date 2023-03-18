@@ -50,7 +50,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dGVJobStaff = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dGVMyJob = new System.Windows.Forms.DataGridView();
+            this.dGVMyProject = new System.Windows.Forms.DataGridView();
+            this.btComp = new System.Windows.Forms.Button();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -58,7 +59,7 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJobStaff)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVMyJob)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVMyProject)).BeginInit();
             this.SuspendLayout();
             // 
             // grInfo
@@ -264,7 +265,7 @@
             this.tabJobStaff.Location = new System.Drawing.Point(520, 4);
             this.tabJobStaff.Name = "tabJobStaff";
             this.tabJobStaff.SelectedIndex = 0;
-            this.tabJobStaff.Size = new System.Drawing.Size(849, 505);
+            this.tabJobStaff.Size = new System.Drawing.Size(849, 512);
             this.tabJobStaff.TabIndex = 4;
             this.tabJobStaff.SelectedIndexChanged += new System.EventHandler(this.tabJobStaff_SelectedIndexChanged);
             // 
@@ -275,7 +276,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(841, 476);
+            this.tabPage1.Size = new System.Drawing.Size(841, 483);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "STAFF JOB ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -293,32 +294,46 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dGVMyJob);
+            this.tabPage2.Controls.Add(this.btComp);
+            this.tabPage2.Controls.Add(this.dGVMyProject);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(841, 476);
+            this.tabPage2.Size = new System.Drawing.Size(841, 483);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MY PROJECT";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dGVMyJob
+            // dGVMyProject
             // 
-            this.dGVMyJob.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVMyJob.Location = new System.Drawing.Point(3, 0);
-            this.dGVMyJob.Name = "dGVMyJob";
-            this.dGVMyJob.RowHeadersWidth = 51;
-            this.dGVMyJob.RowTemplate.Height = 24;
-            this.dGVMyJob.Size = new System.Drawing.Size(846, 484);
-            this.dGVMyJob.TabIndex = 5;
-            this.dGVMyJob.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVMyJob_CellClick);
+            this.dGVMyProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVMyProject.Location = new System.Drawing.Point(0, 0);
+            this.dGVMyProject.Name = "dGVMyProject";
+            this.dGVMyProject.RowHeadersWidth = 51;
+            this.dGVMyProject.RowTemplate.Height = 24;
+            this.dGVMyProject.Size = new System.Drawing.Size(841, 426);
+            this.dGVMyProject.TabIndex = 5;
+            this.dGVMyProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVMyProject_CellClick);
+            // 
+            // btComp
+            // 
+            this.btComp.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btComp.Location = new System.Drawing.Point(707, 431);
+            this.btComp.Name = "btComp";
+            this.btComp.Size = new System.Drawing.Size(128, 48);
+            this.btComp.TabIndex = 5;
+            this.btComp.Text = "COMPLETE";
+            this.btComp.UseVisualStyleBackColor = false;
+            this.btComp.Click += new System.EventHandler(this.btComp_Click);
             // 
             // FJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 511);
+            this.ClientSize = new System.Drawing.Size(1371, 517);
             this.Controls.Add(this.tabJobStaff);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FJob";
@@ -332,7 +347,7 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGVJobStaff)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGVMyJob)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVMyProject)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,6 +376,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dGVJobStaff;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dGVMyJob;
+        private System.Windows.Forms.DataGridView dGVMyProject;
+        private System.Windows.Forms.Button btComp;
     }
 }
