@@ -16,9 +16,19 @@ namespace COMPANY_MANAGEMENT
         const string IDjbS = "JOB";
         const string IDjbM = "JOM";
         JobDAO jobDAO =new JobDAO();
+        ManagerDAO manDAO = new ManagerDAO();
+        CompleteWorkDAO cmpWDAO =new CompleteWorkDAO();
+        Manager man;
+
         public FJob()
         {
             InitializeComponent();
+        }
+
+        public FJob(string ID)
+        {
+            InitializeComponent();
+            man = manDAO.Search(ID);
         }
 
         private void ChangeInfo(Action<Job> methodChange)
@@ -107,7 +117,11 @@ namespace COMPANY_MANAGEMENT
         private void btComp_Click(object sender, EventArgs e)
         {
             DateTime DateComp = DateTime.Now;
-            
+            Job jb = jobDAO.Search(txtID.Text);
+            KPI kpi = new KPI(man.BasicSalary, jb, DateComp);
+            cmpWDAO.Insert(kpi, man.ID);
+            jobDAO.Delete(jb);
+            dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
         }
     }
 }

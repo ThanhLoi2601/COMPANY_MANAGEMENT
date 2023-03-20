@@ -28,28 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dGVCompleteWork = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbNumJob = new System.Windows.Forms.Label();
+            this.lbAvgKPI = new System.Windows.Forms.Label();
+            this.lbKPIGrand = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVCompleteWork)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dGVCompleteWork
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(411, 298);
-            this.dataGridView1.TabIndex = 0;
+            this.dGVCompleteWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVCompleteWork.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVCompleteWork.Location = new System.Drawing.Point(12, 56);
+            this.dGVCompleteWork.Name = "dGVCompleteWork";
+            this.dGVCompleteWork.RowHeadersWidth = 51;
+            this.dGVCompleteWork.RowTemplate.Height = 24;
+            this.dGVCompleteWork.Size = new System.Drawing.Size(468, 298);
+            this.dGVCompleteWork.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,106 +66,103 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(29, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 25);
+            this.label1.Size = new System.Drawing.Size(210, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "CÔNG VIỆC THAM GIA";
+            this.label1.Text = "COMPLETE WORK ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(449, 119);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 18);
+            this.label2.Size = new System.Drawing.Size(128, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tỷ lệ hoàn thành: ";
+            this.label2.Text = "Number of jobs ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(449, 168);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 18);
+            this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Tỷ lệ đạt chuẩn:";
+            this.label3.Text = "Average KPIs ";
             // 
-            // label4
+            // lbNumJob
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(621, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "%";
+            this.lbNumJob.AutoSize = true;
+            this.lbNumJob.BackColor = System.Drawing.SystemColors.Info;
+            this.lbNumJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNumJob.Location = new System.Drawing.Point(154, 18);
+            this.lbNumJob.Name = "lbNumJob";
+            this.lbNumJob.Size = new System.Drawing.Size(33, 20);
+            this.lbNumJob.TabIndex = 6;
+            this.lbNumJob.Text = "****";
             // 
-            // label5
+            // lbAvgKPI
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(621, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 16);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "%";
+            this.lbAvgKPI.AutoSize = true;
+            this.lbAvgKPI.BackColor = System.Drawing.SystemColors.Info;
+            this.lbAvgKPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAvgKPI.Location = new System.Drawing.Point(154, 58);
+            this.lbAvgKPI.Name = "lbAvgKPI";
+            this.lbAvgKPI.Size = new System.Drawing.Size(33, 20);
+            this.lbAvgKPI.TabIndex = 8;
+            this.lbAvgKPI.Text = "****";
+            this.lbAvgKPI.TextChanged += new System.EventHandler(this.lbAvgKPI_TextChanged);
             // 
-            // label6
+            // lbKPIGrand
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(579, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 16);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "****";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Info;
-            this.label8.Location = new System.Drawing.Point(579, 170);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 16);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "****";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(579, 224);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "****";
+            this.lbKPIGrand.AutoSize = true;
+            this.lbKPIGrand.BackColor = System.Drawing.SystemColors.Info;
+            this.lbKPIGrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKPIGrand.Location = new System.Drawing.Point(154, 100);
+            this.lbKPIGrand.Name = "lbKPIGrand";
+            this.lbKPIGrand.Size = new System.Drawing.Size(33, 20);
+            this.lbKPIGrand.TabIndex = 11;
+            this.lbKPIGrand.Text = "****";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(449, 222);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(6, 100);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 18);
+            this.label10.Size = new System.Drawing.Size(99, 20);
             this.label10.TabIndex = 9;
-            this.label10.Text = "KPI: ";
+            this.label10.Text = "KPI Grading";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lbKPIGrand);
+            this.groupBox1.Controls.Add(this.lbNumJob);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.lbAvgKPI);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(486, 124);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(261, 135);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
             // 
             // FKPI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(758, 367);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dGVCompleteWork);
             this.Name = "FKPI";
             this.Text = "KPI";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FKPI_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVCompleteWork)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,15 +170,14 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVCompleteWork;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbNumJob;
+        private System.Windows.Forms.Label lbAvgKPI;
+        private System.Windows.Forms.Label lbKPIGrand;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

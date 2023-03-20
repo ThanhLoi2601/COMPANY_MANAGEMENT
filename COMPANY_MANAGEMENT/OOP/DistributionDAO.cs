@@ -20,7 +20,7 @@ namespace COMPANY_MANAGEMENT.OOP
         }
         public DataTable LoadListJob()
         {
-            return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID NOT IN (SELECT IDJob FROM Distribution)"));
+            return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID NOT IN (SELECT IDJob FROM Distribution) AND ID like 'JOB%'"));
         }
 
         public DataTable LoadListStaff(Job jb, string IDMan)

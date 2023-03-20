@@ -172,5 +172,22 @@ namespace COMPANY_MANAGEMENT.OOP
             return null;
         }
 
+        public int Merge(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                Int32 num = (Int32)cmd.ExecuteScalar();
+                conn.Close();
+                return (int)num;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+        }
+
     }
 }

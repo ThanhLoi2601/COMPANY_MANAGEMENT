@@ -27,7 +27,7 @@ namespace COMPANY_MANAGEMENT
         }
         private void btKPI_Click(object sender, EventArgs e)
         {
-            FKPI f = new FKPI();
+            FKPI f = new FKPI(txtID.Text);
             f.ShowDialog();
         }
 
@@ -63,7 +63,7 @@ namespace COMPANY_MANAGEMENT
 
         private void btJob_Click(object sender, EventArgs e)
         {
-            FJob f = new FJob();
+            FJob f = new FJob(IDReceive);
             f.ShowDialog();
         }
         private void FManager_Load(object sender, EventArgs e)

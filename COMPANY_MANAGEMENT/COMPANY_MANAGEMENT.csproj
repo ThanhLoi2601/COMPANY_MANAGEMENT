@@ -149,10 +149,12 @@
     <Compile Include="Form\FStaff.Designer.cs">
       <DependentUpon>FStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="OOP\CompleteWorkDAO.cs" />
     <Compile Include="OOP\DBConn.cs" />
     <Compile Include="OOP\DistributionDAO.cs" />
     <Compile Include="OOP\Job.cs" />
     <Compile Include="OOP\JobDAO.cs" />
+    <Compile Include="OOP\KPI.cs" />
     <Compile Include="OOP\Leader.cs" />
     <Compile Include="OOP\LeaderDAO.cs" />
     <Compile Include="OOP\Manager.cs" />
@@ -254,6 +256,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\SQLCompleteWork.sql" />
     <Content Include="Database\SQLDistribution.sql" />
     <Content Include="Database\SQLJob.sql" />
     <Content Include="Database\SQLLeader.sql" />
