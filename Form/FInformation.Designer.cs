@@ -125,8 +125,10 @@
             // 
             // textID
             // 
+            this.textID.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textID.Location = new System.Drawing.Point(153, 43);
             this.textID.Name = "textID";
+            this.textID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textID.Size = new System.Drawing.Size(200, 22);
             this.textID.TabIndex = 28;
             this.textID.Text = "EMP12345";
@@ -203,6 +205,7 @@
             this.btUpdate.TabIndex = 43;
             this.btUpdate.Text = "UPDATE";
             this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // FInformation
             // 

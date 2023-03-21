@@ -12,51 +12,48 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FChangePassWord : Form
     {
-        string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True";
-        public FChangePassWord()
+        StaffDAO s = new StaffDAO();
+        string ID;
+        public FChangePassWord(string ID)
         {
             InitializeComponent();
+            this.ID = ID;
         }
 
-        private void btConfirm_Click(object sender, EventArgs e)
+        private void ChangePass()
         {
-            string ID = textMaDN.Text;
-            string currentPassword = textOldPass.Text;
-            string newPassword = textNewPass.Text;
-            string confirmNewPassword = textNewPassConfirm.Text;
+            Staff man = s.Search(ID);
+            Staff a = new Staff(textMaDN.Text, textNewPass.Text);
+            string currentPass = textOldPass.Text;
+            string newPass = textNewPass.Text;
+            string newPassConfirm = textNewPassConfirm.Text;
+            string ID_DN = textMaDN.Text;
 
-            if (newPassword != confirmNewPassword)
+            if(textMaDN.Text != man.ID)
+            {
+                MessageBox.Show("Mã đăng nhập không chính xác");
+            }    
+            else if(textOldPass.Text != man.Password )
+            {
+                MessageBox.Show("Mật khẩu hiện tại không đúng?");
+            }
+            else if (newPass != newPassConfirm)
             {
                 MessageBox.Show("Mật khẩu mới và mật khẩu confirm không chính xác");
                 return;
             }
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            else
             {
-                connection.Open();
-
-                string query = "SELECT Password FROM Staff WHERE ID = @ID";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ID", ID);
-                string currentPasswordInDatabase = (string)command.ExecuteScalar();
-
-                if (currentPasswordInDatabase != currentPassword)
-                {
-                    MessageBox.Show("Mật khẩu hiện tại không đúng");
-                    return;
-                }
-
-                query = "UPDATE Staff SET Password = @NewPassword WHERE ID = @ID";
-                command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@NewPassword", newPassword);
-                command.Parameters.AddWithValue("@ID", ID);
-                command.ExecuteNonQuery();
+                s.UpdatePass(a);
+                MessageBox.Show("Đối mật khẩu thành công");
+                this.Close();
             }
+            //s.UpdatePass(man);*/
+        }
 
-            MessageBox.Show("Đổi mật khẩu thành công");
-            this.Close();
+        private void btConfirm_Click(object sender, EventArgs e)
+        {
+            this.ChangePass();
         }
     }
 }
-

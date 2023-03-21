@@ -12,21 +12,23 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FStaff : Form
     {
+        string ID;
 
-        public FStaff()
+        public FStaff(string ID)
         {
             InitializeComponent();
+            this.ID = ID;
         }
 
         private void btInform_Click(object sender, EventArgs e)
         {
-            FInformation f = new FInformation();
+            FInformation f = new FInformation(ID);
             f.ShowDialog();
         }
 
         private void btChangePass_Click(object sender, EventArgs e)
         {
-            FChangePassWord f = new FChangePassWord();
+            FChangePassWord f = new FChangePassWord(ID);
             f.ShowDialog();
         }
 
@@ -38,7 +40,7 @@ namespace COMPANY_MANAGEMENT
 
         private void btLetter_Click(object sender, EventArgs e)
         {
-            FAbsenceLetter f = new FAbsenceLetter();
+            FAbsenceLetter f = new FAbsenceLetter(ID);
             f.ShowDialog();
         }
 

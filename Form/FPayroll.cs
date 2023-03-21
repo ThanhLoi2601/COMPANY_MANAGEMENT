@@ -12,9 +12,15 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FPayroll : Form
     {
+        CompleteJobDAO a = new CompleteJobDAO();
         public FPayroll()
         {
             InitializeComponent();
+        }
+
+        private void FPayroll_Load(object sender, EventArgs e)
+        {
+            dataCVHT.DataSource = a.LoadList();
         }
     }
 }

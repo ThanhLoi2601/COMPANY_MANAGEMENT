@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataCVPC = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCVPC)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataCVPC
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 426);
-            this.dataGridView1.TabIndex = 0;
+            this.dataCVPC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCVPC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataCVPC.Location = new System.Drawing.Point(0, 0);
+            this.dataCVPC.Name = "dataCVPC";
+            this.dataCVPC.RowHeadersWidth = 51;
+            this.dataCVPC.RowTemplate.Height = 24;
+            this.dataCVPC.Size = new System.Drawing.Size(506, 296);
+            this.dataCVPC.TabIndex = 0;
             // 
             // FAssignedWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(506, 296);
+            this.Controls.Add(this.dataCVPC);
             this.Name = "FAssignedWork";
             this.Text = "Assigned Work";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FAssignedWork_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataCVPC)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataCVPC;
     }
 }

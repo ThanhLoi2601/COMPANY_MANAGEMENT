@@ -13,42 +13,37 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FInformation : Form
     {
-        public FInformation()
+        StaffDAO s = new StaffDAO();
+        string ID;
+        public FInformation(string ID)
         {
             InitializeComponent();
+            this.ID = ID;
         }
 
         private void FInformation_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString);
+            this.LoadMyInfo();
+        }
 
-            string query = "SELECT * FROM Staff WHERE ID= @ID";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@ID", textID.Text);
+        private void LoadMyInfo()
+        {
+            Staff man = s.Search(ID);
+            textID.Text = man.ID;
+            textName.Text = man.Name;
+            dateOfBirth.Value = man.Birth;
+            textIDcard.Text = man.ID_Card;
+            textMail.Text = man.Email;
+            textNum.Text = man.NumPhone;
+            textPlace.Text = man.Address;
+            textManID.Text = man.ManagerId;
+            textSalary.Text = man.BasicSalary.ToString();
+        }
 
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
-            {
-                textID.Text = reader["ID"].ToString();
-                textName.Text = reader["Name"].ToString();
-                dateOfBirth.Value = (DateTime)reader["Birth"];
-                textIDcard.Text = reader["ID_Card"].ToString();
-                textMail.Text = reader["Email"].ToString();
-                textNum.Text = reader["PhoneNumber"].ToString();
-                textPlace.Text = reader["Address"].ToString();
-                textManID.Text = reader["Manager_ID"].ToString();
-                textSalary.Text = reader["Basic_salary"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Không thể load thông tin");
-            }
-
-            reader.Close();
-            connection.Close();
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            Staff a = new Staff(textName.Text, dateOfBirth.Value, textIDcard.Text, textMail.Text, textNum.Text, textPlace.Text, ID);
+            s.Update(a);
         }
     }
 }

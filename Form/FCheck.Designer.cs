@@ -32,11 +32,15 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkOUT = new System.Windows.Forms.CheckBox();
+            this.checkIN = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btConfirm = new System.Windows.Forms.Button();
+            this.cbDsCV = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textTienDo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,8 +64,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.checkOUT);
+            this.groupBox1.Controls.Add(this.checkIN);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(44, 63);
             this.groupBox1.Name = "groupBox1";
@@ -70,25 +74,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OPTION";
             // 
-            // checkBox2
+            // checkOUT
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(15, 70);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(113, 24);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "CheckOut";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkOUT.AutoSize = true;
+            this.checkOUT.Location = new System.Drawing.Point(15, 70);
+            this.checkOUT.Name = "checkOUT";
+            this.checkOUT.Size = new System.Drawing.Size(113, 24);
+            this.checkOUT.TabIndex = 9;
+            this.checkOUT.Text = "CheckOut";
+            this.checkOUT.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkIN
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 26);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(98, 24);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "CheckIn";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkIN.AutoSize = true;
+            this.checkIN.Location = new System.Drawing.Point(15, 26);
+            this.checkIN.Name = "checkIN";
+            this.checkIN.Size = new System.Drawing.Size(98, 24);
+            this.checkIN.TabIndex = 8;
+            this.checkIN.Text = "CheckIn";
+            this.checkIN.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -107,7 +111,7 @@
             // btConfirm
             // 
             this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(261, 111);
+            this.btConfirm.Location = new System.Drawing.Point(542, 222);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(125, 46);
             this.btConfirm.TabIndex = 24;
@@ -115,11 +119,50 @@
             this.btConfirm.UseVisualStyleBackColor = true;
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
+            // cbDsCV
+            // 
+            this.cbDsCV.FormattingEnabled = true;
+            this.cbDsCV.Location = new System.Drawing.Point(275, 199);
+            this.cbDsCV.Name = "cbDsCV";
+            this.cbDsCV.Size = new System.Drawing.Size(186, 24);
+            this.cbDsCV.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(55, 199);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(185, 20);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Danh sách công việc";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(55, 248);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 20);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Tiến độ công việc";
+            // 
+            // textTienDo
+            // 
+            this.textTienDo.Location = new System.Drawing.Point(275, 248);
+            this.textTienDo.Name = "textTienDo";
+            this.textTienDo.Size = new System.Drawing.Size(186, 22);
+            this.textTienDo.TabIndex = 29;
+            // 
             // FCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 184);
+            this.ClientSize = new System.Drawing.Size(699, 277);
+            this.Controls.Add(this.textTienDo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbDsCV);
             this.Controls.Add(this.btConfirm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
@@ -128,6 +171,7 @@
             this.Name = "FCheck";
             this.Text = "Check";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FCheck_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FCheck_FormClosed);
             this.Load += new System.EventHandler(this.FCheck_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -144,7 +188,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btConfirm;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkOUT;
+        private System.Windows.Forms.CheckBox checkIN;
+        private System.Windows.Forms.ComboBox cbDsCV;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textTienDo;
     }
 }

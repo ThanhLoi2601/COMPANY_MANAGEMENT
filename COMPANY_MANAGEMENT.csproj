@@ -79,6 +79,12 @@
     <Compile Include="Form\FInformation.Designer.cs">
       <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FPayroll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,7 +97,14 @@
     <Compile Include="Form\FStaff.Designer.cs">
       <DependentUpon>FStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="OOP\AbsenceLetter.cs" />
+    <Compile Include="OOP\AbsenceLetterDAO.cs" />
+    <Compile Include="OOP\AssignedWorkDAO.cs" />
+    <Compile Include="OOP\CompleteJobDAO.cs" />
     <Compile Include="OOP\DBConn.cs" />
+    <Compile Include="OOP\DistributionDAO.cs" />
+    <Compile Include="OOP\Job.cs" />
+    <Compile Include="OOP\JobDAO.cs" />
     <Compile Include="OOP\Staff.cs" />
     <Compile Include="OOP\StaffDAO.cs" />
     <Compile Include="Program.cs" />
@@ -110,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FInformation.resx">
       <DependentUpon>FInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FPayroll.resx">
       <DependentUpon>FPayroll.cs</DependentUpon>

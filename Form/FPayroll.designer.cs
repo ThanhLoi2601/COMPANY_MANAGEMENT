@@ -38,12 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataChuyenCan = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataCVHT = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataChuyenCan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCVHT)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -139,23 +139,23 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
+            this.flowLayoutPanel1.Controls.Add(this.dataChuyenCan);
             this.flowLayoutPanel1.Controls.Add(this.label6);
-            this.flowLayoutPanel1.Controls.Add(this.dataGridView2);
+            this.flowLayoutPanel1.Controls.Add(this.dataCVHT);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(631, 438);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
-            // dataGridView1
+            // dataChuyenCan
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(628, 203);
-            this.dataGridView1.TabIndex = 3;
+            this.dataChuyenCan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataChuyenCan.Location = new System.Drawing.Point(3, 28);
+            this.dataChuyenCan.Name = "dataChuyenCan";
+            this.dataChuyenCan.RowHeadersWidth = 51;
+            this.dataChuyenCan.RowTemplate.Height = 24;
+            this.dataChuyenCan.Size = new System.Drawing.Size(628, 203);
+            this.dataChuyenCan.TabIndex = 3;
             // 
             // label6
             // 
@@ -167,15 +167,15 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "DS CÔNG VIỆC ĐÃ HOÀN THÀNH";
             // 
-            // dataGridView2
+            // dataCVHT
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 262);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(628, 181);
-            this.dataGridView2.TabIndex = 5;
+            this.dataCVHT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCVHT.Location = new System.Drawing.Point(3, 262);
+            this.dataCVHT.Name = "dataCVHT";
+            this.dataCVHT.RowHeadersWidth = 51;
+            this.dataCVHT.RowTemplate.Height = 24;
+            this.dataCVHT.Size = new System.Drawing.Size(628, 181);
+            this.dataCVHT.TabIndex = 5;
             // 
             // FPayroll
             // 
@@ -193,10 +193,11 @@
             this.Controls.Add(this.label10);
             this.Name = "FPayroll";
             this.Text = "PAYROLL";
+            this.Load += new System.EventHandler(this.FPayroll_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataChuyenCan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCVHT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,8 +214,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataChuyenCan;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataCVHT;
     }
 }

@@ -13,9 +13,13 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FAbsenceLetter : Form
     {
-        public FAbsenceLetter()
+        AbsenceLetterDAO ab = new AbsenceLetterDAO();
+        StaffDAO s = new StaffDAO();
+        string ID;
+        public FAbsenceLetter(string id)
         {
             InitializeComponent();
+            this.ID = id;
         }
 
         private void btConfirm_Click(object sender, EventArgs e)
@@ -39,23 +43,23 @@ namespace COMPANY_MANAGEMENT
                 reason = textReason.Text;
             }
 
-            string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString);
+            AbsenceLetter lt = new AbsenceLetter(textID.Text, textName.Text, reason, dateStart.Value, dateEnd.Value);
 
-            string query = "INSERT INTO Absence (ID, Name, Reason, StartDate, EndDate) VALUES (@ID, @Name, @Reason, @StartDate, @EndDate)";
-            SqlCommand command = new SqlCommand(query, connection);
+            if (textID.Text != ID)
+            {
+                MessageBox.Show("Mã nhân viên không hợp lệ");
+            }
+            else
+            {
+                ab.UpdateAbsen(lt);
+                MessageBox.Show("Gửi đơn xin nghỉ thành công");
+                this.Close();
+            }
+        }
 
-            command.Parameters.AddWithValue("@ID", textID.Text);
-            command.Parameters.AddWithValue("@Name", textName.Text);
-            command.Parameters.AddWithValue("@Reason", reason);
-            command.Parameters.AddWithValue("@StartDate", dateStart.Value);
-            command.Parameters.AddWithValue("@EndDate", dateEnd.Value);
-
-            connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Gửi thư xin nghỉ thành công");
-            this.Close();
+        private void rbRea4_CheckedChanged(object sender, EventArgs e)
+        {
+            textReason.Visible = rbRea4.Checked;
         }
     }
 }

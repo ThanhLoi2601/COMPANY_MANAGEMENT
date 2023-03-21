@@ -53,3 +53,4 @@ D:\STUDY\LapTrinhTrenWin\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.
 C:\Users\PC\COMPANY_MANAGEMENT\bin\Debug\System.Data.SqlClient.dll
 C:\Users\PC\COMPANY_MANAGEMENT\bin\Debug\System.Data.SqlClient.xml
 C:\Users\PC\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.csproj.CopyComplete
+C:\Users\PC\COMPANY_MANAGEMENT\obj\Debug\COMPANY_MANAGEMENT.FLogin.resources

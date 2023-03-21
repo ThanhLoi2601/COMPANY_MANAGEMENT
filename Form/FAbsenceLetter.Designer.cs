@@ -95,11 +95,12 @@
             this.rbRea4.TabStop = true;
             this.rbRea4.Text = "Etc...";
             this.rbRea4.UseVisualStyleBackColor = true;
+            this.rbRea4.CheckedChanged += new System.EventHandler(this.rbRea4_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 28);
+            this.label1.Location = new System.Drawing.Point(65, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 5;
@@ -168,6 +169,7 @@
             this.textReason.Name = "textReason";
             this.textReason.Size = new System.Drawing.Size(200, 22);
             this.textReason.TabIndex = 15;
+            this.textReason.Visible = false;
             // 
             // btConfirm
             // 

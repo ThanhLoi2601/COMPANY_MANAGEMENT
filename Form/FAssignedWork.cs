@@ -12,9 +12,15 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FAssignedWork : Form
     {
+        AssignedWorkDAO a = new AssignedWorkDAO();
         public FAssignedWork()
         {
             InitializeComponent();
+        }
+
+        private void FAssignedWork_Load(object sender, EventArgs e)
+        {
+            dataCVPC.DataSource = a.LoadList();
         }
     }
 }
