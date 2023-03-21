@@ -18,4 +18,8 @@ INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2343','DRAW
 INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2344','DRAW','Ve so do thiet ke so do','3/16/2023','3/22/2023',50000);
 INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2344','DRAW','Ve so do thiet ke so do','2/16/2023','4/22/2023',150000);
 INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2345','DRAW','Ve so do thiet ke phan cung','2/16/2023','3/22/2023',100000);
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2346','DRAW','Ve so do thiet ke phan mem','2/16/2023','3/22/2023',200000);
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2347','CONTROL','Bao cao tinh hinh nhan vien','2/16/2023','3/22/2023',200000);
+
+
 SELECT *FROM Job WHERE ID like 'JOM%';
