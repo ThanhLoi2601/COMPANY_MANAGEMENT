@@ -6,5 +6,11 @@ namespace COMPANY_MANAGEMENT
         {
             InitializeComponent();
         }
+
+        private void btContract_Click(object sender, EventArgs e)
+        {
+            FContract contract = new FContract();
+            contract.ShowDialog();
+        }
     }
 }

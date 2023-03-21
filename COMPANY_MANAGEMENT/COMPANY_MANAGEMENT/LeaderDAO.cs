@@ -42,8 +42,7 @@ namespace COMPANY_MANAGEMENT
 
         public Leader Search(string id)
         {
-            string sqlStr = string.Format("SELECT * FROM Leader WHERE ID = '{0}';", id);
-            return dB.FindManager(sqlStr);
+            return null;
         }
     }
 }
