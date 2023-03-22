@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.grbInformationLd = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btUpdateLd = new System.Windows.Forms.Button();
+            this.btInsertLd = new System.Windows.Forms.Button();
+            this.btDeleteLd = new System.Windows.Forms.Button();
             this.txtPasswordLd = new System.Windows.Forms.TextBox();
             this.txtKPILd = new System.Windows.Forms.TextBox();
             this.txtBasicSalaryLd = new System.Windows.Forms.TextBox();
@@ -52,18 +56,14 @@
             this.btDistributionLd = new System.Windows.Forms.Button();
             this.btSalaryDetailsLd = new System.Windows.Forms.Button();
             this.btKPIDetailsLd = new System.Windows.Forms.Button();
-            this.btCheckInOutLd = new System.Windows.Forms.Button();
+            this.btContract = new System.Windows.Forms.Button();
             this.btAbsenceLetterLd = new System.Windows.Forms.Button();
             this.btListManagerLd = new System.Windows.Forms.Button();
             this.btListStaffLd = new System.Windows.Forms.Button();
-            this.btDeleteLd = new System.Windows.Forms.Button();
-            this.btInsertLd = new System.Windows.Forms.Button();
-            this.btUpdateLd = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.grbInformationLd.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvLeader)).BeginInit();
             this.grbOptionLd.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbInformationLd
@@ -95,9 +95,49 @@
             this.grbInformationLd.TabStop = false;
             this.grbInformationLd.Text = "INFORMATION";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btUpdateLd);
+            this.flowLayoutPanel1.Controls.Add(this.btInsertLd);
+            this.flowLayoutPanel1.Controls.Add(this.btDeleteLd);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 460);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(395, 57);
+            this.flowLayoutPanel1.TabIndex = 18;
+            // 
+            // btUpdateLd
+            // 
+            this.btUpdateLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btUpdateLd.Location = new System.Drawing.Point(3, 3);
+            this.btUpdateLd.Name = "btUpdateLd";
+            this.btUpdateLd.Size = new System.Drawing.Size(125, 48);
+            this.btUpdateLd.TabIndex = 0;
+            this.btUpdateLd.Text = "Update";
+            this.btUpdateLd.UseVisualStyleBackColor = true;
+            // 
+            // btInsertLd
+            // 
+            this.btInsertLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btInsertLd.Location = new System.Drawing.Point(134, 3);
+            this.btInsertLd.Name = "btInsertLd";
+            this.btInsertLd.Size = new System.Drawing.Size(125, 48);
+            this.btInsertLd.TabIndex = 1;
+            this.btInsertLd.Text = "Insert";
+            this.btInsertLd.UseVisualStyleBackColor = true;
+            // 
+            // btDeleteLd
+            // 
+            this.btDeleteLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btDeleteLd.Location = new System.Drawing.Point(265, 3);
+            this.btDeleteLd.Name = "btDeleteLd";
+            this.btDeleteLd.Size = new System.Drawing.Size(125, 48);
+            this.btDeleteLd.TabIndex = 2;
+            this.btDeleteLd.Text = "Delete";
+            this.btDeleteLd.UseVisualStyleBackColor = true;
+            // 
             // txtPasswordLd
             // 
-            this.txtPasswordLd.Location = new System.Drawing.Point(102, 431);
+            this.txtPasswordLd.Location = new System.Drawing.Point(102, 424);
             this.txtPasswordLd.Name = "txtPasswordLd";
             this.txtPasswordLd.Size = new System.Drawing.Size(250, 30);
             this.txtPasswordLd.TabIndex = 17;
@@ -163,7 +203,7 @@
             // 
             this.lbPasswordLd.AutoSize = true;
             this.lbPasswordLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPasswordLd.Location = new System.Drawing.Point(3, 439);
+            this.lbPasswordLd.Location = new System.Drawing.Point(3, 432);
             this.lbPasswordLd.Name = "lbPasswordLd";
             this.lbPasswordLd.Size = new System.Drawing.Size(75, 18);
             this.lbPasswordLd.TabIndex = 8;
@@ -256,7 +296,7 @@
             this.gvLeader.Name = "gvLeader";
             this.gvLeader.RowHeadersWidth = 51;
             this.gvLeader.RowTemplate.Height = 29;
-            this.gvLeader.Size = new System.Drawing.Size(530, 517);
+            this.gvLeader.Size = new System.Drawing.Size(752, 517);
             this.gvLeader.TabIndex = 1;
             // 
             // grbOptionLd
@@ -264,12 +304,12 @@
             this.grbOptionLd.Controls.Add(this.btDistributionLd);
             this.grbOptionLd.Controls.Add(this.btSalaryDetailsLd);
             this.grbOptionLd.Controls.Add(this.btKPIDetailsLd);
-            this.grbOptionLd.Controls.Add(this.btCheckInOutLd);
+            this.grbOptionLd.Controls.Add(this.btContract);
             this.grbOptionLd.Controls.Add(this.btAbsenceLetterLd);
             this.grbOptionLd.Controls.Add(this.btListManagerLd);
             this.grbOptionLd.Controls.Add(this.btListStaffLd);
             this.grbOptionLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grbOptionLd.Location = new System.Drawing.Point(950, 1);
+            this.grbOptionLd.Location = new System.Drawing.Point(1172, 1);
             this.grbOptionLd.Name = "grbOptionLd";
             this.grbOptionLd.Size = new System.Drawing.Size(148, 517);
             this.grbOptionLd.TabIndex = 2;
@@ -306,15 +346,16 @@
             this.btKPIDetailsLd.Text = "KPI Details";
             this.btKPIDetailsLd.UseVisualStyleBackColor = true;
             // 
-            // btCheckInOutLd
+            // btContract
             // 
-            this.btCheckInOutLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btCheckInOutLd.Location = new System.Drawing.Point(0, 241);
-            this.btCheckInOutLd.Name = "btCheckInOutLd";
-            this.btCheckInOutLd.Size = new System.Drawing.Size(142, 48);
-            this.btCheckInOutLd.TabIndex = 6;
-            this.btCheckInOutLd.Text = "Check In/Out";
-            this.btCheckInOutLd.UseVisualStyleBackColor = true;
+            this.btContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btContract.Location = new System.Drawing.Point(0, 241);
+            this.btContract.Name = "btContract";
+            this.btContract.Size = new System.Drawing.Size(142, 48);
+            this.btContract.TabIndex = 6;
+            this.btContract.Text = "Contract";
+            this.btContract.UseVisualStyleBackColor = true;
+            this.btContract.Click += new System.EventHandler(this.btContract_Click);
             // 
             // btAbsenceLetterLd
             // 
@@ -346,51 +387,11 @@
             this.btListStaffLd.Text = "List Staff";
             this.btListStaffLd.UseVisualStyleBackColor = true;
             // 
-            // btDeleteLd
-            // 
-            this.btDeleteLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btDeleteLd.Location = new System.Drawing.Point(265, 3);
-            this.btDeleteLd.Name = "btDeleteLd";
-            this.btDeleteLd.Size = new System.Drawing.Size(125, 48);
-            this.btDeleteLd.TabIndex = 2;
-            this.btDeleteLd.Text = "Delete";
-            this.btDeleteLd.UseVisualStyleBackColor = true;
-            // 
-            // btInsertLd
-            // 
-            this.btInsertLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btInsertLd.Location = new System.Drawing.Point(134, 3);
-            this.btInsertLd.Name = "btInsertLd";
-            this.btInsertLd.Size = new System.Drawing.Size(125, 48);
-            this.btInsertLd.TabIndex = 1;
-            this.btInsertLd.Text = "Insert";
-            this.btInsertLd.UseVisualStyleBackColor = true;
-            // 
-            // btUpdateLd
-            // 
-            this.btUpdateLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateLd.Location = new System.Drawing.Point(3, 3);
-            this.btUpdateLd.Name = "btUpdateLd";
-            this.btUpdateLd.Size = new System.Drawing.Size(125, 48);
-            this.btUpdateLd.TabIndex = 0;
-            this.btUpdateLd.Text = "Update";
-            this.btUpdateLd.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btUpdateLd);
-            this.flowLayoutPanel1.Controls.Add(this.btInsertLd);
-            this.flowLayoutPanel1.Controls.Add(this.btDeleteLd);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 460);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(401, 57);
-            this.flowLayoutPanel1.TabIndex = 18;
-            // 
             // FLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 520);
+            this.ClientSize = new System.Drawing.Size(1324, 520);
             this.Controls.Add(this.grbOptionLd);
             this.Controls.Add(this.gvLeader);
             this.Controls.Add(this.grbInformationLd);
@@ -398,9 +399,9 @@
             this.Text = "FLeader";
             this.grbInformationLd.ResumeLayout(false);
             this.grbInformationLd.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvLeader)).EndInit();
             this.grbOptionLd.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -431,7 +432,7 @@
         private Button btDistributionLd;
         private Button btSalaryDetailsLd;
         private Button btKPIDetailsLd;
-        private Button btCheckInOutLd;
+        private Button btContract;
         private Button btAbsenceLetterLd;
         private Button btListManagerLd;
         private Button btListStaffLd;
