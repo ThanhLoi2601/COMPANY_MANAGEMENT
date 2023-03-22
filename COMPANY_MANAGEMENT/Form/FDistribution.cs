@@ -18,6 +18,7 @@ namespace COMPANY_MANAGEMENT
         JobDAO jobDAO = new JobDAO();
         StaffDAO staDAO = new StaffDAO();
         DistributionDAO disDAO = new DistributionDAO();
+        ProcessJobDAO procDAO = new ProcessJobDAO();
 
         public FDistribution(string ID)
         {
@@ -32,6 +33,7 @@ namespace COMPANY_MANAGEMENT
         private void FDistribution_Load(object sender, EventArgs e)
         {
             dGVJob.DataSource = disDAO.LoadListJob();
+            dGVDistribution.DataSource = disDAO.LoadListDis();
         }
 
         private void dGVJob_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -52,6 +54,9 @@ namespace COMPANY_MANAGEMENT
         {
             disDAO.Insert(txtIDJob.Text, txtIDStaff.Text);
             dGVJob.DataSource = disDAO.LoadListJob();
+            Job jb = jobDAO.Search(txtIDJob.Text);
+            procDAO.Insert(jb);
+            dGVDistribution.DataSource = disDAO.LoadListDis();
         }
 
         private void txtIDJob_TextChanged(object sender, EventArgs e)
@@ -65,5 +70,19 @@ namespace COMPANY_MANAGEMENT
             dGVStaff.DataSource = disDAO.LoadListStaff(jb, IDReceive);
         }
 
+        private void dGVDistribution_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = this.dGVDistribution.CurrentCell.RowIndex;
+            lbIDJob.DataBindings.Clear();
+            lbIDJob.Text = dGVDistribution.Rows[r].Cells[0].Value.ToString();
+            lbIDStaff.DataBindings.Clear();
+            lbIDStaff.Text = dGVDistribution.Rows[r].Cells[1].Value.ToString();
+            Job jb = jobDAO.Search(lbIDJob.Text);
+            Staff sta = staDAO.Search(lbIDStaff.Text);
+            lbNameJob.Text = jb.Name;
+            lbNameStaff.Text = sta.Name;
+            lbProcess.DataBindings.Clear();
+            lbProcess.Text = (double.Parse(dGVDistribution.Rows[r].Cells[4].Value.ToString())*100).ToString();
+        }
     }
 }

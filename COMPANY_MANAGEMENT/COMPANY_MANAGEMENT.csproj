@@ -71,6 +71,12 @@
     <Compile Include="Form\FChangePassWord.Designer.cs">
       <DependentUpon>FChangePassWord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FContract.designer.cs">
+      <DependentUpon>FContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,8 @@
     <Compile Include="OOP\LeaderDAO.cs" />
     <Compile Include="OOP\Manager.cs" />
     <Compile Include="OOP\ManagerDAO.cs" />
+    <Compile Include="OOP\ProcessJob.cs" />
+    <Compile Include="OOP\ProcessJobDAO.cs" />
     <Compile Include="OOP\Staff.cs" />
     <Compile Include="OOP\StaffDAO.cs" />
     <Compile Include="Program.cs" />
@@ -180,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FCheck.resx">
       <DependentUpon>FCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FContract.resx">
+      <DependentUpon>FContract.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FDistribution.resx">
       <DependentUpon>FDistribution.cs</DependentUpon>
@@ -256,8 +267,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\ComJobSQL.sql" />
     <Content Include="Database\SQLCompleteWork.sql" />
+    <Content Include="Database\SQLContract.sql" />
+    <Content Include="Database\SQLCustomer.sql" />
     <Content Include="Database\SQLDistribution.sql" />
+    <Content Include="Database\SQLProcessJob.sql" />
     <Content Include="Database\SQLJob.sql" />
     <Content Include="Database\SQLLeader.sql" />
     <Content Include="Database\SQLManager.sql" />

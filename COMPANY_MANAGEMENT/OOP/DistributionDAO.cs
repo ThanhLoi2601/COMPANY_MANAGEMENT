@@ -33,5 +33,10 @@ namespace COMPANY_MANAGEMENT.OOP
             return dB.LoadList(string.Format("SELECT * FROM Staff WHERE (ID NOT IN (SELECT IDStaff FROM Distribution) " +
                  "OR ID NOT IN ({0}) ) AND Manager_ID = '{1}'", str, IDMan));
         }
+
+        public DataTable LoadListDis()
+        {
+            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process  FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob;"));
+        }
     }
 }

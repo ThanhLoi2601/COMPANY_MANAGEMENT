@@ -78,6 +78,39 @@ namespace COMPANY_MANAGEMENT.OOP
             return false;
         }
 
+        public Staff FindStaff(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string id = reader.GetString(0);
+                    string name = reader.GetString(1);
+                    DateTime birth = reader.GetDateTime(2);
+                    string id_card = reader.GetString(3);
+                    string email = reader.GetString(4);
+                    string address = reader.GetString(5);
+                    string id_man = reader.GetString(6);
+                    int bSalary = reader.GetInt32(7);
+                    string pass = reader.GetString(8);
+                    return new Staff(id, name, birth, id_card, email, address, id_man ,bSalary, pass);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
         public Manager FindManager(string sqlStr)
         {
             try
@@ -158,6 +191,33 @@ namespace COMPANY_MANAGEMENT.OOP
                     DateTime dateend = reader.GetDateTime(4);
                     int bonus = reader.GetInt32(5);
                     return new Job(id, name, content, datestart, dateend, bonus);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
+        public ProcessJob FindProcessJob(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string id = reader.GetString(0);
+                    string content = reader.GetString(1);
+                    double proc = reader.GetDouble(2);
+                    return new ProcessJob(id, content, proc);
                 }
             }
             catch (Exception ex)

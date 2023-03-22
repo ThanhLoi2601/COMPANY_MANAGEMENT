@@ -41,6 +41,12 @@ namespace COMPANY_MANAGEMENT
         {
             return dB.LoadList(string.Format("SELECT *FROM Staff WHERE Manager_ID = '{0}'",IDMan));
         }
+
+        public Staff Search(string id)
+        {
+            string sqlStr = string.Format("SELECT * FROM Staff WHERE ID = '{0}';", id);
+            return dB.FindStaff(sqlStr);
+        }
     }
 }
 
