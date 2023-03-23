@@ -18,6 +18,13 @@ namespace COMPANY_MANAGEMENT.OOP
             string sqlStr = string.Format("INSERT INTO Distribution(IDJob,IDStaff) values ('{0}','{1}')", IDjob,IDstaff);
             dB.Executive(sqlStr);
         }
+
+        public void Delete(string IDjob, string IDstaff)
+        {
+            string sqlStr = string.Format("DELETE FROM Distribution WHERE IDJob = '{0}' and IDStaff = '{1}' ", IDjob, IDstaff);
+            dB.Executive(sqlStr);
+        }
+
         public DataTable LoadListJob()
         {
             return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID NOT IN (SELECT IDJob FROM Distribution) AND ID like 'JOB%'"));

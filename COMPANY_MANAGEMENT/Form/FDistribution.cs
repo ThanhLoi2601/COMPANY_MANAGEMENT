@@ -32,6 +32,11 @@ namespace COMPANY_MANAGEMENT
 
         private void FDistribution_Load(object sender, EventArgs e)
         {
+            Load_Dis_Job();
+        }
+
+        private void Load_Dis_Job()
+        {
             dGVJob.DataSource = disDAO.LoadListJob();
             dGVDistribution.DataSource = disDAO.LoadListDis();
         }
@@ -54,8 +59,11 @@ namespace COMPANY_MANAGEMENT
         {
             disDAO.Insert(txtIDJob.Text, txtIDStaff.Text);
             dGVJob.DataSource = disDAO.LoadListJob();
-            Job jb = jobDAO.Search(txtIDJob.Text);
-            procDAO.Insert(jb);
+            if (procDAO.Search(txtIDJob.Text) == null)
+            {
+                Job jb = jobDAO.Search(txtIDJob.Text);
+                procDAO.Insert(jb);
+            }
             dGVDistribution.DataSource = disDAO.LoadListDis();
         }
 
@@ -83,6 +91,12 @@ namespace COMPANY_MANAGEMENT
             lbNameStaff.Text = sta.Name;
             lbProcess.DataBindings.Clear();
             lbProcess.Text = (double.Parse(dGVDistribution.Rows[r].Cells[4].Value.ToString())*100).ToString();
+        }
+
+        private void btRemove_Click(object sender, EventArgs e)
+        {
+            disDAO.Delete(lbIDJob.Text,lbIDStaff.Text);
+            Load_Dis_Job();
         }
     }
 }

@@ -45,7 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbProcess = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btRemove = new System.Windows.Forms.Button();
             this.lbNameStaff = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbNameJob = new System.Windows.Forms.Label();
@@ -194,7 +194,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.lbProcess);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btRemove);
             this.groupBox3.Controls.Add(this.lbNameStaff);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.lbNameJob);
@@ -240,17 +240,18 @@
             this.label14.TabIndex = 20;
             this.label14.Text = "Work completed :";
             // 
-            // button1
+            // btRemove
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(947, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 58);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "REMOVE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btRemove.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRemove.Location = new System.Drawing.Point(947, 136);
+            this.btRemove.Name = "btRemove";
+            this.btRemove.Size = new System.Drawing.Size(153, 58);
+            this.btRemove.TabIndex = 19;
+            this.btRemove.Text = "REMOVE";
+            this.btRemove.UseVisualStyleBackColor = false;
+            this.btRemove.Click += new System.EventHandler(this.btRemove_Click);
             // 
             // lbNameStaff
             // 
@@ -400,7 +401,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbProcess;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btRemove;
         private System.Windows.Forms.Label label7;
     }
 }
