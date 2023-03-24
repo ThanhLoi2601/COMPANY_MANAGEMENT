@@ -16,6 +16,7 @@ namespace COMPANY_MANAGEMENT
         string IDReceive;
         ManagerDAO manDAO =new ManagerDAO();
         StaffDAO staDAO = new StaffDAO();
+        KPI kpi = new KPI();
         public FManager(string ID)
         {
             InitializeComponent();
@@ -152,6 +153,12 @@ namespace COMPANY_MANAGEMENT
             txtBasicSalary.Text = dGVStaff.Rows[r].Cells[7].Value.ToString();
             txtPass.DataBindings.Clear();
             txtPass.Text = dGVStaff.Rows[r].Cells[8].Value.ToString();
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            txtKPI.DataBindings.Clear();
+            txtKPI.Text = kpi.CalKPIAvg(txtID.Text).ToString();
         }
     }
 }

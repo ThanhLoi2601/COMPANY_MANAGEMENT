@@ -180,6 +180,7 @@
             // 
             // txtKPI
             // 
+            this.txtKPI.Enabled = false;
             this.txtKPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKPI.Location = new System.Drawing.Point(100, 375);
             this.txtKPI.Name = "txtKPI";
@@ -311,6 +312,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(238, 24);
             this.txtID.TabIndex = 1;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // labHoTen
             // 

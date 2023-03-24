@@ -8,6 +8,8 @@ namespace COMPANY_MANAGEMENT.OOP
 {
     class KPI
     {
+        CompleteWorkDAO cmpWDAO = new CompleteWorkDAO();
+
         private int BasicSalary;
         private Job jb = new Job();
         private DateTime dateStart;
@@ -37,6 +39,15 @@ namespace COMPANY_MANAGEMENT.OOP
         public int CalKPI() // KPI của 1 công việc
         {
             return (int)Math.Round((this.jb.Bonus + this.BasicSalary) / this.TimeComplete());
+        }
+
+        public double CalKPIAvg(string IDUser)
+        {
+            double count = cmpWDAO.CountWork(IDUser);
+            double avg = 0;
+            if (count != 0)
+                avg = (double)cmpWDAO.SumKPI(IDUser) / count;
+            return avg;
         }
     }
 }
