@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FManager));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.grInfo = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
@@ -51,7 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.labHoTen = new System.Windows.Forms.Label();
+            this.labID = new System.Windows.Forms.Label();
             this.dGVStaff = new System.Windows.Forms.DataGridView();
             this.grOption = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -72,17 +73,22 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Info;
+            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel1.Controls.Add(this.grInfo);
             this.flowLayoutPanel1.Controls.Add(this.dGVStaff);
             this.flowLayoutPanel1.Controls.Add(this.grOption);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1471, 517);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1466, 517);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // grInfo
             // 
+            this.grInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grInfo.BackgroundImage")));
+            this.grInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grInfo.Controls.Add(this.flowLayoutPanel3);
             this.grInfo.Controls.Add(this.txtPass);
             this.grInfo.Controls.Add(this.label8);
@@ -101,7 +107,7 @@
             this.grInfo.Controls.Add(this.label2);
             this.grInfo.Controls.Add(this.label1);
             this.grInfo.Controls.Add(this.txtID);
-            this.grInfo.Controls.Add(this.labHoTen);
+            this.grInfo.Controls.Add(this.labID);
             this.grInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grInfo.Location = new System.Drawing.Point(3, 3);
             this.grInfo.Name = "grInfo";
@@ -122,7 +128,7 @@
             // 
             // btUpdate
             // 
-            this.btUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btUpdate.BackColor = System.Drawing.Color.LightCyan;
             this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUpdate.Location = new System.Drawing.Point(3, 3);
@@ -135,7 +141,7 @@
             // 
             // btInsert
             // 
-            this.btInsert.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btInsert.BackColor = System.Drawing.Color.LightCyan;
             this.btInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btInsert.Location = new System.Drawing.Point(137, 3);
@@ -148,7 +154,7 @@
             // 
             // btDelete
             // 
-            this.btDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btDelete.BackColor = System.Drawing.Color.LightCyan;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDelete.Location = new System.Drawing.Point(270, 3);
@@ -171,6 +177,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Info;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(6, 418);
             this.label8.Name = "label8";
@@ -190,6 +197,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Info;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(6, 375);
             this.label7.Name = "label7";
@@ -216,6 +224,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Info;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 331);
             this.label6.Name = "label6";
@@ -226,6 +235,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Info;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 283);
             this.label5.Name = "label5";
@@ -244,6 +254,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Info;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 178);
             this.label4.Name = "label4";
@@ -262,6 +273,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Info;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 235);
             this.label3.Name = "label3";
@@ -288,6 +300,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Info;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 87);
             this.label2.Name = "label2";
@@ -298,6 +311,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Info;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 135);
             this.label1.Name = "label1";
@@ -314,18 +328,20 @@
             this.txtID.TabIndex = 1;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
-            // labHoTen
+            // labID
             // 
-            this.labHoTen.AutoSize = true;
-            this.labHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labHoTen.Location = new System.Drawing.Point(6, 39);
-            this.labHoTen.Name = "labHoTen";
-            this.labHoTen.Size = new System.Drawing.Size(22, 18);
-            this.labHoTen.TabIndex = 0;
-            this.labHoTen.Text = "ID";
+            this.labID.AutoSize = true;
+            this.labID.BackColor = System.Drawing.SystemColors.Info;
+            this.labID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labID.Location = new System.Drawing.Point(6, 39);
+            this.labID.Name = "labID";
+            this.labID.Size = new System.Drawing.Size(22, 18);
+            this.labID.TabIndex = 0;
+            this.labID.Text = "ID";
             // 
             // dGVStaff
             // 
+            this.dGVStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dGVStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVStaff.Location = new System.Drawing.Point(421, 3);
             this.dGVStaff.Name = "dGVStaff";
@@ -337,6 +353,8 @@
             // 
             // grOption
             // 
+            this.grOption.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grOption.BackColor = System.Drawing.Color.LightSkyBlue;
             this.grOption.Controls.Add(this.flowLayoutPanel2);
             this.grOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grOption.Location = new System.Drawing.Point(1276, 3);
@@ -455,8 +473,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1471, 517);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FManager";
             this.Text = "MANAGER";
             this.Load += new System.EventHandler(this.FManager_Load);
@@ -479,7 +500,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label labHoTen;
+        private System.Windows.Forms.Label labID;
         private System.Windows.Forms.DataGridView dGVStaff;
         private System.Windows.Forms.GroupBox grOption;
         private System.Windows.Forms.TextBox txtPass;

@@ -277,6 +277,10 @@
     <Content Include="Database\SQLLeader.sql" />
     <Content Include="Database\SQLManager.sql" />
     <Content Include="Database\StaffDB.sql" />
+    <Content Include="Inco_img\Aha-Soft-Security-Secrecy.ico" />
+    <Content Include="Inco_img\BackgrInfo1.jpg" />
+    <Content Include="Inco_img\backgrLogin.jpg" />
+    <Content Include="Inco_img\Icons8-Windows-8-Users-Administrator.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLogin));
             this.rbStaff = new System.Windows.Forms.RadioButton();
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.rbLeader = new System.Windows.Forms.RadioButton();
@@ -81,19 +82,27 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.SpringGreen;
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.Controls.Add(this.rbStaff);
             this.groupBox1.Controls.Add(this.rbLeader);
             this.groupBox1.Controls.Add(this.rbManager);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(20, 29);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(380, 56);
+            this.groupBox1.Size = new System.Drawing.Size(409, 56);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "USER";
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
+            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.cbHienMK);
             this.groupBox2.Controls.Add(this.btDNhap);
             this.groupBox2.Controls.Add(this.txtMK);
@@ -104,27 +113,30 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(543, 256);
+            this.groupBox2.Size = new System.Drawing.Size(553, 256);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ĐĂNG NHẬP";
             // 
             // cbHienMK
             // 
+            this.cbHienMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbHienMK.AutoSize = true;
+            this.cbHienMK.BackColor = System.Drawing.Color.Aqua;
             this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHienMK.Location = new System.Drawing.Point(168, 206);
             this.cbHienMK.Name = "cbHienMK";
             this.cbHienMK.Size = new System.Drawing.Size(125, 22);
             this.cbHienMK.TabIndex = 10;
             this.cbHienMK.Text = "Hiện mật khẩu";
-            this.cbHienMK.UseVisualStyleBackColor = true;
+            this.cbHienMK.UseVisualStyleBackColor = false;
             this.cbHienMK.CheckedChanged += new System.EventHandler(this.cbHienMK_TextChanged);
             this.cbHienMK.TextChanged += new System.EventHandler(this.cbHienMK_TextChanged);
             // 
             // btDNhap
             // 
-            this.btDNhap.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btDNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btDNhap.BackColor = System.Drawing.Color.NavajoWhite;
             this.btDNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDNhap.Location = new System.Drawing.Point(349, 197);
@@ -137,6 +149,7 @@
             // 
             // txtMK
             // 
+            this.txtMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.Location = new System.Drawing.Point(168, 153);
             this.txtMK.Name = "txtMK";
@@ -147,7 +160,9 @@
             // 
             // labMK
             // 
+            this.labMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labMK.AutoSize = true;
+            this.labMK.BackColor = System.Drawing.Color.Aqua;
             this.labMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labMK.Location = new System.Drawing.Point(16, 160);
             this.labMK.Name = "labMK";
@@ -157,6 +172,7 @@
             // 
             // txtMaDN
             // 
+            this.txtMaDN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDN.Location = new System.Drawing.Point(168, 96);
             this.txtMaDN.Name = "txtMaDN";
@@ -166,7 +182,9 @@
             // 
             // labMaDN
             // 
+            this.labMaDN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labMaDN.AutoSize = true;
+            this.labMaDN.BackColor = System.Drawing.Color.Aqua;
             this.labMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labMaDN.Location = new System.Drawing.Point(16, 103);
             this.labMaDN.Name = "labMaDN";
@@ -178,8 +196,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(558, 262);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FLogin";
             this.Text = "LOG IN";
             this.groupBox1.ResumeLayout(false);
