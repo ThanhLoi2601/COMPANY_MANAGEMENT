@@ -53,6 +53,7 @@
             this.lbIDLd = new System.Windows.Forms.Label();
             this.gvLeader = new System.Windows.Forms.DataGridView();
             this.grbOptionLd = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btDistributionLd = new System.Windows.Forms.Button();
             this.btSalaryDetailsLd = new System.Windows.Forms.Button();
             this.btKPIDetailsLd = new System.Windows.Forms.Button();
@@ -198,6 +199,7 @@
             this.dtpkDateOfBirthLd.Name = "dtpkDateOfBirthLd";
             this.dtpkDateOfBirthLd.Size = new System.Drawing.Size(250, 24);
             this.dtpkDateOfBirthLd.TabIndex = 9;
+            this.dtpkDateOfBirthLd.Value = new System.DateTime(2023, 3, 22, 8, 52, 31, 0);
             // 
             // lbPasswordLd
             // 
@@ -301,6 +303,7 @@
             // 
             // grbOptionLd
             // 
+            this.grbOptionLd.Controls.Add(this.button1);
             this.grbOptionLd.Controls.Add(this.btDistributionLd);
             this.grbOptionLd.Controls.Add(this.btSalaryDetailsLd);
             this.grbOptionLd.Controls.Add(this.btKPIDetailsLd);
@@ -316,10 +319,21 @@
             this.grbOptionLd.TabStop = false;
             this.grbOptionLd.Text = "Option";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(0, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 49);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Project";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btDistributionLd
             // 
             this.btDistributionLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btDistributionLd.Location = new System.Drawing.Point(0, 449);
+            this.btDistributionLd.Location = new System.Drawing.Point(0, 376);
             this.btDistributionLd.Name = "btDistributionLd";
             this.btDistributionLd.Size = new System.Drawing.Size(142, 49);
             this.btDistributionLd.TabIndex = 9;
@@ -329,7 +343,7 @@
             // btSalaryDetailsLd
             // 
             this.btSalaryDetailsLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btSalaryDetailsLd.Location = new System.Drawing.Point(0, 378);
+            this.btSalaryDetailsLd.Location = new System.Drawing.Point(-2, 314);
             this.btSalaryDetailsLd.Name = "btSalaryDetailsLd";
             this.btSalaryDetailsLd.Size = new System.Drawing.Size(142, 56);
             this.btSalaryDetailsLd.TabIndex = 8;
@@ -339,7 +353,7 @@
             // btKPIDetailsLd
             // 
             this.btKPIDetailsLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btKPIDetailsLd.Location = new System.Drawing.Point(0, 306);
+            this.btKPIDetailsLd.Location = new System.Drawing.Point(0, 257);
             this.btKPIDetailsLd.Name = "btKPIDetailsLd";
             this.btKPIDetailsLd.Size = new System.Drawing.Size(142, 51);
             this.btKPIDetailsLd.TabIndex = 7;
@@ -349,7 +363,7 @@
             // btContract
             // 
             this.btContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btContract.Location = new System.Drawing.Point(0, 241);
+            this.btContract.Location = new System.Drawing.Point(0, 203);
             this.btContract.Name = "btContract";
             this.btContract.Size = new System.Drawing.Size(142, 48);
             this.btContract.TabIndex = 6;
@@ -360,7 +374,7 @@
             // btAbsenceLetterLd
             // 
             this.btAbsenceLetterLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btAbsenceLetterLd.Location = new System.Drawing.Point(0, 174);
+            this.btAbsenceLetterLd.Location = new System.Drawing.Point(-2, 146);
             this.btAbsenceLetterLd.Name = "btAbsenceLetterLd";
             this.btAbsenceLetterLd.Size = new System.Drawing.Size(142, 51);
             this.btAbsenceLetterLd.TabIndex = 5;
@@ -370,7 +384,7 @@
             // btListManagerLd
             // 
             this.btListManagerLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btListManagerLd.Location = new System.Drawing.Point(0, 108);
+            this.btListManagerLd.Location = new System.Drawing.Point(0, 85);
             this.btListManagerLd.Name = "btListManagerLd";
             this.btListManagerLd.Size = new System.Drawing.Size(142, 55);
             this.btListManagerLd.TabIndex = 4;
@@ -380,7 +394,7 @@
             // btListStaffLd
             // 
             this.btListStaffLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btListStaffLd.Location = new System.Drawing.Point(0, 43);
+            this.btListStaffLd.Location = new System.Drawing.Point(0, 29);
             this.btListStaffLd.Name = "btListStaffLd";
             this.btListStaffLd.Size = new System.Drawing.Size(142, 50);
             this.btListStaffLd.TabIndex = 3;
@@ -440,5 +454,6 @@
         private Button btInsertLd;
         private Button btUpdateLd;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button button1;
     }
 }

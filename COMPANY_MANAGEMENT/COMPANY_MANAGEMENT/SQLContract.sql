@@ -9,6 +9,7 @@ create table HopDong (
     NoiDung varchar(1500),
     MaNV varchar(10) foreign key references Staff(ID),
     MaKH varchar(10)  foreign key references Customer(MaKH),
+    TrangThai varchar(50)
 )
 
 INSERT INTO HopDong (MaHD, TenHD, NgayKy, NgayCoHieuLuc, NgayHetHan, GiaTri, NoiDung, MaNV, MaKH)
@@ -26,7 +27,7 @@ VALUES ('HD002', 'Hợp đồng cung cấp vật tư', '2022-02-01', '2022-02-05
 --  UPDATE HopDong
 --  SET TrangThai = 
 --      CASE 
---          WHEN NgayHetHan < GETDATE() THEN 'Da het han'
+--          WHEN NgayHetHan > NgayCoHieuLuc THEN 'Da het han'
 --          ELSE 'Dang co hieu luc'
 --      END
 --  FROM HopDong
