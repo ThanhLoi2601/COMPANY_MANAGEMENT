@@ -13,7 +13,6 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FCheck : Form
     {
-        //private bool MyCheckboxChecked;
         public FCheck()
         {
             InitializeComponent();
@@ -26,23 +25,12 @@ namespace COMPANY_MANAGEMENT
 
         private void FCheck_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             timer1.Start();
-            
-            checkIN.Checked = Properties.Settings.Default.checkbox;
-            checkOUT.Checked = Properties.Settings.Default.checkbox;
-
-            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True");
-            connection.Open();
-            string query = "SELECT Job.Content FROM Job INNER JOIN Distribution ON Job.ID = Distribution.IDJob WHERE Distribution.IDStaff = 'EMP12345'";
-            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                cbDsCV.Items.Add(row["Content"].ToString());
-            }
-
+            //checkIN.Checked = Properties.Settings.Default.checkbox;
+            //checkOUT.Checked = Properties.Settings.Default.checkbox;
+            //textTienDo.Text = Properties.Settings.Default.textbox;
+            LoadCongViec();
         }
 
         private void FCheck_FormClosing(object sender, FormClosingEventArgs e)
@@ -106,6 +94,10 @@ namespace COMPANY_MANAGEMENT
             {
                 MessageBox.Show("Vui lòng check");
             }
+            else if(dateTimeCheck.Value != DateTime.Now)
+            {
+                MessageBox.Show("Không thể check khác ngày");
+            }    
             else
             {
                 MessageBox.Show("Check thành công");
@@ -114,9 +106,10 @@ namespace COMPANY_MANAGEMENT
 
         private void FCheck_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Properties.Settings.Default.checkbox = checkIN.Checked;
+            /*Properties.Settings.Default.checkbox = checkIN.Checked;
             Properties.Settings.Default.checkbox = checkOUT.Checked;
-            Properties.Settings.Default.Save();
+            Properties.Settings.Default.textbox = textTienDo.Text;           
+            Properties.Settings.Default.Save();*/
         }
 
         /*/private void checkIN_CheckedChanged(object sender, EventArgs e)
@@ -142,5 +135,21 @@ namespace COMPANY_MANAGEMENT
                 checkOUT.CheckState = CheckState.Checked;
             }
         }*/
+
+        public void LoadCongViec()
+        {
+            string ID = "Content";
+            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True");
+            connection.Open();
+            string query = "SELECT Job.Content FROM Job INNER JOIN Distribution ON Job.ID = Distribution.IDJob WHERE Distribution.IDStaff = 'EMP12345'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                cbDsCV.Items.Add(row[ID].ToString());
+            }
+        }
     }
 }

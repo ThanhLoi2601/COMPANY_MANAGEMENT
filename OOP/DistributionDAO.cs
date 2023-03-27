@@ -16,7 +16,7 @@ namespace COMPANY_MANAGEMENT
 
         public void LoadListJob(string id)
         {
-            string sqlStr = string.Format("SELECT Job.Name FROM Job INNER JOIN Distribution ON Job.ID = Distribution.IDJob WHERE Distribution.IDStaff = '{0}'",id);
+            string sqlStr = string.Format("SELECT Job.Name FROM Job INNER JOIN Distribution ON Job.ID = Distribution.IDJob WHERE Distribution.IDStaff = '{0}'", id);
             dB.Executive(sqlStr);
         }
     }

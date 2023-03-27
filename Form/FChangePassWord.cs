@@ -55,5 +55,10 @@ namespace COMPANY_MANAGEMENT
         {
             this.ChangePass();
         }
+
+        private void FChangePassWord_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
     }
 }

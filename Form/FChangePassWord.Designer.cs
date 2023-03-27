@@ -130,6 +130,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FChangePassWord";
             this.Text = "Change passworf";
+            this.Load += new System.EventHandler(this.FChangePassWord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

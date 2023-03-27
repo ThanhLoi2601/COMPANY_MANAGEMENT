@@ -43,11 +43,15 @@
             this.textID = new System.Windows.Forms.TextBox();
             this.textReason = new System.Windows.Forms.TextBox();
             this.btConfirm = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textNghi = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textNgayNghi = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dateStart
             // 
-            this.dateStart.Location = new System.Drawing.Point(165, 336);
+            this.dateStart.Location = new System.Drawing.Point(165, 333);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(200, 22);
             this.dateStart.TabIndex = 0;
@@ -118,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 117);
+            this.label3.Location = new System.Drawing.Point(65, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 7;
@@ -127,7 +131,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 341);
+            this.label4.Location = new System.Drawing.Point(60, 338);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 8;
@@ -136,7 +140,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 400);
+            this.label5.Location = new System.Drawing.Point(65, 395);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 9;
@@ -144,7 +148,7 @@
             // 
             // dateEnd
             // 
-            this.dateEnd.Location = new System.Drawing.Point(165, 395);
+            this.dateEnd.Location = new System.Drawing.Point(165, 390);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(200, 22);
             this.dateEnd.TabIndex = 12;
@@ -155,13 +159,15 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(200, 22);
             this.textName.TabIndex = 13;
+            this.textName.Text = "A";
             // 
             // textID
             // 
-            this.textID.Location = new System.Drawing.Point(165, 68);
+            this.textID.Location = new System.Drawing.Point(165, 66);
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(200, 22);
             this.textID.TabIndex = 14;
+            this.textID.Text = "EMP12345";
             // 
             // textReason
             // 
@@ -182,11 +188,51 @@
             this.btConfirm.UseVisualStyleBackColor = true;
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(65, 442);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(181, 17);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Số lần xin nghỉ trong tháng ";
+            // 
+            // textNghi
+            // 
+            this.textNghi.Location = new System.Drawing.Point(265, 439);
+            this.textNghi.Name = "textNghi";
+            this.textNghi.ReadOnly = true;
+            this.textNghi.Size = new System.Drawing.Size(100, 22);
+            this.textNghi.TabIndex = 24;
+            this.textNghi.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(65, 488);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Số ngày đã nghỉ";
+            // 
+            // textNgayNghi
+            // 
+            this.textNgayNghi.Location = new System.Drawing.Point(265, 488);
+            this.textNgayNghi.Name = "textNgayNghi";
+            this.textNgayNghi.ReadOnly = true;
+            this.textNgayNghi.Size = new System.Drawing.Size(100, 22);
+            this.textNgayNghi.TabIndex = 26;
+            this.textNgayNghi.Text = "0";
+            // 
             // FAbsenceLetter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 450);
+            this.ClientSize = new System.Drawing.Size(584, 514);
+            this.Controls.Add(this.textNgayNghi);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textNghi);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btConfirm);
             this.Controls.Add(this.textReason);
             this.Controls.Add(this.textID);
@@ -204,6 +250,8 @@
             this.Controls.Add(this.dateStart);
             this.Name = "FAbsenceLetter";
             this.Text = "FAbsenceLetter";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FAbsenceLetter_FormClosed);
+            this.Load += new System.EventHandler(this.FAbsenceLetter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +274,9 @@
         private System.Windows.Forms.TextBox textID;
         private System.Windows.Forms.TextBox textReason;
         private System.Windows.Forms.Button btConfirm;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textNghi;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textNgayNghi;
     }
 }

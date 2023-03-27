@@ -20,6 +20,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FPayroll_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             dataCVHT.DataSource = a.LoadList();
         }
     }

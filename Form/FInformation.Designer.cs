@@ -131,7 +131,6 @@
             this.textID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textID.Size = new System.Drawing.Size(200, 22);
             this.textID.TabIndex = 28;
-            this.textID.Text = "EMP12345";
             // 
             // label7
             // 
@@ -211,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 534);
+            this.ClientSize = new System.Drawing.Size(522, 534);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.textSalary);
             this.Controls.Add(this.textManID);

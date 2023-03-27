@@ -57,5 +57,32 @@ namespace COMPANY_MANAGEMENT.Properties {
                 this["textbox"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>One</string>\r\n  <string>Two</string>\r\n  <string>Three</string>\r\n</ArrayOfS" +
+            "tring>")]
+        public global::System.Collections.Specialized.StringCollection combobox {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["combobox"]));
+            }
+            set {
+                this["combobox"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string textbox2 {
+            get {
+                return ((string)(this["textbox2"]));
+            }
+            set {
+                this["textbox2"] = value;
+            }
+        }
     }
 }

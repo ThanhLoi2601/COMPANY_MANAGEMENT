@@ -169,7 +169,10 @@
             // 
             // dataCVHT
             // 
+            this.dataCVHT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataCVHT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataCVHT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCVHT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataCVHT.Location = new System.Drawing.Point(3, 262);
             this.dataCVHT.Name = "dataCVHT";
             this.dataCVHT.RowHeadersWidth = 51;

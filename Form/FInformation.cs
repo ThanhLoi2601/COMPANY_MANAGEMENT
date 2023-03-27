@@ -23,6 +23,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FInformation_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             this.LoadMyInfo();
         }
 
