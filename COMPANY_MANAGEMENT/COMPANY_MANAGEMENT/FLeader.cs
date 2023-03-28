@@ -12,5 +12,11 @@ namespace COMPANY_MANAGEMENT
             FContract contract = new FContract();
             contract.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FProject project = new FProject();
+            project.ShowDialog();
+        }
     }
 }
