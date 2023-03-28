@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FJob));
             this.grInfo = new System.Windows.Forms.GroupBox();
             this.rTxtContent = new System.Windows.Forms.RichTextBox();
             this.txtBunus = new System.Windows.Forms.TextBox();
@@ -50,8 +51,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dGVJobStaff = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dGVMyProject = new System.Windows.Forms.DataGridView();
             this.btComp = new System.Windows.Forms.Button();
+            this.dGVMyProject = new System.Windows.Forms.DataGridView();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,6 +65,9 @@
             // 
             // grInfo
             // 
+            this.grInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grInfo.BackgroundImage")));
+            this.grInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grInfo.Controls.Add(this.rTxtContent);
             this.grInfo.Controls.Add(this.txtBunus);
             this.grInfo.Controls.Add(this.labBonus);
@@ -246,6 +250,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.62811F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.37189F));
@@ -260,6 +265,7 @@
             // 
             // tabJobStaff
             // 
+            this.tabJobStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabJobStaff.Controls.Add(this.tabPage1);
             this.tabJobStaff.Controls.Add(this.tabPage2);
             this.tabJobStaff.Location = new System.Drawing.Point(520, 4);
@@ -305,17 +311,6 @@
             this.tabPage2.Text = "MY PROJECT";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dGVMyProject
-            // 
-            this.dGVMyProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVMyProject.Location = new System.Drawing.Point(0, 0);
-            this.dGVMyProject.Name = "dGVMyProject";
-            this.dGVMyProject.RowHeadersWidth = 51;
-            this.dGVMyProject.RowTemplate.Height = 24;
-            this.dGVMyProject.Size = new System.Drawing.Size(841, 426);
-            this.dGVMyProject.TabIndex = 5;
-            this.dGVMyProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVMyProject_CellClick);
-            // 
             // btComp
             // 
             this.btComp.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -329,10 +324,23 @@
             this.btComp.UseVisualStyleBackColor = false;
             this.btComp.Click += new System.EventHandler(this.btComp_Click);
             // 
+            // dGVMyProject
+            // 
+            this.dGVMyProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVMyProject.Location = new System.Drawing.Point(0, 0);
+            this.dGVMyProject.Name = "dGVMyProject";
+            this.dGVMyProject.RowHeadersWidth = 51;
+            this.dGVMyProject.RowTemplate.Height = 24;
+            this.dGVMyProject.Size = new System.Drawing.Size(841, 426);
+            this.dGVMyProject.TabIndex = 5;
+            this.dGVMyProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVMyProject_CellClick);
+            // 
             // FJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1371, 517);
             this.Controls.Add(this.tabJobStaff);
             this.Controls.Add(this.tableLayoutPanel1);

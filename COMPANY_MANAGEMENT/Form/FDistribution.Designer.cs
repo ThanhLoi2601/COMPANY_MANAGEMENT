@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDistribution));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -165,6 +166,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.dGVJob);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
@@ -177,6 +181,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
+            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.btConfirm);
             this.groupBox2.Controls.Add(this.label3);
@@ -191,6 +198,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox3.BackgroundImage")));
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.lbProcess);
             this.groupBox3.Controls.Add(this.label14);
@@ -206,7 +216,7 @@
             this.groupBox3.Controls.Add(this.dGVDistribution);
             this.groupBox3.Location = new System.Drawing.Point(12, 472);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1196, 232);
+            this.groupBox3.Size = new System.Drawing.Size(1196, 240);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             // 
@@ -214,7 +224,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(867, 169);
+            this.label7.Location = new System.Drawing.Point(876, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 25);
             this.label7.TabIndex = 22;
@@ -224,7 +234,7 @@
             // 
             this.lbProcess.AutoSize = true;
             this.lbProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProcess.Location = new System.Drawing.Point(809, 169);
+            this.lbProcess.Location = new System.Drawing.Point(818, 169);
             this.lbProcess.Name = "lbProcess";
             this.lbProcess.Size = new System.Drawing.Size(52, 25);
             this.lbProcess.TabIndex = 21;
@@ -336,19 +346,19 @@
             // dGVDistribution
             // 
             this.dGVDistribution.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDistribution.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dGVDistribution.Location = new System.Drawing.Point(6, 21);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDistribution.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVDistribution.Location = new System.Drawing.Point(6, 12);
             this.dGVDistribution.Name = "dGVDistribution";
             this.dGVDistribution.RowHeadersWidth = 51;
             this.dGVDistribution.RowTemplate.Height = 24;
-            this.dGVDistribution.Size = new System.Drawing.Size(591, 205);
+            this.dGVDistribution.Size = new System.Drawing.Size(591, 220);
             this.dGVDistribution.TabIndex = 0;
             this.dGVDistribution.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDistribution_CellClick);
             // 
@@ -356,10 +366,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 716);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1221, 716);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FDistribution";
             this.Text = "DISTRIBUTION";
             this.Load += new System.EventHandler(this.FDistribution_Load);
