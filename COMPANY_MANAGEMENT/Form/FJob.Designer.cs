@@ -289,6 +289,7 @@
             // 
             // dGVJobStaff
             // 
+            this.dGVJobStaff.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dGVJobStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVJobStaff.Location = new System.Drawing.Point(0, 0);
             this.dGVJobStaff.Name = "dGVJobStaff";
@@ -326,6 +327,7 @@
             // 
             // dGVMyProject
             // 
+            this.dGVMyProject.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dGVMyProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVMyProject.Location = new System.Drawing.Point(0, 0);
             this.dGVMyProject.Name = "dGVMyProject";

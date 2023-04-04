@@ -342,6 +342,7 @@
             // dGVStaff
             // 
             this.dGVStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dGVStaff.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dGVStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVStaff.Location = new System.Drawing.Point(421, 3);
             this.dGVStaff.Name = "dGVStaff";
