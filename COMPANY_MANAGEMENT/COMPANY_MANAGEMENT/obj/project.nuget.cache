@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fT8Ohl3jhBUj35Q/uvGrsbsj4eL5z2bmNpM0wUwo/Do3e17tUh95wYiyfN0T0QxcekwwC5uOzxI3//b+Jnd3+A==",
+  "dgSpecHash": "7LpzLPDeydQ8iNnBpWB07yrF3kYTjnGWWtm3L2OH4oABLxmpHdDMy5+bg442obXpohUHjJTz/Wu02YM1T0tXxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NK\\OneDrive\\Documents\\Nam2\\Ky 2\\Lap trinh Windows\\DACK\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT.csproj",
+  "projectFilePath": "C:\\Users\\NK\\OneDrive\\Documents\\Nam2\\Ky 2\\Lap trinh Windows\\DACK\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT - Copy\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT\\COMPANY_MANAGEMENT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NK\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\NK\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
