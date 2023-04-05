@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMPANY_MANAGEMENT.OOP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +13,18 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FLetterMain : Form
     {
-        public FLetterMain()
+        string IDReceive;
+        public FLetterMain(string ID)
         {
             InitializeComponent();
+            IDReceive = ID;
         }
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
             if(rbCreate.Checked == true )
             {
-                FAbsenceLetter f = new FAbsenceLetter();
+                FAbsenceLetter f = new FAbsenceLetter(IDReceive);
                 f.ShowDialog();
             }
             else

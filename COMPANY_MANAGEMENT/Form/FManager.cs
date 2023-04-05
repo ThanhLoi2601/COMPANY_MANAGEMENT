@@ -44,12 +44,6 @@ namespace COMPANY_MANAGEMENT
             f.ShowDialog();
         }
 
-        private void btAbsenceLetter_Click(object sender, EventArgs e)
-        {
-            FAbsenceLetter f = new FAbsenceLetter();
-            f.ShowDialog();
-        }
-
         private void btCheckIn_Out_Click(object sender, EventArgs e)
         {
             FCheck f = new FCheck();
@@ -58,7 +52,7 @@ namespace COMPANY_MANAGEMENT
 
         private void btLetter_Click(object sender, EventArgs e)
         {
-            FLetterMain f = new FLetterMain();
+            FLetterMain f = new FLetterMain(IDReceive);
             f.ShowDialog();
         }
 

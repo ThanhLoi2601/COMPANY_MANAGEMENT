@@ -46,7 +46,7 @@ namespace COMPANY_MANAGEMENT
 
         private void btLetter_Click(object sender, EventArgs e)
         {
-            FAbsenceLetter f = new FAbsenceLetter();
+            FAbsenceLetter f = new FAbsenceLetter(IDReceive);
             f.ShowDialog();
         }
 

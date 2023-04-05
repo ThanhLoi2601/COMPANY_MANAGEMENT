@@ -155,6 +155,8 @@
     <Compile Include="Form\FStaff.Designer.cs">
       <DependentUpon>FStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="OOP\AbsenceLetter.cs" />
+    <Compile Include="OOP\AbsenceLetterDAO.cs" />
     <Compile Include="OOP\CompleteWorkDAO.cs" />
     <Compile Include="OOP\DBConn.cs" />
     <Compile Include="OOP\DistributionDAO.cs" />
@@ -268,6 +270,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\ComJobSQL.sql" />
+    <Content Include="Database\SQLAbsence.sql" />
     <Content Include="Database\SQLCompleteWork.sql" />
     <Content Include="Database\SQLContract.sql" />
     <Content Include="Database\SQLCustomer.sql" />
@@ -280,7 +283,10 @@
     <Content Include="Inco_img\Aha-Soft-Security-Secrecy.ico" />
     <Content Include="Inco_img\BackgrInfo1.jpg" />
     <Content Include="Inco_img\backgrLogin.jpg" />
+    <Content Include="Inco_img\edit_30px.png" />
     <Content Include="Inco_img\Icons8-Windows-8-Users-Administrator.ico" />
+    <Content Include="Inco_img\plus_+_30px.png" />
+    <Content Include="Inco_img\trash_can_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
