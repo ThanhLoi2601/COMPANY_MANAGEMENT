@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace COMPANY_MANAGEMENT
 {
@@ -14,6 +15,7 @@ namespace COMPANY_MANAGEMENT
     {
         AssignedWorkDAO a = new AssignedWorkDAO();
         string ID;
+        Thread th;
 
         public FStaff(string ID)
         {
@@ -83,13 +85,15 @@ namespace COMPANY_MANAGEMENT
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            //datastaff.datasource = a.loadlist();
-            //panel5.controls.clear();
-            //panel5.controls.add(datastaff);
-            //controls.add(panel5);
-            FStaff f = new FStaff(ID);
-            f.ShowDialog();
             this.Close();
+            th = new Thread(OpenNewHome);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenNewHome()
+        {
+            Application.Run(new FStaff(ID));       
         }
     }
 }

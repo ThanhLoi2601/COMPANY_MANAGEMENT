@@ -18,6 +18,7 @@ namespace COMPANY_MANAGEMENT
         string ID;
         int count = 0;
         int day = 0;
+
         public FAbsenceLetter(string id)
         {
             InitializeComponent();
@@ -47,9 +48,11 @@ namespace COMPANY_MANAGEMENT
 
             AbsenceLetter lt = new AbsenceLetter(textName.Text, textID.Text, reason, dateStart.Value, dateEnd.Value);
             DateTime d1 = dateStart.Value;
+            int day1 = d1.Day;
             DateTime d2 = dateEnd.Value;
-            int d = DateTime.Compare(dateStart.Value, dateEnd.Value);
-            String t = (dateStart.Value - dateEnd.Value).TotalDays.ToString(); ;
+            int day2 = d2.Day;
+            TimeSpan span = d2.Subtract(d1);
+            int d = day2 - day1 + 1; 
 
             if (textID.Text != ID)
             {
@@ -59,7 +62,7 @@ namespace COMPANY_MANAGEMENT
             {
                 MessageBox.Show("Ngày nhập không hợp lệ");
             }
-            else if (int.Parse(t) > 3)
+            else if (d > 3)
             {
                 MessageBox.Show("Không được nghỉ phép quá 3 ngày");
             }
@@ -70,14 +73,14 @@ namespace COMPANY_MANAGEMENT
             else
             {
                 ab.UpdateAbsen(lt);
-                //day += (int)(t.TotalDays);
+                day += d;
                 count++;
                 MessageBox.Show("Gửi đơn xin nghỉ thành công");
                 textNghi.Text = count.ToString();
                 textNgayNghi.Text = day.ToString();
             }           
-            count = int.Parse(textNghi.Text);
-            day = int.Parse(textNgayNghi.Text);
+            /*count = int.Parse(textNghi.Text);
+            day = int.Parse(textNgayNghi.Text);*/
         }
 
         private void rbRea4_CheckedChanged(object sender, EventArgs e)

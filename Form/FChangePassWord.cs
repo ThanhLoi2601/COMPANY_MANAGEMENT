@@ -14,6 +14,7 @@ namespace COMPANY_MANAGEMENT
     {
         StaffDAO s = new StaffDAO();
         string ID;
+
         public FChangePassWord(string ID)
         {
             InitializeComponent();
@@ -42,13 +43,15 @@ namespace COMPANY_MANAGEMENT
                 MessageBox.Show("Mật khẩu mới và mật khẩu confirm không chính xác");
                 return;
             }
+            else if(newPass == currentPass)
+            {
+                MessageBox.Show("Mật khẩu mới trùng với mật khẩu hiện tại");
+            }    
             else
             {
                 s.UpdatePass(a);
                 MessageBox.Show("Đối mật khẩu thành công");
-                this.Close();
             }
-            //s.UpdatePass(man);*/
         }
 
         private void btConfirm_Click(object sender, EventArgs e)

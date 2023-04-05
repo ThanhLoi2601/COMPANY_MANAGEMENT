@@ -27,9 +27,9 @@ namespace COMPANY_MANAGEMENT
         {
             this.FormBorderStyle = FormBorderStyle.None;
             timer1.Start();
-            //checkIN.Checked = Properties.Settings.Default.checkbox;
-            //checkOUT.Checked = Properties.Settings.Default.checkbox;
-            //textTienDo.Text = Properties.Settings.Default.textbox;
+            /*checkIN.Checked = Properties.Settings.Default.checkbox;
+            checkOUT.Checked = Properties.Settings.Default.checkbox;
+            textTienDo.Text = Properties.Settings.Default.textbox;*/
             LoadCongViec();
         }
 
@@ -94,7 +94,7 @@ namespace COMPANY_MANAGEMENT
             {
                 MessageBox.Show("Vui lòng check");
             }
-            else if(dateTimeCheck.Value != DateTime.Now)
+            else if(dateTimeCheck.Value != DateTime.Today)
             {
                 MessageBox.Show("Không thể check khác ngày");
             }    

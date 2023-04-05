@@ -30,26 +30,26 @@
         {
             this.dataStaff = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.btHome = new System.Windows.Forms.Button();
             this.btChangePass = new System.Windows.Forms.Button();
             this.btInform = new System.Windows.Forms.Button();
             this.btPayroll = new System.Windows.Forms.Button();
             this.btLetter = new System.Windows.Forms.Button();
             this.btCheckInOut = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataStaff
@@ -80,65 +80,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 634);
             this.panel1.TabIndex = 30;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(227, 165);
-            this.panel3.TabIndex = 32;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(227, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1067, 34);
-            this.panel2.TabIndex = 31;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(280, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(447, 38);
-            this.panel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(104, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "EMPLOYEE MANAGEMENT";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(470, 25);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "DANH SÁCH CÔNG VIỆC ĐƯỢC PHÂN CÔNG";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.dataStaff);
-            this.panel5.Location = new System.Drawing.Point(227, 37);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1067, 597);
-            this.panel5.TabIndex = 33;
             // 
             // btHome
             // 
@@ -254,6 +195,15 @@
             this.btCheckInOut.UseVisualStyleBackColor = true;
             this.btCheckInOut.Click += new System.EventHandler(this.btCheckInOut_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(227, 165);
+            this.panel3.TabIndex = 32;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.images;
@@ -263,6 +213,56 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(227, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1067, 34);
+            this.panel2.TabIndex = 31;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(280, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(447, 38);
+            this.panel4.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(104, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(289, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "EMPLOYEE MANAGEMENT";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(470, 25);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "DANH SÁCH CÔNG VIỆC ĐƯỢC PHÂN CÔNG";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.dataStaff);
+            this.panel5.Location = new System.Drawing.Point(227, 37);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1067, 597);
+            this.panel5.TabIndex = 33;
             // 
             // FStaff
             // 
@@ -279,12 +279,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

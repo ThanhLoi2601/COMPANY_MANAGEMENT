@@ -113,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 71);
+            this.label2.Location = new System.Drawing.Point(65, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 17);
             this.label2.TabIndex = 6;
@@ -159,7 +159,6 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(200, 22);
             this.textName.TabIndex = 13;
-            this.textName.Text = "A";
             // 
             // textID
             // 
@@ -180,7 +179,7 @@
             // btConfirm
             // 
             this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(411, 395);
+            this.btConfirm.Location = new System.Drawing.Point(217, 550);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(135, 43);
             this.btConfirm.TabIndex = 22;
@@ -228,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 514);
+            this.ClientSize = new System.Drawing.Size(584, 605);
             this.Controls.Add(this.textNgayNghi);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textNghi);

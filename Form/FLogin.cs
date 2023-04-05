@@ -27,7 +27,6 @@ namespace COMPANY_MANAGEMENT
                 {
                     FStaff f = new FStaff(txtMaDN.Text);
                     f.ShowDialog();
-                    this.Close();
                 }
                 else
                 {
@@ -52,6 +51,7 @@ namespace COMPANY_MANAGEMENT
                     f.ShowDialog();
                 }
             }*/
+            this.Close();
         }
 
         private void cbHienMK_TextChanged(object sender, EventArgs e)
