@@ -1,21 +1,27 @@
 ﻿
 create table HopDong (
-    MaHD varchar(10) primary key,
-    TenHD varchar(100),
+    MaHD varchar(10) ,
+    TenHD nvarchar(100),
     NgayKy Date,
     NgayCoHieuLuc Date,
     NgayHetHan Date,
     GiaTri int,
+<<<<<<< HEAD
+    NoiDung nvarchar(1500),
+    MaNV varchar(10),
+    MaKH varchar(10)
+=======
     NoiDung varchar(1500),
     MaNV varchar(10) foreign key references Staff(ID),
     MaKH varchar(10)  foreign key references Customer(MaKH),
     TrangThai varchar(50)
+>>>>>>> 8d54fa59ef09f1bb57a56920729dbf66a4d91a51
 )
 
 INSERT INTO HopDong (MaHD, TenHD, NgayKy, NgayCoHieuLuc, NgayHetHan, GiaTri, NoiDung, MaNV, MaKH)
-VALUES ('HD001', 'Hợp đồng dịch vụ IT', '2022-01-01', '2022-01-10', '2023-01-01', 100000000, 'Cung cấp dịch vụ IT cho công ty ABC', 'EMP12345', 'KH001');
+VALUES ('HD001', 'Hop dong dich vu IT', '2022-01-01', '2022-01-10', '2023-01-01', 100000000, 'Cung cap dich vu IT cho cong ty ABC', 'EMP12345', 'KH001');
 INSERT INTO HopDong (MaHD, TenHD, NgayKy, NgayCoHieuLuc, NgayHetHan, GiaTri, NoiDung, MaNV, MaKH)
-VALUES ('HD002', 'Hợp đồng cung cấp vật tư', '2022-02-01', '2022-02-05', '2023-02-01', 50000000, 'Cung cấp vật tư cho công trình X', 'EMP12345', 'KH002');
+VALUES ('HD002', 'Hop dong cung cap vat tu', '2022-02-01', '2022-02-05', '2023-02-01', 50000000, 'Cung cap vat tu cho cong trinh X', 'EMP12345', 'KH002');
 
 --CREATE TRIGGER tr_HopDong_CapNhatTrangThai
 --ON HopDong

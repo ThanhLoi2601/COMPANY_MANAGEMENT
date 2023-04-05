@@ -1,5 +1,5 @@
 ﻿create table Customer (
-	MaKH varchar(10) primary key,
+	MaKH varchar(10),
     Ten varchar(50),
     CCCD varchar(12),
     Email varchar(50),
