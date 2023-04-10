@@ -17,17 +17,17 @@ namespace COMPANY_MANAGEMENT
             dB.Executive(sqlStr);
         }
 
-        public void Delete(Task pro)
+        public void Delete(Task tks)
         {
-            string sqlStr = string.Format("DELETE FROM Tasks WHERE ID = '{0}'", pro.Id);
+            string sqlStr = string.Format("DELETE FROM Tasks WHERE ID = '{0}'", tks.Id);
             dB.Executive(sqlStr);
         }
 
-        public void Update(Task pro)
+        public void Update(Task tks)
         {
-            string sqlStr = string.Format("UPDATE Tasks Set Task_Name = '{0}', Task_description = '{1}', StartDate = '{2}', EndDate = '{3}',  WHERE ID ='{4}'"
-                , pro.Name, pro.Description, pro.DateStart.ToString(), pro.DateEnd.ToString(), pro.Id);
-            dB.Executive(sqlStr);
+            string sqlStr = string.Format("UPDATE Tasks Set Task_Name = '{0}', Task_description = '{1}', StartDate = '{2}', EndDate = '{3}', Task_status = '{4}'  WHERE ID ='{5}'"
+                , tks.Name, tks.Description, tks.DateStart.ToString(), tks.DateEnd.ToString(), tks.Status.ToString(), tks.Id);
+            dB.ExecutiveWithoutNotice(sqlStr);
         }
 
         public DataTable LoadList(string id)

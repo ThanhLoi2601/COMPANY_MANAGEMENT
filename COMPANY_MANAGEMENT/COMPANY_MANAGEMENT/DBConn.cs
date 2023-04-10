@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Common;
+using System.Collections;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace COMPANY_MANAGEMENT
 {
@@ -54,6 +57,13 @@ namespace COMPANY_MANAGEMENT
             {
                 conn.Close();
             }
+        }
+        public void ExecutiveWithoutNotice(string sqlStr)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         public bool Search(string sqlStr)

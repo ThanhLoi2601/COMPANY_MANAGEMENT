@@ -33,6 +33,8 @@ namespace COMPANY_MANAGEMENT
         public TaskStatus Status { get; set; }
         public string Id_project { get => id_project; set => id_project = value; }
 
+        public Task() { }
+            
         public Task(string _id, string _name, DateTime _startDate, DateTime _endDate, string _description, TaskStatus _status, string _id_project)
         {
             this.id = _id;

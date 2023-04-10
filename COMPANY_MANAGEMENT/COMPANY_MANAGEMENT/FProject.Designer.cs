@@ -34,9 +34,9 @@
             this.btDeleteProject = new System.Windows.Forms.Button();
             this.btTask = new System.Windows.Forms.Button();
             this.grbProject = new System.Windows.Forms.GroupBox();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
             this.dtDateEnd = new System.Windows.Forms.DateTimePicker();
             this.dtDateStart = new System.Windows.Forms.DateTimePicker();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.rtxtContent = new System.Windows.Forms.RichTextBox();
@@ -109,9 +109,9 @@
             // 
             // grbProject
             // 
+            this.grbProject.Controls.Add(this.cbbStatus);
             this.grbProject.Controls.Add(this.dtDateEnd);
             this.grbProject.Controls.Add(this.dtDateStart);
-            this.grbProject.Controls.Add(this.txtStatus);
             this.grbProject.Controls.Add(this.txtName);
             this.grbProject.Controls.Add(this.txtID);
             this.grbProject.Controls.Add(this.rtxtContent);
@@ -130,6 +130,15 @@
             this.grbProject.TabStop = false;
             this.grbProject.Text = "INFORMATION";
             // 
+            // cbbStatus
+            // 
+            this.cbbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Location = new System.Drawing.Point(96, 449);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(412, 28);
+            this.cbbStatus.TabIndex = 35;
+            // 
             // dtDateEnd
             // 
             this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -145,14 +154,6 @@
             this.dtDateStart.Name = "dtDateStart";
             this.dtDateStart.Size = new System.Drawing.Size(412, 27);
             this.dtDateStart.TabIndex = 33;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtStatus.Location = new System.Drawing.Point(96, 448);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(412, 27);
-            this.txtStatus.TabIndex = 32;
             // 
             // txtName
             // 
@@ -282,12 +283,12 @@
         private Label lblName;
         private Label lblID;
         private Label lblStatus;
-        private TextBox txtStatus;
         private TextBox txtName;
         private TextBox txtID;
         private RichTextBox rtxtContent;
         private DateTimePicker dtDateEnd;
         private DateTimePicker dtDateStart;
         private DataGridView gvProject;
+        private ComboBox cbbStatus;
     }
 }

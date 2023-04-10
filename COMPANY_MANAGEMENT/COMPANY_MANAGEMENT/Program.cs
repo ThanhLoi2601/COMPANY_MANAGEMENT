@@ -1,3 +1,5 @@
+﻿using System.Data.SqlClient;
+
 namespace COMPANY_MANAGEMENT
 {
     internal static class Program

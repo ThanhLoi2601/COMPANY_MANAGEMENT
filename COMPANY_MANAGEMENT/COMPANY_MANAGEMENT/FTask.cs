@@ -68,7 +68,21 @@ namespace COMPANY_MANAGEMENT
 
         private void gvTask_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int r = this.gvTask.CurrentCell.RowIndex;
+            txtID.DataBindings.Clear();
+            txtID.Text = gvTask.Rows[r].Cells[0].Value.ToString();
+            txtName.DataBindings.Clear();
+            txtName.Text = gvTask.Rows[r].Cells[1].Value.ToString();
+            dtDateStart.DataBindings.Clear();
+            dtDateStart.Text = gvTask.Rows[r].Cells[2].Value.ToString();
+            dtDateEnd.DataBindings.Clear();
+            dtDateEnd.Text = gvTask.Rows[r].Cells[3].Value.ToString();
+            rtxtContent.DataBindings.Clear();
+            rtxtContent.Text = gvTask.Rows[r].Cells[4].Value.ToString();
+            cbbStatus.DataBindings.Clear();
+            cbbStatus.Text = gvTask.Rows[r].Cells[5].Value.ToString();
+            txtID_Project.DataBindings.Clear();
+            txtID_Project.Text = gvTask.Rows[r].Cells[6].Value.ToString();
         }
     }
 }
