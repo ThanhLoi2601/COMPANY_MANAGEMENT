@@ -53,7 +53,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.labID = new System.Windows.Forms.Label();
-            this.dGVStaff = new System.Windows.Forms.DataGridView();
+            this.dGVBasic = new System.Windows.Forms.DataGridView();
             this.grOption = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btDistribution = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVStaff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVBasic)).BeginInit();
             this.grOption.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -77,11 +77,11 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel1.Controls.Add(this.grInfo);
-            this.flowLayoutPanel1.Controls.Add(this.dGVStaff);
+            this.flowLayoutPanel1.Controls.Add(this.dGVBasic);
             this.flowLayoutPanel1.Controls.Add(this.grOption);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1538, 630);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1538, 631);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // grInfo
@@ -345,18 +345,18 @@
             this.labID.TabIndex = 0;
             this.labID.Text = "ID";
             // 
-            // dGVStaff
+            // dGVBasic
             // 
-            this.dGVStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dGVStaff.BackgroundColor = System.Drawing.Color.White;
-            this.dGVStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVStaff.Location = new System.Drawing.Point(451, 3);
-            this.dGVStaff.Name = "dGVStaff";
-            this.dGVStaff.RowHeadersWidth = 51;
-            this.dGVStaff.RowTemplate.Height = 24;
-            this.dGVStaff.Size = new System.Drawing.Size(852, 623);
-            this.dGVStaff.TabIndex = 0;
-            this.dGVStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVStaff_CellClick);
+            this.dGVBasic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dGVBasic.BackgroundColor = System.Drawing.Color.White;
+            this.dGVBasic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVBasic.Location = new System.Drawing.Point(451, 3);
+            this.dGVBasic.Name = "dGVBasic";
+            this.dGVBasic.RowHeadersWidth = 51;
+            this.dGVBasic.RowTemplate.Height = 24;
+            this.dGVBasic.Size = new System.Drawing.Size(852, 623);
+            this.dGVBasic.TabIndex = 0;
+            this.dGVBasic.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVStaff_CellClick);
             // 
             // grOption
             // 
@@ -489,7 +489,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1538, 644);
+            this.ClientSize = new System.Drawing.Size(1547, 652);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FManager";
@@ -499,7 +499,7 @@
             this.grInfo.ResumeLayout(false);
             this.grInfo.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGVStaff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVBasic)).EndInit();
             this.grOption.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -515,7 +515,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label labID;
-        private System.Windows.Forms.DataGridView dGVStaff;
+        private System.Windows.Forms.DataGridView dGVBasic;
         private System.Windows.Forms.GroupBox grOption;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label8;

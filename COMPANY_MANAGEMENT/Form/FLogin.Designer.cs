@@ -83,7 +83,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.BackColor = System.Drawing.Color.SpringGreen;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.Controls.Add(this.rbStaff);
             this.groupBox1.Controls.Add(this.rbLeader);
@@ -122,7 +122,7 @@
             // 
             this.cbHienMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbHienMK.AutoSize = true;
-            this.cbHienMK.BackColor = System.Drawing.Color.Aqua;
+            this.cbHienMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHienMK.Location = new System.Drawing.Point(168, 206);
             this.cbHienMK.Name = "cbHienMK";
@@ -136,7 +136,7 @@
             // btDNhap
             // 
             this.btDNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btDNhap.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btDNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btDNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDNhap.Location = new System.Drawing.Point(349, 197);

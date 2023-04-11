@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dGVStaffLetter = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVStaffLetter)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dGVStaffLetter
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(762, 446);
-            this.dataGridView1.TabIndex = 0;
+            this.dGVStaffLetter.BackgroundColor = System.Drawing.Color.White;
+            this.dGVStaffLetter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVStaffLetter.Location = new System.Drawing.Point(3, 2);
+            this.dGVStaffLetter.Name = "dGVStaffLetter";
+            this.dGVStaffLetter.RowHeadersWidth = 51;
+            this.dGVStaffLetter.RowTemplate.Height = 24;
+            this.dGVStaffLetter.Size = new System.Drawing.Size(778, 467);
+            this.dGVStaffLetter.TabIndex = 0;
             // 
             // FShowStaffLetter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 470);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dGVStaffLetter);
             this.Name = "FShowStaffLetter";
             this.Text = "Show Staff Letter";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FShowStaffLetter_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dGVStaffLetter)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGVStaffLetter;
     }
 }

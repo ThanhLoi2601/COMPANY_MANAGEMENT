@@ -64,7 +64,7 @@ namespace COMPANY_MANAGEMENT
         private void FManager_Load(object sender, EventArgs e)
         {
             this.LoadMyInfo();
-            dGVStaff.DataSource = staDAO.LoadList(IDReceive);   
+            dGVBasic.DataSource = staDAO.LoadList(IDReceive);   
         }
 
         private void btMyInfo_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace COMPANY_MANAGEMENT
         {
             Staff sta = new Staff(txtID.Text, txtName.Text, dtBirth.Value, txtIDCard.Text, txtEmail.Text, txtAddress.Text, IDReceive, int.Parse(txtBasicSalary.Text), txtPass.Text);
             methodChange(sta);
-            dGVStaff.DataSource = staDAO.LoadList(IDReceive);
+            dGVBasic.DataSource = staDAO.LoadList(IDReceive);
         }
 
         private void ChangeInfo(Action<Manager> methodChange)
@@ -130,23 +130,23 @@ namespace COMPANY_MANAGEMENT
 
         private void dGVStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = this.dGVStaff.CurrentCell.RowIndex;
+            int r = this.dGVBasic.CurrentCell.RowIndex;
             txtID.DataBindings.Clear();
-            txtID.Text = dGVStaff.Rows[r].Cells[0].Value.ToString();
+            txtID.Text = dGVBasic.Rows[r].Cells[0].Value.ToString();
             txtName.DataBindings.Clear();
-            txtName.Text = dGVStaff.Rows[r].Cells[1].Value.ToString();
+            txtName.Text = dGVBasic.Rows[r].Cells[1].Value.ToString();
             dtBirth.DataBindings.Clear();
-            dtBirth.Text = dGVStaff.Rows[r].Cells[2].Value.ToString();
+            dtBirth.Text = dGVBasic.Rows[r].Cells[2].Value.ToString();
             txtIDCard.DataBindings.Clear();
-            txtIDCard.Text = dGVStaff.Rows[r].Cells[3].Value.ToString();
+            txtIDCard.Text = dGVBasic.Rows[r].Cells[3].Value.ToString();
             txtEmail.DataBindings.Clear();
-            txtEmail.Text = dGVStaff.Rows[r].Cells[4].Value.ToString();
+            txtEmail.Text = dGVBasic.Rows[r].Cells[4].Value.ToString();
             txtAddress.DataBindings.Clear();
-            txtAddress.Text = dGVStaff.Rows[r].Cells[5].Value.ToString();
+            txtAddress.Text = dGVBasic.Rows[r].Cells[5].Value.ToString();
             txtBasicSalary.DataBindings.Clear();
-            txtBasicSalary.Text = dGVStaff.Rows[r].Cells[7].Value.ToString();
+            txtBasicSalary.Text = dGVBasic.Rows[r].Cells[7].Value.ToString();
             txtPass.DataBindings.Clear();
-            txtPass.Text = dGVStaff.Rows[r].Cells[8].Value.ToString();
+            txtPass.Text = dGVBasic.Rows[r].Cells[8].Value.ToString();
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
