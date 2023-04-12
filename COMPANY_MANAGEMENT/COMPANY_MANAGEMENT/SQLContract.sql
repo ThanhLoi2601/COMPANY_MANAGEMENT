@@ -6,16 +6,10 @@ create table HopDong (
     NgayCoHieuLuc Date,
     NgayHetHan Date,
     GiaTri int,
-<<<<<<< HEAD
-    NoiDung nvarchar(1500),
-    MaNV varchar(10),
-    MaKH varchar(10)
-=======
     NoiDung varchar(1500),
     MaNV varchar(10) foreign key references Staff(ID),
     MaKH varchar(10)  foreign key references Customer(MaKH),
     TrangThai varchar(50)
->>>>>>> 8d54fa59ef09f1bb57a56920729dbf66a4d91a51
 )
 
 INSERT INTO HopDong (MaHD, TenHD, NgayKy, NgayCoHieuLuc, NgayHetHan, GiaTri, NoiDung, MaNV, MaKH)
