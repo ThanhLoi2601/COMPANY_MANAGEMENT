@@ -33,9 +33,9 @@ namespace COMPANY_MANAGEMENT
         public DataTable LoadList(string id)
         {
             if (id != "")
-                return dB.LoadList(string.Format("SELECT * FROM Tasks WHERE ID like 'TKS%' and Project_ID = '{0}'", id));
+                return dB.LoadList(string.Format("SELECT ID, Task_Name, StartDate, EndDate, Task_description, Task_status FROM Tasks WHERE ID like 'TKS%' and Project_ID = '{0}'", id));
             else
-                return dB.LoadList(string.Format("SELECT * FROM Tasks WHERE ID like 'TKS%'"));
+                return dB.LoadList(string.Format("SELECT ID, Task_Name, StartDate, EndDate, Task_description, Task_status FROM Tasks WHERE ID like 'TKS%'"));
         }
     }
 }
