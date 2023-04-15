@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="cnnStr" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=BLOW;User ID=sa;Password=123</Value>
+      <Value Profile="(Default)">Data Source=BLOW;Persist Security Info=True;User ID=sa;Password=123</Value>
     </Setting>
   </Settings>
 </SettingsFile>
