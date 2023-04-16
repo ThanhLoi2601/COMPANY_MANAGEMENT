@@ -61,3 +61,5 @@ BEGIN
     UPDATE Tasks SET Task_status = 'Cancelled' WHERE Project_ID IN (SELECT ID FROM inserted WHERE Project_status = 'Cancelled')
   END
 END
+
+select * from staff

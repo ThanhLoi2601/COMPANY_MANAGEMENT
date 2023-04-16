@@ -81,8 +81,6 @@ namespace COMPANY_MANAGEMENT
             rtxtContent.Text = gvTask.Rows[r].Cells[4].Value.ToString();
             cbbStatus.DataBindings.Clear();
             cbbStatus.Text = gvTask.Rows[r].Cells[5].Value.ToString();
-            txtID_Project.DataBindings.Clear();
-            txtID_Project.Text = gvTask.Rows[r].Cells[6].Value.ToString();
         }
     }
 }

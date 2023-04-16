@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btUpdateProject = new System.Windows.Forms.Button();
             this.btInsertProject = new System.Windows.Forms.Button();
@@ -46,10 +52,16 @@
             this.lblDateStart = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.gvProject = new System.Windows.Forms.DataGridView();
+            this.grbListProject = new System.Windows.Forms.GroupBox();
+            this.dgvProject = new System.Windows.Forms.DataGridView();
+            this.grbListTask = new System.Windows.Forms.GroupBox();
+            this.dgvTask = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
             this.grbProject.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProject)).BeginInit();
+            this.grbListProject.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).BeginInit();
+            this.grbListTask.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -103,7 +115,7 @@
             this.btTask.Name = "btTask";
             this.btTask.Size = new System.Drawing.Size(125, 48);
             this.btTask.TabIndex = 3;
-            this.btTask.Text = "Task";
+            this.btTask.Text = "Add Task";
             this.btTask.UseVisualStyleBackColor = true;
             this.btTask.Click += new System.EventHandler(this.btTask_Click);
             // 
@@ -240,31 +252,117 @@
             this.lblID.TabIndex = 21;
             this.lblID.Text = "ID";
             // 
-            // gvProject
+            // grbListProject
             // 
-            this.gvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvProject.Location = new System.Drawing.Point(560, 24);
-            this.gvProject.Name = "gvProject";
-            this.gvProject.RowHeadersWidth = 51;
-            this.gvProject.RowTemplate.Height = 29;
-            this.gvProject.Size = new System.Drawing.Size(791, 545);
-            this.gvProject.TabIndex = 28;
-            this.gvProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvProject_CellClick);
+            this.grbListProject.Controls.Add(this.dgvProject);
+            this.grbListProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.grbListProject.Location = new System.Drawing.Point(575, 12);
+            this.grbListProject.Name = "grbListProject";
+            this.grbListProject.Size = new System.Drawing.Size(812, 280);
+            this.grbListProject.TabIndex = 28;
+            this.grbListProject.TabStop = false;
+            this.grbListProject.Text = "List Project";
+            // 
+            // dgvProject
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProject.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProject.Location = new System.Drawing.Point(6, 26);
+            this.dgvProject.Name = "dgvProject";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProject.RowHeadersWidth = 51;
+            this.dgvProject.RowTemplate.Height = 29;
+            this.dgvProject.Size = new System.Drawing.Size(799, 245);
+            this.dgvProject.TabIndex = 0;
+            this.dgvProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProject_CellClick_1);
+            // 
+            // grbListTask
+            // 
+            this.grbListTask.Controls.Add(this.dgvTask);
+            this.grbListTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.grbListTask.Location = new System.Drawing.Point(567, 289);
+            this.grbListTask.Name = "grbListTask";
+            this.grbListTask.Size = new System.Drawing.Size(820, 274);
+            this.grbListTask.TabIndex = 29;
+            this.grbListTask.TabStop = false;
+            this.grbListTask.Text = "List Task";
+            // 
+            // dgvTask
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTask.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTask.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvTask.Location = new System.Drawing.Point(21, 26);
+            this.dgvTask.Name = "dgvTask";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTask.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvTask.RowHeadersWidth = 51;
+            this.dgvTask.RowTemplate.Height = 29;
+            this.dgvTask.Size = new System.Drawing.Size(799, 242);
+            this.dgvTask.TabIndex = 1;
+            this.dgvTask.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTask_CellClick);
             // 
             // FProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 571);
-            this.Controls.Add(this.gvProject);
+            this.ClientSize = new System.Drawing.Size(1391, 579);
+            this.Controls.Add(this.grbListTask);
+            this.Controls.Add(this.grbListProject);
             this.Controls.Add(this.grbProject);
             this.Name = "FProject";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FProject";
             this.Load += new System.EventHandler(this.FProject_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.grbProject.ResumeLayout(false);
             this.grbProject.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProject)).EndInit();
+            this.grbListProject.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).EndInit();
+            this.grbListTask.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTask)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,7 +386,10 @@
         private RichTextBox rtxtContent;
         private DateTimePicker dtDateEnd;
         private DateTimePicker dtDateStart;
-        private DataGridView gvProject;
         private ComboBox cbbStatus;
+        private GroupBox grbListProject;
+        private DataGridView dgvProject;
+        private GroupBox grbListTask;
+        private DataGridView dgvTask;
     }
 }
