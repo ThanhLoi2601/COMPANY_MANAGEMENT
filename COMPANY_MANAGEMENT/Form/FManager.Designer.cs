@@ -63,6 +63,7 @@
             this.btCheckIn_Out = new System.Windows.Forms.Button();
             this.btJob = new System.Windows.Forms.Button();
             this.btLetter = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -79,6 +80,7 @@
             this.flowLayoutPanel1.Controls.Add(this.grInfo);
             this.flowLayoutPanel1.Controls.Add(this.dGVBasic);
             this.flowLayoutPanel1.Controls.Add(this.grOption);
+            this.flowLayoutPanel1.Controls.Add(this.checkedListBox1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1538, 631);
@@ -483,6 +485,14 @@
             this.btLetter.UseVisualStyleBackColor = false;
             this.btLetter.Click += new System.EventHandler(this.btLetter_Click);
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(3, 632);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 89);
+            this.checkedListBox1.TabIndex = 2;
+            // 
             // FManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -542,5 +552,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btJob;
         private System.Windows.Forms.Button btLetter;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
