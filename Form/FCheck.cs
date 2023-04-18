@@ -14,6 +14,8 @@ namespace COMPANY_MANAGEMENT
     public partial class FCheck : Form
     {
         string ID;
+        CheckDAO c = new CheckDAO();
+        StaffDAO s = new StaffDAO();
         public FCheck(string id)
         {
             InitializeComponent();
@@ -68,18 +70,10 @@ namespace COMPANY_MANAGEMENT
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True");
-            connection.Open();
-            string query = "INSERT INTO SQLCheck (DateCheck, CheckIn, CheckOut) VALUES (@NgayCheck, @TrangThaiCheckIn, @TrangThaiCheckOut)";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@NgayCheck", dateTimeCheck.Value);
-            command.Parameters.AddWithValue("@TrangThaiCheckIn", checkIN.Checked);
-            command.Parameters.AddWithValue("@TrangThaiCheckOut", checkOUT.Checked);
-            int rowsAffected = command.ExecuteNonQuery();
-            if (rowsAffected > 0)
-            {
-                MessageBox.Show("Dữ liệu đã được cập nhật thành công!");
-            }
+            int so = 0;
+            Staff man = s.Search(ID);
+            Check a = new Check(man.ID,man.Name,dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, so);
+            c.InsertCheck(a);
         }
 
         private void FCheck_FormClosed(object sender, FormClosedEventArgs e)
