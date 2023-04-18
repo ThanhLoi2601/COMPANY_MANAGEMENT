@@ -70,6 +70,10 @@ namespace COMPANY_MANAGEMENT
             {
                 MessageBox.Show("Bạn đã nghỉ quá số lần cho phép");
             }
+            else if( !rbRea1.Checked)
+            {
+                MessageBox.Show("Vui  lòng điền lý do nghỉ");
+            }
             else
             {
                 ab.UpdateAbsen(lt);
@@ -78,9 +82,8 @@ namespace COMPANY_MANAGEMENT
                 MessageBox.Show("Gửi đơn xin nghỉ thành công");
                 textNghi.Text = count.ToString();
                 textNgayNghi.Text = day.ToString();
-            }           
-            /*count = int.Parse(textNghi.Text);
-            day = int.Parse(textNgayNghi.Text);*/
+            }
+            textNgayNghi.Tag = day.ToString();
         }
 
         private void rbRea4_CheckedChanged(object sender, EventArgs e)
@@ -91,14 +94,9 @@ namespace COMPANY_MANAGEMENT
         private void FAbsenceLetter_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
-            //textNghi.Text = Properties.Settings.Default.textbox2;
-            //count = int.Parse(Properties.Settings.Default.textbox2);
-        }
-
-        private void FAbsenceLetter_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //Properties.Settings.Default.textbox2 = textNghi.Text;
-            //Properties.Settings.Default.Save();
+            Staff man = s.Search(ID);
+            textName.Text = man.Name;
+            textID.Text = man.ID;
         }
     }
 }

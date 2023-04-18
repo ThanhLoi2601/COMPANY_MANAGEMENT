@@ -157,6 +157,7 @@
             // 
             this.textName.Location = new System.Drawing.Point(165, 21);
             this.textName.Name = "textName";
+            this.textName.ReadOnly = true;
             this.textName.Size = new System.Drawing.Size(200, 22);
             this.textName.TabIndex = 13;
             // 
@@ -164,9 +165,9 @@
             // 
             this.textID.Location = new System.Drawing.Point(165, 66);
             this.textID.Name = "textID";
+            this.textID.ReadOnly = true;
             this.textID.Size = new System.Drawing.Size(200, 22);
             this.textID.TabIndex = 14;
-            this.textID.Text = "EMP12345";
             // 
             // textReason
             // 
@@ -249,7 +250,6 @@
             this.Controls.Add(this.dateStart);
             this.Name = "FAbsenceLetter";
             this.Text = "FAbsenceLetter";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FAbsenceLetter_FormClosed);
             this.Load += new System.EventHandler(this.FAbsenceLetter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

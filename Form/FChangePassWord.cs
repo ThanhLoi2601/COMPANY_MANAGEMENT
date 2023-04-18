@@ -62,6 +62,8 @@ namespace COMPANY_MANAGEMENT
         private void FChangePassWord_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
+            Staff man = s.Search(ID);
+            textMaDN.Text = man.ID;
         }
     }
 }

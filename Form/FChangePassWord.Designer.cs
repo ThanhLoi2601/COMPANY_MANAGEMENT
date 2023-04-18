@@ -79,6 +79,7 @@
             // 
             this.textMaDN.Location = new System.Drawing.Point(170, 34);
             this.textMaDN.Name = "textMaDN";
+            this.textMaDN.ReadOnly = true;
             this.textMaDN.Size = new System.Drawing.Size(223, 22);
             this.textMaDN.TabIndex = 4;
             // 

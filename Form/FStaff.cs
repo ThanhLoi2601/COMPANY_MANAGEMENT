@@ -26,7 +26,7 @@ namespace COMPANY_MANAGEMENT
         private void btCheckInOut_Click(object sender, EventArgs e)
         {
             panel5.Controls.Clear();
-            FCheck f = new FCheck();
+            FCheck f = new FCheck(ID);
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             panel5.Controls.Add(f);
@@ -36,7 +36,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FStaff_Load(object sender, EventArgs e)
         {
-            dataStaff.DataSource = a.LoadList();
+            dataStaff.DataSource = a.LoadList(ID);
         }
 
         private void btLetter_Click_1(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace COMPANY_MANAGEMENT
         private void btPayroll_Click_1(object sender, EventArgs e)
         {
             panel5.Controls.Clear();
-            FPayroll f = new FPayroll();
+            FPayroll f = new FPayroll(ID);
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             panel5.Controls.Add(f);

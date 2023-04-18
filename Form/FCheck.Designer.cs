@@ -106,6 +106,8 @@
             // 
             // cbDsCV
             // 
+            this.cbDsCV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbDsCV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbDsCV.FormattingEnabled = true;
             this.cbDsCV.Location = new System.Drawing.Point(274, 400);
             this.cbDsCV.Name = "cbDsCV";

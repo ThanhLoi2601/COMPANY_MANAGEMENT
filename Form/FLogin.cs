@@ -51,7 +51,7 @@ namespace COMPANY_MANAGEMENT
                     f.ShowDialog();
                 }
             }*/
-            this.Close();
+            //this.Close();
         }
 
         private void cbHienMK_TextChanged(object sender, EventArgs e)

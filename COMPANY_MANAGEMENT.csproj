@@ -94,6 +94,7 @@
     <Compile Include="OOP\AbsenceLetter.cs" />
     <Compile Include="OOP\AbsenceLetterDAO.cs" />
     <Compile Include="OOP\AssignedWorkDAO.cs" />
+    <Compile Include="OOP\Check.cs" />
     <Compile Include="OOP\CheckDAO.cs" />
     <Compile Include="OOP\CompleteJobDAO.cs" />
     <Compile Include="OOP\DBConn.cs" />
@@ -160,7 +161,6 @@
     <None Include="Resources\money_transfer_26px.png" />
     <None Include="Resources\leave_26px1.png" />
     <None Include="Resources\checkmark_26px.png" />
-    <None Include="Resources\profile_64px.png" />
     <None Include="Resources\payroll_80px.png" />
     <None Include="Resources\password_26px.png" />
     <None Include="Resources\leave_26px.png" />

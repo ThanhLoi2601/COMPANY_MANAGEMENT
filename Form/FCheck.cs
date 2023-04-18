@@ -13,9 +13,11 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FCheck : Form
     {
-        public FCheck()
+        string ID;
+        public FCheck(string id)
         {
             InitializeComponent();
+            this.ID = id;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -27,10 +29,8 @@ namespace COMPANY_MANAGEMENT
         {
             this.FormBorderStyle = FormBorderStyle.None;
             timer1.Start();
-            /*checkIN.Checked = Properties.Settings.Default.checkbox;
-            checkOUT.Checked = Properties.Settings.Default.checkbox;
-            textTienDo.Text = Properties.Settings.Default.textbox;*/
             LoadCongViec();
+            
         }
 
         private void FCheck_FormClosing(object sender, FormClosingEventArgs e)
@@ -68,74 +68,25 @@ namespace COMPANY_MANAGEMENT
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
-            if (checkIN.CheckState == CheckState.Checked && CanCheckIn() && checkOUT.CheckState == CheckState.Unchecked)
+            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=DBStaff;Integrated Security=True");
+            connection.Open();
+            string query = "INSERT INTO SQLCheck (DateCheck, CheckIn, CheckOut) VALUES (@NgayCheck, @TrangThaiCheckIn, @TrangThaiCheckOut)";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@NgayCheck", dateTimeCheck.Value);
+            command.Parameters.AddWithValue("@TrangThaiCheckIn", checkIN.Checked);
+            command.Parameters.AddWithValue("@TrangThaiCheckOut", checkOUT.Checked);
+            int rowsAffected = command.ExecuteNonQuery();
+            if (rowsAffected > 0)
             {
-                MessageBox.Show("Check in thành công");
-            }
-            else if (checkIN.CheckState == CheckState.Checked && !CanCheckIn() && checkOUT.CheckState == CheckState.Unchecked)
-            {
-                MessageBox.Show("Check in thành công, bạn tới muộn");
-            }
-            else if (checkIN.CheckState == CheckState.Unchecked && checkOUT.CheckState == CheckState.Checked)
-            {
-                MessageBox.Show("Bạn chưa check in, vui lòng check in trước");
-                checkOUT.CheckState = CheckState.Unchecked;
-            }
-            else if (checkIN.CheckState == CheckState.Checked && checkOUT.CheckState == CheckState.Checked && CanCheckOut())
-            {
-                MessageBox.Show("Check out thành công");
-            }
-            else if (checkIN.CheckState == CheckState.Checked && checkOUT.CheckState == CheckState.Checked && !CanCheckIn())
-            {
-                MessageBox.Show("Check out thất bại,chưa tới giờ check out");
-                checkOUT.CheckState = CheckState.Unchecked;
-            }
-            else if (checkIN.CheckState == CheckState.Unchecked && checkOUT.CheckState == CheckState.Unchecked)
-            {
-                MessageBox.Show("Vui lòng check");
-            }
-            else if(dateTimeCheck.Value != DateTime.Today)
-            {
-                MessageBox.Show("Không thể check khác ngày");
-            }    
-            else
-            {
-                MessageBox.Show("Check thành công");
+                MessageBox.Show("Dữ liệu đã được cập nhật thành công!");
             }
         }
 
         private void FCheck_FormClosed(object sender, FormClosedEventArgs e)
         {
-            /*Properties.Settings.Default.checkbox = checkIN.Checked;
-            Properties.Settings.Default.checkbox = checkOUT.Checked;
-            Properties.Settings.Default.textbox = textTienDo.Text;           
-            Properties.Settings.Default.Save();*/
+            
         }
-
-        /*/private void checkIN_CheckedChanged(object sender, EventArgs e)
-        {
-            if(checkIN.Checked)
-            {
-                checkIN.CheckState = CheckState.Checked;
-            }
-            else
-            {
-                checkIN.CheckState = CheckState.Checked;
-            }
-        }
-
-        //private void checkOUT_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkOUT.Checked)
-            {
-                checkOUT.CheckState = CheckState.Checked;
-            }
-            else
-            {
-                checkOUT.CheckState = CheckState.Checked;
-            }
-        }*/
-
+  
         public void LoadCongViec()
         {
             string ID = "Content";

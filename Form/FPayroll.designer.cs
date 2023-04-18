@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbKPI = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtFine = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbSalary = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.dataChuyenCan = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.dataCVHT = new System.Windows.Forms.DataGridView();
+            this.textBonus = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataChuyenCan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCVHT)).BeginInit();
@@ -56,16 +56,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "CHUYÊN CẦN";
             // 
-            // label7
+            // lbKPI
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Info;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(853, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "****";
+            this.lbKPI.AutoSize = true;
+            this.lbKPI.BackColor = System.Drawing.SystemColors.Info;
+            this.lbKPI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKPI.Location = new System.Drawing.Point(853, 87);
+            this.lbKPI.Name = "lbKPI";
+            this.lbKPI.Size = new System.Drawing.Size(33, 20);
+            this.lbKPI.TabIndex = 13;
+            this.lbKPI.Text = "****";
             // 
             // label10
             // 
@@ -87,23 +87,14 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Tiền thưởng:";
             // 
-            // textBox1
+            // txtFine
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(816, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 15;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(816, 185);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 17;
+            this.txtFine.Enabled = false;
+            this.txtFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFine.Location = new System.Drawing.Point(816, 185);
+            this.txtFine.Name = "txtFine";
+            this.txtFine.Size = new System.Drawing.Size(100, 27);
+            this.txtFine.TabIndex = 17;
             // 
             // label2
             // 
@@ -125,16 +116,16 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Tiền lương tổng:";
             // 
-            // label5
+            // lbSalary
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Info;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(853, 235);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 20);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "****";
+            this.lbSalary.AutoSize = true;
+            this.lbSalary.BackColor = System.Drawing.SystemColors.Info;
+            this.lbSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSalary.Location = new System.Drawing.Point(853, 235);
+            this.lbSalary.Name = "lbSalary";
+            this.lbSalary.Size = new System.Drawing.Size(33, 20);
+            this.lbSalary.TabIndex = 19;
+            this.lbSalary.Text = "****";
             // 
             // flowLayoutPanel1
             // 
@@ -180,19 +171,26 @@
             this.dataCVHT.Size = new System.Drawing.Size(628, 181);
             this.dataCVHT.TabIndex = 5;
             // 
+            // textBonus
+            // 
+            this.textBonus.Location = new System.Drawing.Point(816, 132);
+            this.textBonus.Name = "textBonus";
+            this.textBonus.Size = new System.Drawing.Size(100, 22);
+            this.textBonus.TabIndex = 21;
+            // 
             // FPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 439);
+            this.Controls.Add(this.textBonus);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbSalary);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtFine);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbKPI);
             this.Controls.Add(this.label10);
             this.Name = "FPayroll";
             this.Text = "PAYROLL";
@@ -208,17 +206,17 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbKPI;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtFine;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbSalary;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridView dataChuyenCan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataCVHT;
+        private System.Windows.Forms.TextBox textBonus;
     }
 }
