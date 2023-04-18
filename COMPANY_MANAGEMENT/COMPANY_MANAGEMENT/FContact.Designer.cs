@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtGVContact = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtIDSent = new System.Windows.Forms.TextBox();
-            this.txtNameSent = new System.Windows.Forms.TextBox();
-            this.txtSub = new System.Windows.Forms.TextBox();
-            this.rTxtContent = new System.Windows.Forms.RichTextBox();
-            this.cbBoxIDRe = new System.Windows.Forms.ComboBox();
             this.btSent = new System.Windows.Forms.Button();
+            this.cbBoxIDRe = new System.Windows.Forms.ComboBox();
+            this.rTxtContent = new System.Windows.Forms.RichTextBox();
+            this.txtSub = new System.Windows.Forms.TextBox();
+            this.txtNameSent = new System.Windows.Forms.TextBox();
+            this.txtIDSent = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtGVContact = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVContact)).BeginInit();
             this.SuspendLayout();
@@ -65,89 +65,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMATION";
             // 
-            // dtGVContact
+            // btSent
             // 
-            this.dtGVContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGVContact.Location = new System.Drawing.Point(578, 12);
-            this.dtGVContact.Name = "dtGVContact";
-            this.dtGVContact.RowHeadersWidth = 51;
-            this.dtGVContact.RowTemplate.Height = 29;
-            this.dtGVContact.Size = new System.Drawing.Size(638, 637);
-            this.dtGVContact.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID Sent";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name Sent";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 200);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Subject";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 275);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Content";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 558);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "ID Receive";
-            // 
-            // txtIDSent
-            // 
-            this.txtIDSent.Location = new System.Drawing.Point(142, 45);
-            this.txtIDSent.Name = "txtIDSent";
-            this.txtIDSent.Size = new System.Drawing.Size(253, 27);
-            this.txtIDSent.TabIndex = 5;
-            // 
-            // txtNameSent
-            // 
-            this.txtNameSent.Location = new System.Drawing.Point(142, 116);
-            this.txtNameSent.Name = "txtNameSent";
-            this.txtNameSent.Size = new System.Drawing.Size(253, 27);
-            this.txtNameSent.TabIndex = 6;
-            // 
-            // txtSub
-            // 
-            this.txtSub.Location = new System.Drawing.Point(142, 193);
-            this.txtSub.Name = "txtSub";
-            this.txtSub.Size = new System.Drawing.Size(387, 27);
-            this.txtSub.TabIndex = 7;
-            // 
-            // rTxtContent
-            // 
-            this.rTxtContent.Location = new System.Drawing.Point(17, 298);
-            this.rTxtContent.Name = "rTxtContent";
-            this.rTxtContent.Size = new System.Drawing.Size(512, 243);
-            this.rTxtContent.TabIndex = 8;
-            this.rTxtContent.Text = "";
+            this.btSent.Location = new System.Drawing.Point(373, 596);
+            this.btSent.Name = "btSent";
+            this.btSent.Size = new System.Drawing.Size(156, 46);
+            this.btSent.TabIndex = 10;
+            this.btSent.Text = "SENT";
+            this.btSent.UseVisualStyleBackColor = true;
+            this.btSent.Click += new System.EventHandler(this.btSent_Click);
             // 
             // cbBoxIDRe
             // 
@@ -161,14 +87,90 @@
             this.cbBoxIDRe.Size = new System.Drawing.Size(253, 28);
             this.cbBoxIDRe.TabIndex = 9;
             // 
-            // btSent
+            // rTxtContent
             // 
-            this.btSent.Location = new System.Drawing.Point(373, 596);
-            this.btSent.Name = "btSent";
-            this.btSent.Size = new System.Drawing.Size(156, 46);
-            this.btSent.TabIndex = 10;
-            this.btSent.Text = "SENT";
-            this.btSent.UseVisualStyleBackColor = true;
+            this.rTxtContent.Location = new System.Drawing.Point(17, 298);
+            this.rTxtContent.Name = "rTxtContent";
+            this.rTxtContent.Size = new System.Drawing.Size(512, 243);
+            this.rTxtContent.TabIndex = 8;
+            this.rTxtContent.Text = "";
+            // 
+            // txtSub
+            // 
+            this.txtSub.Location = new System.Drawing.Point(142, 193);
+            this.txtSub.Name = "txtSub";
+            this.txtSub.Size = new System.Drawing.Size(387, 27);
+            this.txtSub.TabIndex = 7;
+            // 
+            // txtNameSent
+            // 
+            this.txtNameSent.Location = new System.Drawing.Point(142, 116);
+            this.txtNameSent.Name = "txtNameSent";
+            this.txtNameSent.Size = new System.Drawing.Size(253, 27);
+            this.txtNameSent.TabIndex = 6;
+            // 
+            // txtIDSent
+            // 
+            this.txtIDSent.Location = new System.Drawing.Point(142, 45);
+            this.txtIDSent.Name = "txtIDSent";
+            this.txtIDSent.Size = new System.Drawing.Size(253, 27);
+            this.txtIDSent.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 558);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "ID Receive";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 275);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Content";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Subject";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Name Sent";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID Sent";
+            // 
+            // dtGVContact
+            // 
+            this.dtGVContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVContact.Location = new System.Drawing.Point(578, 12);
+            this.dtGVContact.Name = "dtGVContact";
+            this.dtGVContact.RowHeadersWidth = 51;
+            this.dtGVContact.RowTemplate.Height = 29;
+            this.dtGVContact.Size = new System.Drawing.Size(638, 637);
+            this.dtGVContact.TabIndex = 1;
+            this.dtGVContact.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVContact_CellClick);
             // 
             // FContact
             // 
@@ -179,6 +181,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FContact";
             this.Text = "FContact";
+            this.Load += new System.EventHandler(this.FContact_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVContact)).EndInit();

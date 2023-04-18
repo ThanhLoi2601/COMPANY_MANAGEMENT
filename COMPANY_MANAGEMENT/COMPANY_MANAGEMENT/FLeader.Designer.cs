@@ -45,7 +45,7 @@
             this.txtEmailLd = new System.Windows.Forms.TextBox();
             this.txtIDCardLd = new System.Windows.Forms.TextBox();
             this.txtNameLd = new System.Windows.Forms.TextBox();
-            this.txtIDLd = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.dtpkDateOfBirthLd = new System.Windows.Forms.DateTimePicker();
             this.lbPasswordLd = new System.Windows.Forms.Label();
             this.lbBasicSalaryLd = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.lbIDCardLd = new System.Windows.Forms.Label();
             this.lbDateOfBirthLd = new System.Windows.Forms.Label();
             this.lbNameLd = new System.Windows.Forms.Label();
-            this.lbIDLd = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             this.grbOptionLd = new System.Windows.Forms.GroupBox();
             this.btAbsenceLetterLd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -87,7 +87,7 @@
             this.grbInformationLd.Controls.Add(this.txtEmailLd);
             this.grbInformationLd.Controls.Add(this.txtIDCardLd);
             this.grbInformationLd.Controls.Add(this.txtNameLd);
-            this.grbInformationLd.Controls.Add(this.txtIDLd);
+            this.grbInformationLd.Controls.Add(this.txtID);
             this.grbInformationLd.Controls.Add(this.dtpkDateOfBirthLd);
             this.grbInformationLd.Controls.Add(this.lbPasswordLd);
             this.grbInformationLd.Controls.Add(this.lbBasicSalaryLd);
@@ -96,7 +96,7 @@
             this.grbInformationLd.Controls.Add(this.lbIDCardLd);
             this.grbInformationLd.Controls.Add(this.lbDateOfBirthLd);
             this.grbInformationLd.Controls.Add(this.lbNameLd);
-            this.grbInformationLd.Controls.Add(this.lbIDLd);
+            this.grbInformationLd.Controls.Add(this.lbID);
             this.grbInformationLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.grbInformationLd.Location = new System.Drawing.Point(1, 1);
             this.grbInformationLd.Name = "grbInformationLd";
@@ -214,13 +214,13 @@
             this.txtNameLd.Size = new System.Drawing.Size(294, 27);
             this.txtNameLd.TabIndex = 11;
             // 
-            // txtIDLd
+            // txtID
             // 
-            this.txtIDLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIDLd.Location = new System.Drawing.Point(102, 35);
-            this.txtIDLd.Name = "txtIDLd";
-            this.txtIDLd.Size = new System.Drawing.Size(294, 27);
-            this.txtIDLd.TabIndex = 10;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtID.Location = new System.Drawing.Point(102, 35);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(294, 27);
+            this.txtID.TabIndex = 10;
             // 
             // dtpkDateOfBirthLd
             // 
@@ -301,15 +301,15 @@
             this.lbNameLd.TabIndex = 1;
             this.lbNameLd.Text = "Name";
             // 
-            // lbIDLd
+            // lbID
             // 
-            this.lbIDLd.AutoSize = true;
-            this.lbIDLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbIDLd.Location = new System.Drawing.Point(9, 43);
-            this.lbIDLd.Name = "lbIDLd";
-            this.lbIDLd.Size = new System.Drawing.Size(22, 18);
-            this.lbIDLd.TabIndex = 0;
-            this.lbIDLd.Text = "ID";
+            this.lbID.AutoSize = true;
+            this.lbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbID.Location = new System.Drawing.Point(9, 43);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(22, 18);
+            this.lbID.TabIndex = 0;
+            this.lbID.Text = "ID";
             // 
             // grbOptionLd
             // 
@@ -509,7 +509,7 @@
         private TextBox txtEmailLd;
         private TextBox txtIDCardLd;
         private TextBox txtNameLd;
-        private TextBox txtIDLd;
+        private TextBox txtID;
         private DateTimePicker dtpkDateOfBirthLd;
         private Label lbPasswordLd;
         private Label lbBasicSalaryLd;
@@ -518,7 +518,7 @@
         private Label lbIDCardLd;
         private Label lbDateOfBirthLd;
         private Label lbNameLd;
-        private Label lbIDLd;
+        private Label lbID;
         private GroupBox grbOptionLd;
         private Button btDistributionLd;
         private Button btSalaryDetailsLd;
