@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbInformationLd = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDManager = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.txtEmailLd = new System.Windows.Forms.TextBox();
             this.txtIDCardLd = new System.Windows.Forms.TextBox();
             this.txtNameLd = new System.Windows.Forms.TextBox();
-            this.txtIDLd = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.dtpkDateOfBirthLd = new System.Windows.Forms.DateTimePicker();
             this.lbPasswordLd = new System.Windows.Forms.Label();
             this.lbBasicSalaryLd = new System.Windows.Forms.Label();
@@ -54,14 +54,14 @@
             this.lbIDCardLd = new System.Windows.Forms.Label();
             this.lbDateOfBirthLd = new System.Windows.Forms.Label();
             this.lbNameLd = new System.Windows.Forms.Label();
-            this.lbIDLd = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             this.grbOptionLd = new System.Windows.Forms.GroupBox();
             this.btAbsenceLetterLd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btDistributionLd = new System.Windows.Forms.Button();
             this.btSalaryDetailsLd = new System.Windows.Forms.Button();
             this.btKPIDetailsLd = new System.Windows.Forms.Button();
-            this.btContract = new System.Windows.Forms.Button();
+            this.btContact = new System.Windows.Forms.Button();
             this.btMyInfor = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListManager = new System.Windows.Forms.DataGridView();
@@ -87,7 +87,7 @@
             this.grbInformationLd.Controls.Add(this.txtEmailLd);
             this.grbInformationLd.Controls.Add(this.txtIDCardLd);
             this.grbInformationLd.Controls.Add(this.txtNameLd);
-            this.grbInformationLd.Controls.Add(this.txtIDLd);
+            this.grbInformationLd.Controls.Add(this.txtID);
             this.grbInformationLd.Controls.Add(this.dtpkDateOfBirthLd);
             this.grbInformationLd.Controls.Add(this.lbPasswordLd);
             this.grbInformationLd.Controls.Add(this.lbBasicSalaryLd);
@@ -96,7 +96,7 @@
             this.grbInformationLd.Controls.Add(this.lbIDCardLd);
             this.grbInformationLd.Controls.Add(this.lbDateOfBirthLd);
             this.grbInformationLd.Controls.Add(this.lbNameLd);
-            this.grbInformationLd.Controls.Add(this.lbIDLd);
+            this.grbInformationLd.Controls.Add(this.lbID);
             this.grbInformationLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.grbInformationLd.Location = new System.Drawing.Point(1, 1);
             this.grbInformationLd.Name = "grbInformationLd";
@@ -214,13 +214,13 @@
             this.txtNameLd.Size = new System.Drawing.Size(294, 27);
             this.txtNameLd.TabIndex = 11;
             // 
-            // txtIDLd
+            // txtID
             // 
-            this.txtIDLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIDLd.Location = new System.Drawing.Point(102, 35);
-            this.txtIDLd.Name = "txtIDLd";
-            this.txtIDLd.Size = new System.Drawing.Size(294, 27);
-            this.txtIDLd.TabIndex = 10;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtID.Location = new System.Drawing.Point(102, 35);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(294, 27);
+            this.txtID.TabIndex = 10;
             // 
             // dtpkDateOfBirthLd
             // 
@@ -301,15 +301,15 @@
             this.lbNameLd.TabIndex = 1;
             this.lbNameLd.Text = "Name";
             // 
-            // lbIDLd
+            // lbID
             // 
-            this.lbIDLd.AutoSize = true;
-            this.lbIDLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbIDLd.Location = new System.Drawing.Point(9, 43);
-            this.lbIDLd.Name = "lbIDLd";
-            this.lbIDLd.Size = new System.Drawing.Size(22, 18);
-            this.lbIDLd.TabIndex = 0;
-            this.lbIDLd.Text = "ID";
+            this.lbID.AutoSize = true;
+            this.lbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbID.Location = new System.Drawing.Point(9, 43);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(22, 18);
+            this.lbID.TabIndex = 0;
+            this.lbID.Text = "ID";
             // 
             // grbOptionLd
             // 
@@ -318,7 +318,7 @@
             this.grbOptionLd.Controls.Add(this.btDistributionLd);
             this.grbOptionLd.Controls.Add(this.btSalaryDetailsLd);
             this.grbOptionLd.Controls.Add(this.btKPIDetailsLd);
-            this.grbOptionLd.Controls.Add(this.btContract);
+            this.grbOptionLd.Controls.Add(this.btContact);
             this.grbOptionLd.Controls.Add(this.btMyInfor);
             this.grbOptionLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.grbOptionLd.Location = new System.Drawing.Point(1231, 1);
@@ -379,16 +379,16 @@
             this.btKPIDetailsLd.Text = "KPI Details";
             this.btKPIDetailsLd.UseVisualStyleBackColor = true;
             // 
-            // btContract
+            // btContact
             // 
-            this.btContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btContract.Location = new System.Drawing.Point(8, 217);
-            this.btContract.Name = "btContract";
-            this.btContract.Size = new System.Drawing.Size(142, 48);
-            this.btContract.TabIndex = 6;
-            this.btContract.Text = "Contract";
-            this.btContract.UseVisualStyleBackColor = true;
-            this.btContract.Click += new System.EventHandler(this.btContract_Click);
+            this.btContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btContact.Location = new System.Drawing.Point(8, 217);
+            this.btContact.Name = "btContact";
+            this.btContact.Size = new System.Drawing.Size(142, 48);
+            this.btContact.TabIndex = 6;
+            this.btContact.Text = "Contact";
+            this.btContact.UseVisualStyleBackColor = true;
+            this.btContact.Click += new System.EventHandler(this.btContract_Click);
             // 
             // btMyInfor
             // 
@@ -413,23 +413,23 @@
             // 
             // dgvListManager
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListManager.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListManager.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvListManager.Location = new System.Drawing.Point(6, 26);
             this.dgvListManager.Name = "dgvListManager";
             this.dgvListManager.RowHeadersWidth = 51;
@@ -451,23 +451,23 @@
             // 
             // dgvListStaff
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvListStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListStaff.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListStaff.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvListStaff.Location = new System.Drawing.Point(6, 24);
             this.dgvListStaff.Name = "dgvListStaff";
             this.dgvListStaff.RowHeadersWidth = 51;
@@ -509,7 +509,7 @@
         private TextBox txtEmailLd;
         private TextBox txtIDCardLd;
         private TextBox txtNameLd;
-        private TextBox txtIDLd;
+        private TextBox txtID;
         private DateTimePicker dtpkDateOfBirthLd;
         private Label lbPasswordLd;
         private Label lbBasicSalaryLd;
@@ -518,12 +518,12 @@
         private Label lbIDCardLd;
         private Label lbDateOfBirthLd;
         private Label lbNameLd;
-        private Label lbIDLd;
+        private Label lbID;
         private GroupBox grbOptionLd;
         private Button btDistributionLd;
         private Button btSalaryDetailsLd;
         private Button btKPIDetailsLd;
-        private Button btContract;
+        private Button btContact;
         private Button btMyInfor;
         private Button btDeleteLd;
         private Button btInsertLd;

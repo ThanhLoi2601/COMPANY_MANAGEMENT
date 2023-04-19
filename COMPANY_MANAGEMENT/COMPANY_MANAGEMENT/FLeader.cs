@@ -23,8 +23,8 @@ namespace COMPANY_MANAGEMENT
 
         private void btContract_Click(object sender, EventArgs e)
         {
-            FContract contract = new FContract();
-            contract.ShowDialog();
+            FContact cont = new FContact();
+            cont.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,14 +35,14 @@ namespace COMPANY_MANAGEMENT
 
         private void btUpdateLd_Click(object sender, EventArgs e)
         {
-            if (txtIDLd.Text.Contains("MAN"))
+            if (txtID.Text.Contains("MAN"))
             {
-                Manager man = new Manager(txtIDLd.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
+                Manager man = new Manager(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                 manDAO.Update(man);
             }
             else
             {
-                Staff sta = new Staff(txtIDLd.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
+                Staff sta = new Staff(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                 staDAO.Update(sta);
             }
             dgvLoad();
@@ -50,7 +50,7 @@ namespace COMPANY_MANAGEMENT
 
         private void btInsertLd_Click(object sender, EventArgs e)
         {
-            if (txtIDLd.Text.Contains("MAN"))
+            if (txtID.Text.Contains("MAN"))
             {
                 if (txtIDManager.Text != "")
                 {
@@ -58,13 +58,13 @@ namespace COMPANY_MANAGEMENT
                 }
                 else
                 {
-                    Manager man = new Manager(txtIDLd.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
+                    Manager man = new Manager(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                     manDAO.Insert(man);
                 }
             }
-            else if(txtIDLd.Text.Contains("EMP"))
+            else if(txtID.Text.Contains("EMP"))
             {
-                Staff sta = new Staff(txtIDLd.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
+                Staff sta = new Staff(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                 staDAO.Insert(sta);
             }
             else
@@ -81,7 +81,7 @@ namespace COMPANY_MANAGEMENT
                         }
                     }
                 }
-                if (!txtIDLd.Text.Contains("MAN") || !txtIDLd.Text.Contains("EMP"))
+                if (!txtID.Text.Contains("MAN") || !txtID.Text.Contains("EMP"))
                 {
                     MessageBox.Show("You must enter the correct employee ID !!", "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -94,14 +94,14 @@ namespace COMPANY_MANAGEMENT
             DialogResult result = MessageBox.Show("Are you sure to delete?", "REMIND", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (txtIDLd.Text.Contains("MAN"))
+                if (txtID.Text.Contains("MAN"))
                 {
-                    Manager man = new Manager(txtIDLd.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
+                    Manager man = new Manager(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                     manDAO.Delete(man);
                 }
                 else
                 {
-                    Staff sta = new Staff(txtIDLd.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
+                    Staff sta = new Staff(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                     staDAO.Delete(sta);
                 }
                 dgvLoad();
@@ -112,8 +112,8 @@ namespace COMPANY_MANAGEMENT
         {
             int r = this.dgvListManager.CurrentCell.RowIndex;
             txtIDManager.Clear();
-            txtIDLd.DataBindings.Clear();
-            txtIDLd.Text = dgvListManager.Rows[r].Cells[0].Value.ToString();
+            txtID.DataBindings.Clear();
+            txtID.Text = dgvListManager.Rows[r].Cells[0].Value.ToString();
             txtNameLd.DataBindings.Clear();
             txtNameLd.Text = dgvListManager.Rows[r].Cells[1].Value.ToString();
             dtpkDateOfBirthLd.DataBindings.Clear();
@@ -128,15 +128,14 @@ namespace COMPANY_MANAGEMENT
             txtBasicSalaryLd.Text = dgvListManager.Rows[r].Cells[6].Value.ToString();
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListManager.Rows[r].Cells[7].Value.ToString();
-            IDReceive = dgvListManager.Rows[r].Cells[0].Value.ToString();
-            dgvListStaff.DataSource = staDAO.LoadList(IDReceive);
+            dgvListStaff.DataSource = staDAO.LoadList(txtID.Text);
         }
 
         private void dgvListStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = this.dgvListStaff.CurrentCell.RowIndex;
-            txtIDLd.DataBindings.Clear();
-            txtIDLd.Text = dgvListStaff.Rows[r].Cells[0].Value.ToString();
+            txtID.DataBindings.Clear();
+            txtID.Text = dgvListStaff.Rows[r].Cells[0].Value.ToString();
             txtNameLd.DataBindings.Clear();
             txtNameLd.Text = dgvListStaff.Rows[r].Cells[1].Value.ToString();
             dtpkDateOfBirthLd.DataBindings.Clear();
@@ -153,7 +152,10 @@ namespace COMPANY_MANAGEMENT
             txtBasicSalaryLd.Text = dgvListStaff.Rows[r].Cells[7].Value.ToString();
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListStaff.Rows[r].Cells[8].Value.ToString();
+<<<<<<< HEAD
             //IDReceive = dgvListStaff.Rows[r].Cells[0].Value.ToString();
+=======
+>>>>>>> a3353c0debe82184e5c2553a0e82766f8d801fcf
         }
 
         private void FLeader_Load(object sender, EventArgs e)
