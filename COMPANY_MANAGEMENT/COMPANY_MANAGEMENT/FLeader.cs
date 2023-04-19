@@ -128,7 +128,6 @@ namespace COMPANY_MANAGEMENT
             txtBasicSalaryLd.Text = dgvListManager.Rows[r].Cells[6].Value.ToString();
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListManager.Rows[r].Cells[7].Value.ToString();
-            //IDReceive = dgvListManager.Rows[r].Cells[0].Value.ToString();
             dgvListStaff.DataSource = staDAO.LoadList(txtID.Text);
         }
 
@@ -153,7 +152,6 @@ namespace COMPANY_MANAGEMENT
             txtBasicSalaryLd.Text = dgvListStaff.Rows[r].Cells[7].Value.ToString();
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListStaff.Rows[r].Cells[8].Value.ToString();
-            //IDReceive = dgvListStaff.Rows[r].Cells[0].Value.ToString();  // không thay đổi IDReceive
         }
 
         private void FLeader_Load(object sender, EventArgs e)
