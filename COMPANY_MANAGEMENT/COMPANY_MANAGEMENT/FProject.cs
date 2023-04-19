@@ -49,9 +49,12 @@ namespace COMPANY_MANAGEMENT
         }
         private void btUpdateProject_Click(object sender, EventArgs e)
         {
-            Project pro = new Project(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Project.ProjectStatus)cbbStatus.SelectedItem);
-            proDao.Update(pro);
-            dgvLoad(pro.Id);
+            if(txtID.Text.Contains("PRO"))
+            {
+                Project pro = new Project(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Project.ProjectStatus)cbbStatus.SelectedItem);
+                proDao.Update(pro);
+                dgvLoad(pro.Id);
+            }
         }
 
         private void btInsertProject_Click(object sender, EventArgs e)

@@ -153,7 +153,7 @@ namespace COMPANY_MANAGEMENT
             txtBasicSalaryLd.Text = dgvListStaff.Rows[r].Cells[7].Value.ToString();
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListStaff.Rows[r].Cells[8].Value.ToString();
-            IDReceive = dgvListStaff.Rows[r].Cells[0].Value.ToString();
+            //IDReceive = dgvListStaff.Rows[r].Cells[0].Value.ToString();
         }
 
         private void FLeader_Load(object sender, EventArgs e)
