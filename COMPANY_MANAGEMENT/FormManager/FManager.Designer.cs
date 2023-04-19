@@ -497,6 +497,7 @@
             this.btContact.TabIndex = 11;
             this.btContact.Text = "CONTACT";
             this.btContact.UseVisualStyleBackColor = false;
+            this.btContact.Click += new System.EventHandler(this.btContact_Click);
             // 
             // FManager
             // 

@@ -28,8 +28,8 @@ namespace COMPANY_MANAGEMENT
                 Staff Sta = new Staff(txtMaDN.Text, txtMK.Text);
                 if(StaDAO.Login(Sta)==true)
                 {
-                    FStaff f = new FStaff(txtMaDN.Text);
-                    f.ShowDialog();
+                    //FStaff f = new FStaff(txtMaDN.Text);
+                    //f.ShowDialog();
                 }
             }else if(rbManager.Checked==true)
             {
@@ -44,8 +44,8 @@ namespace COMPANY_MANAGEMENT
                 Leader Lea = new Leader(txtMaDN.Text, txtMK.Text);
                 if (LeaDAO.Login(Lea) == true)
                 {
-                    FLeader f = new FLeader(txtMaDN.Text);
-                    f.ShowDialog();
+                    //FLeader f = new FLeader(txtMaDN.Text);
+                    //f.ShowDialog();
                 }
             }
         }

@@ -154,5 +154,12 @@ namespace COMPANY_MANAGEMENT
             txtKPI.DataBindings.Clear();
             txtKPI.Text = kpi.CalKPIAvg(txtID.Text).ToString();
         }
+
+        private void btContact_Click(object sender, EventArgs e)
+        {
+            Manager man = manDAO.Search(IDReceive);
+            FContact f = new FContact(man.ID,man.Name);
+            f.ShowDialog();
+        }
     }
 }
