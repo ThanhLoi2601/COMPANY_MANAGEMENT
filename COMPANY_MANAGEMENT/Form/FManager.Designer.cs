@@ -63,7 +63,7 @@
             this.btCheckIn_Out = new System.Windows.Forms.Button();
             this.btJob = new System.Windows.Forms.Button();
             this.btLetter = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.btContact = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -80,10 +80,9 @@
             this.flowLayoutPanel1.Controls.Add(this.grInfo);
             this.flowLayoutPanel1.Controls.Add(this.dGVBasic);
             this.flowLayoutPanel1.Controls.Add(this.grOption);
-            this.flowLayoutPanel1.Controls.Add(this.checkedListBox1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 6);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1538, 631);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1538, 688);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // grInfo
@@ -111,9 +110,9 @@
             this.grInfo.Controls.Add(this.txtID);
             this.grInfo.Controls.Add(this.labID);
             this.grInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grInfo.Location = new System.Drawing.Point(3, 3);
+            this.grInfo.Location = new System.Drawing.Point(3, 7);
             this.grInfo.Name = "grInfo";
-            this.grInfo.Size = new System.Drawing.Size(442, 623);
+            this.grInfo.Size = new System.Drawing.Size(451, 670);
             this.grInfo.TabIndex = 1;
             this.grInfo.TabStop = false;
             this.grInfo.Text = "INFORMATION";
@@ -123,9 +122,9 @@
             this.flowLayoutPanel3.Controls.Add(this.btUpdate);
             this.flowLayoutPanel3.Controls.Add(this.btInsert);
             this.flowLayoutPanel3.Controls.Add(this.btDelete);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(-3, 565);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 617);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(445, 52);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(451, 52);
             this.flowLayoutPanel3.TabIndex = 17;
             // 
             // btUpdate
@@ -176,7 +175,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(145, 518);
+            this.txtPass.Location = new System.Drawing.Point(145, 537);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(261, 28);
             this.txtPass.TabIndex = 16;
@@ -187,7 +186,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 518);
+            this.label8.Location = new System.Drawing.Point(4, 537);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 22);
             this.label8.TabIndex = 15;
@@ -352,11 +351,11 @@
             this.dGVBasic.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dGVBasic.BackgroundColor = System.Drawing.Color.White;
             this.dGVBasic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVBasic.Location = new System.Drawing.Point(451, 3);
+            this.dGVBasic.Location = new System.Drawing.Point(460, 9);
             this.dGVBasic.Name = "dGVBasic";
             this.dGVBasic.RowHeadersWidth = 51;
             this.dGVBasic.RowTemplate.Height = 24;
-            this.dGVBasic.Size = new System.Drawing.Size(852, 623);
+            this.dGVBasic.Size = new System.Drawing.Size(852, 667);
             this.dGVBasic.TabIndex = 0;
             this.dGVBasic.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVStaff_CellClick);
             // 
@@ -366,9 +365,9 @@
             this.grOption.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grOption.Controls.Add(this.flowLayoutPanel2);
             this.grOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grOption.Location = new System.Drawing.Point(1309, 9);
+            this.grOption.Location = new System.Drawing.Point(1318, 3);
             this.grOption.Name = "grOption";
-            this.grOption.Size = new System.Drawing.Size(216, 611);
+            this.grOption.Size = new System.Drawing.Size(216, 679);
             this.grOption.TabIndex = 0;
             this.grOption.TabStop = false;
             this.grOption.Text = "OPTION";
@@ -382,9 +381,10 @@
             this.flowLayoutPanel2.Controls.Add(this.btCheckIn_Out);
             this.flowLayoutPanel2.Controls.Add(this.btJob);
             this.flowLayoutPanel2.Controls.Add(this.btLetter);
+            this.flowLayoutPanel2.Controls.Add(this.btContact);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 39);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(210, 582);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(210, 634);
             this.flowLayoutPanel2.TabIndex = 9;
             // 
             // btDistribution
@@ -485,13 +485,18 @@
             this.btLetter.UseVisualStyleBackColor = false;
             this.btLetter.Click += new System.EventHandler(this.btLetter_Click);
             // 
-            // checkedListBox1
+            // btContact
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(3, 632);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 89);
-            this.checkedListBox1.TabIndex = 2;
+            this.btContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btContact.FlatAppearance.BorderSize = 0;
+            this.btContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btContact.Location = new System.Drawing.Point(3, 554);
+            this.btContact.Name = "btContact";
+            this.btContact.Size = new System.Drawing.Size(207, 68);
+            this.btContact.TabIndex = 11;
+            this.btContact.Text = "CONTACT";
+            this.btContact.UseVisualStyleBackColor = false;
             // 
             // FManager
             // 
@@ -499,7 +504,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1547, 652);
+            this.ClientSize = new System.Drawing.Size(1547, 699);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FManager";
@@ -552,6 +557,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btJob;
         private System.Windows.Forms.Button btLetter;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button btContact;
     }
 }
