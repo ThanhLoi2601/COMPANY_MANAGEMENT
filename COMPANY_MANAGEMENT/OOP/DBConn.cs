@@ -249,5 +249,12 @@ namespace COMPANY_MANAGEMENT.OOP
             }
         }
 
+        public void ExecutiveWithoutNotice(string sqlStr)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
