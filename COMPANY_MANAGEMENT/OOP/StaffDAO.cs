@@ -47,6 +47,11 @@ namespace COMPANY_MANAGEMENT
             string sqlStr = string.Format("SELECT * FROM Staff WHERE ID = '{0}';", id);
             return dB.FindStaff(sqlStr);
         }
+        public void UpdatePass(Staff sta)
+        {
+            string sqlStr = string.Format("UPDATE Staff SET Password = '{0}' Where ID ='{1}'", sta.Password, sta.ID);
+            dB.Executive(sqlStr);
+        }
     }
 }
 

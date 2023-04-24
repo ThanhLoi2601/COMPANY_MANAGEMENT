@@ -1,5 +1,4 @@
-﻿using COMPANY_MANAGEMENT.OOP;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
-namespace COMPANY_MANAGEMENT
+using COMPANY_MANAGEMENT.OOP;
+namespace COMPANY_MANAGEMENT.FormStaff1
 {
     public partial class FAbsenceLetter : Form
     {
         AbsenceLetterDAO ab = new AbsenceLetterDAO();
-        StaffDAO staDAO = new StaffDAO();
-        ManagerDAO manDAO = new ManagerDAO();
+        StaffDAO s = new StaffDAO();
         string ID;
         int count = 0;
         int day = 0;
@@ -80,7 +78,8 @@ namespace COMPANY_MANAGEMENT
                 MessageBox.Show("Gửi đơn xin nghỉ thành công");
                 textNghi.Text = count.ToString();
                 textNgayNghi.Text = day.ToString();
-            }           
+            }
+            textNgayNghi.Tag = day.ToString();
         }
 
         private void rbRea4_CheckedChanged(object sender, EventArgs e)
@@ -90,12 +89,10 @@ namespace COMPANY_MANAGEMENT
 
         private void FAbsenceLetter_Load(object sender, EventArgs e)
         {
-            //this.FormBorderStyle = FormBorderStyle.None;
-            textID.Text = ID;
-            if (ID.Contains("MAN"))
-                textName.Text = manDAO.Search(ID).Name;
-            else
-                textName.Text = staDAO.Search(ID).Name;
+            this.FormBorderStyle = FormBorderStyle.None;
+            Staff man = s.Search(ID);
+            textName.Text = man.Name;
+            textID.Text = man.ID;
         }
     }
 }

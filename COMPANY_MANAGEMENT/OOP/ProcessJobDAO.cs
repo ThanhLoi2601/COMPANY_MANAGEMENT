@@ -22,5 +22,16 @@ namespace COMPANY_MANAGEMENT.OOP
                 , job.ID, job.Name, 0);
             dB.Executive(sqlStr);
         }
+        public void Update(ProcessJob a)
+        {
+            string sqlStr = string.Format("UPDATE ProcessJob SET Process = {0} Where Content ='{1}'", a.Process, a.Content);
+            dB.Executive(sqlStr);
+        }
+
+        public void Detele(ProcessJob a)
+        {
+            string sqlStr = string.Format("Delete FROM ProcessJob Where Content = '{0}'", a.Content);
+            dB.Executive(sqlStr);
+        }
     }
 }

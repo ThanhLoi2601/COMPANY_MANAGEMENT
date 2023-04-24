@@ -83,12 +83,6 @@
     <Compile Include="FormManager\FJob.Designer.cs">
       <DependentUpon>FJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManager\FAbsenceLetter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormManager\FAbsenceLetter.designer.cs">
-      <DependentUpon>FAbsenceLetter.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormManager\FCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,11 +125,54 @@
     <Compile Include="FormManager\FSalary.Designer.cs">
       <DependentUpon>FSalary.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStaff1\FAbsenceLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff1\FAbsenceLetter.Designer.cs">
+      <DependentUpon>FAbsenceLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff1\FChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff1\FChangePassWord.designer.cs">
+      <DependentUpon>FChangePassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff1\FCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff1\FCheck.designer.cs">
+      <DependentUpon>FCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff1\FInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff1\FInformation.designer.cs">
+      <DependentUpon>FInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff1\FPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff1\FPayroll.designer.cs">
+      <DependentUpon>FPayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff1\FStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff1\FStaff.designer.cs">
+      <DependentUpon>FStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="OOP\AbsenceLetter.cs" />
     <Compile Include="OOP\AbsenceLetterDAO.cs" />
+    <Compile Include="OOP\AssignedWorkDAO.cs" />
+    <Compile Include="OOP\Check.cs" />
+    <Compile Include="OOP\CheckDAO.cs" />
+    <Compile Include="OOP\CompleteJob.cs" />
+    <Compile Include="OOP\CompleteJobDAO.cs" />
     <Compile Include="OOP\CompleteWorkDAO.cs" />
     <Compile Include="OOP\Contact.cs" />
     <Compile Include="OOP\ContactDAO.cs" />
+    <Compile Include="OOP\Contract.cs" />
+    <Compile Include="OOP\Customer.cs" />
     <Compile Include="OOP\DBConn.cs" />
     <Compile Include="OOP\DistributionDAO.cs" />
     <Compile Include="OOP\Job.cs" />
@@ -159,9 +196,6 @@
     <Compile Include="FormManager\ShowStaffLetter.Designer.cs">
       <DependentUpon>ShowStaffLetter.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormManager\FAbsenceLetter.resx">
-      <DependentUpon>FAbsenceLetter.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormManager\FAssignedWork.resx">
       <DependentUpon>FAssignedWork.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +229,24 @@
     <EmbeddedResource Include="FormManager\FSalary.resx">
       <DependentUpon>FSalary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff1\FAbsenceLetter.resx">
+      <DependentUpon>FAbsenceLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff1\FChangePassWord.resx">
+      <DependentUpon>FChangePassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff1\FCheck.resx">
+      <DependentUpon>FCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff1\FInformation.resx">
+      <DependentUpon>FInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff1\FPayroll.resx">
+      <DependentUpon>FPayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff1\FStaff.resx">
+      <DependentUpon>FStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -203,6 +255,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="FormManager\ShowStaffLetter.resx">
       <DependentUpon>ShowStaffLetter.cs</DependentUpon>
@@ -239,6 +292,7 @@
   <ItemGroup>
     <Content Include="Database\ComJobSQL.sql" />
     <Content Include="Database\SQLAbsence.sql" />
+    <Content Include="Database\SQLCheck.sql" />
     <Content Include="Database\SQLCompleteWork.sql" />
     <Content Include="Database\SQLContact.sql" />
     <Content Include="Database\SQLContract.sql" />
@@ -257,6 +311,16 @@
     <Content Include="Inco_img\Icons8-Windows-8-Users-Administrator.ico" />
     <Content Include="Inco_img\plus_+_30px.png" />
     <Content Include="Inco_img\trash_can_30px.png" />
+    <None Include="Resources\money_transfer_26px.png" />
+    <None Include="Resources\profile_26px.png" />
+    <None Include="Resources\payroll_80px.png" />
+    <None Include="Resources\leave_26px1.png" />
+    <None Include="Resources\password_26px.png" />
+    <None Include="Resources\home_26px.png" />
+    <None Include="Resources\checkmark_26px.png" />
+    <None Include="Resources\payroll.png" />
+    <None Include="Resources\absence.png" />
+    <None Include="Resources\images.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

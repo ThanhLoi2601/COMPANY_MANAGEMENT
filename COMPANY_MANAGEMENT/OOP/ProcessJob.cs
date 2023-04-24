@@ -24,6 +24,11 @@ namespace COMPANY_MANAGEMENT.OOP
             content = cont;
             process = proc;
         }
+        public ProcessJob(string content, int process)
+        {
+            this.content = content;
+            this.process = process;
+        }
 
         ~ProcessJob() { }
 

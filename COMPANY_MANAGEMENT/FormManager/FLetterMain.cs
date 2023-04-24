@@ -24,7 +24,7 @@ namespace COMPANY_MANAGEMENT
         {
             if(rbCreate.Checked == true )
             {
-                FAbsenceLetter f = new FAbsenceLetter(IDReceive);
+                FAbsenceLetterstaff f = new FAbsenceLetter(IDReceive);
                 f.ShowDialog();
             }
             else

@@ -43,7 +43,15 @@ namespace COMPANY_MANAGEMENT
             this.BasicSalary = bSalary;
             this.Password = pass;
         }
-
+        public Staff(string name, DateTime birth, string id_card, string email, string address, string id)
+        {
+            this.name = name;
+            this.birth = birth;
+            this.id_card = id_card;
+            this.email = email;
+            this.address = address;
+            this.id = id;
+        }
         public Staff(string id, string pass)
         {
             this.ID = id;
