@@ -36,7 +36,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FStaff_Load(object sender, EventArgs e)
         {
-            dataStaff.DataSource = a.LoadList(ID);
+            dataStaff.DataSource = a.LoadList();
         }
 
         private void btLetter_Click_1(object sender, EventArgs e)

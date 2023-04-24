@@ -32,8 +32,8 @@ namespace COMPANY_MANAGEMENT
 
         void LoadSalary()
         {
-            int bonus;
-            int salary;
+            int bonus=0;
+            int salary=0;
             Staff man = sta.Search(ID);
             conn.Open();
             string query = "SELECT CompleteJob.Bonus FROM Job INNER JOIN CompleteJob ON Job.ID = CompleteJob.IDJob";
@@ -43,7 +43,7 @@ namespace COMPANY_MANAGEMENT
                 {
                     while (reader.Read())
                     {
-                        bonus = (int)reader["Bonus"];
+                        bonus = bonus + (int)reader["Bonus"];
                         salary = man.BasicSalary + bonus;
                         textBonus.Text = bonus.ToString();
                         lbSalary.Text = salary.ToString();

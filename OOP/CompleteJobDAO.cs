@@ -18,5 +18,12 @@ namespace COMPANY_MANAGEMENT
         {
             return dB.LoadList(string.Format("SELECT *FROM CompleteJob"));
         }
+
+        public void Insert(CompleteJob job)
+        {
+            string sqlStr=string.Format("Insert INTO CompleteJob VALUES ('{0}','{1}','{2}','{3}')"
+                                                                            , job.Id, job.Content,job.ComDate.ToString("yyyy-MM-dd"), job.Bonus);
+            dB.Executive(sqlStr);
+        }
     }
 }

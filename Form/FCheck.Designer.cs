@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textTienDo = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btReport = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeCheck = new System.Windows.Forms.DateTimePicker();
@@ -68,6 +68,7 @@
             this.checkOUT.TabIndex = 9;
             this.checkOUT.Text = "CheckOut";
             this.checkOUT.UseVisualStyleBackColor = true;
+            this.checkOUT.CheckedChanged += new System.EventHandler(this.checkOUT_CheckedChanged);
             // 
             // checkIN
             // 
@@ -78,6 +79,7 @@
             this.checkIN.TabIndex = 8;
             this.checkIN.Text = "CheckIn";
             this.checkIN.UseVisualStyleBackColor = true;
+            this.checkIN.CheckedChanged += new System.EventHandler(this.checkIN_CheckedChanged);
             // 
             // label2
             // 
@@ -113,6 +115,7 @@
             this.cbDsCV.Name = "cbDsCV";
             this.cbDsCV.Size = new System.Drawing.Size(186, 24);
             this.cbDsCV.TabIndex = 25;
+            this.cbDsCV.SelectedIndexChanged += new System.EventHandler(this.cbDsCV_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -141,15 +144,16 @@
             this.textTienDo.Size = new System.Drawing.Size(186, 22);
             this.textTienDo.TabIndex = 29;
             // 
-            // button1
+            // btReport
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(508, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 46);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "REPORT";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReport.Location = new System.Drawing.Point(508, 486);
+            this.btReport.Name = "btReport";
+            this.btReport.Size = new System.Drawing.Size(125, 46);
+            this.btReport.TabIndex = 30;
+            this.btReport.Text = "REPORT";
+            this.btReport.UseVisualStyleBackColor = true;
+            this.btReport.Click += new System.EventHandler(this.btReport_Click);
             // 
             // label5
             // 
@@ -197,10 +201,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 556);
+            this.ClientSize = new System.Drawing.Size(1001, 556);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btReport);
             this.Controls.Add(this.textTienDo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -213,7 +217,6 @@
             this.Name = "FCheck";
             this.Text = "Check";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FCheck_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FCheck_FormClosed);
             this.Load += new System.EventHandler(this.FCheck_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -233,7 +236,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textTienDo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btReport;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimeCheck;

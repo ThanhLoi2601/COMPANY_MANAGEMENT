@@ -93,6 +93,7 @@
             this.txtFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFine.Location = new System.Drawing.Point(816, 185);
             this.txtFine.Name = "txtFine";
+            this.txtFine.ReadOnly = true;
             this.txtFine.Size = new System.Drawing.Size(100, 27);
             this.txtFine.TabIndex = 17;
             // 
@@ -175,6 +176,7 @@
             // 
             this.textBonus.Location = new System.Drawing.Point(816, 132);
             this.textBonus.Name = "textBonus";
+            this.textBonus.ReadOnly = true;
             this.textBonus.Size = new System.Drawing.Size(100, 22);
             this.textBonus.TabIndex = 21;
             // 
