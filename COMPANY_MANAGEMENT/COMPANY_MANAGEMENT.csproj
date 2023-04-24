@@ -131,11 +131,35 @@
     <Compile Include="FormManager\FSalary.Designer.cs">
       <DependentUpon>FSalary.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStaff\FAbsenceLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OOP\AbsenceLetter.cs" />
     <Compile Include="OOP\AbsenceLetterDAO.cs" />
+    <Compile Include="OOP\AssignedWorkDAO.cs" />
+    <Compile Include="OOP\Check.cs" />
+    <Compile Include="OOP\CheckDAO.cs" />
+    <Compile Include="OOP\CompleteJobDAO.cs" />
     <Compile Include="OOP\CompleteWorkDAO.cs" />
     <Compile Include="OOP\Contact.cs" />
     <Compile Include="OOP\ContactDAO.cs" />
+    <Compile Include="OOP\Contract.cs" />
+    <Compile Include="OOP\Customer.cs" />
     <Compile Include="OOP\DBConn.cs" />
     <Compile Include="OOP\DistributionDAO.cs" />
     <Compile Include="OOP\Job.cs" />
