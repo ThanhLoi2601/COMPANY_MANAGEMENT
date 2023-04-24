@@ -1,8 +1,7 @@
 ﻿CREATE TABLE ProcessJob(
 	IDJob varchar(10),
 	Content varchar(500),
-	Process float,
-	Bonus int
+	Process float
 )
 
 INSERT INTO ProcessJob(IDJob,Content,Process,Bonus) VALUES ('JOB2345','Ve so do thiet ke',0,10000)

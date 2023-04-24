@@ -15,6 +15,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
     public partial class FStaff : Form
     {
         AssignedWorkDAO a = new AssignedWorkDAO();
+        StaffDAO staDao = new StaffDAO();
         string ID;
         Thread th;
 
@@ -43,7 +44,8 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         private void btLetter_Click_1(object sender, EventArgs e)
         {
             panel5.Controls.Clear();
-            FAbsenceLetter f = new FAbsenceLetter(ID);
+            Staff sta = staDao.Search(ID);
+            FAbsenceLetter f = new FAbsenceLetter(ID, sta.Name);
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             panel5.Controls.Add(f);

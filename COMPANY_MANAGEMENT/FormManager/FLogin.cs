@@ -1,4 +1,5 @@
 ﻿using COMPANY_MANAGEMENT.OOP;
+using COMPANY_MANAGEMENT.FormStaff1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,8 +29,8 @@ namespace COMPANY_MANAGEMENT
                 Staff Sta = new Staff(txtMaDN.Text, txtMK.Text);
                 if(StaDAO.Login(Sta)==true)
                 {
-                    //FStaff f = new FStaff(txtMaDN.Text);
-                    //f.ShowDialog();
+                    FStaff f = new FStaff(txtMaDN.Text);
+                    f.ShowDialog();
                 }
             }else if(rbManager.Checked==true)
             {

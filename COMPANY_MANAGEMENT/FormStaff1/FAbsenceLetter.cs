@@ -16,13 +16,15 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         AbsenceLetterDAO ab = new AbsenceLetterDAO();
         StaffDAO s = new StaffDAO();
         string ID;
+        string Name;
         int count = 0;
         int day = 0;
 
-        public FAbsenceLetter(string id)
+        public FAbsenceLetter(string id, string name)
         {
             InitializeComponent();
             this.ID = id;
+            this.Name = name;
         }
 
         private void btConfirm_Click(object sender, EventArgs e)
@@ -89,10 +91,10 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void FAbsenceLetter_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
-            Staff man = s.Search(ID);
-            textName.Text = man.Name;
-            textID.Text = man.ID;
+            if(ID.Contains("EMP"))
+                this.FormBorderStyle = FormBorderStyle.None;
+            textName.Text = Name;
+            textID.Text = ID;
         }
     }
 }

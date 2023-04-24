@@ -1,4 +1,5 @@
-﻿using COMPANY_MANAGEMENT.OOP;
+﻿using COMPANY_MANAGEMENT.FormStaff1;
+using COMPANY_MANAGEMENT.OOP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace COMPANY_MANAGEMENT
     public partial class FLetterMain : Form
     {
         string IDReceive;
+        string NameReceive;
         public FLetterMain(string ID)
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace COMPANY_MANAGEMENT
         {
             if(rbCreate.Checked == true )
             {
-                FAbsenceLetterstaff f = new FAbsenceLetter(IDReceive);
+                FAbsenceLetter f = new FAbsenceLetter(IDReceive, NameReceive);
                 f.ShowDialog();
             }
             else
