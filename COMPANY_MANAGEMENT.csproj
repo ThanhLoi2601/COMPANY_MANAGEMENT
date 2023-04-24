@@ -96,11 +96,14 @@
     <Compile Include="OOP\AssignedWorkDAO.cs" />
     <Compile Include="OOP\Check.cs" />
     <Compile Include="OOP\CheckDAO.cs" />
+    <Compile Include="OOP\CompleteJob.cs" />
     <Compile Include="OOP\CompleteJobDAO.cs" />
     <Compile Include="OOP\DBConn.cs" />
     <Compile Include="OOP\DistributionDAO.cs" />
     <Compile Include="OOP\Job.cs" />
     <Compile Include="OOP\JobDAO.cs" />
+    <Compile Include="OOP\ProcessJob.cs" />
+    <Compile Include="OOP\ProcessJobDAO.cs" />
     <Compile Include="OOP\Staff.cs" />
     <Compile Include="OOP\StaffDAO.cs" />
     <Compile Include="Program.cs" />

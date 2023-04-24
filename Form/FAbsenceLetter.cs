@@ -70,10 +70,6 @@ namespace COMPANY_MANAGEMENT
             {
                 MessageBox.Show("Bạn đã nghỉ quá số lần cho phép");
             }
-            else if( !rbRea1.Checked)
-            {
-                MessageBox.Show("Vui  lòng điền lý do nghỉ");
-            }
             else
             {
                 ab.UpdateAbsen(lt);
