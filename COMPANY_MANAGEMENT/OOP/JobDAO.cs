@@ -30,9 +30,12 @@ namespace COMPANY_MANAGEMENT.OOP
             dB.Executive(sqlStr);
         }
 
-        public DataTable LoadList()
+        public DataTable LoadList(string IDhead)
         {
-            return dB.LoadList(string.Format("SELECT *FROM Job"));
+            if (IDhead == "JOB")
+                return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID like 'JOB%'"));
+            else
+                return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID like 'JOM%'"));
         }
 
     }
