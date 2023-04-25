@@ -2,6 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
     <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC</SSDTPath>
@@ -131,6 +132,12 @@
     <Compile Include="FormStaff1\FAbsenceLetter.Designer.cs">
       <DependentUpon>FAbsenceLetter.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStaff1\FAnnouncement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff1\FAnnouncement.Designer.cs">
+      <DependentUpon>FAnnouncement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStaff1\FChangePassWord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +239,9 @@
     <EmbeddedResource Include="FormStaff1\FAbsenceLetter.resx">
       <DependentUpon>FAbsenceLetter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff1\FAnnouncement.resx">
+      <DependentUpon>FAnnouncement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStaff1\FChangePassWord.resx">
       <DependentUpon>FChangePassWord.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +320,7 @@
     <Content Include="Inco_img\Icons8-Windows-8-Users-Administrator.ico" />
     <Content Include="Inco_img\plus_+_30px.png" />
     <Content Include="Inco_img\trash_can_30px.png" />
+    <None Include="Resources\commercial_26px.png" />
     <None Include="Resources\money_transfer_26px.png" />
     <None Include="Resources\profile_26px.png" />
     <None Include="Resources\payroll_80px.png" />

@@ -14,10 +14,10 @@ namespace COMPANY_MANAGEMENT.OOP
     {
         DBConn dB = new DBConn();
 
-        public DataTable LoadList()
+        public DataTable LoadList(string ID)
         {
-            //return dB.LoadList(string.Format("SELECT Job.ID,Job.Name,Job.Content FROM Job INNER JOIN Distribution ON Job.ID = Distribution.IDJob WHERE Distribution.IDStaff = '{0}'",ID));
-            return dB.LoadList(string.Format("SELECT ProcessJob.IDJob,ProcessJob.Content,ProcessJob.Bonus FROM ProcessJob"));
+            return dB.LoadList(string.Format("SELECT Job.ID,Job.Name,Job.Content FROM Job " +
+                    "INNER JOIN Distribution ON Job.ID = Distribution.IDJob WHERE Distribution.IDStaff = '{0}'", ID));
         }
     }
 }

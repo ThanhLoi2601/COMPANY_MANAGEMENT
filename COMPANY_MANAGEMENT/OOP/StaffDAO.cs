@@ -20,7 +20,7 @@ namespace COMPANY_MANAGEMENT
         public void Insert(Staff sta)   
         {
             string sqlStr = string.Format("INSERT Staff(ID,Name,Birth,ID_Card,Email,Address,Manager_ID,Basic_salary,Password) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}');"
-                , sta.ID,sta.Name,sta.Birth,sta.ID_Card,sta.Email,sta.Address,sta.ManagerId,sta.BasicSalary,sta.Password);
+                , sta.ID,sta.Name,sta.Birth.ToString("yyyy-MM-dd"),sta.ID_Card,sta.Email,sta.Address,sta.ManagerId,sta.BasicSalary,sta.Password);
             dB.Executive(sqlStr);
         }
 
@@ -33,7 +33,7 @@ namespace COMPANY_MANAGEMENT
         public void Update(Staff sta)
         {
             string sqlStr = string.Format("UPDATE Staff SET Name= '{0}', Birth= '{1}', ID_Card= '{2}', Email= '{3}', Address= '{4}', Basic_salary= {5}, Password= '{6}' WHERE ID = '{7}'"
-                , sta.Name, sta.Birth.ToString(),sta.ID_Card,sta.Email,sta.Address,sta.BasicSalary.ToString(),sta.Password, sta.ID);
+                , sta.Name, sta.Birth.ToString("yyyy-MM-dd"),sta.ID_Card,sta.Email,sta.Address,sta.BasicSalary.ToString(),sta.Password, sta.ID);
             dB.Executive(sqlStr);
         }
 

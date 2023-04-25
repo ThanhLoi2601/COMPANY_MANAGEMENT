@@ -29,6 +29,7 @@ namespace COMPANY_MANAGEMENT.OOP
             IDReceive = idRe;
             InfoDate = date;
         }
+
         ~Contact() { }
     }
 }

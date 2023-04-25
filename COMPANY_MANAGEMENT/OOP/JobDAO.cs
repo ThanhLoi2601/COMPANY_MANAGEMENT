@@ -14,7 +14,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public void Insert(Job job)
         {
             string sqlStr = string.Format("INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('{0}','{1}','{2}','{3}','{4}','{5}')"
-                , job.ID, job.Name, job.Content,job.DateStart.ToString(),job.DateEnd.ToString(),job.Bonus.ToString());
+                , job.ID, job.Name, job.Content,job.DateStart.ToString("yyyy-MM-dd"),job.DateEnd.ToString("yyyy-MM-dd"),job.Bonus.ToString());
             dB.Executive(sqlStr);
         }
 
@@ -27,7 +27,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public void Update(Job job)
         {
             string sqlStr = string.Format("UPDATE Job Set Name = '{0}', Content = '{1}', DateStart = '{2}', DateEnd = '{3}', Bonus = {4} WHERE ID ='{5}'"
-                , job.Name,job.Content,job.DateStart.ToString(),job.DateEnd.ToString(),job.Bonus,job.ID);
+                , job.Name,job.Content,job.DateStart.ToString("yyyy-MM-dd"),job.DateEnd.ToString("yyyy-MM-dd"),job.Bonus,job.ID);
             dB.Executive(sqlStr);
         }
 

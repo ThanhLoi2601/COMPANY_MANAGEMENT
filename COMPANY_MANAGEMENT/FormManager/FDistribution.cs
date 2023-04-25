@@ -90,7 +90,7 @@ namespace COMPANY_MANAGEMENT
             lbNameJob.Text = jb.Name;
             lbNameStaff.Text = sta.Name;
             lbProcess.DataBindings.Clear();
-            lbProcess.Text = (double.Parse(dGVDistribution.Rows[r].Cells[4].Value.ToString())*100).ToString();
+            lbProcess.Text = (double.Parse(dGVDistribution.Rows[r].Cells[4].Value.ToString())).ToString();
         }
 
         private void btRemove_Click(object sender, EventArgs e)
