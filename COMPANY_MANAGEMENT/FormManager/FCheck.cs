@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMPANY_MANAGEMENT.OOP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +13,15 @@ namespace COMPANY_MANAGEMENT
 {
     public partial class FCheck : Form
     {
+        CheckDAO checkDao = new CheckDAO();
         public FCheck()
         {
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label2.Text = DateTime.Now.ToLongTimeString().ToString();
-        }
-
         private void FCheck_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-        }
-
-        private void FCheck_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            timer1.Stop();
+            dtCheckinout.DataSource = checkDao.LoadCheck();
         }
     }
 }

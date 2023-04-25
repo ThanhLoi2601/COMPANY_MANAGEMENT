@@ -14,7 +14,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 {
     public partial class FCheck : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.con);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
         string ID;
         CheckDAO c = new CheckDAO();
         StaffDAO s = new StaffDAO();

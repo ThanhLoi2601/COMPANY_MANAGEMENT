@@ -12,7 +12,7 @@ namespace COMPANY_MANAGEMENT.OOP
 {
     class DBConn
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.con);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
 
         public DataTable LoadList(string sqlStr)
         {

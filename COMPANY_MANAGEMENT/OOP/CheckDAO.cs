@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,5 +22,11 @@ namespace COMPANY_MANAGEMENT.OOP
             string query = string.Format("UPDATE SQLCheck SET CheckOut ='{0}' WHERE ID ='{1}'", a.CheckOut, a.Id);
             dB.Executive(query);
         }
+        public DataTable LoadCheck()
+        {
+            string query = string.Format("SELECT * FROM SQLCheck WHERE DateCheck= CONVERT(date, GETDATE())");
+            return dB.LoadList(query);
+        }
+
     }
 }

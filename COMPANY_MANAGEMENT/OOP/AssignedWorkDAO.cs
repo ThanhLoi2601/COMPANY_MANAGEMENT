@@ -16,8 +16,8 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public DataTable LoadList(string ID)
         {
-            return dB.LoadList(string.Format("SELECT Job.ID,Job.Name,Job.Content FROM Job " +
-                    "INNER JOIN Distribution ON Job.ID = Distribution.IDJob WHERE Distribution.IDStaff = '{0}'", ID));
+            return dB.LoadList(string.Format("SELECT d.IDJob,j.Name,j.Content FROM Job j,  Distribution d " +
+                    "WHERE j.ID = d.IDJob AND d.IDStaff = '{0}'", ID));
         }
     }
 }

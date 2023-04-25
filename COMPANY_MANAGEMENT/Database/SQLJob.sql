@@ -23,3 +23,5 @@ INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2347','CONT
 
 
 SELECT *FROM Job WHERE ID like 'JOM%';
+
+SELECT d.IDJob,j.Name,j.Content FROM Job j,  Distribution d WHERE j.ID = d.IDJob AND d.IDStaff = 'EMP12345'

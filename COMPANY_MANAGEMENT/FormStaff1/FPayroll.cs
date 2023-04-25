@@ -14,7 +14,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 {
     public partial class FPayroll : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.con);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
         CompleteJobDAO a = new CompleteJobDAO();
         StaffDAO sta = new StaffDAO();
         string ID;
