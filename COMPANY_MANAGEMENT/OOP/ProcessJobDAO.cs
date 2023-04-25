@@ -19,7 +19,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public void Insert(Job job)
         {
             string sqlStr = string.Format("INSERT INTO ProcessJob(IDJob,Content,Process) values ('{0}','{1}',{2})"
-                , job.ID, job.Name, 0);
+                , job.ID, job.Content, 0);
             dB.Executive(sqlStr);
         }
         public void Update(ProcessJob a)

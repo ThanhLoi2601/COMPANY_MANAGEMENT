@@ -34,13 +34,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.textPlace = new System.Windows.Forms.TextBox();
-            this.textNum = new System.Windows.Forms.TextBox();
             this.textMail = new System.Windows.Forms.TextBox();
             this.textIDcard = new System.Windows.Forms.TextBox();
             this.textName = new System.Windows.Forms.TextBox();
             this.textID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,14 +49,14 @@
             // 
             // textSalary
             // 
-            this.textSalary.Location = new System.Drawing.Point(153, 449);
+            this.textSalary.Location = new System.Drawing.Point(153, 446);
             this.textSalary.Name = "textSalary";
             this.textSalary.Size = new System.Drawing.Size(200, 22);
             this.textSalary.TabIndex = 39;
             // 
             // textManID
             // 
-            this.textManID.Location = new System.Drawing.Point(153, 410);
+            this.textManID.Location = new System.Drawing.Point(153, 389);
             this.textManID.Name = "textManID";
             this.textManID.Size = new System.Drawing.Size(200, 22);
             this.textManID.TabIndex = 38;
@@ -66,7 +64,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(47, 452);
+            this.label9.Location = new System.Drawing.Point(47, 449);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 17);
             this.label9.TabIndex = 36;
@@ -75,7 +73,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 413);
+            this.label8.Location = new System.Drawing.Point(47, 392);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 17);
             this.label8.TabIndex = 35;
@@ -90,17 +88,10 @@
             // 
             // textPlace
             // 
-            this.textPlace.Location = new System.Drawing.Point(153, 354);
+            this.textPlace.Location = new System.Drawing.Point(153, 320);
             this.textPlace.Name = "textPlace";
             this.textPlace.Size = new System.Drawing.Size(200, 22);
             this.textPlace.TabIndex = 33;
-            // 
-            // textNum
-            // 
-            this.textNum.Location = new System.Drawing.Point(153, 301);
-            this.textNum.Name = "textNum";
-            this.textNum.Size = new System.Drawing.Size(200, 22);
-            this.textNum.TabIndex = 32;
             // 
             // textMail
             // 
@@ -135,20 +126,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(47, 357);
+            this.label7.Location = new System.Drawing.Point(47, 325);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 17);
             this.label7.TabIndex = 27;
             this.label7.Text = "Address";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(43, 304);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 17);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Number phone";
             // 
             // label5
             // 
@@ -198,7 +180,7 @@
             // btUpdate
             // 
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUpdate.Location = new System.Drawing.Point(367, 470);
+            this.btUpdate.Location = new System.Drawing.Point(360, 487);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(135, 43);
             this.btUpdate.TabIndex = 43;
@@ -210,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 534);
+            this.ClientSize = new System.Drawing.Size(522, 551);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.textSalary);
             this.Controls.Add(this.textManID);
@@ -218,13 +200,11 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateOfBirth);
             this.Controls.Add(this.textPlace);
-            this.Controls.Add(this.textNum);
             this.Controls.Add(this.textMail);
             this.Controls.Add(this.textIDcard);
             this.Controls.Add(this.textName);
             this.Controls.Add(this.textID);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -245,13 +225,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateOfBirth;
         private System.Windows.Forms.TextBox textPlace;
-        private System.Windows.Forms.TextBox textNum;
         private System.Windows.Forms.TextBox textMail;
         private System.Windows.Forms.TextBox textIDcard;
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.TextBox textID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

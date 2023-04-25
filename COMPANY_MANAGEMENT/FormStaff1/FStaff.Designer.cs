@@ -30,27 +30,27 @@
         {
             this.dataStaff = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btAnnounce = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
             this.btChangePass = new System.Windows.Forms.Button();
             this.btInform = new System.Windows.Forms.Button();
+            this.btPayroll = new System.Windows.Forms.Button();
+            this.btLetter = new System.Windows.Forms.Button();
             this.btCheckInOut = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btPayroll = new System.Windows.Forms.Button();
-            this.btLetter = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataStaff
@@ -69,7 +69,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btAnnounce);
             this.panel1.Controls.Add(this.btHome);
             this.panel1.Controls.Add(this.btChangePass);
             this.panel1.Controls.Add(this.btInform);
@@ -83,22 +83,24 @@
             this.panel1.Size = new System.Drawing.Size(227, 634);
             this.panel1.TabIndex = 30;
             // 
-            // button1
+            // btAnnounce
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 541);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 67);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "HOME";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btAnnounce.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btAnnounce.FlatAppearance.BorderSize = 0;
+            this.btAnnounce.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.btAnnounce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAnnounce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAnnounce.ForeColor = System.Drawing.Color.White;
+            this.btAnnounce.Image = global::COMPANY_MANAGEMENT.Properties.Resources.commercial_26px;
+            this.btAnnounce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAnnounce.Location = new System.Drawing.Point(0, 541);
+            this.btAnnounce.Name = "btAnnounce";
+            this.btAnnounce.Size = new System.Drawing.Size(227, 67);
+            this.btAnnounce.TabIndex = 38;
+            this.btAnnounce.Text = "ANNOUNCEMENT";
+            this.btAnnounce.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAnnounce.UseVisualStyleBackColor = true;
+            this.btAnnounce.Click += new System.EventHandler(this.btAnnounce_Click);
             // 
             // btHome
             // 
@@ -157,6 +159,44 @@
             this.btInform.UseVisualStyleBackColor = true;
             this.btInform.Click += new System.EventHandler(this.btInform_Click_1);
             // 
+            // btPayroll
+            // 
+            this.btPayroll.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btPayroll.FlatAppearance.BorderSize = 0;
+            this.btPayroll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.btPayroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPayroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPayroll.ForeColor = System.Drawing.Color.White;
+            this.btPayroll.Image = global::COMPANY_MANAGEMENT.Properties.Resources.money_transfer_26px;
+            this.btPayroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPayroll.Location = new System.Drawing.Point(0, 291);
+            this.btPayroll.Name = "btPayroll";
+            this.btPayroll.Size = new System.Drawing.Size(227, 61);
+            this.btPayroll.TabIndex = 34;
+            this.btPayroll.Text = "Payroll";
+            this.btPayroll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btPayroll.UseVisualStyleBackColor = true;
+            this.btPayroll.Click += new System.EventHandler(this.btPayroll_Click_1);
+            // 
+            // btLetter
+            // 
+            this.btLetter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btLetter.FlatAppearance.BorderSize = 0;
+            this.btLetter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.btLetter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLetter.ForeColor = System.Drawing.Color.White;
+            this.btLetter.Image = global::COMPANY_MANAGEMENT.Properties.Resources.leave_26px1;
+            this.btLetter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLetter.Location = new System.Drawing.Point(0, 230);
+            this.btLetter.Name = "btLetter";
+            this.btLetter.Size = new System.Drawing.Size(227, 61);
+            this.btLetter.TabIndex = 33;
+            this.btLetter.Text = "Absence Letter";
+            this.btLetter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLetter.UseVisualStyleBackColor = true;
+            this.btLetter.Click += new System.EventHandler(this.btLetter_Click_1);
+            // 
             // btCheckInOut
             // 
             this.btCheckInOut.Dock = System.Windows.Forms.DockStyle.Top;
@@ -165,6 +205,7 @@
             this.btCheckInOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCheckInOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCheckInOut.ForeColor = System.Drawing.Color.White;
+            this.btCheckInOut.Image = global::COMPANY_MANAGEMENT.Properties.Resources.checkmark_26px;
             this.btCheckInOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCheckInOut.Location = new System.Drawing.Point(0, 165);
             this.btCheckInOut.Name = "btCheckInOut";
@@ -183,6 +224,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(227, 165);
             this.panel3.TabIndex = 32;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.images;
+            this.pictureBox1.Location = new System.Drawing.Point(52, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -234,54 +285,6 @@
             this.panel5.Size = new System.Drawing.Size(1067, 597);
             this.panel5.TabIndex = 33;
             // 
-            // btPayroll
-            // 
-            this.btPayroll.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btPayroll.FlatAppearance.BorderSize = 0;
-            this.btPayroll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.btPayroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPayroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPayroll.ForeColor = System.Drawing.Color.White;
-            this.btPayroll.Image = global::COMPANY_MANAGEMENT.Properties.Resources.money_transfer_26px;
-            this.btPayroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPayroll.Location = new System.Drawing.Point(0, 291);
-            this.btPayroll.Name = "btPayroll";
-            this.btPayroll.Size = new System.Drawing.Size(227, 61);
-            this.btPayroll.TabIndex = 34;
-            this.btPayroll.Text = "Payroll";
-            this.btPayroll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btPayroll.UseVisualStyleBackColor = true;
-            this.btPayroll.Click += new System.EventHandler(this.btPayroll_Click_1);
-            // 
-            // btLetter
-            // 
-            this.btLetter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btLetter.FlatAppearance.BorderSize = 0;
-            this.btLetter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.btLetter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLetter.ForeColor = System.Drawing.Color.White;
-            this.btLetter.Image = global::COMPANY_MANAGEMENT.Properties.Resources.leave_26px1;
-            this.btLetter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLetter.Location = new System.Drawing.Point(0, 230);
-            this.btLetter.Name = "btLetter";
-            this.btLetter.Size = new System.Drawing.Size(227, 61);
-            this.btLetter.TabIndex = 33;
-            this.btLetter.Text = "Absence Letter";
-            this.btLetter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btLetter.UseVisualStyleBackColor = true;
-            this.btLetter.Click += new System.EventHandler(this.btLetter_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // FStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -297,12 +300,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,6 +326,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btHome;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btAnnounce;
     }
 }

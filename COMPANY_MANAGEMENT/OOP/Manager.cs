@@ -53,12 +53,12 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public string toStringMan()
         {
-            return string.Format("'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}'", id, name, birth, idCard, email, address, basicSalary, password); 
+            return string.Format("'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}'", id, name, birth.ToString("yyyy-MM-dd"), idCard, email, address, basicSalary, password); 
         }
         public string toStringInfo()
         {
             return string.Format("ID= '{0}', Name= '{1}', Birth= '{2}', ID_Card= '{3}', Email= '{4}', Address= '{5}', Basic_salary= '{6}', Password= '{7}' "
-                , id, name, birth, idCard, email, address, basicSalary, password);
+                , id, name, birth.ToString("yyyy-MM-dd"), idCard, email, address, basicSalary, password);
         }
     }
 }

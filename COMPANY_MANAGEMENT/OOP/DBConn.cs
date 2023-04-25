@@ -12,7 +12,7 @@ namespace COMPANY_MANAGEMENT.OOP
 {
     class DBConn
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.con);
 
         public DataTable LoadList(string sqlStr)
         {
@@ -232,6 +232,7 @@ namespace COMPANY_MANAGEMENT.OOP
             return null;
         }
 
+        
         public int Merge(string sqlStr)
         {
             try

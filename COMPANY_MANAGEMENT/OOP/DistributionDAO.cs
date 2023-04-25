@@ -36,7 +36,7 @@ namespace COMPANY_MANAGEMENT.OOP
                  "WHERE (DateStart BETWEEN '{0}' AND '{1}')" +
                  " OR (DateEnd BETWEEN '{0}' AND '{1}')" +
                  " OR ('{0}' BETWEEN DateStart AND DateEnd)" +
-                 " OR ('{1}' BETWEEN DateStart AND DateEnd)", jb.DateStart.ToString(), jb.DateEnd.ToString());
+                 " OR ('{1}' BETWEEN DateStart AND DateEnd)", jb.DateStart.ToString("yyyy-MM-dd"), jb.DateEnd.ToString("yyyy-MM-dd"));
             return dB.LoadList(string.Format("SELECT * FROM Staff WHERE (ID NOT IN (SELECT IDStaff FROM Distribution) " +
                  "OR ID NOT IN ({0}) ) AND Manager_ID = '{1}'", str, IDMan));
         }

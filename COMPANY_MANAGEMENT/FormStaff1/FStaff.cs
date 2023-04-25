@@ -38,7 +38,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void FStaff_Load(object sender, EventArgs e)
         {
-            dataStaff.DataSource = a.LoadList();
+            dataStaff.DataSource = a.LoadList(ID);
         }
 
         private void btLetter_Click_1(object sender, EventArgs e)
@@ -97,6 +97,17 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         private void OpenNewHome()
         {
             Application.Run(new FStaff(ID));       
+        }
+
+        private void btAnnounce_Click(object sender, EventArgs e)
+        {
+            panel5.Controls.Clear();
+            FAnnouncement f = new FAnnouncement(ID);
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel5.Controls.Add(f);
+            panel5.BringToFront();
+            f.Show();
         }
     }
 }

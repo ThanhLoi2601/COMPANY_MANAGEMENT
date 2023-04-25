@@ -79,7 +79,6 @@
             this.checkIN.TabIndex = 8;
             this.checkIN.Text = "CheckIn";
             this.checkIN.UseVisualStyleBackColor = true;
-            this.checkIN.CheckedChanged += new System.EventHandler(this.checkIN_CheckedChanged);
             // 
             // label2
             // 

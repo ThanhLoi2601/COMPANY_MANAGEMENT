@@ -14,7 +14,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 {
     public partial class FCheck : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.con);
         string ID;
         CheckDAO c = new CheckDAO();
         StaffDAO s = new StaffDAO();
@@ -54,7 +54,6 @@ namespace COMPANY_MANAGEMENT.FormStaff1
                 {
                     Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, latetimes);
                     c.InsertCheck(a);
-                    MessageBox.Show("Đã cập nhật bảng chấm công thành công");
                 }    
                 else
                 {
@@ -157,18 +156,6 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             {
                 MessageBox.Show("Chưa tới giờ check out, vui lòng check đúng giờ");
                 checkOUT.CheckState = CheckState.Unchecked;
-            }    
-        }
-
-        private void checkIN_CheckedChanged(object sender, EventArgs e)
-        {
-            if(checkIN.Checked && CanCheckIn())
-            {
-                MessageBox.Show("Đã check in thành công");
-            }
-            else if (checkIN.Checked && !CanCheckIn())
-            {
-                MessageBox.Show("Đã check in thành công, bạn đã đi trễ");
             }    
         }
 
