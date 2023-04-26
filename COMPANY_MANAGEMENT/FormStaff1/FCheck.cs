@@ -76,7 +76,8 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             Staff man = s.Search(ID);
             string name = "Content";
             conn.Open();
-            string query = string.Format("SELECT Content FROM ProcessJob");
+            string query = string.Format("SELECT ProcessJob.Content FROM ProcessJob INNER JOIN Distribution ON ProcessJob.IDJob = Distribution.IDJob" +
+                                        " WHERE Distribution.IDStaff = '{0}'", ID);
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);

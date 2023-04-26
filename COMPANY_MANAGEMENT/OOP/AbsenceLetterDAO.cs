@@ -16,9 +16,9 @@ namespace COMPANY_MANAGEMENT.OOP
             dB.Executive(sqlStr);
         }
 
-        public DataTable LoadAbsenStaff()
+        public DataTable LoadAbsenStaff(string IDMan)
         {
-            return dB.LoadList(string.Format("SELECT * FROM Absence "));
+            return dB.LoadList(string.Format("SELECT * FROM Absence WHERE  ID IN (SELECT ID FROM Staff WHERE Manager_ID = '{0}' )", IDMan));
         }
 
     }

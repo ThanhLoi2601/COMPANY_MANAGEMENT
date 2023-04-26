@@ -15,15 +15,17 @@ namespace COMPANY_MANAGEMENT
     public partial class FShowStaffLetter : Form
     {
         AbsenceLetterDAO absenDAO = new AbsenceLetterDAO();
+        string IDReceive;
 
-        public FShowStaffLetter()
+        public FShowStaffLetter(string id)
         {
             InitializeComponent();
+            IDReceive = id;
         }
 
         private void FShowStaffLetter_Load(object sender, EventArgs e)
         {
-            dGVStaffLetter.DataSource = absenDAO.LoadAbsenStaff();
+            dGVStaffLetter.DataSource = absenDAO.LoadAbsenStaff(IDReceive);
         }
     }
 }

@@ -54,5 +54,31 @@ namespace COMPANY_MANAGEMENT.OOP
         {
             return status.ToString();
         }
+        public void GetStatus()
+        {
+            if (Status == TaskStatus.NotStarted)
+            {
+                DateTime today = DateTime.Today;
+                if (today > DateEnd)
+                {
+                    UpdateStatus(Task.TaskStatus.BehindSchedule);
+                }
+                else if (today >= DateStart && today <= DateEnd)
+                {
+                    if (today > DateEnd)
+                    {
+                        UpdateStatus(Task.TaskStatus.BehindSchedule);
+                    }
+                    else
+                    {
+                        UpdateStatus(Task.TaskStatus.InProgress);
+                    }
+                }
+                else
+                {
+                    UpdateStatus(Task.TaskStatus.NotStarted);
+                }
+            }
+        }
     }
 }

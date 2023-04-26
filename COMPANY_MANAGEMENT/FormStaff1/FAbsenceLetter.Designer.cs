@@ -61,7 +61,7 @@
             this.rbRea1.AutoSize = true;
             this.rbRea1.Location = new System.Drawing.Point(93, 151);
             this.rbRea1.Name = "rbRea1";
-            this.rbRea1.Size = new System.Drawing.Size(114, 21);
+            this.rbRea1.Size = new System.Drawing.Size(109, 20);
             this.rbRea1.TabIndex = 1;
             this.rbRea1.TabStop = true;
             this.rbRea1.Text = "Health issues";
@@ -72,7 +72,7 @@
             this.rbRea2.AutoSize = true;
             this.rbRea2.Location = new System.Drawing.Point(93, 199);
             this.rbRea2.Name = "rbRea2";
-            this.rbRea2.Size = new System.Drawing.Size(140, 21);
+            this.rbRea2.Size = new System.Drawing.Size(135, 20);
             this.rbRea2.TabIndex = 2;
             this.rbRea2.TabStop = true;
             this.rbRea2.Text = "Personal problem";
@@ -83,7 +83,7 @@
             this.rbRea3.AutoSize = true;
             this.rbRea3.Location = new System.Drawing.Point(93, 246);
             this.rbRea3.Name = "rbRea3";
-            this.rbRea3.Size = new System.Drawing.Size(283, 21);
+            this.rbRea3.Size = new System.Drawing.Size(270, 20);
             this.rbRea3.TabIndex = 3;
             this.rbRea3.TabStop = true;
             this.rbRea3.Text = "Care for a sick immediate family member";
@@ -94,7 +94,7 @@
             this.rbRea4.AutoSize = true;
             this.rbRea4.Location = new System.Drawing.Point(93, 288);
             this.rbRea4.Name = "rbRea4";
-            this.rbRea4.Size = new System.Drawing.Size(61, 21);
+            this.rbRea4.Size = new System.Drawing.Size(56, 20);
             this.rbRea4.TabIndex = 4;
             this.rbRea4.TabStop = true;
             this.rbRea4.Text = "Etc...";
@@ -106,16 +106,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(65, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Staff name";
+            this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(65, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 17);
+            this.label2.Size = new System.Drawing.Size(20, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "ID";
             // 
@@ -124,7 +124,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(65, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 17);
+            this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Reasons";
             // 
@@ -133,7 +133,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(60, 338);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 17);
+            this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Start date";
             // 
@@ -142,7 +142,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(65, 395);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.Size = new System.Drawing.Size(61, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "End date";
             // 
@@ -193,7 +193,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(65, 442);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 17);
+            this.label6.Size = new System.Drawing.Size(164, 16);
             this.label6.TabIndex = 23;
             this.label6.Text = "Số lần xin nghỉ trong tháng ";
             // 
@@ -211,7 +211,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(65, 488);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 17);
+            this.label7.Size = new System.Drawing.Size(104, 16);
             this.label7.TabIndex = 25;
             this.label7.Text = "Số ngày đã nghỉ";
             // 

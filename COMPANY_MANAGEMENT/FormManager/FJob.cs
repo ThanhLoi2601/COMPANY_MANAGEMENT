@@ -17,7 +17,6 @@ namespace COMPANY_MANAGEMENT
         const string IDjbM = "JOM";
         JobDAO jobDAO =new JobDAO();
         ManagerDAO manDAO = new ManagerDAO();
-        CompleteWorkDAO cmpWDAO =new CompleteWorkDAO();
         Manager man;
 
         public FJob()
@@ -118,8 +117,6 @@ namespace COMPANY_MANAGEMENT
         {
             DateTime DateComp = DateTime.Now;
             Job jb = jobDAO.Search(txtID.Text);
-            KPI kpi = new KPI(man.BasicSalary, jb, DateComp);
-            cmpWDAO.Insert(kpi, man.ID);
             jobDAO.Delete(jb);
             dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
         }

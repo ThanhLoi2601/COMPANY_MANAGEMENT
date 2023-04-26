@@ -16,7 +16,6 @@ namespace COMPANY_MANAGEMENT
         string IDReceive;
         ManagerDAO manDAO =new ManagerDAO();
         StaffDAO staDAO = new StaffDAO();
-        KPI kpi = new KPI();
         public FManager(string ID)
         {
             InitializeComponent();
@@ -26,12 +25,7 @@ namespace COMPANY_MANAGEMENT
         {
             InitializeComponent();
         }
-        private void btKPI_Click(object sender, EventArgs e)
-        {
-            FKPI f = new FKPI(txtID.Text);
-            f.ShowDialog();
-        }
-
+ 
         private void btSalary_Click(object sender, EventArgs e)
         {
             FSalary f = new FSalary();
@@ -52,7 +46,8 @@ namespace COMPANY_MANAGEMENT
 
         private void btLetter_Click(object sender, EventArgs e)
         {
-            FLetterMain f = new FLetterMain(IDReceive);
+            Manager man = manDAO.Search(IDReceive);
+            FLetterMain f = new FLetterMain(IDReceive,man.Name);
             f.ShowDialog();
         }
 
@@ -151,8 +146,6 @@ namespace COMPANY_MANAGEMENT
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            txtKPI.DataBindings.Clear();
-            txtKPI.Text = kpi.CalKPIAvg(txtID.Text).ToString();
         }
 
         private void btContact_Click(object sender, EventArgs e)

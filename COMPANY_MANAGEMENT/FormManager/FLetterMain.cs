@@ -16,10 +16,11 @@ namespace COMPANY_MANAGEMENT
     {
         string IDReceive;
         string NameReceive;
-        public FLetterMain(string ID)
+        public FLetterMain(string ID, string Name)
         {
             InitializeComponent();
             IDReceive = ID;
+            NameReceive = Name;
         }
 
         private void btConfirm_Click(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace COMPANY_MANAGEMENT
             }
             else
             {
-                FShowStaffLetter f = new FShowStaffLetter();
+                FShowStaffLetter f = new FShowStaffLetter(IDReceive);
                 f.ShowDialog();
             }
         }
