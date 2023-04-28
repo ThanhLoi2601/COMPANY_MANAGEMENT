@@ -32,7 +32,7 @@ namespace COMPANY_MANAGEMENT
 
         private void ChangeInfo(Action<Job> methodChange)
         {
-            Job job = new Job(txtID.Text, txtName.Text, rTxtContent.Text, dtDateStart.Value, dtDateEnd.Value, int.Parse(txtBunus.Text));
+            Job job = new Job(txtID.Text, txtName.Text, rTxtContent.Text, dtDateStart.Value, dtDateEnd.Value, int.Parse(txtBonus.Text),txtIDWork.Text);
             methodChange(job);
             dGVJobStaff.DataSource = jobDAO.LoadList(IDjbS);
         }
@@ -64,13 +64,13 @@ namespace COMPANY_MANAGEMENT
         private void FJob_Load(object sender, EventArgs e)
         {
             dGVJobStaff.DataSource = jobDAO.LoadList(IDjbS);
-            dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
+            //dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
         }
 
         private bool check_Empty()
         {
             if (txtName.Text == "" || rTxtContent.Text == "" || txtID.Text == ""
-                || txtBunus.Text == "" )
+                || txtBonus.Text == "" )
             {
                 MessageBox.Show("Please fill in all the information !! ");
                 return true;
@@ -91,8 +91,10 @@ namespace COMPANY_MANAGEMENT
             dtDateStart.Text = dGV.Rows[r].Cells[3].Value.ToString();
             dtDateEnd.DataBindings.Clear();
             dtDateEnd.Text = dGV.Rows[r].Cells[4].Value.ToString();
-            txtBunus.DataBindings.Clear();
-            txtBunus.Text = dGV.Rows[r].Cells[5].Value.ToString();
+            txtBonus.DataBindings.Clear();
+            txtBonus.Text = dGV.Rows[r].Cells[5].Value.ToString();
+            txtIDWork.DataBindings.Clear();
+            txtIDWork.Text = dGV.Rows[r].Cells[6].Value.ToString();
         }
 
         private void dGVJobStaff_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -115,10 +117,9 @@ namespace COMPANY_MANAGEMENT
 
         private void btComp_Click(object sender, EventArgs e)
         {
-            DateTime DateComp = DateTime.Now;
-            Job jb = jobDAO.Search(txtID.Text);
-            jobDAO.Delete(jb);
-            dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
+            //Job jb = jobDAO.Search(txtID.Text);
+            //jobDAO.Delete(jb);
+            //dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
         }
     }
 }

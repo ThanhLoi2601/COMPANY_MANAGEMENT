@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Common;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
+using System.Xml.Linq;
 
 namespace COMPANY_MANAGEMENT.OOP
 {
@@ -190,7 +193,33 @@ namespace COMPANY_MANAGEMENT.OOP
                     DateTime datestart = reader.GetDateTime(3);
                     DateTime dateend = reader.GetDateTime(4);
                     int bonus = reader.GetInt32(5);
-                    return new Job(id, name, content, datestart, dateend, bonus);
+                    string idtask = reader.GetString(6);
+                    return new Job(id, name, content, datestart, dateend, bonus,idtask);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
+        public string FindNameTask(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string name = reader.GetString(1);
+                    return name;
                 }
             }
             catch (Exception ex)
@@ -250,6 +279,24 @@ namespace COMPANY_MANAGEMENT.OOP
             }
         }
 
+        public void LoadCbJobTask(string sqlStr,ComboBox cb)
+        { 
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cb.Items.Add(reader["IDTasks"].ToString());
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void ExecutiveWithoutNotice(string sqlStr)
         {
             conn.Open();

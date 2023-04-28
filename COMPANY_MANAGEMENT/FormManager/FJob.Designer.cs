@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FJob));
             this.grInfo = new System.Windows.Forms.GroupBox();
+            this.txtIDWork = new System.Windows.Forms.TextBox();
+            this.lbIDWork = new System.Windows.Forms.Label();
             this.rTxtContent = new System.Windows.Forms.RichTextBox();
-            this.txtBunus = new System.Windows.Forms.TextBox();
+            this.txtBonus = new System.Windows.Forms.TextBox();
             this.labBonus = new System.Windows.Forms.Label();
             this.dtDateEnd = new System.Windows.Forms.DateTimePicker();
             this.dtDateStart = new System.Windows.Forms.DateTimePicker();
@@ -68,8 +70,10 @@
             this.grInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grInfo.BackgroundImage")));
             this.grInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.grInfo.Controls.Add(this.txtIDWork);
+            this.grInfo.Controls.Add(this.lbIDWork);
             this.grInfo.Controls.Add(this.rTxtContent);
-            this.grInfo.Controls.Add(this.txtBunus);
+            this.grInfo.Controls.Add(this.txtBonus);
             this.grInfo.Controls.Add(this.labBonus);
             this.grInfo.Controls.Add(this.dtDateEnd);
             this.grInfo.Controls.Add(this.dtDateStart);
@@ -89,6 +93,24 @@
             this.grInfo.TabStop = false;
             this.grInfo.Text = "INFORMATION";
             // 
+            // txtIDWork
+            // 
+            this.txtIDWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDWork.Location = new System.Drawing.Point(331, 36);
+            this.txtIDWork.Name = "txtIDWork";
+            this.txtIDWork.Size = new System.Drawing.Size(155, 24);
+            this.txtIDWork.TabIndex = 25;
+            // 
+            // lbIDWork
+            // 
+            this.lbIDWork.AutoSize = true;
+            this.lbIDWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIDWork.Location = new System.Drawing.Point(262, 42);
+            this.lbIDWork.Name = "lbIDWork";
+            this.lbIDWork.Size = new System.Drawing.Size(63, 18);
+            this.lbIDWork.TabIndex = 24;
+            this.lbIDWork.Text = "ID Work";
+            // 
             // rTxtContent
             // 
             this.rTxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,13 +120,13 @@
             this.rTxtContent.TabIndex = 23;
             this.rTxtContent.Text = "";
             // 
-            // txtBunus
+            // txtBonus
             // 
-            this.txtBunus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBunus.Location = new System.Drawing.Point(100, 419);
-            this.txtBunus.Name = "txtBunus";
-            this.txtBunus.Size = new System.Drawing.Size(267, 24);
-            this.txtBunus.TabIndex = 22;
+            this.txtBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBonus.Location = new System.Drawing.Point(100, 419);
+            this.txtBonus.Name = "txtBonus";
+            this.txtBonus.Size = new System.Drawing.Size(267, 24);
+            this.txtBonus.TabIndex = 22;
             // 
             // labBonus
             // 
@@ -235,7 +257,7 @@
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(100, 39);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(267, 24);
+            this.txtID.Size = new System.Drawing.Size(136, 24);
             this.txtID.TabIndex = 1;
             // 
             // labID
@@ -378,7 +400,7 @@
         private System.Windows.Forms.Label labID;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.RichTextBox rTxtContent;
-        private System.Windows.Forms.TextBox txtBunus;
+        private System.Windows.Forms.TextBox txtBonus;
         private System.Windows.Forms.Label labBonus;
         private System.Windows.Forms.DateTimePicker dtDateEnd;
         private System.Windows.Forms.DateTimePicker dtDateStart;
@@ -388,5 +410,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dGVMyProject;
         private System.Windows.Forms.Button btComp;
+        private System.Windows.Forms.TextBox txtIDWork;
+        private System.Windows.Forms.Label lbIDWork;
     }
 }

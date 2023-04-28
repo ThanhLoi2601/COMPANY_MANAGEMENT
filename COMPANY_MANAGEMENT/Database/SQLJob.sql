@@ -4,24 +4,22 @@
 	Content varchar(500),
 	DateStart Date,
 	DateEnd Date,
-	Bonus int
+	Bonus int,
+	IDTasks VARCHAR(10)
 );
 
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2345','DRAW','Ve so do thiet ke','3/1/2023','3/17/2023',10000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2346','DRAW','Ve so do','3/1/2023','3/27/2023',0);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2347','DRAW','Ve so do thiet ke may','2/3/2023','2/13/2023',50000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2348','DRAW','Ve so do thiet ke code','3/1/2023','3/29/2023',0);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2349','DRAW','Ve so do thiet ke do hoa','3/1/2023','3/12/2023',10000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2341','DRAW','Ve so do thiet ke game','3/10/2023','3/17/2023',20000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2342','DRAW','Ve so do thiet ke phan mem','3/21/2023','3/22/2023',100000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2343','DRAW','Ve so do thiet ke phan cung','4/1/2023','4/10/2023',30000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOB2344','DRAW','Ve so do thiet ke so do','3/16/2023','3/22/2023',50000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2344','DRAW','Ve so do thiet ke so do','2/16/2023','4/22/2023',150000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2345','DRAW','Ve so do thiet ke phan cung','2/16/2023','3/22/2023',100000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2346','DRAW','Ve so do thiet ke phan mem','2/16/2023','3/22/2023',200000);
-INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus) values ('JOM2347','CONTROL','Bao cao tinh hinh nhan vien','2/16/2023','3/22/2023',200000);
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2345','DRAW','Ve so do thiet ke','3/1/2023','3/17/2023',10000,'TKS001');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2346','DRAW','Ve so do','3/1/2023','3/27/2023',0,'TKS001');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2347','DRAW','Ve so do thiet ke may','2/3/2023','2/13/2023',50000,'TKS002');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2348','DRAW','Ve so do thiet ke code','3/1/2023','3/29/2023',0,'TKS002');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2349','DRAW','Ve so do thiet ke do hoa','3/1/2023','3/12/2023',10000,'TKS003');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2341','DRAW','Ve so do thiet ke game','3/10/2023','3/17/2023',20000,'TKS003');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2342','DRAW','Ve so do thiet ke phan mem','3/21/2023','3/22/2023',100000,'TKS004');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2343','DRAW','Ve so do thiet ke phan cung','4/1/2023','4/10/2023',30000,'TKS004');
+INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2344','DRAW','Ve so do thiet ke so do','3/16/2023','3/22/2023',50000,'TKS005');
 
 
-SELECT *FROM Job WHERE ID like 'JOM%';
 
 SELECT d.IDJob,j.Name,j.Content FROM Job j,  Distribution d WHERE j.ID = d.IDJob AND d.IDStaff = 'EMP12345'
+SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks
+                FROM Distribution d, Job j, ProcessJob pj  WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob

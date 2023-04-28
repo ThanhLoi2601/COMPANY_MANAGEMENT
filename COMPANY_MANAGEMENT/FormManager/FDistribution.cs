@@ -19,6 +19,7 @@ namespace COMPANY_MANAGEMENT
         StaffDAO staDAO = new StaffDAO();
         DistributionDAO disDAO = new DistributionDAO();
         ProcessJobDAO procDAO = new ProcessJobDAO();
+        TaskDAO tksDAO = new TaskDAO();
 
         public FDistribution(string ID)
         {
@@ -39,6 +40,17 @@ namespace COMPANY_MANAGEMENT
         {
             dGVJob.DataSource = disDAO.LoadListJob();
             dGVDistribution.DataSource = disDAO.LoadListDis();
+            LoadCbTask();
+        }
+
+        private void LoadCbTask()
+        {
+            cbTaskJobList.Items.Clear();
+            jobDAO.LoadCbTaskJob(cbTaskJobList);
+            cbTaskJobList.Items.Add("All tasks");
+            cbTaskDis.Items.Clear();
+            jobDAO.LoadCbTaskDis(cbTaskDis);
+            cbTaskDis.Items.Add("All tasks");
         }
 
         private void dGVJob_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -65,6 +77,7 @@ namespace COMPANY_MANAGEMENT
                 procDAO.Insert(jb);
             }
             dGVDistribution.DataSource = disDAO.LoadListDis();
+            LoadCbTask();
         }
 
         private void txtIDJob_TextChanged(object sender, EventArgs e)
@@ -97,6 +110,19 @@ namespace COMPANY_MANAGEMENT
         {
             disDAO.Delete(lbIDJob.Text,lbIDStaff.Text);
             Load_Dis_Job();
+            LoadCbTask();
+        }
+
+        private void combTask_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtNameTaskJobList.Text = tksDAO.Search(cbTaskJobList.Text);
+            dGVJob.DataSource = disDAO.LoadListJob(cbTaskJobList.Text);
+        }
+
+        private void cbTaskDis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtNameTaskDis.Text = tksDAO.Search(cbTaskDis.Text);
+            dGVDistribution.DataSource = disDAO.LoadListDis(cbTaskDis.Text);
         }
     }
 }

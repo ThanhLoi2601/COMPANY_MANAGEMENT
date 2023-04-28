@@ -14,6 +14,7 @@ namespace COMPANY_MANAGEMENT.OOP
         private DateTime dateStart;
         private DateTime dateEnd;
         private int bonus;
+        private string idTask;
 
         public string ID { get { return id; } set { id = value; } }
         public string Name { get { return name; } set { name = value; } }
@@ -21,12 +22,13 @@ namespace COMPANY_MANAGEMENT.OOP
         public DateTime DateStart { get { return dateStart; } set { dateStart = value; } }
         public DateTime DateEnd { get { return dateEnd; } set { dateEnd = value; } }
         public int Bonus { get { return bonus; } set { bonus = value; } }
+        public string IDTask { get { return idTask; } set { idTask = value; } }
 
         public Job()
         {
         }
 
-        public Job(string ID, string NAME, string CONTENT, DateTime DATESTART, DateTime DATEEND, int BONUS)
+        public Job(string ID, string NAME, string CONTENT, DateTime DATESTART, DateTime DATEEND, int BONUS, string IDTASK)
         {
             this.id = ID;
             this.name = NAME;
@@ -34,6 +36,7 @@ namespace COMPANY_MANAGEMENT.OOP
             this.dateStart = DATESTART;
             this.dateEnd = DATEEND;
             this.bonus = BONUS;
+            this.idTask = IDTASK;
         }
 
         ~Job()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +37,14 @@ namespace COMPANY_MANAGEMENT.OOP
                 return dB.LoadList(string.Format("SELECT ID, Task_Name, StartDate, EndDate, Task_description, Task_status FROM Tasks WHERE ID like 'TKS%' and Project_ID = '{0}'", id));
             else
                 return dB.LoadList(string.Format("SELECT ID, Task_Name, StartDate, EndDate, Task_description, Task_status FROM Tasks WHERE ID like 'TKS%'"));
+        }
+
+        public string Search(string id)
+        {
+            if (id == "All tasks")
+                return null;
+            string sqlStr = string.Format("SELECT * FROM Tasks WHERE ID = '{0}';", id);
+            return dB.FindNameTask(sqlStr);
         }
     }
 }

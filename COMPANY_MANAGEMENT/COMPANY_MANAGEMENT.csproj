@@ -294,7 +294,6 @@
     <Content Include="Database\ComJobSQL.sql" />
     <Content Include="Database\SQLAbsence.sql" />
     <Content Include="Database\SQLCheck.sql" />
-    <Content Include="Database\SQLCompleteWork.sql" />
     <Content Include="Database\SQLContact.sql" />
     <Content Include="Database\SQLCustomer.sql" />
     <Content Include="Database\SQLDistribution.sql" />

@@ -27,7 +27,16 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public DataTable LoadListJob()
         {
-            return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID NOT IN (SELECT IDJob FROM Distribution) AND ID like 'JOB%'"));
+            return dB.LoadList(string.Format("SELECT j.ID,j.Name,j.Content,j.DateStart,j.DateEnd,j.Bonus,j.IDTasks,t.Task_Name " +
+                " FROM Job j, Tasks t WHERE j.ID NOT IN (SELECT IDJob FROM Distribution) AND j.IDTasks = t.ID"));
+        }
+
+        public DataTable LoadListJob(string IDTask)
+        {
+            if (IDTask == "All tasks")
+                return LoadListJob();
+            return dB.LoadList(string.Format("SELECT j.ID,j.Name,j.Content,j.DateStart,j.DateEnd,j.Bonus,j.IDTasks,t.Task_Name " +
+                " FROM Job j, Tasks t WHERE j.ID NOT IN (SELECT IDJob FROM Distribution) AND j.IDTasks = t.ID AND IDTasks = '{0}'", IDTask));
         }
 
         public DataTable LoadListStaff(Job jb, string IDMan)
@@ -43,7 +52,16 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public DataTable LoadListDis()
         {
-            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process  FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob;"));
+            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks" +
+                " FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob;"));
+        }
+
+        public DataTable LoadListDis(string IDTask)
+        {
+            if (IDTask == "All tasks")
+                return LoadListDis();
+            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks" +
+                " FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.IDTasks = '{0}';",IDTask));
         }
     }
 }

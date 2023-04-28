@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDistribution));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.cbTask = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtIDStaff = new System.Windows.Forms.TextBox();
@@ -41,6 +41,8 @@
             this.dGVJob = new System.Windows.Forms.DataGridView();
             this.dGVStaff = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNameTaskJobList = new System.Windows.Forms.TextBox();
+            this.cbTaskJobList = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,6 +58,8 @@
             this.lbIDJob = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dGVDistribution = new System.Windows.Forms.DataGridView();
+            this.txtNameTaskDis = new System.Windows.Forms.TextBox();
+            this.cbTaskDis = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJob)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -64,15 +68,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVDistribution)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // cbTask
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "JOB LIST";
+            this.cbTask.AutoSize = true;
+            this.cbTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTask.Location = new System.Drawing.Point(19, 15);
+            this.cbTask.Name = "cbTask";
+            this.cbTask.Size = new System.Drawing.Size(108, 25);
+            this.cbTask.TabIndex = 2;
+            this.cbTask.Text = "JOB LIST";
             // 
             // label2
             // 
@@ -144,7 +148,7 @@
             // 
             // dGVJob
             // 
-            this.dGVJob.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dGVJob.BackgroundColor = System.Drawing.Color.White;
             this.dGVJob.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVJob.Location = new System.Drawing.Point(19, 53);
             this.dGVJob.Name = "dGVJob";
@@ -156,7 +160,7 @@
             // 
             // dGVStaff
             // 
-            this.dGVStaff.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dGVStaff.BackgroundColor = System.Drawing.Color.White;
             this.dGVStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVStaff.Location = new System.Drawing.Point(583, 53);
             this.dGVStaff.Name = "dGVStaff";
@@ -171,8 +175,10 @@
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.txtNameTaskJobList);
+            this.groupBox1.Controls.Add(this.cbTaskJobList);
             this.groupBox1.Controls.Add(this.dGVJob);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cbTask);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dGVStaff);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -180,6 +186,24 @@
             this.groupBox1.Size = new System.Drawing.Size(1196, 363);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // txtNameTaskJobList
+            // 
+            this.txtNameTaskJobList.Location = new System.Drawing.Point(384, 25);
+            this.txtNameTaskJobList.Name = "txtNameTaskJobList";
+            this.txtNameTaskJobList.ReadOnly = true;
+            this.txtNameTaskJobList.Size = new System.Drawing.Size(153, 22);
+            this.txtNameTaskJobList.TabIndex = 11;
+            // 
+            // cbTaskJobList
+            // 
+            this.cbTaskJobList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTaskJobList.FormattingEnabled = true;
+            this.cbTaskJobList.Location = new System.Drawing.Point(217, 23);
+            this.cbTaskJobList.Name = "cbTaskJobList";
+            this.cbTaskJobList.Size = new System.Drawing.Size(144, 24);
+            this.cbTaskJobList.TabIndex = 5;
+            this.cbTaskJobList.SelectedIndexChanged += new System.EventHandler(this.combTask_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -203,6 +227,8 @@
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox3.BackgroundImage")));
             this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox3.Controls.Add(this.txtNameTaskDis);
+            this.groupBox3.Controls.Add(this.cbTaskDis);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.lbProcess);
             this.groupBox3.Controls.Add(this.label14);
@@ -257,7 +283,7 @@
             this.btRemove.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRemove.Location = new System.Drawing.Point(947, 136);
+            this.btRemove.Location = new System.Drawing.Point(960, 154);
             this.btRemove.Name = "btRemove";
             this.btRemove.Size = new System.Drawing.Size(153, 58);
             this.btRemove.TabIndex = 19;
@@ -269,7 +295,7 @@
             // 
             this.lbNameStaff.AutoSize = true;
             this.lbNameStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNameStaff.Location = new System.Drawing.Point(1043, 85);
+            this.lbNameStaff.Location = new System.Drawing.Point(1050, 104);
             this.lbNameStaff.Name = "lbNameStaff";
             this.lbNameStaff.Size = new System.Drawing.Size(39, 20);
             this.lbNameStaff.TabIndex = 16;
@@ -279,7 +305,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(895, 85);
+            this.label12.Location = new System.Drawing.Point(902, 104);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(109, 20);
             this.label12.TabIndex = 15;
@@ -289,7 +315,7 @@
             // 
             this.lbNameJob.AutoSize = true;
             this.lbNameJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNameJob.Location = new System.Drawing.Point(744, 85);
+            this.lbNameJob.Location = new System.Drawing.Point(751, 104);
             this.lbNameJob.Name = "lbNameJob";
             this.lbNameJob.Size = new System.Drawing.Size(39, 20);
             this.lbNameJob.TabIndex = 14;
@@ -299,7 +325,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(623, 85);
+            this.label10.Location = new System.Drawing.Point(630, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 20);
             this.label10.TabIndex = 13;
@@ -309,7 +335,7 @@
             // 
             this.lbIDStaff.AutoSize = true;
             this.lbIDStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIDStaff.Location = new System.Drawing.Point(1042, 22);
+            this.lbIDStaff.Location = new System.Drawing.Point(1049, 41);
             this.lbIDStaff.Name = "lbIDStaff";
             this.lbIDStaff.Size = new System.Drawing.Size(39, 20);
             this.lbIDStaff.TabIndex = 12;
@@ -319,7 +345,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(924, 21);
+            this.label8.Location = new System.Drawing.Point(931, 40);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 11;
@@ -329,7 +355,7 @@
             // 
             this.lbIDJob.AutoSize = true;
             this.lbIDJob.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIDJob.Location = new System.Drawing.Point(744, 22);
+            this.lbIDJob.Location = new System.Drawing.Point(751, 41);
             this.lbIDJob.Name = "lbIDJob";
             this.lbIDJob.Size = new System.Drawing.Size(39, 20);
             this.lbIDJob.TabIndex = 10;
@@ -339,7 +365,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(652, 22);
+            this.label6.Location = new System.Drawing.Point(659, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 9;
@@ -347,16 +373,16 @@
             // 
             // dGVDistribution
             // 
-            this.dGVDistribution.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dGVDistribution.BackgroundColor = System.Drawing.Color.White;
             this.dGVDistribution.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDistribution.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDistribution.DefaultCellStyle = dataGridViewCellStyle4;
             this.dGVDistribution.Location = new System.Drawing.Point(6, 12);
             this.dGVDistribution.Name = "dGVDistribution";
             this.dGVDistribution.RowHeadersWidth = 51;
@@ -364,6 +390,24 @@
             this.dGVDistribution.Size = new System.Drawing.Size(591, 220);
             this.dGVDistribution.TabIndex = 0;
             this.dGVDistribution.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDistribution_CellClick);
+            // 
+            // txtNameTaskDis
+            // 
+            this.txtNameTaskDis.Location = new System.Drawing.Point(753, 14);
+            this.txtNameTaskDis.Name = "txtNameTaskDis";
+            this.txtNameTaskDis.ReadOnly = true;
+            this.txtNameTaskDis.Size = new System.Drawing.Size(153, 22);
+            this.txtNameTaskDis.TabIndex = 24;
+            // 
+            // cbTaskDis
+            // 
+            this.cbTaskDis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTaskDis.FormattingEnabled = true;
+            this.cbTaskDis.Location = new System.Drawing.Point(609, 14);
+            this.cbTaskDis.Name = "cbTaskDis";
+            this.cbTaskDis.Size = new System.Drawing.Size(126, 24);
+            this.cbTaskDis.TabIndex = 23;
+            this.cbTaskDis.SelectedIndexChanged += new System.EventHandler(this.cbTaskDis_SelectedIndexChanged);
             // 
             // FDistribution
             // 
@@ -393,7 +437,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label cbTask;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIDStaff;
@@ -419,5 +463,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btRemove;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbTaskJobList;
+        private System.Windows.Forms.TextBox txtNameTaskJobList;
+        private System.Windows.Forms.TextBox txtNameTaskDis;
+        private System.Windows.Forms.ComboBox cbTaskDis;
     }
 }
