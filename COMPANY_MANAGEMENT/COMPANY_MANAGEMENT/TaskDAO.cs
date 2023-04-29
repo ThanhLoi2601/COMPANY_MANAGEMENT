@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMPANY_MANAGEMENT.OOP;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -36,6 +37,11 @@ namespace COMPANY_MANAGEMENT
                 return dB.LoadList(string.Format("SELECT ID, Task_Name, StartDate, EndDate, Task_description, Task_status FROM Tasks WHERE ID like 'TKS%' and Project_ID = '{0}'", id));
             else
                 return dB.LoadList(string.Format("SELECT ID, Task_Name, StartDate, EndDate, Task_description, Task_status FROM Tasks WHERE ID like 'TKS%'"));
+        }
+        public Task Search(string id)
+        {
+            string sqlStr = string.Format("SELECT * FROM Tasks WHERE ID = '{0}';", id);
+            return dB.FindTask(sqlStr);
         }
     }
 }

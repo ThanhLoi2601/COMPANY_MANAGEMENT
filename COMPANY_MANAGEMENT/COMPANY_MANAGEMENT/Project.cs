@@ -89,6 +89,7 @@ namespace COMPANY_MANAGEMENT
         }
         public List<Task> GetListTasks(string id_project)
         {
+            TaskDAO tksDAO = new TaskDAO();
             SqlConnection conn = new SqlConnection(Properties.Settings.Default.cnnStr);
             conn.Open();
             string sql = String.Format("SELECT * FROM Tasks WHERE Project_ID = '{0}'", id_project);
@@ -104,7 +105,9 @@ namespace COMPANY_MANAGEMENT
                 task.DateEnd = reader.GetDateTime(3);
                 task.Description = reader.GetString(4);
                 task.Status = (Task.TaskStatus)Enum.Parse(typeof(Task.TaskStatus), reader.GetString(5));
+                task.GetStatus();
                 task.Id_project = reader.GetString(6);
+                tksDAO.Update(task);
                 tasks.Add(task);
             }
             reader.Close();

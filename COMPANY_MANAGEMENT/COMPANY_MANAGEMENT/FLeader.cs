@@ -152,10 +152,7 @@ namespace COMPANY_MANAGEMENT
             txtBasicSalaryLd.Text = dgvListStaff.Rows[r].Cells[7].Value.ToString();
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListStaff.Rows[r].Cells[8].Value.ToString();
-<<<<<<< HEAD
             //IDReceive = dgvListStaff.Rows[r].Cells[0].Value.ToString();
-=======
->>>>>>> a3353c0debe82184e5c2553a0e82766f8d801fcf
         }
 
         private void FLeader_Load(object sender, EventArgs e)
@@ -166,6 +163,28 @@ namespace COMPANY_MANAGEMENT
         { 
             dgvListManager.DataSource = manDAO.LoadList();
             dgvListStaff.DataSource = staDAO.LoadList();
+        }
+
+        private void btMyInfor_MouseEnter(object sender, EventArgs e)
+        {
+            btMyInfor.BackColor = Color.Blue;
+        }
+
+        private void btMyInfor_MouseLeave(object sender, EventArgs e)
+        {
+            btMyInfor.BackColor = SystemColors.Control;
+        }
+
+        private void btAbsenceLetterLd_Click(object sender, EventArgs e)
+        {
+            FShowStaffLetter staf = new FShowStaffLetter();
+            staf.ShowDialog();
+        }
+
+        private void btDistributionLd_Click(object sender, EventArgs e)
+        {
+            DistributionLD dis = new DistributionLD();
+            dis.ShowDialog();
         }
     }
 }

@@ -23,15 +23,12 @@ namespace COMPANY_MANAGEMENT.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-56M3BUT\\THANHLOI;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BLOW;Persist Security Info=True;User ID=sa;Password=123")]
         public string cnnStr {
             get {
                 return ((string)(this["cnnStr"]));
-            }
-            set {
-                this["cnnStr"] = value;
             }
         }
     }

@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="COMPANY_MANAGEMENT.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="cnnStr" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=DESKTOP-56M3BUT\THANHLOI;Integrated Security=True</Value>
+    <Setting Name="cnnStr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=BLOW;Persist Security Info=True;User ID=sa;Password=123</Value>
     </Setting>
   </Settings>
 </SettingsFile>

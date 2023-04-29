@@ -17,6 +17,8 @@ namespace COMPANY_MANAGEMENT
     {
         ProjectDAO proDao = new ProjectDAO();
         TaskDAO taskDao = new TaskDAO();
+        DBConn dB = new DBConn();
+        private string proID = "";
         public FProject()
         {
             InitializeComponent();
@@ -27,7 +29,6 @@ namespace COMPANY_MANAGEMENT
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                // Tạo đối tượng Project và gán giá trị từ các trường trong bảng Projects
                 Project project = new Project();
                 project.Id = reader.GetString(0);
                 project.Name = reader.GetString(1);
@@ -53,8 +54,13 @@ namespace COMPANY_MANAGEMENT
             {
                 Project pro = new Project(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Project.ProjectStatus)cbbStatus.SelectedItem);
                 proDao.Update(pro);
-                dgvLoad(pro.Id);
             }
+            else
+            {
+                string sqlStr = string.Format("UPDATE Tasks SET Task_Name = '{0}',StartDate = '{1}',EndDate = '{2}',Task_description = '{3}',Task_status = '{4}' WHERE ID = '{5}'", txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Task.TaskStatus)cbbStatus.SelectedItem, txtID.Text);
+                dB.Executive(sqlStr);
+            }
+            dgvLoad(proID);
         }
 
         private void btInsertProject_Click(object sender, EventArgs e)
@@ -98,9 +104,8 @@ namespace COMPANY_MANAGEMENT
             rtxtContent.Text = dgvProject.Rows[r].Cells[4].Value.ToString();
             cbbStatus.DataBindings.Clear();
             cbbStatus.Text = dgvProject.Rows[r].Cells[5].Value.ToString();
-            string t = dgvProject.Rows[r].Cells[0].Value.ToString();
-            dgvTask.DataSource = taskDao.LoadList(t);
-
+            this.proID = dgvProject.Rows[r].Cells[0].Value.ToString();
+            dgvTask.DataSource = taskDao.LoadList(this.proID);
         }
 
         private void dgvTask_CellClick(object sender, DataGridViewCellEventArgs e)

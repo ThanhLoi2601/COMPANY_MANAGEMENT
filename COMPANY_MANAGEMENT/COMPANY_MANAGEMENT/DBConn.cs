@@ -119,6 +119,64 @@ namespace COMPANY_MANAGEMENT
             }
             return null;
         }
+        public ProcessJob FindProcessJob(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string id = reader.GetString(0);
+                    string content = reader.GetString(1);
+                    double proc = reader.GetDouble(2);
+                    return new ProcessJob(id, content, proc);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+        public Task FindTask(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Task task = new Task();
+                    task.Id = reader.GetString(0);
+                    task.Name = reader.GetString(1);
+                    task.DateStart = reader.GetDateTime(2);
+                    task.DateEnd = reader.GetDateTime(3);
+                    task.Description = reader.GetString(4);
+                    task.Status = (Task.TaskStatus)Enum.Parse(typeof(Task.TaskStatus), reader.GetString(5));
+                    task.GetStatus();
+                    task.Id_project = reader.GetString(6);
+                    return task;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
     }
 }
 

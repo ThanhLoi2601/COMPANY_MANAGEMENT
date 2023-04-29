@@ -51,15 +51,15 @@ INSERT INTO Tasks (ID, Task_Name, StartDate, EndDate, Task_description, Task_sta
 ('TKS0024', 'Survey Data Collection', '2023-01-16', '2023-01-25', 'Collecting data from customer survey', 'NotStarted', 'PRO005'),
 ('TKS0025', 'Survey Analysis and Reporting', '2023-01-26', '2023-01-31', 'Analyzing data from customer survey and preparing a report', 'NotStarted', 'PRO005');
 
-CREATE TRIGGER update_tasks_status
-ON Projects
-AFTER UPDATE
-AS
-BEGIN
-  IF UPDATE(Project_status) AND (SELECT COUNT(*) FROM deleted WHERE Project_status = 'Cancelled') = 0 AND (SELECT COUNT(*) FROM inserted WHERE Project_status = 'Cancelled') > 0
-  BEGIN
-    UPDATE Tasks SET Task_status = 'Cancelled' WHERE Project_ID IN (SELECT ID FROM inserted WHERE Project_status = 'Cancelled')
-  END
-END
+--CREATE TRIGGER update_tasks_status
+--ON Projects
+--AFTER UPDATE
+--AS
+--BEGIN
+--  IF UPDATE(Project_status) AND (SELECT COUNT(*) FROM deleted WHERE Project_status = 'Cancelled') = 0 AND (SELECT COUNT(*) FROM inserted WHERE Project_status = 'Cancelled') > 0
+--  BEGIN
+--    UPDATE Tasks SET Task_status = 'Cancelled' WHERE Project_ID IN (SELECT ID FROM inserted WHERE Project_status = 'Cancelled')
+--  END
+--END
 
-select * from staff
+--select * from staff

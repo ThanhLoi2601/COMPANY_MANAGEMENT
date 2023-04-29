@@ -7,4 +7,6 @@
 	InfoDate Datetime 
 )
 
+
+
 INSERT INTO Contact(IDSent,NameSent,Subject,Content,IDReceive,InfoDate) values ('LD12345','Tran Van A','Submit a plan','Planning and submission','All Manager','4/19/2023')

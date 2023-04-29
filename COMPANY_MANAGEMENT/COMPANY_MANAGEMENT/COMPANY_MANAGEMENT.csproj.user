@@ -4,10 +4,10 @@
     <Compile Update="CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="FContact.cs">
+    <Compile Update="DistributionLD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FContract.cs">
+    <Compile Update="FContact.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FLeader.cs">
@@ -17,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShowStaffLetter.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

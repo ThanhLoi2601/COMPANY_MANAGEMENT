@@ -43,7 +43,7 @@ namespace COMPANY_MANAGEMENT
 
         public DataTable LoadList()
         {
-            return dB.LoadList(string.Format("SELECT *FROM Projects WHERE ID like 'PRO%'"));
+            return dB.LoadList(string.Format("SELECT * FROM Projects WHERE ID like 'PRO%'"));
         }
         public void AddTask(Project pro)
         {
