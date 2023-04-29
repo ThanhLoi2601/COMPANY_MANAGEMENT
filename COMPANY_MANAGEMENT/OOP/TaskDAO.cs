@@ -39,12 +39,23 @@ namespace COMPANY_MANAGEMENT.OOP
                 return dB.LoadList(string.Format("SELECT ID, Task_Name, StartDate, EndDate, Task_description, Task_status FROM Tasks WHERE ID like 'TKS%'"));
         }
 
+        public DataTable LoadListTaskMan(string idMan)
+        {
+            return dB.LoadList(string.Format("SELECT t.ID, t.Task_Name, t.Task_description, t.StartDate, t.EndDate, t.Task_status,t.Project_ID FROM Tasks t, Distribution d WHERE t.ID = d.IDJob and d.IDStaff = '{0}'",idMan));
+        }
+
         public string Search(string id)
         {
             if (id == "All tasks")
                 return null;
             string sqlStr = string.Format("SELECT * FROM Tasks WHERE ID = '{0}';", id);
             return dB.FindNameTask(sqlStr);
+        }
+
+        public Task SearchTask(string id)
+        {
+            string sqlStr = string.Format("SELECT * FROM Tasks WHERE ID = '{0}';", id);
+            return dB.FindTask(sqlStr);
         }
     }
 }

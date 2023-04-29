@@ -22,6 +22,14 @@ namespace COMPANY_MANAGEMENT.OOP
                 , job.ID, job.Content, 0);
             dB.Executive(sqlStr);
         }
+
+        public void Insert(Task t)
+        {
+            string sqlStr = string.Format("INSERT INTO ProcessJob(IDJob,Content,Process) values ('{0}','{1}',{2})"
+                , t.Id, t.Description, 0);
+            dB.ExecutiveWithoutNotice(sqlStr);
+        }
+
         public void Update(ProcessJob a)
         {
             string sqlStr = string.Format("UPDATE ProcessJob SET Process = {0} Where Content ='{1}'", a.Process, a.Content);

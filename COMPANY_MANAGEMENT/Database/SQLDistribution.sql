@@ -15,3 +15,4 @@ SELECT * FROM Staff WHERE (ID NOT IN (SELECT IDStaff FROM Distribution)
 					OR (DateEnd BETWEEN '02/03/2023' AND '02/13/2023')
 					OR ('02/03/2023' BETWEEN DateStart AND DateEnd)
 					OR ('02/13/2023' BETWEEN DateStart AND DateEnd)) )AND Manager_ID = 'MAN12345'
+SELECT DISTINCT IDJob FROM Distribution WHERE IDStaff= 'MAN12345'

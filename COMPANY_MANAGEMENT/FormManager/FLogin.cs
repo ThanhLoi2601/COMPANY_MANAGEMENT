@@ -1,5 +1,6 @@
 ﻿using COMPANY_MANAGEMENT.OOP;
 using COMPANY_MANAGEMENT.FormStaff1;
+using COMPANY_MANAGEMENT.FormLeader;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,8 +46,8 @@ namespace COMPANY_MANAGEMENT
                 Leader Lea = new Leader(txtMaDN.Text, txtMK.Text);
                 if (LeaDAO.Login(Lea) == true)
                 {
-                    //FLeader f = new FLeader(txtMaDN.Text);
-                    //f.ShowDialog();
+                    FLeader f = new FLeader(txtMaDN.Text);
+                    f.ShowDialog();
                 }
             }
         }

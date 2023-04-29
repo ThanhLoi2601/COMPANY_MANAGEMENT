@@ -34,7 +34,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public string Id_project { get => id_project; set => id_project = value; }
 
         public Task() { }
-            
+
         public Task(string _id, string _name, DateTime _startDate, DateTime _endDate, string _description, TaskStatus _status, string _id_project)
         {
             this.id = _id;
@@ -49,10 +49,6 @@ namespace COMPANY_MANAGEMENT.OOP
         public void UpdateStatus(TaskStatus newStatus)
         {
             this.Status = newStatus;
-        }
-        public string ToStringTaskStatus(TaskStatus status)
-        {
-            return status.ToString();
         }
         public void GetStatus()
         {
@@ -79,6 +75,10 @@ namespace COMPANY_MANAGEMENT.OOP
                     UpdateStatus(Task.TaskStatus.NotStarted);
                 }
             }
+        }
+        public string ToStringTaskStatus(TaskStatus status)
+        {
+            return status.ToString();
         }
     }
 }

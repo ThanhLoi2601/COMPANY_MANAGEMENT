@@ -32,15 +32,9 @@ namespace COMPANY_MANAGEMENT.OOP
             dB.Executive(sqlStr);
         }
 
-        public DataTable LoadList(string IDhead)
+        public DataTable LoadList(string ID)
         {
-            if (IDhead == "JOB")
-                return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID like 'JOB%'"));
-            else
-            {
-                // return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID like 'TKS%'"));
-                return null;
-            }
+            return dB.LoadList(string.Format("SELECT *FROM Job WHERE ID IN (SELECT IDJob FROM Distribution WHERE IDStaff = '{0}')",ID));
         }
 
         public Job Search(string id)
@@ -49,15 +43,16 @@ namespace COMPANY_MANAGEMENT.OOP
             return dB.FindJob(sqlStr);
         }
 
-        public void LoadCbTaskJob(ComboBox cb)// SELECT DISTINCT j.IDTasks FROM Job j INNER JOIN Distribution d ON j.IDTask = d.IDJob
+        public void LoadCbTaskJob(ComboBox cb, string IDEmp)// SELECT DISTINCT j.IDTasks FROM Job j INNER JOIN Distribution d ON j.IDTask = d.IDJob
         {
-            string sqlStr = string.Format("SELECT DISTINCT IDTasks FROM Job WHERE ID NOT IN (SELECT IDJob FROM Distribution)");
-            dB.LoadCbJobTask(sqlStr,cb);
+            string sqlStr = string.Format("SELECT DISTINCT IDJob FROM Distribution WHERE IDStaff= '{0}'", IDEmp);
+            dB.LoadCbJobTask(sqlStr,cb, "IDJob");
         }
-        public void LoadCbTaskDis(ComboBox cb)
+        public void LoadCbTaskDis(ComboBox cb, string IDEmp)
         {
-            string sqlStr = string.Format("SELECT DISTINCT j.IDTasks FROM Job j INNER JOIN Distribution d ON j.ID = d.IDJob");
-            dB.LoadCbJobTask(sqlStr, cb);
+            string sqlStr = string.Format("SELECT DISTINCT j.IDTasks FROM Job j INNER JOIN Distribution d ON j.ID = d.IDJob " +
+                "WHERE d.IDStaff IN (SELECT ID FROM Staff WHERE Manager_ID = '{0}')",IDEmp);
+            dB.LoadCbJobTask(sqlStr, cb, "IDTasks");
         }
 
     }

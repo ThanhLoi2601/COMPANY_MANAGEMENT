@@ -5,3 +5,4 @@
 	StartDate date,
 	EndDate date
 )
+SELECT * FROM Absence WHERE  ID LIKE 'MAN%'

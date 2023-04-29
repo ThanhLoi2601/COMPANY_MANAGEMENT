@@ -21,5 +21,9 @@ namespace COMPANY_MANAGEMENT.OOP
             return dB.LoadList(string.Format("SELECT * FROM Absence WHERE  ID IN (SELECT ID FROM Staff WHERE Manager_ID = '{0}' )", IDMan));
         }
 
+        public DataTable LoadAbsenManager()
+        {
+            return dB.LoadList(string.Format("SELECT * FROM Absence WHERE  ID LIKE 'MAN%'"));
+        }
     }
 }

@@ -60,6 +60,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormLeader\DistributionLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeader\DistributionLD.designer.cs">
+      <DependentUpon>DistributionLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeader\FContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeader\FContact.Designer.cs">
+      <DependentUpon>FContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeader\FLeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeader\FLeader.designer.cs">
+      <DependentUpon>FLeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeader\FProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeader\FProject.Designer.cs">
+      <DependentUpon>FProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeader\FTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeader\FTask.Designer.cs">
+      <DependentUpon>FTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormManager\FAssignedWork.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,12 +221,27 @@
     <Compile Include="OOP\TaskDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormManager\FShowStaffLetter.cs">
+    <Compile Include="FormManager\FShowLetter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormManager\FShowStaffLetter.Designer.cs">
-      <DependentUpon>FShowStaffLetter.cs</DependentUpon>
+    <Compile Include="FormManager\FShowLetter.Designer.cs">
+      <DependentUpon>FShowLetter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormLeader\DistributionLD.resx">
+      <DependentUpon>DistributionLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeader\FContact.resx">
+      <DependentUpon>FContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeader\FLeader.resx">
+      <DependentUpon>FLeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeader\FProject.resx">
+      <DependentUpon>FProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeader\FTask.resx">
+      <DependentUpon>FTask.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormManager\FAssignedWork.resx">
       <DependentUpon>FAssignedWork.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,8 +303,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FormManager\FShowStaffLetter.resx">
-      <DependentUpon>FShowStaffLetter.cs</DependentUpon>
+    <EmbeddedResource Include="FormManager\FShowLetter.resx">
+      <DependentUpon>FShowLetter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

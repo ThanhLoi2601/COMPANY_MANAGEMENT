@@ -260,7 +260,6 @@ namespace COMPANY_MANAGEMENT.OOP
             }
             return null;
         }
-
         
         public int Merge(string sqlStr)
         {
@@ -279,7 +278,7 @@ namespace COMPANY_MANAGEMENT.OOP
             }
         }
 
-        public void LoadCbJobTask(string sqlStr,ComboBox cb)
+        public void LoadCbJobTask(string sqlStr,ComboBox cb, string column)
         { 
             try
             {
@@ -288,7 +287,7 @@ namespace COMPANY_MANAGEMENT.OOP
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    cb.Items.Add(reader["IDTasks"].ToString());
+                    cb.Items.Add(reader[column].ToString());
                 }
                 conn.Close();
             }
@@ -303,6 +302,38 @@ namespace COMPANY_MANAGEMENT.OOP
             SqlCommand cmd = new SqlCommand(sqlStr, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+        public Task FindTask(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Task task = new Task();
+                    task.Id = reader.GetString(0);
+                    task.Name = reader.GetString(1);
+                    task.DateStart = reader.GetDateTime(2);
+                    task.DateEnd = reader.GetDateTime(3);
+                    task.Description = reader.GetString(4);
+                    task.Status = (Task.TaskStatus)Enum.Parse(typeof(Task.TaskStatus), reader.GetString(5));
+                    task.GetStatus();
+                    task.Id_project = reader.GetString(6);
+                    return task;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
         }
     }
 }

@@ -12,20 +12,23 @@ using COMPANY_MANAGEMENT.OOP;
 
 namespace COMPANY_MANAGEMENT
 {
-    public partial class FShowStaffLetter : Form
+    public partial class FShowLetter : Form
     {
         AbsenceLetterDAO absenDAO = new AbsenceLetterDAO();
         string IDReceive;
 
-        public FShowStaffLetter(string id)
+        public FShowLetter(string id)
         {
             InitializeComponent();
             IDReceive = id;
         }
 
-        private void FShowStaffLetter_Load(object sender, EventArgs e)
+        private void FShowLetter_Load(object sender, EventArgs e)
         {
-            dGVStaffLetter.DataSource = absenDAO.LoadAbsenStaff(IDReceive);
+            if(IDReceive.Contains("MAN")) 
+                dGVStaffLetter.DataSource = absenDAO.LoadAbsenStaff(IDReceive);
+            else
+                dGVStaffLetter.DataSource = absenDAO.LoadAbsenManager();
         }
     }
 }

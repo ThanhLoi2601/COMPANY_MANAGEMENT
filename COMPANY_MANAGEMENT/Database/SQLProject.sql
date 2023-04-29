@@ -51,7 +51,7 @@ INSERT INTO Tasks (ID, Task_Name, StartDate, EndDate, Task_description, Task_sta
 ('TKS0024', 'Survey Data Collection', '2023-01-16', '2023-01-25', 'Collecting data from customer survey', 'NotStarted', 'PRO005'),
 ('TKS0025', 'Survey Analysis and Reporting', '2023-01-26', '2023-01-31', 'Analyzing data from customer survey and preparing a report', 'NotStarted', 'PRO005');
 SELECT * FROM Tasks WHERE ID = 'TKS001'
-
+GO
 CREATE TRIGGER update_tasks_status
 ON Projects
 AFTER UPDATE

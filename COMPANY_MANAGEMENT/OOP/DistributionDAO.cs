@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -25,18 +26,20 @@ namespace COMPANY_MANAGEMENT.OOP
             dB.Executive(sqlStr);
         }
 
-        public DataTable LoadListJob()
+        public DataTable LoadListJob(string IDEmp)
         {
             return dB.LoadList(string.Format("SELECT j.ID,j.Name,j.Content,j.DateStart,j.DateEnd,j.Bonus,j.IDTasks,t.Task_Name " +
-                " FROM Job j, Tasks t WHERE j.ID NOT IN (SELECT IDJob FROM Distribution) AND j.IDTasks = t.ID"));
+                " FROM Job j, Tasks t, Distribution d WHERE j.ID NOT IN (SELECT IDJob FROM Distribution) " +
+                "AND j.IDTasks = t.ID AND t.ID = d.IDJob AND d.IDStaff = '{0}'", IDEmp));
         }
 
-        public DataTable LoadListJob(string IDTask)
+        public DataTable LoadListJob(string IDTask, string IDEmp)
         {
             if (IDTask == "All tasks")
-                return LoadListJob();
+                return LoadListJob(IDEmp);
             return dB.LoadList(string.Format("SELECT j.ID,j.Name,j.Content,j.DateStart,j.DateEnd,j.Bonus,j.IDTasks,t.Task_Name " +
-                " FROM Job j, Tasks t WHERE j.ID NOT IN (SELECT IDJob FROM Distribution) AND j.IDTasks = t.ID AND IDTasks = '{0}'", IDTask));
+                " FROM Job j, Tasks t, Distribution d WHERE j.ID NOT IN (SELECT IDJob FROM Distribution) " +
+                "AND j.IDTasks = t.ID AND t.ID = d.IDJob AND d.IDStaff = '{0}' AND t.ID = '{1}'", IDEmp, IDTask));
         }
 
         public DataTable LoadListStaff(Job jb, string IDMan)
@@ -62,6 +65,28 @@ namespace COMPANY_MANAGEMENT.OOP
                 return LoadListDis();
             return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks" +
                 " FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.IDTasks = '{0}';",IDTask));
+        }
+
+        public DataTable LoadListDisTask(string id)
+        {
+            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.StartDate, j.EndDate, pj.Process  FROM Distribution d, Tasks j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.Project_ID = '{0}';", id));
+        }
+
+        public DataTable LoadListTask(string id)
+        {
+            return dB.LoadList(string.Format("SELECT *FROM Tasks WHERE ID NOT IN (SELECT IDJob FROM Distribution) AND ID like 'TKS%' AND Project_ID = '{0}'", id));
+        }
+        public bool CheckAssigned(string id)
+        {
+            SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+            conn.Open();
+            string sql = string.Format("SELECT COUNT(*) FROM Distribution WHERE IDJob = '{0}'", id);
+            SqlCommand command = new SqlCommand(sql, conn);
+            int count = (int)command.ExecuteScalar();
+            if (count > 0)
+                return true;
+            else
+                return false;
         }
     }
 }

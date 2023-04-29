@@ -1,6 +1,6 @@
 ﻿namespace COMPANY_MANAGEMENT
 {
-    partial class FShowStaffLetter
+    partial class FShowLetter
     {
         /// <summary>
         /// Required designer variable.
@@ -36,22 +36,22 @@
             // 
             this.dGVStaffLetter.BackgroundColor = System.Drawing.Color.White;
             this.dGVStaffLetter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVStaffLetter.Location = new System.Drawing.Point(3, 2);
+            this.dGVStaffLetter.Location = new System.Drawing.Point(3, 1);
             this.dGVStaffLetter.Name = "dGVStaffLetter";
             this.dGVStaffLetter.RowHeadersWidth = 51;
             this.dGVStaffLetter.RowTemplate.Height = 24;
-            this.dGVStaffLetter.Size = new System.Drawing.Size(778, 467);
+            this.dGVStaffLetter.Size = new System.Drawing.Size(778, 468);
             this.dGVStaffLetter.TabIndex = 0;
             // 
-            // FShowStaffLetter
+            // FShowLetter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 470);
             this.Controls.Add(this.dGVStaffLetter);
-            this.Name = "FShowStaffLetter";
+            this.Name = "FShowLetter";
             this.Text = "Show Staff Letter";
-            this.Load += new System.EventHandler(this.FShowStaffLetter_Load);
+            this.Load += new System.EventHandler(this.FShowLetter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVStaffLetter)).EndInit();
             this.ResumeLayout(false);
 

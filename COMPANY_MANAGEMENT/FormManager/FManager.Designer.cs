@@ -385,7 +385,7 @@
             this.btSalary.Name = "btSalary";
             this.btSalary.Size = new System.Drawing.Size(207, 93);
             this.btSalary.TabIndex = 7;
-            this.btSalary.Text = "SALARY DATAILS";
+            this.btSalary.Text = "SALARY DETAILS";
             this.btSalary.UseVisualStyleBackColor = false;
             this.btSalary.Click += new System.EventHandler(this.btSalary_Click);
             // 

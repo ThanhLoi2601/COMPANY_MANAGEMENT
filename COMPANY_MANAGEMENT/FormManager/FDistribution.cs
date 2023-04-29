@@ -38,7 +38,7 @@ namespace COMPANY_MANAGEMENT
 
         private void Load_Dis_Job()
         {
-            dGVJob.DataSource = disDAO.LoadListJob();
+            dGVJob.DataSource = disDAO.LoadListJob(IDReceive);
             dGVDistribution.DataSource = disDAO.LoadListDis();
             LoadCbTask();
         }
@@ -46,10 +46,10 @@ namespace COMPANY_MANAGEMENT
         private void LoadCbTask()
         {
             cbTaskJobList.Items.Clear();
-            jobDAO.LoadCbTaskJob(cbTaskJobList);
+            jobDAO.LoadCbTaskJob(cbTaskJobList, IDReceive);
             cbTaskJobList.Items.Add("All tasks");
             cbTaskDis.Items.Clear();
-            jobDAO.LoadCbTaskDis(cbTaskDis);
+            jobDAO.LoadCbTaskDis(cbTaskDis, IDReceive);
             cbTaskDis.Items.Add("All tasks");
         }
 
@@ -70,7 +70,7 @@ namespace COMPANY_MANAGEMENT
         private void btConfirm_Click(object sender, EventArgs e)
         {
             disDAO.Insert(txtIDJob.Text, txtIDStaff.Text);
-            dGVJob.DataSource = disDAO.LoadListJob();
+            dGVJob.DataSource = disDAO.LoadListJob(IDReceive);
             if (procDAO.Search(txtIDJob.Text) == null)
             {
                 Job jb = jobDAO.Search(txtIDJob.Text);
@@ -116,7 +116,7 @@ namespace COMPANY_MANAGEMENT
         private void combTask_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtNameTaskJobList.Text = tksDAO.Search(cbTaskJobList.Text);
-            dGVJob.DataSource = disDAO.LoadListJob(cbTaskJobList.Text);
+            dGVJob.DataSource = disDAO.LoadListJob(cbTaskJobList.Text,IDReceive);
         }
 
         private void cbTaskDis_SelectedIndexChanged(object sender, EventArgs e)

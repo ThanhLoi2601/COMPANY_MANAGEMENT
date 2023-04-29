@@ -32,7 +32,7 @@ namespace COMPANY_MANAGEMENT
             }
             else
             {
-                FShowStaffLetter f = new FShowStaffLetter(IDReceive);
+                FShowLetter f = new FShowLetter(IDReceive);
                 f.ShowDialog();
             }
         }

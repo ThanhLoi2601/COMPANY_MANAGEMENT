@@ -14,8 +14,9 @@ namespace COMPANY_MANAGEMENT
     public partial class FJob : Form
     {
         const string IDjbS = "JOB";
-        const string IDjbM = "JOM";
+        const string IDjbM = "TKS";
         JobDAO jobDAO =new JobDAO();
+        TaskDAO taskDAO = new TaskDAO();
         ManagerDAO manDAO = new ManagerDAO();
         Manager man;
 
@@ -34,7 +35,7 @@ namespace COMPANY_MANAGEMENT
         {
             Job job = new Job(txtID.Text, txtName.Text, rTxtContent.Text, dtDateStart.Value, dtDateEnd.Value, int.Parse(txtBonus.Text),txtIDWork.Text);
             methodChange(job);
-            dGVJobStaff.DataSource = jobDAO.LoadList(IDjbS);
+            dGVJobStaff.DataSource = jobDAO.LoadList(man.ID);
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
@@ -63,8 +64,8 @@ namespace COMPANY_MANAGEMENT
 
         private void FJob_Load(object sender, EventArgs e)
         {
-            dGVJobStaff.DataSource = jobDAO.LoadList(IDjbS);
-            //dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
+            dGVJobStaff.DataSource = jobDAO.LoadList(man.ID);
+            dGVMyProject.DataSource = taskDAO.LoadListTaskMan(man.ID);
         }
 
         private bool check_Empty()
