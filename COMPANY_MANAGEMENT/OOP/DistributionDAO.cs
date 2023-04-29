@@ -52,8 +52,8 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public DataTable LoadListDis()
         {
-            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks" +
-                " FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob;"));
+            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks, t.Task_Name" +
+                " FROM Distribution d, Job j, ProcessJob pj, Tasks t WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.IDTasks = t.ID;"));
         }
 
         public DataTable LoadListDis(string IDTask)
