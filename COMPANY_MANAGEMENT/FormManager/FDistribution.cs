@@ -39,7 +39,7 @@ namespace COMPANY_MANAGEMENT
         private void Load_Dis_Job()
         {
             dGVJob.DataSource = disDAO.LoadListJob(IDReceive);
-            dGVDistribution.DataSource = disDAO.LoadListDis();
+            dGVDistribution.DataSource = disDAO.LoadListDis(IDReceive);
             LoadCbTask();
         }
 
@@ -76,7 +76,7 @@ namespace COMPANY_MANAGEMENT
                 Job jb = jobDAO.Search(txtIDJob.Text);
                 procDAO.Insert(jb);
             }
-            dGVDistribution.DataSource = disDAO.LoadListDis();
+            dGVDistribution.DataSource = disDAO.LoadListDis(IDReceive);
             LoadCbTask();
         }
 
@@ -122,7 +122,7 @@ namespace COMPANY_MANAGEMENT
         private void cbTaskDis_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtNameTaskDis.Text = tksDAO.Search(cbTaskDis.Text);
-            dGVDistribution.DataSource = disDAO.LoadListDis(cbTaskDis.Text);
+            dGVDistribution.DataSource = disDAO.LoadListDisCB(cbTaskDis.Text, IDReceive);
         }
     }
 }

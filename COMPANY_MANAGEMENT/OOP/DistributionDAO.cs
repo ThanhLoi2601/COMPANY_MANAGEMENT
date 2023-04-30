@@ -53,18 +53,18 @@ namespace COMPANY_MANAGEMENT.OOP
                  "OR ID NOT IN ({0}) ) AND Manager_ID = '{1}'", str, IDMan));
         }
 
-        public DataTable LoadListDis()
+        public DataTable LoadListDis(string IDMan)
         {
             return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks, t.Task_Name" +
-                " FROM Distribution d, Job j, ProcessJob pj, Tasks t WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.IDTasks = t.ID;"));
+                " FROM Distribution d, Job j, ProcessJob pj, Tasks t WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.IDTasks = t.ID and d.IDStaff IN (SELECT ID FROM Staff WHERE Manager_ID = '{0}');",IDMan));
         }
 
-        public DataTable LoadListDis(string IDTask)
+        public DataTable LoadListDisCB(string IDTask, string IDMan)
         {
             if (IDTask == "All tasks")
-                return LoadListDis();
+                return LoadListDis(IDMan);
             return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.DateStart, j.DateEnd, pj.Process, j.IDTasks" +
-                " FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.IDTasks = '{0}';",IDTask));
+                " FROM Distribution d, Job j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.IDTasks = '{0}' and d.IDStaff IN (SELECT ID FROM Staff WHERE Manager_ID = '{1}');", IDTask,IDMan));
         }
 
         public DataTable LoadListDisTask(string id)

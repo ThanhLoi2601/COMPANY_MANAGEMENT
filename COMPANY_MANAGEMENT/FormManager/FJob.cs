@@ -6,7 +6,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace COMPANY_MANAGEMENT
@@ -110,17 +109,25 @@ namespace COMPANY_MANAGEMENT
 
         private void tabJobStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtBonus.Clear();
             if (tabJobStaff.SelectedIndex == 0)
+            {
                 grInfo.Enabled = true;
+                labBonus.Text = "Bonus";
+            }
             else
+            {
                 grInfo.Enabled = false;
+                labBonus.Text = "Task_status";
+            }
         }
 
         private void btComp_Click(object sender, EventArgs e)
         {
-            //Job jb = jobDAO.Search(txtID.Text);
-            //jobDAO.Delete(jb);
-            //dGVMyProject.DataSource = jobDAO.LoadList(IDjbM);
+            Task tsk = taskDAO.SearchTask(txtID.Text);
+            tsk.UpdateStatus(Task.TaskStatus.Completed);
+            taskDAO.Update(tsk);
+            dGVMyProject.DataSource = taskDAO.LoadListTaskMan(man.ID);
         }
     }
 }
