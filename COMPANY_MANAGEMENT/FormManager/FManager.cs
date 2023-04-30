@@ -28,7 +28,7 @@ namespace COMPANY_MANAGEMENT
  
         private void btSalary_Click(object sender, EventArgs e)
         {
-            FSalary f = new FSalary();
+            FSalary f = new FSalary(IDReceive);
             f.ShowDialog();
         }
 

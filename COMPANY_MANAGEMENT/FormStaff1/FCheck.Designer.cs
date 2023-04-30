@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimeCheck = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.textID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -196,11 +197,19 @@
             this.label6.TabIndex = 34;
             this.label6.Text = "TO-DO LIST AND SCHEDULE";
             // 
+            // textID
+            // 
+            this.textID.Location = new System.Drawing.Point(523, 400);
+            this.textID.Name = "textID";
+            this.textID.Size = new System.Drawing.Size(100, 22);
+            this.textID.TabIndex = 35;
+            // 
             // FCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 556);
+            this.Controls.Add(this.textID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btReport);
@@ -240,5 +249,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimeCheck;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textID;
     }
 }

@@ -38,9 +38,12 @@
             this.dataCVHT = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textMonth = new System.Windows.Forms.TextBox();
             this.lbKPI = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbMonth = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataCVHT)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -110,9 +113,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(216, 25);
+            this.label6.Size = new System.Drawing.Size(180, 25);
             this.label6.TabIndex = 4;
-            this.label6.Text = "SALARY BY MONTH";
+            this.label6.Text = "COMPLETE JOB";
             // 
             // dataCVHT
             // 
@@ -131,9 +134,9 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.label6);
             this.flowLayoutPanel1.Controls.Add(this.dataCVHT);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 109);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(639, 451);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(639, 354);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
             // label1
@@ -146,14 +149,13 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Tháng:";
             // 
-            // textBox1
+            // textMonth
             // 
-            this.textBox1.Location = new System.Drawing.Point(831, 286);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textMonth.Location = new System.Drawing.Point(831, 286);
+            this.textMonth.Name = "textMonth";
+            this.textMonth.ReadOnly = true;
+            this.textMonth.Size = new System.Drawing.Size(100, 22);
+            this.textMonth.TabIndex = 23;
             // 
             // lbKPI
             // 
@@ -176,12 +178,44 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Lương cơ bản: ";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 25);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "MONTH";
+            // 
+            // cbMonth
+            // 
+            this.cbMonth.FormattingEnabled = true;
+            this.cbMonth.Location = new System.Drawing.Point(112, 20);
+            this.cbMonth.Name = "cbMonth";
+            this.cbMonth.Size = new System.Drawing.Size(121, 24);
+            this.cbMonth.TabIndex = 25;
+            this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(279, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Xem";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 475);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbMonth);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textMonth);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label10);
@@ -214,8 +248,11 @@
         private System.Windows.Forms.DataGridView dataCVHT;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textMonth;
         private System.Windows.Forms.Label lbKPI;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbMonth;
+        private System.Windows.Forms.Button button1;
     }
 }

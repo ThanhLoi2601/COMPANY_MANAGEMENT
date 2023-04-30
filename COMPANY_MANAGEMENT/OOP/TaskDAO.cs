@@ -41,7 +41,7 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public DataTable LoadListTaskMan(string idMan)
         {
-            return dB.LoadList(string.Format("SELECT t.ID, t.Task_Name, t.Task_description, t.StartDate, t.EndDate, t.Task_status,t.Project_ID FROM Tasks t, Distribution d WHERE t.ID = d.IDJob and d.IDStaff = '{0}'",idMan));
+            return dB.LoadList(string.Format("SELECT t.ID, t.Task_Name, t.Task_description, t.StartDate, t.EndDate, t.Task_status,t.Project_ID, p.Project_Name FROM Tasks t, Distribution d, Projects p WHERE t.ID = d.IDJob and t.Project_ID = p.ID and d.IDStaff = '{0}'",idMan));
         }
 
         public string Search(string id)

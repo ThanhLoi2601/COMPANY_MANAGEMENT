@@ -30,10 +30,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grbInformationLd = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDManager = new System.Windows.Forms.TextBox();
@@ -61,7 +61,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btAbsenceLetterLd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btDistributionLd = new System.Windows.Forms.Button();
-            this.btSalaryDetailsLd = new System.Windows.Forms.Button();
             this.btContact = new System.Windows.Forms.Button();
             this.btMyInfor = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -333,7 +332,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.grbOptionLd.Controls.Add(this.btAbsenceLetterLd);
             this.grbOptionLd.Controls.Add(this.button1);
             this.grbOptionLd.Controls.Add(this.btDistributionLd);
-            this.grbOptionLd.Controls.Add(this.btSalaryDetailsLd);
             this.grbOptionLd.Controls.Add(this.btContact);
             this.grbOptionLd.Controls.Add(this.btMyInfor);
             this.grbOptionLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -352,7 +350,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btAbsenceLetterLd.Location = new System.Drawing.Point(8, 129);
             this.btAbsenceLetterLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btAbsenceLetterLd.Name = "btAbsenceLetterLd";
-            this.btAbsenceLetterLd.Size = new System.Drawing.Size(142, 41);
+            this.btAbsenceLetterLd.Size = new System.Drawing.Size(142, 57);
             this.btAbsenceLetterLd.TabIndex = 11;
             this.btAbsenceLetterLd.Text = "Absence Letter";
             this.btAbsenceLetterLd.UseVisualStyleBackColor = true;
@@ -361,10 +359,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.button1.Location = new System.Drawing.Point(8, 424);
+            this.button1.Location = new System.Drawing.Point(8, 374);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 39);
+            this.button1.Size = new System.Drawing.Size(142, 54);
             this.button1.TabIndex = 10;
             this.button1.Text = "Project";
             this.button1.UseVisualStyleBackColor = true;
@@ -373,25 +371,14 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // btDistributionLd
             // 
             this.btDistributionLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btDistributionLd.Location = new System.Drawing.Point(8, 349);
+            this.btDistributionLd.Location = new System.Drawing.Point(8, 289);
             this.btDistributionLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btDistributionLd.Name = "btDistributionLd";
-            this.btDistributionLd.Size = new System.Drawing.Size(142, 39);
+            this.btDistributionLd.Size = new System.Drawing.Size(142, 61);
             this.btDistributionLd.TabIndex = 9;
             this.btDistributionLd.Text = "Distribution";
             this.btDistributionLd.UseVisualStyleBackColor = true;
             this.btDistributionLd.Click += new System.EventHandler(this.btDistributionLd_Click);
-            // 
-            // btSalaryDetailsLd
-            // 
-            this.btSalaryDetailsLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btSalaryDetailsLd.Location = new System.Drawing.Point(8, 279);
-            this.btSalaryDetailsLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btSalaryDetailsLd.Name = "btSalaryDetailsLd";
-            this.btSalaryDetailsLd.Size = new System.Drawing.Size(142, 45);
-            this.btSalaryDetailsLd.TabIndex = 8;
-            this.btSalaryDetailsLd.Text = "Salary Details";
-            this.btSalaryDetailsLd.UseVisualStyleBackColor = true;
             // 
             // btContact
             // 
@@ -399,7 +386,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btContact.Location = new System.Drawing.Point(8, 212);
             this.btContact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btContact.Name = "btContact";
-            this.btContact.Size = new System.Drawing.Size(142, 38);
+            this.btContact.Size = new System.Drawing.Size(142, 54);
             this.btContact.TabIndex = 6;
             this.btContact.Text = "Contact";
             this.btContact.UseVisualStyleBackColor = true;
@@ -411,7 +398,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btMyInfor.Location = new System.Drawing.Point(8, 48);
             this.btMyInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btMyInfor.Name = "btMyInfor";
-            this.btMyInfor.Size = new System.Drawing.Size(142, 41);
+            this.btMyInfor.Size = new System.Drawing.Size(142, 59);
             this.btMyInfor.TabIndex = 5;
             this.btMyInfor.Text = "My Information";
             this.btMyInfor.UseVisualStyleBackColor = true;
@@ -434,23 +421,24 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // dgvListManager
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvListManager.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListManager.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListManager.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListManager.Location = new System.Drawing.Point(6, 21);
             this.dgvListManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListManager.Name = "dgvListManager";
@@ -475,23 +463,24 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // dgvListStaff
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvListStaff.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListStaff.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListStaff.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListStaff.Location = new System.Drawing.Point(6, 19);
             this.dgvListStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListStaff.Name = "dgvListStaff";
@@ -547,7 +536,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
         private Label lbID;
         private GroupBox grbOptionLd;
         private Button btDistributionLd;
-        private Button btSalaryDetailsLd;
         private Button btContact;
         private Button btMyInfor;
         private Button btDeleteLd;

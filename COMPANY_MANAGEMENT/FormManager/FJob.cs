@@ -7,16 +7,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace COMPANY_MANAGEMENT
 {
     public partial class FJob : Form
     {
         const string IDjbS = "JOB";
-        const string IDjbM = "TKS";
         JobDAO jobDAO =new JobDAO();
         TaskDAO taskDAO = new TaskDAO();
         ManagerDAO manDAO = new ManagerDAO();
+        ProcessJobDAO pjDAO =new ProcessJobDAO();
+        CompleteJobDAO cmpDAO = new CompleteJobDAO();
+
         Manager man;
 
         public FJob()
@@ -119,14 +122,46 @@ namespace COMPANY_MANAGEMENT
             {
                 grInfo.Enabled = false;
                 labBonus.Text = "Task_status";
+                LoadCBStatus();
             }
         }
 
-        private void btComp_Click(object sender, EventArgs e)
+        private void LoadCBStatus()
+        {
+            List<Task.TaskStatus> enum_TaskStatus = new List<Task.TaskStatus>();
+            enum_TaskStatus.Add(Task.TaskStatus.Completed);
+            enum_TaskStatus.Add(Task.TaskStatus.Cancelled);
+            enum_TaskStatus.Add(Task.TaskStatus.NotStarted);
+            enum_TaskStatus.Add(Task.TaskStatus.OnHold);
+            enum_TaskStatus.Add(Task.TaskStatus.BehindSchedule);
+            enum_TaskStatus.Add(Task.TaskStatus.InProgress);
+            cbStatus.DataSource = enum_TaskStatus;
+        }
+
+        private void UpdateStatus(Task tsk)
+        {
+            tsk.UpdateStatus((Task.TaskStatus)cbStatus.SelectedItem);
+            taskDAO.Update(tsk);
+            if ((Task.TaskStatus)cbStatus.SelectedItem == Task.TaskStatus.Completed)
+            {
+                ProcessJob pj = pjDAO.Search(tsk.Id);
+                pjDAO.Detele(pj);
+                CompleteJob cmpJob = new CompleteJob(tsk.Id, tsk.Name, DateTime.Now, 0);
+                cmpDAO.Insert(cmpJob);
+            }
+            MessageBox.Show("Đã cập nhật trạng thái công việc thành công");
+        }
+
+        private void txtBonus_TextChanged(object sender, EventArgs e)
+        {
+            if(labBonus.Text == "Task_status")
+                cbStatus.Text = txtBonus.Text;
+        }
+
+        private void btConf_Click(object sender, EventArgs e)
         {
             Task tsk = taskDAO.SearchTask(txtID.Text);
-            tsk.UpdateStatus(Task.TaskStatus.Completed);
-            taskDAO.Update(tsk);
+            UpdateStatus(tsk);
             dGVMyProject.DataSource = taskDAO.LoadListTaskMan(man.ID);
         }
     }

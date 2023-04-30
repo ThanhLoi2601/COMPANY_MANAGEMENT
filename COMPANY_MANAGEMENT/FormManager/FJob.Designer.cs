@@ -53,8 +53,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dGVJobStaff = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btComp = new System.Windows.Forms.Button();
+            this.btConf = new System.Windows.Forms.Button();
             this.dGVMyProject = new System.Windows.Forms.DataGridView();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -127,6 +129,7 @@
             this.txtBonus.Name = "txtBonus";
             this.txtBonus.Size = new System.Drawing.Size(267, 24);
             this.txtBonus.TabIndex = 22;
+            this.txtBonus.TextChanged += new System.EventHandler(this.txtBonus_TextChanged);
             // 
             // labBonus
             // 
@@ -323,7 +326,9 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btComp);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.cbStatus);
+            this.tabPage2.Controls.Add(this.btConf);
             this.tabPage2.Controls.Add(this.dGVMyProject);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
@@ -334,18 +339,18 @@
             this.tabPage2.Text = "MY PROJECT";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btComp
+            // btConf
             // 
-            this.btComp.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btComp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btComp.Location = new System.Drawing.Point(707, 431);
-            this.btComp.Name = "btComp";
-            this.btComp.Size = new System.Drawing.Size(128, 48);
-            this.btComp.TabIndex = 5;
-            this.btComp.Text = "COMPLETE";
-            this.btComp.UseVisualStyleBackColor = false;
-            this.btComp.Click += new System.EventHandler(this.btComp_Click);
+            this.btConf.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConf.Location = new System.Drawing.Point(663, 431);
+            this.btConf.Name = "btConf";
+            this.btConf.Size = new System.Drawing.Size(172, 48);
+            this.btConf.TabIndex = 5;
+            this.btConf.Text = "CONFIRM ";
+            this.btConf.UseVisualStyleBackColor = false;
+            this.btConf.Click += new System.EventHandler(this.btConf_Click);
             // 
             // dGVMyProject
             // 
@@ -358,6 +363,24 @@
             this.dGVMyProject.Size = new System.Drawing.Size(841, 426);
             this.dGVMyProject.TabIndex = 5;
             this.dGVMyProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVMyProject_CellClick);
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(130, 432);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(161, 26);
+            this.cbStatus.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 440);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 18);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Status Task: ";
             // 
             // FJob
             // 
@@ -379,6 +402,7 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGVJobStaff)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVMyProject)).EndInit();
             this.ResumeLayout(false);
 
@@ -409,8 +433,10 @@
         private System.Windows.Forms.DataGridView dGVJobStaff;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dGVMyProject;
-        private System.Windows.Forms.Button btComp;
+        private System.Windows.Forms.Button btConf;
         private System.Windows.Forms.TextBox txtIDWork;
         private System.Windows.Forms.Label lbIDWork;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbStatus;
     }
 }

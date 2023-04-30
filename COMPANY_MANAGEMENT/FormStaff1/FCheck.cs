@@ -19,7 +19,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         CheckDAO c = new CheckDAO();
         StaffDAO s = new StaffDAO();
         ProcessJobDAO j = new ProcessJobDAO();
-        CompleteJobDAO cj = new CompleteJobDAO();
+        JobDAO job = new JobDAO();
         public int latetimes = 0;
         public FCheck(string id)
         {
@@ -50,27 +50,27 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             Staff man = s.Search(ID);
             if (checkIN.CheckState == CheckState.Checked)
             {
-                if(CanCheckIn())
+                if (CanCheckIn())
                 {
                     Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, latetimes);
                     c.InsertCheck(a);
-                }    
+                }
                 else
                 {
                     latetimes++;
                     Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, latetimes);
                     c.InsertCheck(a);
                     MessageBox.Show("Đã cập nhật bảng chấm công thành công");
-                }    
-            } 
-            if(checkOUT.CheckState==CheckState.Checked && CanCheckOut())
+                }
+            }
+            if (checkOUT.CheckState == CheckState.Checked && CanCheckOut())
             {
                 Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, latetimes);
                 c.Updatecheck(a);
                 MessageBox.Show("Đã cập nhật bảng chấm công thành công");
             }
         }
-  
+
         public void LoadCongViec()
         {
             Staff man = s.Search(ID);
@@ -92,10 +92,10 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         void LoadCheckState()
         {
             Staff man = s.Search(ID);
-            if(conn.State == ConnectionState.Closed)
+            if (conn.State == ConnectionState.Closed)
             {
                 conn.Open();
-            }    
+            }
             SqlCommand command = new SqlCommand("SELECT CheckIn, CheckOut FROM SQLCheck WHERE ID = @id AND DateCheck = CONVERT(date, GETDATE())", conn);
             command.Parameters.AddWithValue("@id", man.ID);
             SqlDataReader reader = command.ExecuteReader();
@@ -112,7 +112,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void cbDsCV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string sqlQuery = "SELECT Process FROM ProcessJob where Content = '" + cbDsCV.Text + "'";
+            string sqlQuery = "SELECT Process,IDJob FROM ProcessJob where Content = '" + cbDsCV.Text + "'";
             SqlCommand objCommand = new SqlCommand(sqlQuery, conn);
             if (conn.State == ConnectionState.Closed)
             {
@@ -124,6 +124,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             while (dr.Read())
             {
                 textTienDo.Text = (string)dr["Process"].ToString();
+                textID.Text = (string)dr["IDJob"].ToString();
             }
             conn.Close();
         }
@@ -135,14 +136,12 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             {
                 MessageBox.Show("Lỗi cập nhật tiến độ!!");
             }
-            else if(Process==100)
+            else if (Process == 100)
             {
-                ProcessJob jb = new ProcessJob(cbDsCV.Text, int.Parse(textTienDo.Text));
+                ProcessJob jb = new ProcessJob(textID.Text,cbDsCV.Text, int.Parse(textTienDo.Text));
                 j.Detele(jb);
-                CompleteJob cjb = new CompleteJob("JOB2346",cbDsCV.Text,DateTime.Today,500000);
-                cj.Insert(cjb);
-                MessageBox.Show("Đã cập nhật công việc hoàn thành");
-            }    
+                UpdateCom(jb);
+            }
             else
             {
                 ProcessJob jb = new ProcessJob(cbDsCV.Text, int.Parse(textTienDo.Text));
@@ -153,11 +152,11 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void checkOUT_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkOUT.Checked && !CanCheckOut())
+            if (checkOUT.Checked && !CanCheckOut())
             {
                 MessageBox.Show("Chưa tới giờ check out, vui lòng check đúng giờ");
                 checkOUT.CheckState = CheckState.Unchecked;
-            }    
+            }
         }
 
         public bool CanCheckIn()
@@ -188,5 +187,34 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             }
         }
 
+        void UpdateCom(ProcessJob job)
+        {
+            int bonus = CalculateBonus(textID.Text);
+            CompleteJob completeJob = new CompleteJob(job.IDJob, job.Content, DateTime.Today, bonus);
+            CompleteJobDAO completeJobDAO = new CompleteJobDAO();
+            completeJobDAO.Insert(completeJob);
+            ProcessJobDAO processJobDAO = new ProcessJobDAO();
+            processJobDAO.Detele(job);
+            MessageBox.Show("Đã cập nhật công việc hoàn thành");
+        }
+
+        public int CalculateBonus(string jobId)
+        {
+            int bonus = 0;
+            string query = "SELECT Bonus FROM Job WHERE ID = @ID";
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                command.Parameters.AddWithValue("@ID", jobId);
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    int jobBonus = reader.GetInt32(0);
+                    bonus = jobBonus;
+                }
+                reader.Close();
+            }
+            return bonus;
+        }
     }
 }
