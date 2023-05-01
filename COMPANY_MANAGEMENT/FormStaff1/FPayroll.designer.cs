@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbMonth = new System.Windows.Forms.ComboBox();
             this.dtGVLate = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataCVHT)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVLate)).BeginInit();
@@ -63,7 +64,7 @@
             // 
             this.txtFine.Enabled = false;
             this.txtFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFine.Location = new System.Drawing.Point(831, 166);
+            this.txtFine.Location = new System.Drawing.Point(831, 141);
             this.txtFine.Name = "txtFine";
             this.txtFine.ReadOnly = true;
             this.txtFine.Size = new System.Drawing.Size(100, 27);
@@ -73,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(686, 169);
+            this.label2.Location = new System.Drawing.Point(686, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 16;
@@ -207,14 +208,25 @@
             this.dtGVLate.Name = "dtGVLate";
             this.dtGVLate.RowHeadersWidth = 51;
             this.dtGVLate.RowTemplate.Height = 24;
-            this.dtGVLate.Size = new System.Drawing.Size(291, 150);
+            this.dtGVLate.Size = new System.Drawing.Size(298, 150);
             this.dtGVLate.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(686, 176);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 20);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Ngày đi trễ:";
             // 
             // FPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 475);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dtGVLate);
             this.Controls.Add(this.cbMonth);
             this.Controls.Add(this.label5);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbMonth;
         private System.Windows.Forms.DataGridView dtGVLate;
+        private System.Windows.Forms.Label label7;
     }
 }

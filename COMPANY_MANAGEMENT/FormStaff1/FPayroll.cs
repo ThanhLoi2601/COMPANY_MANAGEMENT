@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using COMPANY_MANAGEMENT.OOP;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace COMPANY_MANAGEMENT.FormStaff1
 {
@@ -39,27 +40,36 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             cbMonth.Text = DateTime.Now.Month.ToString();
             dataCVHT.DataSource = a.LoadList(ID, "Now");
             LoadSalary();
-            dtGVLate.DataSource = LoadLate(ID, "Now");
+            dtGVLate.DataSource = LoadLate("Now", ID);
         }
 
         void LoadSalary31(string month, string IDEmp)
         {
-            if (month == "All month") return;
-            string query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-31'", month, IDEmp);
+            string query;
+            if (month == "All month")
+                query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{0}' ", IDEmp);
+            else
+                query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-31'", month, IDEmp);
             Cal_Salary(query);
         }
 
         void LoadSalary30(string month, string IDEmp)
         {
-            if (month == "All month") return;
-            string query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-30'", month,IDEmp);
+            string query;
+            if (month == "All month")
+                query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{0}' ", IDEmp);
+            else
+                query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-30'", month,IDEmp);
             Cal_Salary(query);
         }
 
         void LoadSalary28(string month,string IDEmp)
         {
-            if (month == "All month") return;
-            string query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-28'", month,IDEmp);
+            string query;
+            if (month == "All month")
+                query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{0}' ", IDEmp);
+            else
+                query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-28'", month,IDEmp);
             Cal_Salary(query);
         }
 
@@ -71,7 +81,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             if (month == "All month")
                 query = string.Format("SELECT DateCheck,TimeCheckIn,TimeCheckOut FROM SQLCheck WHERE ID = '{0}' ", IDEmp);
             else
-                query = string.Format("SELECT DateCheck,TimeCheckIn,TimeCheckOut FROM SQLCheck WHERE ID = '{1}' and MONTH(TimeCheckIn) = {0} AND MONTH(TimeCheckOut) = {0}", month, IDEmp);
+                query = string.Format("SELECT DateCheck,TimeCheckIn,TimeCheckOut FROM SQLCheck WHERE ID = '{0}' and MONTH(DateCheck) = {1}", IDEmp,month);
             return dB.LoadList(query);
         }
 
@@ -96,6 +106,13 @@ namespace COMPANY_MANAGEMENT.FormStaff1
                         }
                     }
                 }
+                if (bonus == 0) textBonus.Text = bonus.ToString();
+                if (salary == 0)
+                {
+                    salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
+                    lbSalary.Text = salary.ToString();
+                }
+
             }
             catch (Exception ex)
             {
@@ -136,7 +153,9 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             lbSalary.Text = "0";
             textMonth.Text = cbMonth.SelectedItem.ToString();
             LoadSalary();
-            LoadLate(cbMonth.Text, ID);
+            dtGVLate.DataSource = LoadLate(cbMonth.SelectedItem.ToString(), ID);
+            if (cbMonth.Text == "All month")
+                lbSalary.Text = "";
         }
 
         private void LoadSalary()
