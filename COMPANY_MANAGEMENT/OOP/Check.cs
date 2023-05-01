@@ -14,6 +14,8 @@ namespace COMPANY_MANAGEMENT.OOP
         private bool checkIn;
         private bool checkOut;
         private int timesLate;
+        private DateTime timeCheckIn;
+        private DateTime timeCheckOut;
 
         public DateTime CheckDate { get => checkDate; set => checkDate = value; }
         public bool CheckIn { get => checkIn; set => checkIn = value; }
@@ -21,15 +23,19 @@ namespace COMPANY_MANAGEMENT.OOP
         public int TimesLate { get => timesLate; set => timesLate = value; }
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
+        public DateTime TimeCheckIn { get => timeCheckIn; set => timeCheckIn = value; }
+        public DateTime TimeCheckOut { get => timeCheckOut; set => timeCheckOut = value; }
 
-        public Check(string Id,string Name,DateTime checkDate, bool checkIn, bool checkOut,int Timeslate)
+        public Check(string Id, string Name, DateTime checkDate, bool checkIn, bool checkOut, int Timeslate, DateTime timein, DateTime timeout)
         {
             this.id = Id;
             this.name = Name;
             this.checkDate = checkDate;
             this.checkIn = checkIn;
             this.checkOut = checkOut;
-            this.timesLate = TimesLate;
+            this.timesLate = Timeslate;
+            this.timeCheckIn = timein;
+            this.timeCheckOut = timeout;
         }
     }
 }

@@ -6,3 +6,7 @@
   CheckOut BIT,
   TimesLate int
 )
+
+ALTER TABLE SQLCheck
+ADD TimeCheckIn DATETIME,
+    TimeCheckOut DATETIME;

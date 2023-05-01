@@ -20,7 +20,6 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         StaffDAO s = new StaffDAO();
         ProcessJobDAO j = new ProcessJobDAO();
         JobDAO job = new JobDAO();
-        public int latetimes = 0;
         public FCheck(string id)
         {
             InitializeComponent();
@@ -47,25 +46,27 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
+            int timeslate = 0;
             Staff man = s.Search(ID);
-            if (checkIN.CheckState == CheckState.Checked)
+            if (checkIN.CheckState == CheckState.Checked && checkOUT.CheckState == CheckState.Unchecked)
             {
                 if (CanCheckIn())
                 {
-                    Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, latetimes);
+                    Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, timeslate, DateTime.Now, DateTime.Now);
                     c.InsertCheck(a);
+                    MessageBox.Show("Đã cập nhật bảng chấm công thành công");
                 }
                 else
                 {
-                    latetimes++;
-                    Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, latetimes);
+                    timeslate++;
+                    Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, timeslate, DateTime.Now, DateTime.Now);
                     c.InsertCheck(a);
-                    MessageBox.Show("Đã cập nhật bảng chấm công thành công");
+                    MessageBox.Show("Đã cập nhật bảng chấm công thành công,bạn đã trễ một ngày");
                 }
             }
             if (checkOUT.CheckState == CheckState.Checked && CanCheckOut())
             {
-                Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, latetimes);
+                Check a = new Check(man.ID, man.Name, dateTimeCheck.Value, checkIN.Checked, checkOUT.Checked, timeslate, DateTime.Now, DateTime.Now);
                 c.Updatecheck(a);
                 MessageBox.Show("Đã cập nhật bảng chấm công thành công");
             }
@@ -138,7 +139,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             }
             else if (Process == 100)
             {
-                ProcessJob jb = new ProcessJob(textID.Text,cbDsCV.Text, int.Parse(textTienDo.Text));
+                ProcessJob jb = new ProcessJob(textID.Text, cbDsCV.Text, int.Parse(textTienDo.Text));
                 j.Detele(jb);
                 UpdateCom(jb);
             }
@@ -176,7 +177,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         public bool CanCheckOut()
         {
             DateTime currentTime = DateTime.Now;
-            DateTime checkoutTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, 19, 0, 0);
+            DateTime checkoutTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, 9, 0, 0);
             if (currentTime < checkoutTime)
             {
                 return false;

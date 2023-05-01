@@ -27,7 +27,6 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         private void FPayroll_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
-            //dataCVHT.DataSource = a.LoadList();
             Staff man = sta.Search(ID);
             lbKPI.Text = man.BasicSalary.ToString();
             string[] months = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", };
@@ -40,11 +39,11 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         void LoadSalary31(string month)
         {
-             int bonus=0;
-            int salary=0;
+            int bonus = 0;
+            int salary = 0;
             Staff man = sta.Search(ID);
             conn.Open();
-            string query =string.Format("SELECT CompleteJob.Bonus FROM Job INNER JOIN CompleteJob ON Job.ID = CompleteJob.IDJob WHERE CompleteJob.CompleDate >= '2023-{0}-01' AND CompleteJob.CompleDate < '2023-{0}-31'",month);
+            string query = string.Format("SELECT CompleteJob.Bonus FROM Job INNER JOIN CompleteJob ON Job.ID = CompleteJob.IDJob WHERE CompleteJob.CompleDate >= '2023-{0}-01' AND CompleteJob.CompleDate < '2023-{0}-31'", month);
             using (SqlCommand command = new SqlCommand(query, conn))
             {
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -52,7 +51,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
                     while (reader.Read())
                     {
                         bonus = bonus + (int)reader["Bonus"];
-                        salary = man.BasicSalary + bonus;
+                        salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
                         textBonus.Text = bonus.ToString();
                         lbSalary.Text = salary.ToString();
                     }
@@ -75,7 +74,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
                     while (reader.Read())
                     {
                         bonus = bonus + (int)reader["Bonus"];
-                        salary = man.BasicSalary + bonus;
+                        salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
                         textBonus.Text = bonus.ToString();
                         lbSalary.Text = salary.ToString();
                     }
@@ -98,9 +97,32 @@ namespace COMPANY_MANAGEMENT.FormStaff1
                     while (reader.Read())
                     {
                         bonus = bonus + (int)reader["Bonus"];
-                        salary = man.BasicSalary + bonus;
+                        salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
                         textBonus.Text = bonus.ToString();
                         lbSalary.Text = salary.ToString();
+                    }
+                }
+            }
+            conn.Close();
+        }
+
+        void LoadLate(string month)
+        {
+            int fine = 0;
+            int moneyfine = 0;
+            Staff man = sta.Search(ID);
+            conn.Open();
+            string query = string.Format("SELECT SUM(TimesLate) as Fine from SQLCheck WHERE MONTH(DateCheck) = {0}", month);
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int bonusValue = reader.IsDBNull(reader.GetOrdinal("Fine")) ? 0 : Convert.ToInt32(reader["Fine"]);
+                        fine = fine + bonusValue;
+                        moneyfine = 500 * fine;
+                        txtFine.Text = moneyfine.ToString();
                     }
                 }
             }
@@ -119,14 +141,17 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             if (selected == "01" || selected == "03" || selected == "05" || selected == "07" || selected == "08"
             || selected == "10" || selected == "12")
             {
+                LoadLate(selected);
                 LoadSalary31(selected);
             }
             else if (selected == "04" || selected == "06" || selected == "09" || selected == "11")
             {
+                LoadLate(selected);
                 LoadSalary30(selected);
             }
             else
             {
+                LoadLate(selected);
                 LoadSalary28(selected);
             }
         }
