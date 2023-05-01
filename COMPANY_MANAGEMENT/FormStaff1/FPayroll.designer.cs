@@ -43,9 +43,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbMonth = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dtGVLate = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataCVHT)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVLate)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -82,7 +83,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(686, 234);
+            this.label4.Location = new System.Drawing.Point(696, 374);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 20);
             this.label4.TabIndex = 18;
@@ -93,7 +94,7 @@
             this.lbSalary.AutoSize = true;
             this.lbSalary.BackColor = System.Drawing.SystemColors.Info;
             this.lbSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSalary.Location = new System.Drawing.Point(849, 234);
+            this.lbSalary.Location = new System.Drawing.Point(859, 374);
             this.lbSalary.Name = "lbSalary";
             this.lbSalary.Size = new System.Drawing.Size(33, 20);
             this.lbSalary.TabIndex = 19;
@@ -121,29 +122,30 @@
             // 
             this.dataCVHT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataCVHT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataCVHT.BackgroundColor = System.Drawing.Color.White;
             this.dataCVHT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataCVHT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataCVHT.Location = new System.Drawing.Point(3, 28);
             this.dataCVHT.Name = "dataCVHT";
             this.dataCVHT.RowHeadersWidth = 51;
             this.dataCVHT.RowTemplate.Height = 24;
-            this.dataCVHT.Size = new System.Drawing.Size(628, 417);
+            this.dataCVHT.Size = new System.Drawing.Size(628, 378);
             this.dataCVHT.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.label6);
             this.flowLayoutPanel1.Controls.Add(this.dataCVHT);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 109);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 52);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(639, 354);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(639, 411);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(686, 288);
+            this.label1.Location = new System.Drawing.Point(696, 428);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 22;
@@ -151,7 +153,7 @@
             // 
             // textMonth
             // 
-            this.textMonth.Location = new System.Drawing.Point(831, 286);
+            this.textMonth.Location = new System.Drawing.Point(841, 426);
             this.textMonth.Name = "textMonth";
             this.textMonth.ReadOnly = true;
             this.textMonth.Size = new System.Drawing.Size(100, 22);
@@ -197,22 +199,23 @@
             this.cbMonth.TabIndex = 25;
             this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
             // 
-            // button1
+            // dtGVLate
             // 
-            this.button1.Location = new System.Drawing.Point(279, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Xem";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dtGVLate.BackgroundColor = System.Drawing.Color.White;
+            this.dtGVLate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVLate.Location = new System.Drawing.Point(690, 199);
+            this.dtGVLate.Name = "dtGVLate";
+            this.dtGVLate.RowHeadersWidth = 51;
+            this.dtGVLate.RowTemplate.Height = 24;
+            this.dtGVLate.Size = new System.Drawing.Size(291, 150);
+            this.dtGVLate.TabIndex = 26;
             // 
             // FPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 475);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dtGVLate);
             this.Controls.Add(this.cbMonth);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textMonth);
@@ -232,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataCVHT)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVLate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,6 +257,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbMonth;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dtGVLate;
     }
 }

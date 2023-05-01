@@ -34,7 +34,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             dgvProject.DataSource = proDAO.LoadList();
             dgvListManager.DataSource = manDAO.LoadList();
             dgvTask.DataSource = disDAO.LoadListTask(proid);
-            dgvDistribution.DataSource = disDAO.LoadListDisTask(proid);
+            dgvDistribution.DataSource = disDAO.LoadListDisTask("All");
         }
 
         private void dgvProject_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,7 +82,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
                     Task t = tksDAO.SearchTask(txtIDTask.Text);
                     procDAO.Insert(t);
                 }
-                dgvDistribution.DataSource = disDAO.LoadListDis(proid);
+                dgvDistribution.DataSource = disDAO.LoadListDisTask(proid);
             }    
         }
 

@@ -17,6 +17,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
         CompleteJobDAO a = new CompleteJobDAO();
         StaffDAO sta = new StaffDAO();
+        DBConn dB = new DBConn();
         string ID;
         public FPayroll(string id)
         {
@@ -29,85 +30,86 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             this.FormBorderStyle = FormBorderStyle.None;
             Staff man = sta.Search(ID);
             lbKPI.Text = man.BasicSalary.ToString();
-            string[] months = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", };
+            string[] months = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "All month" };
 
             foreach (string month in months)
             {
                 cbMonth.Items.Add(month);
             }
+            cbMonth.Text = DateTime.Now.Month.ToString();
+            dataCVHT.DataSource = a.LoadList(ID, "Now");
+            LoadSalary();
+            dtGVLate.DataSource = LoadLate(ID, "Now");
         }
 
-        void LoadSalary31(string month)
+        void LoadSalary31(string month, string IDEmp)
         {
-            int bonus = 0;
-            int salary = 0;
-            Staff man = sta.Search(ID);
-            conn.Open();
-            string query = string.Format("SELECT CompleteJob.Bonus FROM Job INNER JOIN CompleteJob ON Job.ID = CompleteJob.IDJob WHERE CompleteJob.CompleDate >= '2023-{0}-01' AND CompleteJob.CompleDate < '2023-{0}-31'", month);
-            using (SqlCommand command = new SqlCommand(query, conn))
+            if (month == "All month") return;
+            string query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-31'", month, IDEmp);
+            Cal_Salary(query);
+        }
+
+        void LoadSalary30(string month, string IDEmp)
+        {
+            if (month == "All month") return;
+            string query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-30'", month,IDEmp);
+            Cal_Salary(query);
+        }
+
+        void LoadSalary28(string month,string IDEmp)
+        {
+            if (month == "All month") return;
+            string query = string.Format("SELECT cj.Bonus FROM Job j, CompleteJob cj, Distribution d WHERE j.ID = cj.IDJob and j.ID = d.IDJob and d.IDStaff = '{1}' and cj.CompleDate >= '2023-{0}-01' AND cj.CompleDate <= '2023-{0}-28'", month,IDEmp);
+            Cal_Salary(query);
+        }
+
+        private DataTable LoadLate(string month, string IDEmp)
+        {
+            string query;
+            if (month == "Now")
+                month = DateTime.Now.Month.ToString();
+            if (month == "All month")
+                query = string.Format("SELECT DateCheck,TimeCheckIn,TimeCheckOut FROM SQLCheck WHERE ID = '{0}' ", IDEmp);
+            else
+                query = string.Format("SELECT DateCheck,TimeCheckIn,TimeCheckOut FROM SQLCheck WHERE ID = '{1}' and MONTH(TimeCheckIn) = {0} AND MONTH(TimeCheckOut) = {0}", month, IDEmp);
+            return dB.LoadList(query);
+        }
+
+        private void Cal_Salary(string query)
+        {
+            try
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                int bonus = 0;
+                int salary = 0;
+                Staff man = sta.Search(ID);
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(query, conn))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        bonus = bonus + (int)reader["Bonus"];
-                        salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
-                        textBonus.Text = bonus.ToString();
-                        lbSalary.Text = salary.ToString();
+                        while (reader.Read())
+                        {
+                            bonus = bonus + (int)reader["Bonus"];
+                            salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
+                            textBonus.Text = bonus.ToString();
+                            lbSalary.Text = salary.ToString();
+                        }
                     }
                 }
             }
-            conn.Close();
-        }
-
-        void LoadSalary30(string month)
-        {
-            int bonus = 0;
-            int salary = 0;
-            Staff man = sta.Search(ID);
-            conn.Open();
-            string query = string.Format("SELECT CompleteJob.Bonus FROM Job INNER JOIN CompleteJob ON Job.ID = CompleteJob.IDJob WHERE CompleteJob.CompleDate >= '2023-{0}-01' AND CompleteJob.CompleDate < '2023-{0}-30'", month);
-            using (SqlCommand command = new SqlCommand(query, conn))
+            catch (Exception ex)
             {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        bonus = bonus + (int)reader["Bonus"];
-                        salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
-                        textBonus.Text = bonus.ToString();
-                        lbSalary.Text = salary.ToString();
-                    }
-                }
+                MessageBox.Show(ex.Message);
             }
-            conn.Close();
-        }
-
-        void LoadSalary28(string month)
-        {
-            int bonus = 0;
-            int salary = 0;
-            Staff man = sta.Search(ID);
-            conn.Open();
-            string query = string.Format("SELECT CompleteJob.Bonus FROM Job INNER JOIN CompleteJob ON Job.ID = CompleteJob.IDJob WHERE CompleteJob.CompleDate >= '2023-{0}-01' AND CompleteJob.CompleDate < '2023-{0}-30'", month);
-            using (SqlCommand command = new SqlCommand(query, conn))
+            finally
             {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        bonus = bonus + (int)reader["Bonus"];
-                        salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
-                        textBonus.Text = bonus.ToString();
-                        lbSalary.Text = salary.ToString();
-                    }
-                }
+                conn.Close();
             }
-            conn.Close();
         }
 
         void LoadLate(string month)
         {
+            if (month == "All month") return;
             int fine = 0;
             int moneyfine = 0;
             Staff man = sta.Search(ID);
@@ -131,28 +133,29 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void cbMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lbSalary.Text = "0";
             textMonth.Text = cbMonth.SelectedItem.ToString();
-            dataCVHT.DataSource = a.LoadList(cbMonth.SelectedItem.ToString());
+            LoadSalary();
+            LoadLate(cbMonth.Text, ID);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadSalary()
         {
-            string selected = cbMonth.SelectedItem.ToString();
+            dataCVHT.DataSource = a.LoadList(ID, cbMonth.Text);
+            string selected = cbMonth.Text;
+            LoadLate(selected);
             if (selected == "01" || selected == "03" || selected == "05" || selected == "07" || selected == "08"
             || selected == "10" || selected == "12")
             {
-                LoadLate(selected);
-                LoadSalary31(selected);
+                LoadSalary31(selected, ID);
             }
             else if (selected == "04" || selected == "06" || selected == "09" || selected == "11")
             {
-                LoadLate(selected);
-                LoadSalary30(selected);
+                LoadSalary30(selected, ID);
             }
             else
             {
-                LoadLate(selected);
-                LoadSalary28(selected);
+                LoadSalary28(selected,ID);
             }
         }
     }

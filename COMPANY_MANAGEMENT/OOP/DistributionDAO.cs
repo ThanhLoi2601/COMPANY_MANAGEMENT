@@ -69,7 +69,11 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public DataTable LoadListDisTask(string id)
         {
-            return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.StartDate, j.EndDate, pj.Process  FROM Distribution d, Tasks j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.Project_ID = '{0}';", id));
+            if(id == "All")
+                return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.StartDate, j.EndDate, pj.Process  FROM Distribution d, Tasks j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob; "));
+            else
+                return dB.LoadList(string.Format("SELECT d.IDJob , d.IDStaff , j.StartDate, j.EndDate, pj.Process  FROM Distribution d, Tasks j, ProcessJob pj WHERE d.IDJob = j.ID and d.IDJob = pj.IDJob and j.Project_ID = '{0}';", id));
+
         }
 
         public DataTable LoadListTask(string id)

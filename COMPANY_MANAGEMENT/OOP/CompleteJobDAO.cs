@@ -25,9 +25,16 @@ namespace COMPANY_MANAGEMENT.OOP
                                                                             , job.Id, job.Content,job.ComDate.ToString("yyyy-MM-dd"), job.Bonus);
             dB.Executive(sqlStr);
         }
-        public DataTable LoadList(string month)
+        public DataTable LoadList(string IDEmp, string month)
         {
-            return dB.LoadList(string.Format("SELECT * FROM CompleteJob WHERE MONTH(CompleDate) = {0} ", month));
+            if (month == "Now")
+                month = DateTime.Now.Month.ToString();
+            if (month == "All month")
+                return dB.LoadList(string.Format("SELECT cj.IDJob, cj.Content, cj.CompleDate, j.IDTasks, t.Task_Name, j.Bonus  FROM CompleteJob cj, Distribution d, Job j, Tasks t " +
+                    "WHERE j.IDTasks = t.ID and cj.IDJob = d.IDJob and cj.IDJob = j.ID and d.IDStaff = '{0}'", IDEmp));
+            else
+                return dB.LoadList(string.Format("SELECT cj.IDJob, cj.Content, cj.CompleDate, j.IDTasks, t.Task_Name, j.Bonus  FROM CompleteJob cj, Distribution d, Job j, Tasks t " +
+                    "WHERE j.IDTasks = t.ID and cj.IDJob = d.IDJob and cj.IDJob = j.ID and d.IDStaff = '{0}' and MONTH(CompleDate) = {1}", IDEmp, month));
         }
         public DataTable LoadListTask(string IDEmp, string month)
         {
