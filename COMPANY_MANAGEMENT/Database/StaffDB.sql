@@ -10,6 +10,10 @@
 	Password varchar(20)
 );
 
+ALTER TABLE Staff
+ALTER COLUMN ID varchar(10) NOT NULL
+ALTER TABLE Staff ADD CONSTRAINT PK_Staff PRIMARY KEY (ID) ;
+
 INSERT Staff(ID,Name,Birth,ID_Card,Email,Address,Manager_ID,Basic_salary,Password) values ('EMP12345','Nguyen Van A','9/8/1999','nva@gmail.com','0123456789','TPHCM','MAN12345',50000,'12345678')
 INSERT Staff(ID,Name,Birth,ID_Card,Email,Address,Manager_ID,Basic_salary,Password) values ('EMP12341','Nguyen Van F','9/10/1999','nvf@gmail.com','0123456799','TPHCM','MAN12345',50000,'12345678')
 INSERT Staff(ID,Name,Birth,ID_Card,Email,Address,Manager_ID,Basic_salary,Password) values ('EMP12342','Nguyen Van L','9/9/1999','nvl@gmail.com','0123454589','TPHCM','MAN12345',50000,'12345678')

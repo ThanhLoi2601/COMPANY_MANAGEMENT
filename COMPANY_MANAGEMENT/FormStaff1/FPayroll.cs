@@ -19,6 +19,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         CompleteJobDAO a = new CompleteJobDAO();
         StaffDAO sta = new StaffDAO();
         DBConn dB = new DBConn();
+        CheckDAO cd = new CheckDAO();
         string ID;
         public FPayroll(string id)
         {
@@ -87,72 +88,22 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void Cal_Salary(string query)
         {
-            try
-            {
-                int bonus = 0;
-                int salary = 0;
-                Staff man = sta.Search(ID);
-                conn.Open();
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            bonus = bonus + (int)reader["Bonus"];
-                            salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
-                            textBonus.Text = bonus.ToString();
-                            lbSalary.Text = salary.ToString();
-                        }
-                    }
-                }
-                if (bonus == 0) textBonus.Text = bonus.ToString();
-                if (salary == 0)
-                {
-                    salary = man.BasicSalary + bonus - int.Parse(txtFine.Text);
-                    lbSalary.Text = salary.ToString();
-                }
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            Staff man = sta.Search(ID);
+            a.CalSalary(query, man.BasicSalary, txtFine, textBonus, lbSalary);
         }
 
         void LoadLate(string month)
         {
             if (month == "All month") return;
-            int fine = 0;
-            int moneyfine = 0;
-            Staff man = sta.Search(ID);
-            conn.Open();
-            string query = string.Format("SELECT SUM(TimesLate) as Fine from SQLCheck WHERE MONTH(DateCheck) = {0}", month);
-            using (SqlCommand command = new SqlCommand(query, conn))
-            {
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        int bonusValue = reader.IsDBNull(reader.GetOrdinal("Fine")) ? 0 : Convert.ToInt32(reader["Fine"]);
-                        fine = fine + bonusValue;
-                        moneyfine = 500 * fine;
-                        txtFine.Text = moneyfine.ToString();
-                    }
-                }
-            }
-            conn.Close();
+            cd.CalFine(month, txtFine);
         }
 
         private void cbMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbSalary.Text = "0";
             textMonth.Text = cbMonth.SelectedItem.ToString();
             LoadSalary();
+            LoadLate(cbMonth.Text, ID);
             dtGVLate.DataSource = LoadLate(cbMonth.SelectedItem.ToString(), ID);
             if (cbMonth.Text == "All month")
                 lbSalary.Text = "";

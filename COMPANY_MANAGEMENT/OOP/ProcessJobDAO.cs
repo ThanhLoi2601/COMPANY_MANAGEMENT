@@ -15,7 +15,16 @@ namespace COMPANY_MANAGEMENT.OOP
             string sqlStr = string.Format("SELECT * FROM ProcessJob WHERE IDJob = '{0}';", id);
             return dB.FindProcessJob(sqlStr);
         }
-
+        public string SearchID(string id)
+        {
+            string sqlStr = string.Format("SELECT * FROM ProcessJob WHERE Content = '{0}';", id);
+            return dB.FindIDJob(sqlStr);
+        }
+        public double SearchPro(string id)
+        {
+            string sqlStr = string.Format("SELECT * FROM ProcessJob WHERE Content = '{0}';", id);
+            return dB.FindProJob(sqlStr);
+        }
         public void Insert(Job job)
         {
             string sqlStr = string.Format("INSERT INTO ProcessJob(IDJob,Content,Process) values ('{0}','{1}',{2})"

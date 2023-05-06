@@ -54,5 +54,9 @@ namespace COMPANY_MANAGEMENT.OOP
             else
                 return dB.Merge(string.Format("SELECT COUNT(*) FROM CompleteJob cj INNER JOIN Distribution d ON cj.IDJob = d.IDJob WHERE d.IDStaff = '{0}' and MONTH(CompleDate) = {1}", IDEmp, month)).ToString();
         }
+        public void CalSalary(string query, int salary, TextBox a, TextBox b, Label c)
+        {
+            dB.Cal_Salary(query, salary, a, b, c);
+        }
     }
 }

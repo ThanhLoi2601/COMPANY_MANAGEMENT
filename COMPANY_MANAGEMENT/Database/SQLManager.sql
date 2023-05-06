@@ -9,6 +9,10 @@
 	Password varchar(20)
 );
 
+ALTER TABLE Manager
+ALTER COLUMN ID varchar(10) NOT NULL
+ALTER TABLE Manager ADD CONSTRAINT PK_Manager PRIMARY KEY (ID) ;
+
 INSERT Manager(ID,Name,Birth,ID_Card,Email,Address,Basic_salary,Password) values ('MAN12345','Nguyen Van A','9/8/1999','0228192992','nva@gmail.com','TPHCM',100000,'12345678')
 INSERT Manager(ID,Name,Birth,ID_Card,Email,Address,Basic_salary,Password) values ('MAN12346','Nguyen Van B','10/8/1998','0228192993','nvb@gmail.com','TPHCM',100000,'12345678')
 INSERT Manager(ID,Name,Birth,ID_Card,Email,Address,Basic_salary,Password) values ('MAN12347','Nguyen Van C','9/9/1997','0228192994','nvc@gmail.com','TPHCM',100000,'12345678')

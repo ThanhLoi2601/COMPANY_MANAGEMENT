@@ -10,6 +10,7 @@ using System.Data.Common;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using ComboBox = System.Windows.Forms.ComboBox;
 using System.Xml.Linq;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace COMPANY_MANAGEMENT.OOP
 {
@@ -335,5 +336,163 @@ namespace COMPANY_MANAGEMENT.OOP
             }
             return null;
         }
+        public string FindIDJob(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string name = reader.GetString(0);
+                    return name;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
+        public double FindProJob(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    double pro = reader.GetInt32(2);
+                    return pro;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return 0;
+        }
+
+        public void CalMoneyFine(string sqlStr, TextBox a)
+        {
+            int fine = 0;
+            int moneyfine = 0;
+            try
+            {
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(sqlStr, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int bonusValue = reader.IsDBNull(reader.GetOrdinal("Fine")) ? 0 : Convert.ToInt32(reader["Fine"]);
+                            fine = fine + bonusValue;
+                            moneyfine = 500 * fine;
+                            a.Text = moneyfine.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("FAILED EXECUTION ...\n" + ex, "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void Cal_Salary(string query, int basicSalary, TextBox txtfine, TextBox txtbonus, Label c)
+        {
+            try
+            {
+                int bonus = 0;
+                int salary = 0;
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                bonus = bonus + (int)reader["Bonus"];
+                            }
+                            salary = basicSalary + bonus - int.Parse(txtfine.Text);
+                            txtbonus.Text = bonus.ToString();
+                        }
+                        else
+                        {
+                            txtbonus.Text = "0";
+                            salary = basicSalary - int.Parse(txtfine.Text);
+                        }
+                        c.Text = salary.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public int CalculateBonus(string jobId)
+        {
+            int bonus = 0;
+            string query = "SELECT Bonus FROM Job WHERE ID = @ID";
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                command.Parameters.AddWithValue("@ID", jobId);
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    int jobBonus = reader.GetInt32(0);
+                    bonus = jobBonus;
+                }
+                reader.Close();
+            }
+            return bonus;
+        }
+
+        public void LoadCheck(string query, CheckBox checkIN, CheckBox checkOUT)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            SqlCommand command = new SqlCommand(query, conn);
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                bool bitValue1 = reader.GetBoolean(0);
+                bool bitValue2 = reader.GetBoolean(1);
+                checkIN.Checked = bitValue1;
+                checkOUT.Checked = bitValue2;
+            }
+            conn.Close();
+        }
+ 
     }
 }

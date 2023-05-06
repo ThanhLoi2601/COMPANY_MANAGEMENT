@@ -3,6 +3,12 @@
 	IDStaff varchar(10)
 );
 
+ALTER TABLE Distribution
+ALTER COLUMN IDJob varchar(10) NOT NULL
+ALTER TABLE Distribution
+ALTER COLUMN IDStaff varchar(10) NOT NULL
+ALTER TABLE Distribution ADD CONSTRAINT PK_Distribution PRIMARY KEY (IDJob,IDStaff) ;
+
 DELETE Distribution WHERE IDStaff = 'EMP12342'
 
 SELECT IDJob,IDStaff,DateStart,DateEnd FROM Distribution INNER JOIN Job ON IDJob = ID ;

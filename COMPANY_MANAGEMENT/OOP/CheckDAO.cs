@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace COMPANY_MANAGEMENT.OOP
 {
@@ -35,6 +36,16 @@ namespace COMPANY_MANAGEMENT.OOP
             string query = string.Format("SELECT * FROM SQLCheck WHERE DateCheck = CONVERT(date, GETDATE())");
             return dB.LoadList(query);
         }
+        public void CalFine(string month, TextBox a)
+        {
+            string query = string.Format("SELECT SUM(TimesLate) as Fine from SQLCheck WHERE MONTH(DateCheck) = {0}", month);
+            dB.CalMoneyFine(query, a);
+        }
 
+        public void CheckLoad(string ID, CheckBox checkin, CheckBox checkout)
+        {
+            string query = string.Format("SELECT CheckIn, CheckOut FROM SQLCheck WHERE ID = '{0}' AND DateCheck = CONVERT(date, GETDATE())", ID);
+            dB.LoadCheck(query, checkin, checkout);
+        }
     }
 }

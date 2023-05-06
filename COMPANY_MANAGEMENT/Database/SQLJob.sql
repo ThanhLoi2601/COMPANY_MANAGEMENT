@@ -8,6 +8,10 @@
 	IDTasks VARCHAR(10)
 );
 
+ALTER TABLE Job
+ALTER COLUMN ID varchar(10) NOT NULL
+ALTER TABLE Job ADD CONSTRAINT PK_Job PRIMARY KEY (ID) ;
+
 INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2345','DRAW','Ve so do thiet ke','3/1/2023','3/17/2023',10000,'TKS001');
 INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2346','DRAW','Ve so do','3/1/2023','3/27/2023',0,'TKS001');
 INSERT INTO Job(ID,Name,Content,DateStart,DateEnd,Bonus,IDTasks) values ('JOB2347','DRAW','Ve so do thiet ke may','2/3/2023','2/13/2023',50000,'TKS002');

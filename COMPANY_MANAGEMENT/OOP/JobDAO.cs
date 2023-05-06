@@ -49,6 +49,12 @@ namespace COMPANY_MANAGEMENT.OOP
                 "AND j.IDTasks = t.ID AND t.ID = d.IDJob AND d.IDStaff = '{0}'", IDEmp);
             dB.LoadCbJobTask(sqlStr,cb, "IDTasks");
         }
+        public void LoadCbJob(ComboBox cb, string IDEmp)
+        {
+            string sqlStr = string.Format("SELECT ProcessJob.Content FROM ProcessJob INNER JOIN Distribution ON ProcessJob.IDJob = Distribution.IDJob" +
+                                        " WHERE Distribution.IDStaff = '{0}'", IDEmp);
+            dB.LoadCbJobTask(sqlStr, cb, "Content");
+        }
         public void LoadCbTaskDis(ComboBox cb, string IDEmp)
         {
             string sqlStr = string.Format("SELECT DISTINCT IDTasks " +
