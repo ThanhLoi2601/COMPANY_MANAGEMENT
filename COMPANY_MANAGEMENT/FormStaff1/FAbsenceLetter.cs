@@ -16,7 +16,6 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         AbsenceLetterDAO ab = new AbsenceLetterDAO();
         StaffDAO s = new StaffDAO();
         string ID;
-        string Name;
         int count = 0;
         int day = 0;
 

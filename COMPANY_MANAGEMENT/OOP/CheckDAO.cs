@@ -28,7 +28,7 @@ namespace COMPANY_MANAGEMENT.OOP
 
         public void Updatecheck(Check a)
         {
-            string query = string.Format("UPDATE SQLCheck SET CheckOut ='{0}', TimeCheckOut ='{1}' WHERE ID ='{2}'", a.CheckOut, a.TimeCheckOut.ToString("yyyy-MM-dd HH:mm:ss"), a.Id);
+            string query = string.Format("UPDATE SQLCheck SET CheckOut ='{0}', TimeCheckOut ='{1}' WHERE ID ='{2}' AND DateCheck = CONVERT(date, GETDATE())", a.CheckOut, a.TimeCheckOut.ToString("yyyy-MM-dd HH:mm:ss"), a.Id);
             dB.Executive(query);
         }
         public DataTable LoadCheck()
@@ -36,9 +36,9 @@ namespace COMPANY_MANAGEMENT.OOP
             string query = string.Format("SELECT * FROM SQLCheck WHERE DateCheck = CONVERT(date, GETDATE())");
             return dB.LoadList(query);
         }
-        public void CalFine(string month, TextBox a)
+        public void CalFine(string month, TextBox a,string ID)
         {
-            string query = string.Format("SELECT SUM(TimesLate) as Fine from SQLCheck WHERE MONTH(DateCheck) = {0}", month);
+            string query = string.Format("SELECT SUM(TimesLate) as Fine from SQLCheck WHERE MONTH(DateCheck) = {0} AND ID='{1}'", month,ID);
             dB.CalMoneyFine(query, a);
         }
 

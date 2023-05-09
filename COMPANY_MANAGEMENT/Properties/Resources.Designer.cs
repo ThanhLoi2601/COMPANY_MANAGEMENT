@@ -73,9 +73,39 @@ namespace COMPANY_MANAGEMENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business_logo_design_template_78655edda18bc1196ab28760f1535baa_screen {
+            get {
+                object obj = ResourceManager.GetObject("business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cash_in_hand_60px {
+            get {
+                object obj = ResourceManager.GetObject("cash_in_hand_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checkmark_26px {
             get {
                 object obj = ResourceManager.GetObject("checkmark_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkmark_60px {
+            get {
+                object obj = ResourceManager.GetObject("checkmark_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +123,39 @@ namespace COMPANY_MANAGEMENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap commercial_64px {
+            get {
+                object obj = ResourceManager.GetObject("commercial_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_26px {
             get {
                 object obj = ResourceManager.GetObject("home_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_60px {
+            get {
+                object obj = ResourceManager.GetObject("home_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_64px {
+            get {
+                object obj = ResourceManager.GetObject("home_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +176,16 @@ namespace COMPANY_MANAGEMENT.Properties {
         internal static System.Drawing.Bitmap leave_26px1 {
             get {
                 object obj = ResourceManager.GetObject("leave_26px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leave_60px {
+            get {
+                object obj = ResourceManager.GetObject("leave_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +236,36 @@ namespace COMPANY_MANAGEMENT.Properties {
         internal static System.Drawing.Bitmap profile_26px {
             get {
                 object obj = ResourceManager.GetObject("profile_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_64px {
+            get {
+                object obj = ResourceManager.GetObject("profile_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Task_60px {
+            get {
+                object obj = ResourceManager.GetObject("Task_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tasks_60px {
+            get {
+                object obj = ResourceManager.GetObject("tasks_60px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

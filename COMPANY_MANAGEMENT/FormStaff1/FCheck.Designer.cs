@@ -45,6 +45,7 @@
             this.dateTimeCheck = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.textID = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +81,7 @@
             this.checkIN.TabIndex = 8;
             this.checkIN.Text = "CheckIn";
             this.checkIN.UseVisualStyleBackColor = true;
+            this.checkIN.CheckedChanged += new System.EventHandler(this.checkIN_CheckedChanged);
             // 
             // label2
             // 
@@ -98,7 +100,7 @@
             // btConfirm
             // 
             this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(508, 271);
+            this.btConfirm.Location = new System.Drawing.Point(306, 219);
             this.btConfirm.Name = "btConfirm";
             this.btConfirm.Size = new System.Drawing.Size(125, 46);
             this.btConfirm.TabIndex = 24;
@@ -123,9 +125,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(55, 400);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 20);
+            this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Danh sách công việc";
+            this.label4.Text = "All job";
             // 
             // label3
             // 
@@ -133,9 +135,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(55, 463);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 20);
+            this.label3.Size = new System.Drawing.Size(145, 20);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Tiến độ công việc";
+            this.label3.Text = "Process job (%)";
             // 
             // textTienDo
             // 
@@ -147,9 +149,9 @@
             // btReport
             // 
             this.btReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReport.Location = new System.Drawing.Point(508, 486);
+            this.btReport.Location = new System.Drawing.Point(511, 456);
             this.btReport.Name = "btReport";
-            this.btReport.Size = new System.Drawing.Size(125, 46);
+            this.btReport.Size = new System.Drawing.Size(125, 35);
             this.btReport.TabIndex = 30;
             this.btReport.Text = "REPORT";
             this.btReport.UseVisualStyleBackColor = true;
@@ -199,16 +201,27 @@
             // 
             // textID
             // 
-            this.textID.Location = new System.Drawing.Point(523, 400);
+            this.textID.Location = new System.Drawing.Point(274, 522);
             this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(100, 22);
+            this.textID.Size = new System.Drawing.Size(186, 22);
             this.textID.TabIndex = 35;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(55, 522);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 20);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "ID job";
             // 
             // FCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 556);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -250,5 +263,6 @@
         private System.Windows.Forms.DateTimePicker dateTimeCheck;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.Label label7;
     }
 }

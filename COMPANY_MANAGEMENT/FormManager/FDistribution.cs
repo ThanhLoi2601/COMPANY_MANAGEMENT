@@ -33,6 +33,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FDistribution_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             Load_Dis_Job();
         }
 

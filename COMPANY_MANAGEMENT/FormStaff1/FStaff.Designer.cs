@@ -38,7 +38,7 @@
             this.btLetter = new System.Windows.Forms.Button();
             this.btCheckInOut = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -218,22 +218,21 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.picAvatar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(227, 165);
             this.panel3.TabIndex = 32;
             // 
-            // pictureBox1
+            // picAvatar
             // 
-            this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picAvatar.Location = new System.Drawing.Point(52, 25);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(118, 115);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatar.TabIndex = 0;
+            this.picAvatar.TabStop = false;
             // 
             // panel2
             // 
@@ -300,7 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataStaff)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -320,7 +319,7 @@
         private System.Windows.Forms.Button btPayroll;
         private System.Windows.Forms.Button btLetter;
         private System.Windows.Forms.Button btCheckInOut;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

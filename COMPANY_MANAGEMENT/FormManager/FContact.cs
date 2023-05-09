@@ -31,6 +31,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FContact_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             txtIDSent.Text = IDReceive;
             txtNameSent.Text = NameReceive; 
             LoadContact();

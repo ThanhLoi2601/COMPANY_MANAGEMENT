@@ -5,6 +5,7 @@ using System.Resources;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Threading;
 
 namespace COMPANY_MANAGEMENT.FormLeader
 {
@@ -15,6 +16,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
         ManagerDAO manDAO = new ManagerDAO();
         StaffDAO staDAO = new StaffDAO();
         LeaderDAO ledDAO = new LeaderDAO();
+        Thread th;
         public FLeader(string ID)
         {
             InitializeComponent();
@@ -23,18 +25,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
         public FLeader()
         {
             InitializeComponent();
-        }
-
-        private void btContract_Click(object sender, EventArgs e)
-        {
-            FContact cont = new FContact(IDReceive, NameReceive);
-            cont.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FProject project = new FProject();
-            project.ShowDialog();
         }
 
         private void btUpdateLd_Click(object sender, EventArgs e)
@@ -156,7 +146,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
             txtBasicSalaryLd.Text = dgvListStaff.Rows[r].Cells[7].Value.ToString();
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListStaff.Rows[r].Cells[8].Value.ToString();
-            //IDReceive = dgvListStaff.Rows[r].Cells[0].Value.ToString();
         }
 
         private void FLeader_Load(object sender, EventArgs e)
@@ -183,31 +172,55 @@ namespace COMPANY_MANAGEMENT.FormLeader
             txtPasswordLd.Text = led.Password;
         }
 
-        private void btMyInfor_MouseEnter(object sender, EventArgs e)
-        {
-            btMyInfor.BackColor = Color.Blue;
-        }
-
-        private void btMyInfor_MouseLeave(object sender, EventArgs e)
-        {
-            btMyInfor.BackColor = SystemColors.Control;
-        }
-
-        private void btAbsenceLetterLd_Click(object sender, EventArgs e)
-        {
-            FShowLetter man = new FShowLetter(IDReceive);
-            man.ShowDialog();
-        }
-
-        private void btDistributionLd_Click(object sender, EventArgs e)
-        {
-            DistributionLD dis = new DistributionLD();
-            dis.ShowDialog();
-        }
-
         private void btMyInfor_Click(object sender, EventArgs e)
         {
             LoadMyInfo();
+        }
+
+        private void btProject_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            FProject f = new FProject();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel3.Controls.Add(f);
+            panel3.BringToFront();
+            f.Show();
+        }
+
+        private void btContact_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            FContact f = new FContact(IDReceive,Name);
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel3.Controls.Add(f);
+            panel3.BringToFront();
+            f.Show();
+        }
+
+        private void OpenNewHome()
+        {
+            Application.Run(new FLeader(IDReceive));
+        }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(OpenNewHome);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void btDistributionLd_Click_1(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            DistributionLD f = new DistributionLD();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel3.Controls.Add(f);
+            panel3.BringToFront();
+            f.Show();
         }
     }
 }

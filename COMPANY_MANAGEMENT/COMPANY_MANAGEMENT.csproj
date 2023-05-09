@@ -73,6 +73,12 @@
     <Compile Include="FormLeader\FContact.Designer.cs">
       <DependentUpon>FContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLeader\FInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeader\FInformation.Designer.cs">
+      <DependentUpon>FInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLeader\FLeader.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     <EmbeddedResource Include="FormLeader\FContact.resx">
       <DependentUpon>FContact.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLeader\FInformation.resx">
+      <DependentUpon>FInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLeader\FLeader.resx">
       <DependentUpon>FLeader.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +364,16 @@
     <Content Include="Inco_img\Icons8-Windows-8-Users-Administrator.ico" />
     <Content Include="Inco_img\plus_+_30px.png" />
     <Content Include="Inco_img\trash_can_30px.png" />
+    <None Include="Resources\cash_in_hand_60px.png" />
+    <None Include="Resources\leave_60px.png" />
+    <None Include="Resources\checkmark_60px.png" />
+    <None Include="Resources\tasks_60px.png" />
+    <None Include="Resources\Task_60px.png" />
+    <None Include="Resources\commercial_64px.png" />
+    <None Include="Resources\home_60px.png" />
+    <None Include="Resources\home_64px.png" />
+    <None Include="Resources\profile_64px.png" />
+    <None Include="Resources\business-logo-design-template-78655edda18bc1196ab28760f1535baa_screen.jpg" />
     <None Include="Resources\commercial_26px.png" />
     <None Include="Resources\money_transfer_26px.png" />
     <None Include="Resources\profile_26px.png" />

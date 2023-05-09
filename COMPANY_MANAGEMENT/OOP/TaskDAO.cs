@@ -27,7 +27,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public void Update(Task tks)
         {
             string sqlStr = string.Format("UPDATE Tasks Set Task_Name = '{0}', Task_description = '{1}', StartDate = '{2}', EndDate = '{3}', Task_status = '{4}'  WHERE ID ='{5}'"
-                , tks.Name, tks.Description, tks.DateStart.ToString(), tks.DateEnd.ToString(), tks.Status.ToString(), tks.Id);
+                , tks.Name, tks.Description, tks.DateStart.ToString("yyyy-MM-dd"), tks.DateEnd.ToString("yyyy-MM-dd"), tks.Status.ToString(), tks.Id);
             dB.ExecutiveWithoutNotice(sqlStr);
         }
 

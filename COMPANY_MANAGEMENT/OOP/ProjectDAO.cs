@@ -18,7 +18,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public void Insert(Project pro)
         {
             string sqlStr = string.Format("INSERT INTO Projects(ID,Project_Name,StartDate,EndDate,Project_description,Project_status) values ('{0}','{1}','{2}','{3}','{4}','{5}')"
-                , pro.Id, pro.Name, pro.DateStart.ToString(), pro.DateEnd.ToString(), pro.Description, pro.Status);
+                , pro.Id, pro.Name, pro.DateStart.ToString("yyyy-MM-dd"), pro.DateEnd.ToString("yyyy-MM-dd"), pro.Description, pro.Status);
             dB.Executive(sqlStr);
         }
 
@@ -37,7 +37,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public void UpdateWithoutNotice(Project pro)
         {
             string sqlStr = string.Format("UPDATE Projects Set Project_Name = '{0}', Project_description = '{1}', StartDate = '{2}', EndDate = '{3}', Project_status = '{4}'  WHERE ID ='{5}'"
-                , pro.Name, pro.Description, pro.DateStart.ToString(), pro.DateEnd.ToString(), pro.Status.ToString(), pro.Id);
+                , pro.Name, pro.Description, pro.DateStart.ToString("yyyy-MM-dd"), pro.DateEnd.ToString("yyyy-MM-dd"), pro.Status.ToString(), pro.Id);
             dB.ExecutiveWithoutNotice(sqlStr);
         }
 

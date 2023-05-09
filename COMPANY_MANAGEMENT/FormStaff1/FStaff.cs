@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using COMPANY_MANAGEMENT.OOP;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace COMPANY_MANAGEMENT.FormStaff1
 {
     public partial class FStaff : Form
     {
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+        DBConn dB = new DBConn();
         AssignedWorkDAO a = new AssignedWorkDAO();
         StaffDAO staDao = new StaffDAO();
         string ID;
@@ -39,6 +43,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         private void FStaff_Load(object sender, EventArgs e)
         {
             dataStaff.DataSource = a.LoadList(ID);
+            loadImage();
         }
 
         private void btLetter_Click_1(object sender, EventArgs e)
@@ -96,7 +101,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void OpenNewHome()
         {
-            Application.Run(new FStaff(ID));       
+            Application.Run(new FStaff(ID));
         }
 
         private void btAnnounce_Click(object sender, EventArgs e)
@@ -108,6 +113,11 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             panel5.Controls.Add(f);
             panel5.BringToFront();
             f.Show();
+        }
+
+        void loadImage()
+        {
+            staDao.loadImage(ID, picAvatar);
         }
     }
 }

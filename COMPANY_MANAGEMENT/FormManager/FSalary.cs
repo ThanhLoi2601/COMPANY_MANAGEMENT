@@ -31,6 +31,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FSalary_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             dtGVCmpTask.DataSource = cmpDAO.LoadListTask(IDReceive,"Now");
             txtLuongCB.Text = man.BasicSalary.ToString();
             txtCmpTask.Text = cmpDAO.SumTaskCmp(IDReceive, "Now");

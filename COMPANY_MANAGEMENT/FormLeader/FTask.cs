@@ -29,6 +29,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
 
         private void FTask_Load(object sender, EventArgs e)
         {
+            this.TopLevel = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
             cbbStatus.DataSource = Enum.GetValues(typeof(Task.TaskStatus));
             gvTask.DataSource = tksDao.LoadList(id_Project);
             txtID_Project.Text = this.id_Project; 

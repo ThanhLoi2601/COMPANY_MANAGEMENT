@@ -21,6 +21,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FCheck_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             dtCheckinout.DataSource = checkDao.LoadCheck();
         }
     }

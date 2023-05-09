@@ -30,6 +30,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
 
         private void FContact_Load(object sender, EventArgs e)
         {
+            this.TopLevel = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
             txtIDSent.Text = IDReceive;
             txtNameSent.Text = NameReceive; 
             LoadContact();

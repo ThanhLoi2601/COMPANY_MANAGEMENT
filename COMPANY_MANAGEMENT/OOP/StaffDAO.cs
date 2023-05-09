@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace COMPANY_MANAGEMENT
 {
@@ -56,6 +57,18 @@ namespace COMPANY_MANAGEMENT
         {
             string sqlStr = string.Format("UPDATE Staff SET Password = '{0}' Where ID ='{1}'", sta.Password, sta.ID);
             dB.Executive(sqlStr);
+        }
+        
+        public void loadImage(string id,PictureBox ava)
+        {
+            string sqlStr = string.Format("Select Image From Staff where ID='{0}'", id);
+            dB.loadImage(sqlStr, ava);
+        }
+
+        public void saveImage(string id, string url)
+        {
+            string sqlStr = string.Format("Update Staff SET Image= @image where ID ='{0}'", id);
+            dB.saveImage(sqlStr,url);
         }
     }
 }

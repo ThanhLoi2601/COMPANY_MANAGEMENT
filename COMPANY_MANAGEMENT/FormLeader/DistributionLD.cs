@@ -26,6 +26,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
 
         private void DistributionLD_Load(object sender, EventArgs e)
         {
+            this.TopLevel = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
             Load_All_DGV();
         }
 

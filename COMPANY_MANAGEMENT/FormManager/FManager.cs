@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace COMPANY_MANAGEMENT
 {
@@ -16,6 +17,7 @@ namespace COMPANY_MANAGEMENT
         string IDReceive;
         ManagerDAO manDAO =new ManagerDAO();
         StaffDAO staDAO = new StaffDAO();
+        Thread th;
         public FManager(string ID)
         {
             InitializeComponent();
@@ -26,45 +28,10 @@ namespace COMPANY_MANAGEMENT
             InitializeComponent();
         }
  
-        private void btSalary_Click(object sender, EventArgs e)
-        {
-            FSalary f = new FSalary(IDReceive);
-            f.ShowDialog();
-        }
-
-        private void btDistribution_Click(object sender, EventArgs e)
-        {
-            FDistribution f = new FDistribution(IDReceive);
-            f.ShowDialog();
-        }
-
-        private void btCheckIn_Out_Click(object sender, EventArgs e)
-        {
-            FCheck f = new FCheck();
-            f.ShowDialog();
-        }
-
-        private void btLetter_Click(object sender, EventArgs e)
-        {
-            Manager man = manDAO.Search(IDReceive);
-            FLetterMain f = new FLetterMain(IDReceive,man.Name);
-            f.ShowDialog();
-        }
-
-        private void btJob_Click(object sender, EventArgs e)
-        {
-            FJob f = new FJob(IDReceive);
-            f.ShowDialog();
-        }
         private void FManager_Load(object sender, EventArgs e)
         {
             this.LoadMyInfo();
             dGVBasic.DataSource = staDAO.LoadList(IDReceive);   
-        }
-
-        private void btMyInfo_Click(object sender, EventArgs e)
-        {
-            this.LoadMyInfo();
         }
 
         private void LoadMyInfo()
@@ -93,37 +60,7 @@ namespace COMPANY_MANAGEMENT
             methodChange(man);
         }
 
-        private void btUpdate_Click(object sender, EventArgs e)
-        {
-            if (txtID.Text.Contains("MAN"))
-                ChangeInfo(manDAO.Update);
-            else
-                ChangeInfo(staDAO.Update);
-        }
-
-        private void btInsert_Click(object sender, EventArgs e)
-        {
-            if (txtID.Text.Contains("MAN"))
-                MessageBox.Show("You're not allowed to add management !!", "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-                ChangeInfo(staDAO.Insert);
-        }
-
-        private void btDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult result= MessageBox.Show("Are you sure to delete?", "REMIND",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                if (txtID.Text.Contains("MAN"))
-                {
-                    ChangeInfo(manDAO.Delete);
-                    this.Close();
-                }else
-                    ChangeInfo(staDAO.Delete);
-            }
-        }
-
-        private void dGVStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGVBasic_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int r = this.dGVBasic.CurrentCell.RowIndex;
             txtID.DataBindings.Clear();
@@ -144,15 +81,123 @@ namespace COMPANY_MANAGEMENT
             txtPass.Text = dGVBasic.Rows[r].Cells[8].Value.ToString();
         }
 
-        private void txtID_TextChanged(object sender, EventArgs e)
+        private void btUpdate_Click(object sender, EventArgs e)
         {
+            if (txtID.Text.Contains("MAN"))
+                ChangeInfo(manDAO.Update);
+            else
+                ChangeInfo(staDAO.Update);
+        }
+
+        private void btInsert_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text.Contains("MAN"))
+                MessageBox.Show("You're not allowed to add management !!", "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                ChangeInfo(staDAO.Insert);
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure to delete?", "REMIND", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (txtID.Text.Contains("MAN"))
+                {
+                    ChangeInfo(manDAO.Delete);
+                    this.Close();
+                }
+                else
+                    ChangeInfo(staDAO.Delete);
+            }
+        }
+
+        private void btDistribution_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FDistribution f = new FDistribution(IDReceive);
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel2.Controls.Add(f);
+            panel2.BringToFront();
+            f.Show();
+        }
+
+        private void btSalary_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FSalary f = new FSalary(IDReceive);
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel2.Controls.Add(f);
+            panel2.BringToFront();
+            f.Show();
+        }
+
+        private void btMyInfo_Click(object sender, EventArgs e)
+        {
+            this.LoadMyInfo();
+        }
+
+        private void btCheckIn_Out_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FCheck f = new FCheck();
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel2.Controls.Add(f);
+            panel2.BringToFront();
+            f.Show();
+        }
+
+        private void btJob_Click(object sender, EventArgs e)
+        {
+            panel2.Controls.Clear();
+            FJob f = new FJob(IDReceive);
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel2.Controls.Add(f);
+            panel2.BringToFront();
+            f.Show();
+        }
+
+        private void btLetter_Click(object sender, EventArgs e)
+        {
+            Manager man = manDAO.Search(IDReceive);
+            panel2.Controls.Clear();
+            FLetterMain f = new FLetterMain(IDReceive,man.Name);
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel2.Controls.Add(f);
+            panel2.BringToFront();
+            f.Show();
         }
 
         private void btContact_Click(object sender, EventArgs e)
         {
             Manager man = manDAO.Search(IDReceive);
-            FContact f = new FContact(man.ID,man.Name);
-            f.ShowDialog();
+            panel2.Controls.Clear();
+            FContact f = new FContact(man.ID, man.Name);
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel2.Controls.Add(f);
+            panel2.BringToFront();
+            f.Show();
+        }
+
+
+        private void OpenNewHome()
+        {
+            Application.Run(new FManager(IDReceive));
+        }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(OpenNewHome);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
         }
     }
 }

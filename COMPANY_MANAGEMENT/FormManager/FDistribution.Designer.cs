@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDistribution));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbTask = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +45,8 @@
             this.cbTaskJobList = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtNameTaskDis = new System.Windows.Forms.TextBox();
+            this.cbTaskDis = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lbProcess = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.lbIDJob = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dGVDistribution = new System.Windows.Forms.DataGridView();
-            this.txtNameTaskDis = new System.Windows.Forms.TextBox();
-            this.cbTaskDis = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJob)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -173,7 +173,6 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.txtNameTaskJobList);
             this.groupBox1.Controls.Add(this.cbTaskJobList);
@@ -208,7 +207,6 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.btConfirm);
@@ -225,7 +223,6 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox3.BackgroundImage")));
             this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox3.Controls.Add(this.txtNameTaskDis);
             this.groupBox3.Controls.Add(this.cbTaskDis);
@@ -247,6 +244,24 @@
             this.groupBox3.Size = new System.Drawing.Size(1196, 240);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
+            // 
+            // txtNameTaskDis
+            // 
+            this.txtNameTaskDis.Location = new System.Drawing.Point(753, 14);
+            this.txtNameTaskDis.Name = "txtNameTaskDis";
+            this.txtNameTaskDis.ReadOnly = true;
+            this.txtNameTaskDis.Size = new System.Drawing.Size(153, 22);
+            this.txtNameTaskDis.TabIndex = 24;
+            // 
+            // cbTaskDis
+            // 
+            this.cbTaskDis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTaskDis.FormattingEnabled = true;
+            this.cbTaskDis.Location = new System.Drawing.Point(609, 14);
+            this.cbTaskDis.Name = "cbTaskDis";
+            this.cbTaskDis.Size = new System.Drawing.Size(126, 24);
+            this.cbTaskDis.TabIndex = 23;
+            this.cbTaskDis.SelectedIndexChanged += new System.EventHandler(this.cbTaskDis_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -375,14 +390,14 @@
             // 
             this.dGVDistribution.BackgroundColor = System.Drawing.Color.White;
             this.dGVDistribution.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVDistribution.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVDistribution.DefaultCellStyle = dataGridViewCellStyle1;
             this.dGVDistribution.Location = new System.Drawing.Point(6, 12);
             this.dGVDistribution.Name = "dGVDistribution";
             this.dGVDistribution.RowHeadersWidth = 51;
@@ -391,29 +406,10 @@
             this.dGVDistribution.TabIndex = 0;
             this.dGVDistribution.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDistribution_CellClick);
             // 
-            // txtNameTaskDis
-            // 
-            this.txtNameTaskDis.Location = new System.Drawing.Point(753, 14);
-            this.txtNameTaskDis.Name = "txtNameTaskDis";
-            this.txtNameTaskDis.ReadOnly = true;
-            this.txtNameTaskDis.Size = new System.Drawing.Size(153, 22);
-            this.txtNameTaskDis.TabIndex = 24;
-            // 
-            // cbTaskDis
-            // 
-            this.cbTaskDis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTaskDis.FormattingEnabled = true;
-            this.cbTaskDis.Location = new System.Drawing.Point(609, 14);
-            this.cbTaskDis.Name = "cbTaskDis";
-            this.cbTaskDis.Size = new System.Drawing.Size(126, 24);
-            this.cbTaskDis.TabIndex = 23;
-            this.cbTaskDis.SelectedIndexChanged += new System.EventHandler(this.cbTaskDis_SelectedIndexChanged);
-            // 
             // FDistribution
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1221, 716);
             this.Controls.Add(this.groupBox3);

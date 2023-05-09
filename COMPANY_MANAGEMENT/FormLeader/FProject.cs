@@ -45,6 +45,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
         }
         private void FProject_Load(object sender, EventArgs e)
         {
+            this.TopLevel = false;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
             cbbStatus.DataSource = Enum.GetValues(typeof(Project.ProjectStatus));
             Project pro = new Project(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Project.ProjectStatus)cbbStatus.SelectedItem);
             dgvLoad(pro.Id);

@@ -66,6 +66,7 @@ namespace COMPANY_MANAGEMENT
 
         private void FJob_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             dGVJobStaff.DataSource = jobDAO.LoadList(man.ID);
             dGVMyProject.DataSource = taskDAO.LoadListTaskMan(man.ID);
         }

@@ -132,7 +132,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(17, 446);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.Size = new System.Drawing.Size(76, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "ID Receive";
             // 
@@ -141,7 +141,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(17, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.Size = new System.Drawing.Size(57, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Content";
             // 
@@ -150,7 +150,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Subject";
             // 
@@ -159,7 +159,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 16);
+            this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name Sent";
             // 
@@ -168,7 +168,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Sent";
             // 

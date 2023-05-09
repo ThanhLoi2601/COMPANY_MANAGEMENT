@@ -45,6 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labID = new System.Windows.Forms.Label();
             this.btUpdate = new System.Windows.Forms.Button();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
+            this.btBrow = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // textSalary
@@ -180,7 +184,7 @@
             // btUpdate
             // 
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUpdate.Location = new System.Drawing.Point(360, 487);
+            this.btUpdate.Location = new System.Drawing.Point(153, 496);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(135, 43);
             this.btUpdate.TabIndex = 43;
@@ -188,11 +192,46 @@
             this.btUpdate.UseVisualStyleBackColor = true;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
+            // picAvatar
+            // 
+            this.picAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picAvatar.Location = new System.Drawing.Point(467, 43);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(119, 126);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvatar.TabIndex = 44;
+            this.picAvatar.TabStop = false;
+            // 
+            // btBrow
+            // 
+            this.btBrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBrow.Location = new System.Drawing.Point(467, 212);
+            this.btBrow.Name = "btBrow";
+            this.btBrow.Size = new System.Drawing.Size(119, 35);
+            this.btBrow.TabIndex = 45;
+            this.btBrow.Text = "Browse...";
+            this.btBrow.UseVisualStyleBackColor = true;
+            this.btBrow.Click += new System.EventHandler(this.btBrow_Click);
+            // 
+            // btSave
+            // 
+            this.btSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSave.Location = new System.Drawing.Point(467, 289);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(119, 37);
+            this.btSave.TabIndex = 47;
+            this.btSave.Text = "Save";
+            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
+            // 
             // FInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 551);
+            this.ClientSize = new System.Drawing.Size(782, 551);
+            this.Controls.Add(this.btSave);
+            this.Controls.Add(this.btBrow);
+            this.Controls.Add(this.picAvatar);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.textSalary);
             this.Controls.Add(this.textManID);
@@ -213,6 +252,7 @@
             this.Name = "FInformation";
             this.Text = "Information";
             this.Load += new System.EventHandler(this.FInformation_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +276,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labID;
         private System.Windows.Forms.Button btUpdate;
+        private System.Windows.Forms.PictureBox picAvatar;
+        private System.Windows.Forms.Button btBrow;
+        private System.Windows.Forms.Button btSave;
     }
 }
