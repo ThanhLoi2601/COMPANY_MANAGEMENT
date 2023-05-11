@@ -551,7 +551,7 @@ namespace COMPANY_MANAGEMENT.OOP
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Do not have a profile picture, please update in Information !!");
             }
             finally
             {

@@ -34,20 +34,25 @@
             // 
             // dtCheckinout
             // 
+            this.dtCheckinout.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtCheckinout.BackgroundColor = System.Drawing.Color.White;
             this.dtCheckinout.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtCheckinout.Location = new System.Drawing.Point(12, 12);
+            this.dtCheckinout.Location = new System.Drawing.Point(4, 1);
+            this.dtCheckinout.Margin = new System.Windows.Forms.Padding(4);
             this.dtCheckinout.Name = "dtCheckinout";
             this.dtCheckinout.RowHeadersWidth = 51;
             this.dtCheckinout.RowTemplate.Height = 24;
-            this.dtCheckinout.Size = new System.Drawing.Size(1119, 599);
+            this.dtCheckinout.Size = new System.Drawing.Size(1192, 728);
             this.dtCheckinout.TabIndex = 0;
             // 
             // FCheck
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 623);
+            this.ClientSize = new System.Drawing.Size(1198, 733);
             this.Controls.Add(this.dtCheckinout);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FCheck";
             this.Text = "Check";
             this.Load += new System.EventHandler(this.FCheck_Load);

@@ -78,11 +78,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.grbInformationLd.Controls.Add(this.lbNameLd);
             this.grbInformationLd.Controls.Add(this.lbID);
             this.grbInformationLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.grbInformationLd.Location = new System.Drawing.Point(212, 22);
-            this.grbInformationLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbInformationLd.Location = new System.Drawing.Point(265, 28);
+            this.grbInformationLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.grbInformationLd.Name = "grbInformationLd";
-            this.grbInformationLd.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbInformationLd.Size = new System.Drawing.Size(407, 482);
+            this.grbInformationLd.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grbInformationLd.Size = new System.Drawing.Size(509, 602);
             this.grbInformationLd.TabIndex = 1;
             this.grbInformationLd.TabStop = false;
             this.grbInformationLd.Text = "INFORMATION";
@@ -91,7 +91,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(3, 349);
+            this.label1.Location = new System.Drawing.Point(4, 436);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 18);
             this.label1.TabIndex = 20;
@@ -100,10 +101,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // txtIDManager
             // 
             this.txtIDManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtIDManager.Location = new System.Drawing.Point(102, 346);
-            this.txtIDManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDManager.Location = new System.Drawing.Point(128, 432);
+            this.txtIDManager.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtIDManager.Name = "txtIDManager";
-            this.txtIDManager.Size = new System.Drawing.Size(294, 27);
+            this.txtIDManager.Size = new System.Drawing.Size(366, 27);
             this.txtIDManager.TabIndex = 19;
             // 
             // flowLayoutPanel1
@@ -111,19 +112,19 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.flowLayoutPanel1.Controls.Add(this.btUpdateLd);
             this.flowLayoutPanel1.Controls.Add(this.btInsertLd);
             this.flowLayoutPanel1.Controls.Add(this.btDeleteLd);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 424);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 530);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(395, 46);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(494, 58);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
             // btUpdateLd
             // 
             this.btUpdateLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btUpdateLd.Location = new System.Drawing.Point(3, 2);
-            this.btUpdateLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btUpdateLd.Location = new System.Drawing.Point(4, 2);
+            this.btUpdateLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btUpdateLd.Name = "btUpdateLd";
-            this.btUpdateLd.Size = new System.Drawing.Size(125, 38);
+            this.btUpdateLd.Size = new System.Drawing.Size(156, 48);
             this.btUpdateLd.TabIndex = 0;
             this.btUpdateLd.Text = "Update";
             this.btUpdateLd.UseVisualStyleBackColor = true;
@@ -131,10 +132,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // btInsertLd
             // 
             this.btInsertLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btInsertLd.Location = new System.Drawing.Point(134, 2);
-            this.btInsertLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btInsertLd.Location = new System.Drawing.Point(168, 2);
+            this.btInsertLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btInsertLd.Name = "btInsertLd";
-            this.btInsertLd.Size = new System.Drawing.Size(125, 38);
+            this.btInsertLd.Size = new System.Drawing.Size(156, 48);
             this.btInsertLd.TabIndex = 1;
             this.btInsertLd.Text = "Insert";
             this.btInsertLd.UseVisualStyleBackColor = true;
@@ -142,10 +143,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // btDeleteLd
             // 
             this.btDeleteLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btDeleteLd.Location = new System.Drawing.Point(265, 2);
-            this.btDeleteLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btDeleteLd.Location = new System.Drawing.Point(331, 2);
+            this.btDeleteLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btDeleteLd.Name = "btDeleteLd";
-            this.btDeleteLd.Size = new System.Drawing.Size(125, 38);
+            this.btDeleteLd.Size = new System.Drawing.Size(156, 48);
             this.btDeleteLd.TabIndex = 2;
             this.btDeleteLd.Text = "Delete";
             this.btDeleteLd.UseVisualStyleBackColor = true;
@@ -153,74 +154,74 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // txtPasswordLd
             // 
             this.txtPasswordLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtPasswordLd.Location = new System.Drawing.Point(102, 390);
-            this.txtPasswordLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPasswordLd.Location = new System.Drawing.Point(128, 488);
+            this.txtPasswordLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPasswordLd.Name = "txtPasswordLd";
-            this.txtPasswordLd.Size = new System.Drawing.Size(294, 27);
+            this.txtPasswordLd.Size = new System.Drawing.Size(366, 27);
             this.txtPasswordLd.TabIndex = 17;
             this.txtPasswordLd.UseSystemPasswordChar = true;
             // 
             // txtBasicSalaryLd
             // 
             this.txtBasicSalaryLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtBasicSalaryLd.Location = new System.Drawing.Point(102, 297);
-            this.txtBasicSalaryLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBasicSalaryLd.Location = new System.Drawing.Point(128, 371);
+            this.txtBasicSalaryLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBasicSalaryLd.Name = "txtBasicSalaryLd";
-            this.txtBasicSalaryLd.Size = new System.Drawing.Size(294, 27);
+            this.txtBasicSalaryLd.Size = new System.Drawing.Size(366, 27);
             this.txtBasicSalaryLd.TabIndex = 15;
             // 
             // txtAddressLd
             // 
             this.txtAddressLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtAddressLd.Location = new System.Drawing.Point(102, 252);
-            this.txtAddressLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddressLd.Location = new System.Drawing.Point(128, 315);
+            this.txtAddressLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtAddressLd.Name = "txtAddressLd";
-            this.txtAddressLd.Size = new System.Drawing.Size(294, 27);
+            this.txtAddressLd.Size = new System.Drawing.Size(366, 27);
             this.txtAddressLd.TabIndex = 14;
             // 
             // txtEmailLd
             // 
             this.txtEmailLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtEmailLd.Location = new System.Drawing.Point(102, 206);
-            this.txtEmailLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmailLd.Location = new System.Drawing.Point(128, 258);
+            this.txtEmailLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtEmailLd.Name = "txtEmailLd";
-            this.txtEmailLd.Size = new System.Drawing.Size(294, 27);
+            this.txtEmailLd.Size = new System.Drawing.Size(366, 27);
             this.txtEmailLd.TabIndex = 13;
             // 
             // txtIDCardLd
             // 
             this.txtIDCardLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtIDCardLd.Location = new System.Drawing.Point(102, 159);
-            this.txtIDCardLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDCardLd.Location = new System.Drawing.Point(128, 199);
+            this.txtIDCardLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtIDCardLd.Name = "txtIDCardLd";
-            this.txtIDCardLd.Size = new System.Drawing.Size(294, 27);
+            this.txtIDCardLd.Size = new System.Drawing.Size(366, 27);
             this.txtIDCardLd.TabIndex = 12;
             // 
             // txtNameLd
             // 
             this.txtNameLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtNameLd.Location = new System.Drawing.Point(102, 68);
-            this.txtNameLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNameLd.Location = new System.Drawing.Point(128, 85);
+            this.txtNameLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtNameLd.Name = "txtNameLd";
-            this.txtNameLd.Size = new System.Drawing.Size(294, 27);
+            this.txtNameLd.Size = new System.Drawing.Size(366, 27);
             this.txtNameLd.TabIndex = 11;
             // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtID.Location = new System.Drawing.Point(102, 28);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Location = new System.Drawing.Point(128, 35);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(294, 27);
+            this.txtID.Size = new System.Drawing.Size(366, 27);
             this.txtID.TabIndex = 10;
             // 
             // dtpkDateOfBirthLd
             // 
             this.dtpkDateOfBirthLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.dtpkDateOfBirthLd.Location = new System.Drawing.Point(102, 116);
-            this.dtpkDateOfBirthLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpkDateOfBirthLd.Location = new System.Drawing.Point(128, 145);
+            this.dtpkDateOfBirthLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtpkDateOfBirthLd.Name = "dtpkDateOfBirthLd";
-            this.dtpkDateOfBirthLd.Size = new System.Drawing.Size(294, 27);
+            this.dtpkDateOfBirthLd.Size = new System.Drawing.Size(366, 27);
             this.dtpkDateOfBirthLd.TabIndex = 9;
             this.dtpkDateOfBirthLd.Value = new System.DateTime(2023, 3, 22, 8, 52, 31, 0);
             // 
@@ -228,7 +229,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbPasswordLd.AutoSize = true;
             this.lbPasswordLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbPasswordLd.Location = new System.Drawing.Point(9, 396);
+            this.lbPasswordLd.Location = new System.Drawing.Point(11, 495);
+            this.lbPasswordLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPasswordLd.Name = "lbPasswordLd";
             this.lbPasswordLd.Size = new System.Drawing.Size(75, 18);
             this.lbPasswordLd.TabIndex = 8;
@@ -238,7 +240,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbBasicSalaryLd.AutoSize = true;
             this.lbBasicSalaryLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbBasicSalaryLd.Location = new System.Drawing.Point(3, 300);
+            this.lbBasicSalaryLd.Location = new System.Drawing.Point(4, 375);
+            this.lbBasicSalaryLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBasicSalaryLd.Name = "lbBasicSalaryLd";
             this.lbBasicSalaryLd.Size = new System.Drawing.Size(88, 18);
             this.lbBasicSalaryLd.TabIndex = 6;
@@ -248,7 +251,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbAddressLd.AutoSize = true;
             this.lbAddressLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbAddressLd.Location = new System.Drawing.Point(3, 258);
+            this.lbAddressLd.Location = new System.Drawing.Point(4, 322);
+            this.lbAddressLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAddressLd.Name = "lbAddressLd";
             this.lbAddressLd.Size = new System.Drawing.Size(62, 18);
             this.lbAddressLd.TabIndex = 5;
@@ -258,7 +262,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbEmailLd.AutoSize = true;
             this.lbEmailLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbEmailLd.Location = new System.Drawing.Point(6, 212);
+            this.lbEmailLd.Location = new System.Drawing.Point(8, 265);
+            this.lbEmailLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmailLd.Name = "lbEmailLd";
             this.lbEmailLd.Size = new System.Drawing.Size(45, 18);
             this.lbEmailLd.TabIndex = 4;
@@ -268,7 +273,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbIDCardLd.AutoSize = true;
             this.lbIDCardLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbIDCardLd.Location = new System.Drawing.Point(6, 166);
+            this.lbIDCardLd.Location = new System.Drawing.Point(8, 208);
+            this.lbIDCardLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIDCardLd.Name = "lbIDCardLd";
             this.lbIDCardLd.Size = new System.Drawing.Size(58, 18);
             this.lbIDCardLd.TabIndex = 3;
@@ -278,7 +284,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbDateOfBirthLd.AutoSize = true;
             this.lbDateOfBirthLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbDateOfBirthLd.Location = new System.Drawing.Point(0, 120);
+            this.lbDateOfBirthLd.Location = new System.Drawing.Point(0, 150);
+            this.lbDateOfBirthLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDateOfBirthLd.Name = "lbDateOfBirthLd";
             this.lbDateOfBirthLd.Size = new System.Drawing.Size(88, 18);
             this.lbDateOfBirthLd.TabIndex = 2;
@@ -288,7 +295,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbNameLd.AutoSize = true;
             this.lbNameLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbNameLd.Location = new System.Drawing.Point(6, 74);
+            this.lbNameLd.Location = new System.Drawing.Point(8, 92);
+            this.lbNameLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNameLd.Name = "lbNameLd";
             this.lbNameLd.Size = new System.Drawing.Size(48, 18);
             this.lbNameLd.TabIndex = 1;
@@ -298,7 +306,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbID.Location = new System.Drawing.Point(9, 34);
+            this.lbID.Location = new System.Drawing.Point(11, 42);
+            this.lbID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(22, 18);
             this.lbID.TabIndex = 0;
@@ -306,10 +315,12 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // FInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 525);
+            this.ClientSize = new System.Drawing.Size(1000, 656);
             this.Controls.Add(this.grbInformationLd);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FInformation";
             this.Text = "FInformation";
             this.grbInformationLd.ResumeLayout(false);

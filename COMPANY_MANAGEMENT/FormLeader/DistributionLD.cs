@@ -46,6 +46,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             proid = dgvProject.Rows[r].Cells[0].Value.ToString();
             dgvTask.DataSource = disDAO.LoadListTask(proid);
             dgvDistribution.DataSource = disDAO.LoadListDisTask(proid);
+            grBTasks.Text = "List Tasks of " + proid;
         }
 
         private void dgvTask_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -120,6 +121,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
                 } 
             }
             return false;
+        }
+
+        private void dgvProject_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

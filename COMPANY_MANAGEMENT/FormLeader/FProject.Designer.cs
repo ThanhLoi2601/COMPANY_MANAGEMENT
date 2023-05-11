@@ -29,12 +29,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btUpdateProject = new System.Windows.Forms.Button();
             this.btInsertProject = new System.Windows.Forms.Button();
@@ -71,17 +65,20 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.flowLayoutPanel1.Controls.Add(this.btInsertProject);
             this.flowLayoutPanel1.Controls.Add(this.btDeleteProject);
             this.flowLayoutPanel1.Controls.Add(this.btTask);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 494);
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 530);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(533, 57);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(427, 118);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
             // btUpdateProject
             // 
-            this.btUpdateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateProject.Location = new System.Drawing.Point(3, 3);
+            this.btUpdateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdateProject.Location = new System.Drawing.Point(4, 2);
+            this.btUpdateProject.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btUpdateProject.Name = "btUpdateProject";
-            this.btUpdateProject.Size = new System.Drawing.Size(125, 48);
+            this.btUpdateProject.Size = new System.Drawing.Size(193, 52);
             this.btUpdateProject.TabIndex = 0;
             this.btUpdateProject.Text = "Update";
             this.btUpdateProject.UseVisualStyleBackColor = true;
@@ -89,10 +86,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // btInsertProject
             // 
-            this.btInsertProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btInsertProject.Location = new System.Drawing.Point(134, 3);
+            this.btInsertProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInsertProject.Location = new System.Drawing.Point(205, 2);
+            this.btInsertProject.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btInsertProject.Name = "btInsertProject";
-            this.btInsertProject.Size = new System.Drawing.Size(125, 48);
+            this.btInsertProject.Size = new System.Drawing.Size(203, 52);
             this.btInsertProject.TabIndex = 1;
             this.btInsertProject.Text = "Insert";
             this.btInsertProject.UseVisualStyleBackColor = true;
@@ -100,10 +98,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // btDeleteProject
             // 
-            this.btDeleteProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btDeleteProject.Location = new System.Drawing.Point(265, 3);
+            this.btDeleteProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeleteProject.Location = new System.Drawing.Point(4, 58);
+            this.btDeleteProject.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btDeleteProject.Name = "btDeleteProject";
-            this.btDeleteProject.Size = new System.Drawing.Size(125, 48);
+            this.btDeleteProject.Size = new System.Drawing.Size(193, 53);
             this.btDeleteProject.TabIndex = 2;
             this.btDeleteProject.Text = "Delete";
             this.btDeleteProject.UseVisualStyleBackColor = true;
@@ -111,10 +110,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // btTask
             // 
-            this.btTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btTask.Location = new System.Drawing.Point(396, 3);
+            this.btTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTask.Location = new System.Drawing.Point(205, 58);
+            this.btTask.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btTask.Name = "btTask";
-            this.btTask.Size = new System.Drawing.Size(125, 48);
+            this.btTask.Size = new System.Drawing.Size(203, 53);
             this.btTask.TabIndex = 3;
             this.btTask.Text = "Add Task";
             this.btTask.UseVisualStyleBackColor = true;
@@ -135,224 +135,201 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.grbProject.Controls.Add(this.lblDateStart);
             this.grbProject.Controls.Add(this.lblName);
             this.grbProject.Controls.Add(this.lblID);
-            this.grbProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.grbProject.Location = new System.Drawing.Point(12, 12);
+            this.grbProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.grbProject.Location = new System.Drawing.Point(14, 11);
+            this.grbProject.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.grbProject.Name = "grbProject";
-            this.grbProject.Size = new System.Drawing.Size(542, 557);
+            this.grbProject.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grbProject.Size = new System.Drawing.Size(442, 652);
             this.grbProject.TabIndex = 27;
             this.grbProject.TabStop = false;
             this.grbProject.Text = "INFORMATION";
             // 
             // cbbStatus
             // 
-            this.cbbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cbbStatus.FormattingEnabled = true;
-            this.cbbStatus.Location = new System.Drawing.Point(96, 449);
+            this.cbbStatus.Location = new System.Drawing.Point(108, 474);
+            this.cbbStatus.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbbStatus.Name = "cbbStatus";
-            this.cbbStatus.Size = new System.Drawing.Size(412, 28);
+            this.cbbStatus.Size = new System.Drawing.Size(300, 28);
             this.cbbStatus.TabIndex = 35;
             // 
             // dtDateEnd
             // 
-            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtDateEnd.Location = new System.Drawing.Point(96, 186);
+            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.dtDateEnd.Location = new System.Drawing.Point(108, 197);
+            this.dtDateEnd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtDateEnd.Name = "dtDateEnd";
-            this.dtDateEnd.Size = new System.Drawing.Size(412, 27);
+            this.dtDateEnd.Size = new System.Drawing.Size(300, 27);
             this.dtDateEnd.TabIndex = 34;
             // 
             // dtDateStart
             // 
-            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtDateStart.Location = new System.Drawing.Point(96, 136);
+            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.dtDateStart.Location = new System.Drawing.Point(108, 137);
+            this.dtDateStart.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtDateStart.Name = "dtDateStart";
-            this.dtDateStart.Size = new System.Drawing.Size(412, 27);
+            this.dtDateStart.Size = new System.Drawing.Size(300, 27);
             this.dtDateStart.TabIndex = 33;
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtName.Location = new System.Drawing.Point(96, 87);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtName.Location = new System.Drawing.Point(108, 84);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(412, 27);
+            this.txtName.Size = new System.Drawing.Size(300, 27);
             this.txtName.TabIndex = 29;
             // 
             // txtID
             // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtID.Location = new System.Drawing.Point(96, 41);
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtID.Location = new System.Drawing.Point(108, 37);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(412, 27);
+            this.txtID.Size = new System.Drawing.Size(300, 27);
             this.txtID.TabIndex = 28;
             // 
             // rtxtContent
             // 
-            this.rtxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rtxtContent.Location = new System.Drawing.Point(96, 245);
+            this.rtxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.rtxtContent.Location = new System.Drawing.Point(108, 273);
+            this.rtxtContent.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.rtxtContent.Name = "rtxtContent";
-            this.rtxtContent.Size = new System.Drawing.Size(412, 180);
+            this.rtxtContent.Size = new System.Drawing.Size(300, 163);
             this.rtxtContent.TabIndex = 27;
             this.rtxtContent.Text = "";
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.Location = new System.Drawing.Point(6, 456);
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(7, 480);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(50, 18);
+            this.lblStatus.Size = new System.Drawing.Size(57, 20);
             this.lblStatus.TabIndex = 26;
             this.lblStatus.Text = "Status";
             // 
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblContent.Location = new System.Drawing.Point(6, 245);
+            this.lblContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContent.Location = new System.Drawing.Point(7, 273);
+            this.lblContent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(60, 18);
+            this.lblContent.Size = new System.Drawing.Size(67, 20);
             this.lblContent.TabIndex = 25;
             this.lblContent.Text = "Content";
             // 
             // lblDateEnd
             // 
             this.lblDateEnd.AutoSize = true;
-            this.lblDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDateEnd.Location = new System.Drawing.Point(6, 192);
+            this.lblDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateEnd.Location = new System.Drawing.Point(7, 203);
+            this.lblDateEnd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateEnd.Name = "lblDateEnd";
-            this.lblDateEnd.Size = new System.Drawing.Size(67, 18);
+            this.lblDateEnd.Size = new System.Drawing.Size(77, 20);
             this.lblDateEnd.TabIndex = 24;
             this.lblDateEnd.Text = "Date end";
             // 
             // lblDateStart
             // 
             this.lblDateStart.AutoSize = true;
-            this.lblDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDateStart.Location = new System.Drawing.Point(6, 142);
+            this.lblDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateStart.Location = new System.Drawing.Point(7, 143);
+            this.lblDateStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateStart.Name = "lblDateStart";
-            this.lblDateStart.Size = new System.Drawing.Size(72, 18);
+            this.lblDateStart.Size = new System.Drawing.Size(84, 20);
             this.lblDateStart.TabIndex = 23;
             this.lblDateStart.Text = "Date start";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(6, 95);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(7, 91);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(48, 18);
+            this.lblName.Size = new System.Drawing.Size(53, 20);
             this.lblName.TabIndex = 22;
             this.lblName.Text = "Name";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(6, 49);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(7, 44);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(22, 18);
+            this.lblID.Size = new System.Drawing.Size(26, 20);
             this.lblID.TabIndex = 21;
             this.lblID.Text = "ID";
             // 
             // grbListProject
             // 
             this.grbListProject.Controls.Add(this.dgvProject);
-            this.grbListProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.grbListProject.Location = new System.Drawing.Point(575, 12);
+            this.grbListProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbListProject.Location = new System.Drawing.Point(457, 11);
+            this.grbListProject.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.grbListProject.Name = "grbListProject";
-            this.grbListProject.Size = new System.Drawing.Size(812, 280);
+            this.grbListProject.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grbListProject.Size = new System.Drawing.Size(768, 305);
             this.grbListProject.TabIndex = 28;
             this.grbListProject.TabStop = false;
             this.grbListProject.Text = "List Project";
             // 
             // dgvProject
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProject.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProject.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProject.Location = new System.Drawing.Point(6, 26);
+            this.dgvProject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProject.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProject.ColumnHeadersHeight = 29;
+            this.dgvProject.Location = new System.Drawing.Point(7, 23);
+            this.dgvProject.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvProject.Name = "dgvProject";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProject.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProject.RowHeadersWidth = 51;
             this.dgvProject.RowTemplate.Height = 29;
-            this.dgvProject.Size = new System.Drawing.Size(799, 245);
+            this.dgvProject.Size = new System.Drawing.Size(761, 269);
             this.dgvProject.TabIndex = 0;
             this.dgvProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProject_CellClick_1);
             // 
             // grbListTask
             // 
             this.grbListTask.Controls.Add(this.dgvTask);
-            this.grbListTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.grbListTask.Location = new System.Drawing.Point(567, 289);
+            this.grbListTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbListTask.Location = new System.Drawing.Point(457, 320);
+            this.grbListTask.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.grbListTask.Name = "grbListTask";
-            this.grbListTask.Size = new System.Drawing.Size(820, 274);
+            this.grbListTask.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grbListTask.Size = new System.Drawing.Size(768, 343);
             this.grbListTask.TabIndex = 29;
             this.grbListTask.TabStop = false;
-            this.grbListTask.Text = "List Task";
+            this.grbListTask.Text = "List Tasks of all Projects";
             // 
             // dgvTask
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTask.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTask.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvTask.Location = new System.Drawing.Point(21, 26);
+            this.dgvTask.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTask.ColumnHeadersHeight = 29;
+            this.dgvTask.Location = new System.Drawing.Point(8, 23);
+            this.dgvTask.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvTask.Name = "dgvTask";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTask.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTask.RowHeadersWidth = 51;
             this.dgvTask.RowTemplate.Height = 29;
-            this.dgvTask.Size = new System.Drawing.Size(799, 242);
+            this.dgvTask.Size = new System.Drawing.Size(760, 316);
             this.dgvTask.TabIndex = 1;
             this.dgvTask.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTask_CellClick);
             // 
             // FProject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1391, 579);
+            this.ClientSize = new System.Drawing.Size(1238, 674);
             this.Controls.Add(this.grbListTask);
             this.Controls.Add(this.grbListProject);
             this.Controls.Add(this.grbProject);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FProject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FProject";

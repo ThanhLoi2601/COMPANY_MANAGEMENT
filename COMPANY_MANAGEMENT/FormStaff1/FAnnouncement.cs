@@ -24,7 +24,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         private void FAnnouncement_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
-            dataGridView1.DataSource = ct.LoadListReceive(ID);
+            dtGVAnnou.DataSource = ct.LoadListReceive(ID);
         }
     }
 }

@@ -70,9 +70,9 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             if (month == "Now")
                 month = DateTime.Now.Month.ToString();
             if (month == "All month")
-                query = string.Format("SELECT DateCheck,TimeCheckIn,TimeCheckOut FROM SQLCheck WHERE ID = '{0}' AND TimesLate = 1 ", IDEmp);
+                query = string.Format("SELECT DateCheck,TimeCheckIn FROM SQLCheck WHERE ID = '{0}' AND TimesLate = 1 ", IDEmp);
             else
-                query = string.Format("SELECT DateCheck,TimeCheckIn,TimeCheckOut FROM SQLCheck WHERE ID = '{0}' and MONTH(TimeCheckIn) = {1} AND MONTH(TimeCheckOut) = {1} AND TimesLate = 1", IDEmp, month);
+                query = string.Format("SELECT DateCheck,TimeCheckIn FROM SQLCheck WHERE ID = '{0}' and MONTH(TimeCheckIn) = {1} AND MONTH(TimeCheckOut) = {1} AND TimesLate = 1", IDEmp, month);
             return dB.LoadList(query);
         }
 

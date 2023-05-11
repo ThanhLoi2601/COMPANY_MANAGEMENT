@@ -23,3 +23,6 @@ INSERT Staff(ID,Name,Birth,ID_Card,Email,Address,Manager_ID,Basic_salary,Passwor
 INSERT Staff(ID,Name,Birth,ID_Card,Email,Address,Manager_ID,Basic_salary,Password) values ('EMP12349','Nguyen Van E','11/8/1995','nve@gmail.com','0123456777','TPHCM','MAN12349',50000,'12345678')
 
 Select* from Staff
+
+ALTER TABLE Staff
+ADD Image image

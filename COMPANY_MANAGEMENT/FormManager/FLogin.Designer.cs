@@ -48,9 +48,10 @@
             // 
             this.rbStaff.AutoSize = true;
             this.rbStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbStaff.Location = new System.Drawing.Point(0, 21);
+            this.rbStaff.Location = new System.Drawing.Point(0, 26);
+            this.rbStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbStaff.Name = "rbStaff";
-            this.rbStaff.Size = new System.Drawing.Size(65, 24);
+            this.rbStaff.Size = new System.Drawing.Size(81, 30);
             this.rbStaff.TabIndex = 0;
             this.rbStaff.TabStop = true;
             this.rbStaff.Text = "Staff";
@@ -60,9 +61,10 @@
             // 
             this.rbManager.AutoSize = true;
             this.rbManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbManager.Location = new System.Drawing.Point(111, 21);
+            this.rbManager.Location = new System.Drawing.Point(139, 26);
+            this.rbManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbManager.Name = "rbManager";
-            this.rbManager.Size = new System.Drawing.Size(95, 24);
+            this.rbManager.Size = new System.Drawing.Size(119, 30);
             this.rbManager.TabIndex = 1;
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
@@ -72,9 +74,10 @@
             // 
             this.rbLeader.AutoSize = true;
             this.rbLeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbLeader.Location = new System.Drawing.Point(255, 21);
+            this.rbLeader.Location = new System.Drawing.Point(319, 26);
+            this.rbLeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbLeader.Name = "rbLeader";
-            this.rbLeader.Size = new System.Drawing.Size(82, 24);
+            this.rbLeader.Size = new System.Drawing.Size(102, 30);
             this.rbLeader.TabIndex = 3;
             this.rbLeader.TabStop = true;
             this.rbLeader.Text = "Leader";
@@ -89,9 +92,11 @@
             this.groupBox1.Controls.Add(this.rbLeader);
             this.groupBox1.Controls.Add(this.rbManager);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 29);
+            this.groupBox1.Location = new System.Drawing.Point(25, 36);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(409, 56);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(511, 70);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "USER";
@@ -111,9 +116,11 @@
             this.groupBox2.Controls.Add(this.labMaDN);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 5);
+            this.groupBox2.Location = new System.Drawing.Point(4, 6);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(553, 256);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(691, 320);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ĐĂNG NHẬP";
@@ -124,9 +131,10 @@
             this.cbHienMK.AutoSize = true;
             this.cbHienMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbHienMK.Location = new System.Drawing.Point(168, 206);
+            this.cbHienMK.Location = new System.Drawing.Point(210, 258);
+            this.cbHienMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbHienMK.Name = "cbHienMK";
-            this.cbHienMK.Size = new System.Drawing.Size(125, 22);
+            this.cbHienMK.Size = new System.Drawing.Size(156, 28);
             this.cbHienMK.TabIndex = 10;
             this.cbHienMK.Text = "Hiện mật khẩu";
             this.cbHienMK.UseVisualStyleBackColor = false;
@@ -139,9 +147,10 @@
             this.btDNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btDNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDNhap.Location = new System.Drawing.Point(349, 197);
+            this.btDNhap.Location = new System.Drawing.Point(436, 246);
+            this.btDNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btDNhap.Name = "btDNhap";
-            this.btDNhap.Size = new System.Drawing.Size(144, 48);
+            this.btDNhap.Size = new System.Drawing.Size(180, 60);
             this.btDNhap.TabIndex = 9;
             this.btDNhap.Text = "Đăng nhập";
             this.btDNhap.UseVisualStyleBackColor = false;
@@ -151,9 +160,10 @@
             // 
             this.txtMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(168, 153);
+            this.txtMK.Location = new System.Drawing.Point(210, 191);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(261, 27);
+            this.txtMK.Size = new System.Drawing.Size(325, 27);
             this.txtMK.TabIndex = 8;
             this.txtMK.Text = "12345678";
             this.txtMK.UseSystemPasswordChar = true;
@@ -164,7 +174,8 @@
             this.labMK.AutoSize = true;
             this.labMK.BackColor = System.Drawing.Color.Aqua;
             this.labMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labMK.Location = new System.Drawing.Point(16, 160);
+            this.labMK.Location = new System.Drawing.Point(20, 200);
+            this.labMK.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labMK.Name = "labMK";
             this.labMK.Size = new System.Drawing.Size(85, 20);
             this.labMK.TabIndex = 7;
@@ -174,9 +185,10 @@
             // 
             this.txtMaDN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaDN.Location = new System.Drawing.Point(168, 96);
+            this.txtMaDN.Location = new System.Drawing.Point(210, 120);
+            this.txtMaDN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaDN.Name = "txtMaDN";
-            this.txtMaDN.Size = new System.Drawing.Size(261, 27);
+            this.txtMaDN.Size = new System.Drawing.Size(325, 27);
             this.txtMaDN.TabIndex = 6;
             this.txtMaDN.Text = "MAN12345";
             // 
@@ -186,7 +198,8 @@
             this.labMaDN.AutoSize = true;
             this.labMaDN.BackColor = System.Drawing.Color.Aqua;
             this.labMaDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labMaDN.Location = new System.Drawing.Point(16, 103);
+            this.labMaDN.Location = new System.Drawing.Point(20, 129);
+            this.labMaDN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labMaDN.Name = "labMaDN";
             this.labMaDN.Size = new System.Drawing.Size(126, 20);
             this.labMaDN.TabIndex = 5;
@@ -194,12 +207,14 @@
             // 
             // FLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(558, 262);
+            this.ClientSize = new System.Drawing.Size(698, 328);
             this.Controls.Add(this.groupBox2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FLogin";
             this.Text = "LOG IN";
             this.groupBox1.ResumeLayout(false);

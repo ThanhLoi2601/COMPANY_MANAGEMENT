@@ -123,6 +123,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             txtPasswordLd.DataBindings.Clear();
             txtPasswordLd.Text = dgvListManager.Rows[r].Cells[7].Value.ToString();
             dgvListStaff.DataSource = staDAO.LoadList(txtID.Text);
+            grBStaff.Text = "List Staff managed by " + txtID.Text;
         }
 
         private void dgvListStaff_CellClick(object sender, DataGridViewCellEventArgs e)

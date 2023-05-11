@@ -21,6 +21,7 @@ namespace COMPANY_MANAGEMENT.OOP
         {
             return dB.LoadList(string.Format("SELECT * FROM Contact WHERE IDSent= '{0}'", ID));
         }
+
         public DataTable LoadListReceive(string ID)
         {
             DataTable dt = null;

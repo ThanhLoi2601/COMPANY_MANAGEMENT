@@ -105,6 +105,7 @@ namespace COMPANY_MANAGEMENT
             lbNameStaff.Text = sta.Name;
             lbProcess.DataBindings.Clear();
             lbProcess.Text = (double.Parse(dGVDistribution.Rows[r].Cells[4].Value.ToString())).ToString();
+            prBProc.Value=int.Parse(lbProcess.Text);
         }
 
         private void btRemove_Click(object sender, EventArgs e)
@@ -124,6 +125,11 @@ namespace COMPANY_MANAGEMENT
         {
             txtNameTaskDis.Text = tksDAO.Search(cbTaskDis.Text);
             dGVDistribution.DataSource = disDAO.LoadListDisCB(cbTaskDis.Text, IDReceive);
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,6 +35,7 @@ namespace COMPANY_MANAGEMENT
             dtGVCmpTask.DataSource = cmpDAO.LoadListTask(IDReceive,"Now");
             txtLuongCB.Text = man.BasicSalary.ToString();
             txtCmpTask.Text = cmpDAO.SumTaskCmp(IDReceive, "Now");
+            cbMonth.Text = DateTime.Now.Month.ToString();
         }
 
         private void cbMonth_SelectedIndexChanged(object sender, EventArgs e)

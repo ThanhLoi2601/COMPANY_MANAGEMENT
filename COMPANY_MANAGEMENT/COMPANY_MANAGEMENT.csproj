@@ -97,18 +97,6 @@
     <Compile Include="FormLeader\FTask.Designer.cs">
       <DependentUpon>FTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormManager\FAssignedWork.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormManager\FAssignedWork.designer.cs">
-      <DependentUpon>FAssignedWork.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormManager\FChangePassWord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormManager\FChangePassWord.Designer.cs">
-      <DependentUpon>FChangePassWord.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormManager\FContact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,8 +196,6 @@
     <Compile Include="OOP\CompleteJobDAO.cs" />
     <Compile Include="OOP\Contact.cs" />
     <Compile Include="OOP\ContactDAO.cs" />
-    <Compile Include="OOP\Contract.cs" />
-    <Compile Include="OOP\Customer.cs" />
     <Compile Include="OOP\DBConn.cs" />
     <Compile Include="OOP\DistributionDAO.cs" />
     <Compile Include="OOP\Job.cs" />
@@ -251,12 +237,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLeader\FTask.resx">
       <DependentUpon>FTask.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormManager\FAssignedWork.resx">
-      <DependentUpon>FAssignedWork.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormManager\FChangePassWord.resx">
-      <DependentUpon>FChangePassWord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormManager\FCheck.resx">
       <DependentUpon>FCheck.cs</DependentUpon>

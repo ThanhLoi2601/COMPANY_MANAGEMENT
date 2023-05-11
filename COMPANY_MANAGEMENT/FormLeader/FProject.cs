@@ -110,6 +110,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             cbbStatus.Text = dgvProject.Rows[r].Cells[5].Value.ToString();
             this.proID = dgvProject.Rows[r].Cells[0].Value.ToString();
             dgvTask.DataSource = taskDao.LoadList(this.proID);
+            grbListTask.Text = "List Tasks of " + this.proID;
         }
 
         private void dgvTask_CellClick(object sender, DataGridViewCellEventArgs e)

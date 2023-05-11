@@ -71,37 +71,42 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.grbTask.Controls.Add(this.lblDateStart);
             this.grbTask.Controls.Add(this.lblName);
             this.grbTask.Controls.Add(this.lblID);
-            this.grbTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.grbTask.Location = new System.Drawing.Point(2, 8);
+            this.grbTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.grbTask.Location = new System.Drawing.Point(2, 7);
+            this.grbTask.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.grbTask.Name = "grbTask";
-            this.grbTask.Size = new System.Drawing.Size(542, 620);
+            this.grbTask.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grbTask.Size = new System.Drawing.Size(610, 558);
             this.grbTask.TabIndex = 28;
             this.grbTask.TabStop = false;
             this.grbTask.Text = "INFORMATION";
             // 
             // txtID_Project
             // 
-            this.txtID_Project.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtID_Project.Location = new System.Drawing.Point(94, 502);
+            this.txtID_Project.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtID_Project.Location = new System.Drawing.Point(106, 452);
+            this.txtID_Project.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtID_Project.Name = "txtID_Project";
             this.txtID_Project.ReadOnly = true;
-            this.txtID_Project.Size = new System.Drawing.Size(412, 27);
+            this.txtID_Project.Size = new System.Drawing.Size(463, 27);
             this.txtID_Project.TabIndex = 38;
             // 
             // cbbStatus
             // 
-            this.cbbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.cbbStatus.FormattingEnabled = true;
-            this.cbbStatus.Location = new System.Drawing.Point(94, 454);
+            this.cbbStatus.Location = new System.Drawing.Point(106, 409);
+            this.cbbStatus.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbbStatus.Name = "cbbStatus";
-            this.cbbStatus.Size = new System.Drawing.Size(414, 28);
+            this.cbbStatus.Size = new System.Drawing.Size(465, 28);
             this.cbbStatus.TabIndex = 37;
             // 
             // lblID_Project
             // 
             this.lblID_Project.AutoSize = true;
-            this.lblID_Project.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblID_Project.Location = new System.Drawing.Point(6, 506);
+            this.lblID_Project.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblID_Project.Location = new System.Drawing.Point(7, 455);
+            this.lblID_Project.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID_Project.Name = "lblID_Project";
             this.lblID_Project.Size = new System.Drawing.Size(73, 18);
             this.lblID_Project.TabIndex = 35;
@@ -109,50 +114,56 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // dtDateEnd
             // 
-            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtDateEnd.Location = new System.Drawing.Point(96, 186);
+            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.dtDateEnd.Location = new System.Drawing.Point(108, 167);
+            this.dtDateEnd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtDateEnd.Name = "dtDateEnd";
-            this.dtDateEnd.Size = new System.Drawing.Size(412, 27);
+            this.dtDateEnd.Size = new System.Drawing.Size(463, 27);
             this.dtDateEnd.TabIndex = 34;
             // 
             // dtDateStart
             // 
-            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtDateStart.Location = new System.Drawing.Point(96, 136);
+            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.dtDateStart.Location = new System.Drawing.Point(108, 122);
+            this.dtDateStart.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtDateStart.Name = "dtDateStart";
-            this.dtDateStart.Size = new System.Drawing.Size(412, 27);
+            this.dtDateStart.Size = new System.Drawing.Size(463, 27);
             this.dtDateStart.TabIndex = 33;
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtName.Location = new System.Drawing.Point(96, 87);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtName.Location = new System.Drawing.Point(108, 79);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(412, 27);
+            this.txtName.Size = new System.Drawing.Size(463, 27);
             this.txtName.TabIndex = 29;
             // 
             // txtID
             // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtID.Location = new System.Drawing.Point(96, 41);
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtID.Location = new System.Drawing.Point(108, 37);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(412, 27);
+            this.txtID.Size = new System.Drawing.Size(463, 27);
             this.txtID.TabIndex = 28;
             // 
             // rtxtContent
             // 
-            this.rtxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rtxtContent.Location = new System.Drawing.Point(96, 245);
+            this.rtxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.rtxtContent.Location = new System.Drawing.Point(108, 220);
+            this.rtxtContent.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.rtxtContent.Name = "rtxtContent";
-            this.rtxtContent.Size = new System.Drawing.Size(412, 180);
+            this.rtxtContent.Size = new System.Drawing.Size(463, 162);
             this.rtxtContent.TabIndex = 27;
             this.rtxtContent.Text = "";
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.Location = new System.Drawing.Point(6, 456);
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblStatus.Location = new System.Drawing.Point(7, 410);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(50, 18);
             this.lblStatus.TabIndex = 26;
@@ -163,17 +174,19 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.flowLayoutPanel1.Controls.Add(this.btUpdate);
             this.flowLayoutPanel1.Controls.Add(this.btInsert);
             this.flowLayoutPanel1.Controls.Add(this.btDelete);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(72, 557);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(81, 502);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(397, 57);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(446, 52);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
             // btUpdate
             // 
-            this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btUpdate.Location = new System.Drawing.Point(3, 3);
+            this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btUpdate.Location = new System.Drawing.Point(4, 2);
+            this.btUpdate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(125, 48);
+            this.btUpdate.Size = new System.Drawing.Size(140, 43);
             this.btUpdate.TabIndex = 0;
             this.btUpdate.Text = "Update";
             this.btUpdate.UseVisualStyleBackColor = true;
@@ -181,10 +194,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // btInsert
             // 
-            this.btInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btInsert.Location = new System.Drawing.Point(134, 3);
+            this.btInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btInsert.Location = new System.Drawing.Point(152, 2);
+            this.btInsert.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btInsert.Name = "btInsert";
-            this.btInsert.Size = new System.Drawing.Size(125, 48);
+            this.btInsert.Size = new System.Drawing.Size(140, 43);
             this.btInsert.TabIndex = 1;
             this.btInsert.Text = "Insert";
             this.btInsert.UseVisualStyleBackColor = true;
@@ -192,10 +206,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // btDelete
             // 
-            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btDelete.Location = new System.Drawing.Point(265, 3);
+            this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btDelete.Location = new System.Drawing.Point(300, 2);
+            this.btDelete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(125, 48);
+            this.btDelete.Size = new System.Drawing.Size(140, 43);
             this.btDelete.TabIndex = 2;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = true;
@@ -204,8 +219,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblContent.Location = new System.Drawing.Point(6, 245);
+            this.lblContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblContent.Location = new System.Drawing.Point(7, 220);
+            this.lblContent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContent.Name = "lblContent";
             this.lblContent.Size = new System.Drawing.Size(60, 18);
             this.lblContent.TabIndex = 25;
@@ -214,8 +230,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // lblDateEnd
             // 
             this.lblDateEnd.AutoSize = true;
-            this.lblDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDateEnd.Location = new System.Drawing.Point(6, 192);
+            this.lblDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblDateEnd.Location = new System.Drawing.Point(7, 173);
+            this.lblDateEnd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateEnd.Name = "lblDateEnd";
             this.lblDateEnd.Size = new System.Drawing.Size(67, 18);
             this.lblDateEnd.TabIndex = 24;
@@ -224,8 +241,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // lblDateStart
             // 
             this.lblDateStart.AutoSize = true;
-            this.lblDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDateStart.Location = new System.Drawing.Point(6, 142);
+            this.lblDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblDateStart.Location = new System.Drawing.Point(7, 128);
+            this.lblDateStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateStart.Name = "lblDateStart";
             this.lblDateStart.Size = new System.Drawing.Size(72, 18);
             this.lblDateStart.TabIndex = 23;
@@ -234,8 +252,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(6, 95);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblName.Location = new System.Drawing.Point(7, 86);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(48, 18);
             this.lblName.TabIndex = 22;
@@ -244,8 +263,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(6, 49);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblID.Location = new System.Drawing.Point(7, 44);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(22, 18);
             this.lblID.TabIndex = 21;
@@ -253,22 +273,27 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // gvTask
             // 
+            this.gvTask.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvTask.BackgroundColor = System.Drawing.Color.White;
             this.gvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTask.Location = new System.Drawing.Point(547, 8);
+            this.gvTask.Location = new System.Drawing.Point(616, 7);
+            this.gvTask.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gvTask.Name = "gvTask";
             this.gvTask.RowHeadersWidth = 51;
             this.gvTask.RowTemplate.Height = 29;
-            this.gvTask.Size = new System.Drawing.Size(791, 620);
+            this.gvTask.Size = new System.Drawing.Size(890, 558);
             this.gvTask.TabIndex = 29;
             this.gvTask.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTask_CellClick);
             // 
             // FTask
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1345, 635);
+            this.ClientSize = new System.Drawing.Size(1513, 572);
             this.Controls.Add(this.gvTask);
             this.Controls.Add(this.grbTask);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FTask";
             this.Text = "FTask";
             this.Load += new System.EventHandler(this.FTask_Load);

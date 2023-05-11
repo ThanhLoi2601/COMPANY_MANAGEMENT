@@ -30,9 +30,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grBMan = new System.Windows.Forms.GroupBox();
             this.dgvListManager = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grBStaff = new System.Windows.Forms.GroupBox();
             this.dgvListStaff = new System.Windows.Forms.DataGridView();
             this.grbInformationLd = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,19 +58,19 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.lbNameLd = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btAbsenceLetterLd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btDistributionLd = new System.Windows.Forms.Button();
             this.btContact = new System.Windows.Forms.Button();
             this.btMyInfor = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.grBMan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListManager)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.grBStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListStaff)).BeginInit();
             this.grbInformationLd.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -81,58 +81,60 @@ namespace COMPANY_MANAGEMENT.FormLeader
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grBMan
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.dgvListManager);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.groupBox1.Location = new System.Drawing.Point(581, 68);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(677, 534);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "List Manager";
+            this.grBMan.BackColor = System.Drawing.Color.White;
+            this.grBMan.Controls.Add(this.dgvListManager);
+            this.grBMan.Controls.Add(this.grBStaff);
+            this.grBMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBMan.Location = new System.Drawing.Point(430, 13);
+            this.grBMan.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grBMan.Name = "grBMan";
+            this.grBMan.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grBMan.Size = new System.Drawing.Size(827, 708);
+            this.grBMan.TabIndex = 3;
+            this.grBMan.TabStop = false;
+            this.grBMan.Text = "List Manager";
             // 
             // dgvListManager
             // 
+            this.dgvListManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListManager.BackgroundColor = System.Drawing.Color.White;
             this.dgvListManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListManager.Location = new System.Drawing.Point(6, 27);
-            this.dgvListManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListManager.Location = new System.Drawing.Point(8, 34);
+            this.dgvListManager.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvListManager.Name = "dgvListManager";
             this.dgvListManager.RowHeadersWidth = 51;
             this.dgvListManager.RowTemplate.Height = 29;
-            this.dgvListManager.Size = new System.Drawing.Size(671, 242);
+            this.dgvListManager.Size = new System.Drawing.Size(814, 302);
             this.dgvListManager.TabIndex = 0;
             this.dgvListManager.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListManager_CellClick);
             // 
-            // groupBox2
+            // grBStaff
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.dgvListStaff);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.groupBox2.Location = new System.Drawing.Point(0, 273);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(677, 263);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "List Staff";
+            this.grBStaff.BackColor = System.Drawing.Color.White;
+            this.grBStaff.Controls.Add(this.dgvListStaff);
+            this.grBStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBStaff.Location = new System.Drawing.Point(8, 348);
+            this.grBStaff.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grBStaff.Name = "grBStaff";
+            this.grBStaff.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grBStaff.Size = new System.Drawing.Size(822, 346);
+            this.grBStaff.TabIndex = 4;
+            this.grBStaff.TabStop = false;
+            this.grBStaff.Text = "List Staff";
             // 
             // dgvListStaff
             // 
+            this.dgvListStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListStaff.BackgroundColor = System.Drawing.Color.White;
             this.dgvListStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListStaff.Location = new System.Drawing.Point(6, 27);
-            this.dgvListStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListStaff.Location = new System.Drawing.Point(8, 34);
+            this.dgvListStaff.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvListStaff.Name = "dgvListStaff";
             this.dgvListStaff.RowHeadersWidth = 51;
             this.dgvListStaff.RowTemplate.Height = 29;
-            this.dgvListStaff.Size = new System.Drawing.Size(671, 240);
+            this.dgvListStaff.Size = new System.Drawing.Size(806, 300);
             this.dgvListStaff.TabIndex = 1;
             this.dgvListStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListStaff_CellClick);
             // 
@@ -159,11 +161,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.grbInformationLd.Controls.Add(this.lbNameLd);
             this.grbInformationLd.Controls.Add(this.lbID);
             this.grbInformationLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.grbInformationLd.Location = new System.Drawing.Point(6, 68);
-            this.grbInformationLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbInformationLd.Location = new System.Drawing.Point(8, 13);
+            this.grbInformationLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.grbInformationLd.Name = "grbInformationLd";
-            this.grbInformationLd.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbInformationLd.Size = new System.Drawing.Size(536, 533);
+            this.grbInformationLd.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.grbInformationLd.Size = new System.Drawing.Size(422, 706);
             this.grbInformationLd.TabIndex = 5;
             this.grbInformationLd.TabStop = false;
             this.grbInformationLd.Text = "INFORMATION";
@@ -172,20 +174,21 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(60, 390);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 467);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 18);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "ID Manager";
             // 
             // txtIDManager
             // 
             this.txtIDManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtIDManager.Location = new System.Drawing.Point(159, 387);
-            this.txtIDManager.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDManager.Location = new System.Drawing.Point(134, 463);
+            this.txtIDManager.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtIDManager.Name = "txtIDManager";
-            this.txtIDManager.Size = new System.Drawing.Size(294, 27);
+            this.txtIDManager.Size = new System.Drawing.Size(233, 27);
             this.txtIDManager.TabIndex = 19;
             // 
             // flowLayoutPanel1
@@ -193,41 +196,41 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.flowLayoutPanel1.Controls.Add(this.btUpdateLd);
             this.flowLayoutPanel1.Controls.Add(this.btInsertLd);
             this.flowLayoutPanel1.Controls.Add(this.btDeleteLd);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(63, 465);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 608);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(395, 46);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(403, 57);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
             // btUpdateLd
             // 
-            this.btUpdateLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btUpdateLd.Location = new System.Drawing.Point(3, 2);
-            this.btUpdateLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btUpdateLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdateLd.Location = new System.Drawing.Point(4, 2);
+            this.btUpdateLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btUpdateLd.Name = "btUpdateLd";
-            this.btUpdateLd.Size = new System.Drawing.Size(125, 38);
+            this.btUpdateLd.Size = new System.Drawing.Size(121, 48);
             this.btUpdateLd.TabIndex = 0;
             this.btUpdateLd.Text = "Update";
             this.btUpdateLd.UseVisualStyleBackColor = true;
             // 
             // btInsertLd
             // 
-            this.btInsertLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btInsertLd.Location = new System.Drawing.Point(134, 2);
-            this.btInsertLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btInsertLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInsertLd.Location = new System.Drawing.Point(133, 2);
+            this.btInsertLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btInsertLd.Name = "btInsertLd";
-            this.btInsertLd.Size = new System.Drawing.Size(125, 38);
+            this.btInsertLd.Size = new System.Drawing.Size(122, 48);
             this.btInsertLd.TabIndex = 1;
             this.btInsertLd.Text = "Insert";
             this.btInsertLd.UseVisualStyleBackColor = true;
             // 
             // btDeleteLd
             // 
-            this.btDeleteLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btDeleteLd.Location = new System.Drawing.Point(265, 2);
-            this.btDeleteLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btDeleteLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeleteLd.Location = new System.Drawing.Point(263, 2);
+            this.btDeleteLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btDeleteLd.Name = "btDeleteLd";
-            this.btDeleteLd.Size = new System.Drawing.Size(125, 38);
+            this.btDeleteLd.Size = new System.Drawing.Size(128, 48);
             this.btDeleteLd.TabIndex = 2;
             this.btDeleteLd.Text = "Delete";
             this.btDeleteLd.UseVisualStyleBackColor = true;
@@ -235,74 +238,74 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // txtPasswordLd
             // 
             this.txtPasswordLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtPasswordLd.Location = new System.Drawing.Point(159, 431);
-            this.txtPasswordLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPasswordLd.Location = new System.Drawing.Point(134, 518);
+            this.txtPasswordLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPasswordLd.Name = "txtPasswordLd";
-            this.txtPasswordLd.Size = new System.Drawing.Size(294, 27);
+            this.txtPasswordLd.Size = new System.Drawing.Size(233, 27);
             this.txtPasswordLd.TabIndex = 17;
             this.txtPasswordLd.UseSystemPasswordChar = true;
             // 
             // txtBasicSalaryLd
             // 
             this.txtBasicSalaryLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtBasicSalaryLd.Location = new System.Drawing.Point(159, 338);
-            this.txtBasicSalaryLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBasicSalaryLd.Location = new System.Drawing.Point(134, 401);
+            this.txtBasicSalaryLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBasicSalaryLd.Name = "txtBasicSalaryLd";
-            this.txtBasicSalaryLd.Size = new System.Drawing.Size(294, 27);
+            this.txtBasicSalaryLd.Size = new System.Drawing.Size(233, 27);
             this.txtBasicSalaryLd.TabIndex = 15;
             // 
             // txtAddressLd
             // 
             this.txtAddressLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtAddressLd.Location = new System.Drawing.Point(159, 293);
-            this.txtAddressLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddressLd.Location = new System.Drawing.Point(134, 345);
+            this.txtAddressLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtAddressLd.Name = "txtAddressLd";
-            this.txtAddressLd.Size = new System.Drawing.Size(294, 27);
+            this.txtAddressLd.Size = new System.Drawing.Size(233, 27);
             this.txtAddressLd.TabIndex = 14;
             // 
             // txtEmailLd
             // 
             this.txtEmailLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtEmailLd.Location = new System.Drawing.Point(159, 247);
-            this.txtEmailLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmailLd.Location = new System.Drawing.Point(134, 288);
+            this.txtEmailLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtEmailLd.Name = "txtEmailLd";
-            this.txtEmailLd.Size = new System.Drawing.Size(294, 27);
+            this.txtEmailLd.Size = new System.Drawing.Size(233, 27);
             this.txtEmailLd.TabIndex = 13;
             // 
             // txtIDCardLd
             // 
             this.txtIDCardLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtIDCardLd.Location = new System.Drawing.Point(159, 200);
-            this.txtIDCardLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDCardLd.Location = new System.Drawing.Point(134, 229);
+            this.txtIDCardLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtIDCardLd.Name = "txtIDCardLd";
-            this.txtIDCardLd.Size = new System.Drawing.Size(294, 27);
+            this.txtIDCardLd.Size = new System.Drawing.Size(233, 27);
             this.txtIDCardLd.TabIndex = 12;
             // 
             // txtNameLd
             // 
             this.txtNameLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtNameLd.Location = new System.Drawing.Point(159, 109);
-            this.txtNameLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNameLd.Location = new System.Drawing.Point(134, 115);
+            this.txtNameLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtNameLd.Name = "txtNameLd";
-            this.txtNameLd.Size = new System.Drawing.Size(294, 27);
+            this.txtNameLd.Size = new System.Drawing.Size(233, 27);
             this.txtNameLd.TabIndex = 11;
             // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.txtID.Location = new System.Drawing.Point(159, 69);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Location = new System.Drawing.Point(134, 65);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(294, 27);
+            this.txtID.Size = new System.Drawing.Size(233, 27);
             this.txtID.TabIndex = 10;
             // 
             // dtpkDateOfBirthLd
             // 
             this.dtpkDateOfBirthLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.dtpkDateOfBirthLd.Location = new System.Drawing.Point(159, 157);
-            this.dtpkDateOfBirthLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpkDateOfBirthLd.Location = new System.Drawing.Point(134, 175);
+            this.dtpkDateOfBirthLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtpkDateOfBirthLd.Name = "dtpkDateOfBirthLd";
-            this.dtpkDateOfBirthLd.Size = new System.Drawing.Size(294, 27);
+            this.dtpkDateOfBirthLd.Size = new System.Drawing.Size(233, 27);
             this.dtpkDateOfBirthLd.TabIndex = 9;
             this.dtpkDateOfBirthLd.Value = new System.DateTime(2023, 3, 22, 8, 52, 31, 0);
             // 
@@ -310,10 +313,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbPasswordLd.AutoSize = true;
             this.lbPasswordLd.BackColor = System.Drawing.Color.White;
-            this.lbPasswordLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbPasswordLd.Location = new System.Drawing.Point(66, 437);
+            this.lbPasswordLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPasswordLd.Location = new System.Drawing.Point(17, 525);
+            this.lbPasswordLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPasswordLd.Name = "lbPasswordLd";
-            this.lbPasswordLd.Size = new System.Drawing.Size(75, 18);
+            this.lbPasswordLd.Size = new System.Drawing.Size(83, 20);
             this.lbPasswordLd.TabIndex = 8;
             this.lbPasswordLd.Text = "Password";
             // 
@@ -321,10 +325,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbBasicSalaryLd.AutoSize = true;
             this.lbBasicSalaryLd.BackColor = System.Drawing.Color.White;
-            this.lbBasicSalaryLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbBasicSalaryLd.Location = new System.Drawing.Point(60, 341);
+            this.lbBasicSalaryLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBasicSalaryLd.Location = new System.Drawing.Point(11, 405);
+            this.lbBasicSalaryLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBasicSalaryLd.Name = "lbBasicSalaryLd";
-            this.lbBasicSalaryLd.Size = new System.Drawing.Size(88, 18);
+            this.lbBasicSalaryLd.Size = new System.Drawing.Size(102, 20);
             this.lbBasicSalaryLd.TabIndex = 6;
             this.lbBasicSalaryLd.Text = "Basic salary";
             // 
@@ -332,10 +337,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbAddressLd.AutoSize = true;
             this.lbAddressLd.BackColor = System.Drawing.Color.White;
-            this.lbAddressLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbAddressLd.Location = new System.Drawing.Point(60, 299);
+            this.lbAddressLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddressLd.Location = new System.Drawing.Point(11, 353);
+            this.lbAddressLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbAddressLd.Name = "lbAddressLd";
-            this.lbAddressLd.Size = new System.Drawing.Size(62, 18);
+            this.lbAddressLd.Size = new System.Drawing.Size(71, 20);
             this.lbAddressLd.TabIndex = 5;
             this.lbAddressLd.Text = "Address";
             // 
@@ -343,10 +349,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbEmailLd.AutoSize = true;
             this.lbEmailLd.BackColor = System.Drawing.Color.White;
-            this.lbEmailLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbEmailLd.Location = new System.Drawing.Point(63, 253);
+            this.lbEmailLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmailLd.Location = new System.Drawing.Point(14, 295);
+            this.lbEmailLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmailLd.Name = "lbEmailLd";
-            this.lbEmailLd.Size = new System.Drawing.Size(45, 18);
+            this.lbEmailLd.Size = new System.Drawing.Size(51, 20);
             this.lbEmailLd.TabIndex = 4;
             this.lbEmailLd.Text = "Email";
             // 
@@ -354,10 +361,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbIDCardLd.AutoSize = true;
             this.lbIDCardLd.BackColor = System.Drawing.Color.White;
-            this.lbIDCardLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbIDCardLd.Location = new System.Drawing.Point(63, 207);
+            this.lbIDCardLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIDCardLd.Location = new System.Drawing.Point(14, 238);
+            this.lbIDCardLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIDCardLd.Name = "lbIDCardLd";
-            this.lbIDCardLd.Size = new System.Drawing.Size(58, 18);
+            this.lbIDCardLd.Size = new System.Drawing.Size(67, 20);
             this.lbIDCardLd.TabIndex = 3;
             this.lbIDCardLd.Text = "ID Card";
             // 
@@ -365,10 +373,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbDateOfBirthLd.AutoSize = true;
             this.lbDateOfBirthLd.BackColor = System.Drawing.Color.White;
-            this.lbDateOfBirthLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbDateOfBirthLd.Location = new System.Drawing.Point(57, 161);
+            this.lbDateOfBirthLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateOfBirthLd.Location = new System.Drawing.Point(6, 180);
+            this.lbDateOfBirthLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDateOfBirthLd.Name = "lbDateOfBirthLd";
-            this.lbDateOfBirthLd.Size = new System.Drawing.Size(88, 18);
+            this.lbDateOfBirthLd.Size = new System.Drawing.Size(102, 20);
             this.lbDateOfBirthLd.TabIndex = 2;
             this.lbDateOfBirthLd.Text = "Date of birth";
             // 
@@ -376,10 +385,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbNameLd.AutoSize = true;
             this.lbNameLd.BackColor = System.Drawing.Color.White;
-            this.lbNameLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbNameLd.Location = new System.Drawing.Point(63, 115);
+            this.lbNameLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameLd.Location = new System.Drawing.Point(14, 123);
+            this.lbNameLd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNameLd.Name = "lbNameLd";
-            this.lbNameLd.Size = new System.Drawing.Size(48, 18);
+            this.lbNameLd.Size = new System.Drawing.Size(53, 20);
             this.lbNameLd.TabIndex = 1;
             this.lbNameLd.Text = "Name";
             // 
@@ -387,10 +397,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.lbID.AutoSize = true;
             this.lbID.BackColor = System.Drawing.Color.White;
-            this.lbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lbID.Location = new System.Drawing.Point(66, 75);
+            this.lbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.Location = new System.Drawing.Point(17, 73);
+            this.lbID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(22, 18);
+            this.lbID.Size = new System.Drawing.Size(26, 20);
             this.lbID.TabIndex = 0;
             this.lbID.Text = "ID";
             // 
@@ -402,59 +413,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.panel1.Controls.Add(this.btDistributionLd);
             this.panel1.Controls.Add(this.btContact);
             this.panel1.Controls.Add(this.btMyInfor);
-            this.panel1.Location = new System.Drawing.Point(1, 119);
+            this.panel1.Location = new System.Drawing.Point(1, 149);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(281, 536);
+            this.panel1.Size = new System.Drawing.Size(265, 670);
             this.panel1.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(282, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1258, 56);
-            this.panel2.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(368, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(447, 38);
-            this.panel4.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(155, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "LEADER";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.panel3.Controls.Add(this.grbInformationLd);
-            this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Location = new System.Drawing.Point(282, 51);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1258, 604);
-            this.panel3.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.business_logo_design_template_78655edda18bc1196ab28760f1535baa_screen;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // btAbsenceLetterLd
             // 
@@ -467,10 +430,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btAbsenceLetterLd.ForeColor = System.Drawing.Color.White;
             this.btAbsenceLetterLd.Image = global::COMPANY_MANAGEMENT.Properties.Resources.home_60px;
             this.btAbsenceLetterLd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAbsenceLetterLd.Location = new System.Drawing.Point(0, 408);
-            this.btAbsenceLetterLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btAbsenceLetterLd.Location = new System.Drawing.Point(0, 490);
+            this.btAbsenceLetterLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btAbsenceLetterLd.Name = "btAbsenceLetterLd";
-            this.btAbsenceLetterLd.Size = new System.Drawing.Size(279, 124);
+            this.btAbsenceLetterLd.Size = new System.Drawing.Size(263, 145);
             this.btAbsenceLetterLd.TabIndex = 16;
             this.btAbsenceLetterLd.Text = "HOME";
             this.btAbsenceLetterLd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -488,10 +451,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.tasks_60px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 288);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(0, 356);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(279, 120);
+            this.button1.Size = new System.Drawing.Size(263, 134);
             this.button1.TabIndex = 15;
             this.button1.Text = "PROJECT";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -509,10 +472,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btDistributionLd.ForeColor = System.Drawing.Color.White;
             this.btDistributionLd.Image = global::COMPANY_MANAGEMENT.Properties.Resources.Task_60px;
             this.btDistributionLd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDistributionLd.Location = new System.Drawing.Point(0, 183);
-            this.btDistributionLd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btDistributionLd.Location = new System.Drawing.Point(0, 239);
+            this.btDistributionLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btDistributionLd.Name = "btDistributionLd";
-            this.btDistributionLd.Size = new System.Drawing.Size(279, 105);
+            this.btDistributionLd.Size = new System.Drawing.Size(263, 117);
             this.btDistributionLd.TabIndex = 14;
             this.btDistributionLd.Text = "DISTRIBUTION";
             this.btDistributionLd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -530,10 +493,10 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btContact.ForeColor = System.Drawing.Color.White;
             this.btContact.Image = global::COMPANY_MANAGEMENT.Properties.Resources.commercial_64px;
             this.btContact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btContact.Location = new System.Drawing.Point(0, 95);
-            this.btContact.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btContact.Location = new System.Drawing.Point(0, 125);
+            this.btContact.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btContact.Name = "btContact";
-            this.btContact.Size = new System.Drawing.Size(279, 88);
+            this.btContact.Size = new System.Drawing.Size(263, 114);
             this.btContact.TabIndex = 13;
             this.btContact.Text = "CONTACT";
             this.btContact.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -552,31 +515,86 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btMyInfor.Image = global::COMPANY_MANAGEMENT.Properties.Resources.profile_64px;
             this.btMyInfor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btMyInfor.Location = new System.Drawing.Point(0, 0);
-            this.btMyInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btMyInfor.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btMyInfor.Name = "btMyInfor";
-            this.btMyInfor.Size = new System.Drawing.Size(279, 95);
+            this.btMyInfor.Size = new System.Drawing.Size(263, 125);
             this.btMyInfor.TabIndex = 12;
             this.btMyInfor.Text = "INFORMATION";
             this.btMyInfor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btMyInfor.UseVisualStyleBackColor = false;
             this.btMyInfor.Click += new System.EventHandler(this.btMyInfor_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Location = new System.Drawing.Point(262, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1260, 70);
+            this.panel2.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(422, 7);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(559, 48);
+            this.panel4.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(194, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "LEADER";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.panel3.Controls.Add(this.grbInformationLd);
+            this.panel3.Controls.Add(this.grBMan);
+            this.panel3.Location = new System.Drawing.Point(266, 64);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1256, 721);
+            this.panel3.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.business_logo_design_template_78655edda18bc1196ab28760f1535baa_screen;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // FLeader
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 654);
+            this.ClientSize = new System.Drawing.Size(1523, 782);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FLeader";
             this.Text = "FLeader";
             this.Load += new System.EventHandler(this.FLeader_Load);
-            this.groupBox1.ResumeLayout(false);
+            this.grBMan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListManager)).EndInit();
-            this.groupBox2.ResumeLayout(false);
+            this.grBStaff.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListStaff)).EndInit();
             this.grbInformationLd.ResumeLayout(false);
             this.grbInformationLd.PerformLayout();
@@ -592,9 +610,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
         }
 
         #endregion
-        private GroupBox groupBox1;
+        private GroupBox grBMan;
         private DataGridView dgvListManager;
-        private GroupBox groupBox2;
+        private GroupBox grBStaff;
         private DataGridView dgvListStaff;
         private GroupBox grbInformationLd;
         private Label label1;
