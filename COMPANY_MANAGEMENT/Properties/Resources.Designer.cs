@@ -203,6 +203,16 @@ namespace COMPANY_MANAGEMENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap password_20px {
+            get {
+                object obj = ResourceManager.GetObject("password_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password_26px {
             get {
                 object obj = ResourceManager.GetObject("password_26px", resourceCulture);
@@ -266,6 +276,16 @@ namespace COMPANY_MANAGEMENT.Properties {
         internal static System.Drawing.Bitmap tasks_60px {
             get {
                 object obj = ResourceManager.GetObject("tasks_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_9px {
+            get {
+                object obj = ResourceManager.GetObject("user_9px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

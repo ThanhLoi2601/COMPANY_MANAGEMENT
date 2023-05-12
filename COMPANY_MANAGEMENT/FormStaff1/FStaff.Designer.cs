@@ -140,7 +140,7 @@
             this.btChangePass.Name = "btChangePass";
             this.btChangePass.Size = new System.Drawing.Size(284, 76);
             this.btChangePass.TabIndex = 36;
-            this.btChangePass.Text = "Change password";
+            this.btChangePass.Text = "CHANGE PASSWORD";
             this.btChangePass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btChangePass.UseVisualStyleBackColor = true;
             this.btChangePass.Click += new System.EventHandler(this.btChangePass_Click_1);
@@ -160,7 +160,7 @@
             this.btInform.Name = "btInform";
             this.btInform.Size = new System.Drawing.Size(284, 76);
             this.btInform.TabIndex = 35;
-            this.btInform.Text = "Information";
+            this.btInform.Text = "INFORMATION";
             this.btInform.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btInform.UseVisualStyleBackColor = true;
             this.btInform.Click += new System.EventHandler(this.btInform_Click_1);
@@ -180,7 +180,7 @@
             this.btPayroll.Name = "btPayroll";
             this.btPayroll.Size = new System.Drawing.Size(284, 76);
             this.btPayroll.TabIndex = 34;
-            this.btPayroll.Text = "Payroll";
+            this.btPayroll.Text = "PAYROLL";
             this.btPayroll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btPayroll.UseVisualStyleBackColor = true;
             this.btPayroll.Click += new System.EventHandler(this.btPayroll_Click_1);
@@ -200,7 +200,7 @@
             this.btLetter.Name = "btLetter";
             this.btLetter.Size = new System.Drawing.Size(284, 76);
             this.btLetter.TabIndex = 33;
-            this.btLetter.Text = "Absence Letter";
+            this.btLetter.Text = "ABSENCE LETTER";
             this.btLetter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btLetter.UseVisualStyleBackColor = true;
             this.btLetter.Click += new System.EventHandler(this.btLetter_Click_1);
