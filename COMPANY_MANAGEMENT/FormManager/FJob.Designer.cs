@@ -33,14 +33,14 @@
             this.txtIDWork = new System.Windows.Forms.TextBox();
             this.lbIDWork = new System.Windows.Forms.Label();
             this.rTxtContent = new System.Windows.Forms.RichTextBox();
-            this.txtBonus = new System.Windows.Forms.TextBox();
-            this.labBonus = new System.Windows.Forms.Label();
-            this.dtDateEnd = new System.Windows.Forms.DateTimePicker();
-            this.dtDateStart = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btUpdate = new System.Windows.Forms.Button();
             this.btInsert = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
+            this.txtBonus = new System.Windows.Forms.TextBox();
+            this.labBonus = new System.Windows.Forms.Label();
+            this.dtDateEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtDateStart = new System.Windows.Forms.DateTimePicker();
             this.labDateEnd = new System.Windows.Forms.Label();
             this.labDateStart = new System.Windows.Forms.Label();
             this.LabContent = new System.Windows.Forms.Label();
@@ -127,46 +127,6 @@
             this.rTxtContent.TabIndex = 23;
             this.rTxtContent.Text = "";
             // 
-            // txtBonus
-            // 
-            this.txtBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBonus.Location = new System.Drawing.Point(110, 606);
-            this.txtBonus.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBonus.Name = "txtBonus";
-            this.txtBonus.Size = new System.Drawing.Size(314, 30);
-            this.txtBonus.TabIndex = 22;
-            this.txtBonus.TextChanged += new System.EventHandler(this.txtBonus_TextChanged);
-            // 
-            // labBonus
-            // 
-            this.labBonus.AutoSize = true;
-            this.labBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labBonus.Location = new System.Drawing.Point(8, 606);
-            this.labBonus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labBonus.Name = "labBonus";
-            this.labBonus.Size = new System.Drawing.Size(68, 25);
-            this.labBonus.TabIndex = 21;
-            this.labBonus.Text = "Bonus";
-            // 
-            // dtDateEnd
-            // 
-            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateEnd.Location = new System.Drawing.Point(111, 552);
-            this.dtDateEnd.Margin = new System.Windows.Forms.Padding(4);
-            this.dtDateEnd.Name = "dtDateEnd";
-            this.dtDateEnd.Size = new System.Drawing.Size(313, 30);
-            this.dtDateEnd.TabIndex = 20;
-            // 
-            // dtDateStart
-            // 
-            this.dtDateStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateStart.Location = new System.Drawing.Point(110, 467);
-            this.dtDateStart.Margin = new System.Windows.Forms.Padding(4);
-            this.dtDateStart.Name = "dtDateStart";
-            this.dtDateStart.Size = new System.Drawing.Size(314, 30);
-            this.dtDateStart.TabIndex = 19;
-            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.btUpdate);
@@ -219,6 +179,46 @@
             this.btDelete.Text = "DELETE";
             this.btDelete.UseVisualStyleBackColor = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // txtBonus
+            // 
+            this.txtBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBonus.Location = new System.Drawing.Point(110, 606);
+            this.txtBonus.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBonus.Name = "txtBonus";
+            this.txtBonus.Size = new System.Drawing.Size(314, 30);
+            this.txtBonus.TabIndex = 22;
+            this.txtBonus.TextChanged += new System.EventHandler(this.txtBonus_TextChanged);
+            // 
+            // labBonus
+            // 
+            this.labBonus.AutoSize = true;
+            this.labBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labBonus.Location = new System.Drawing.Point(8, 606);
+            this.labBonus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labBonus.Name = "labBonus";
+            this.labBonus.Size = new System.Drawing.Size(68, 25);
+            this.labBonus.TabIndex = 21;
+            this.labBonus.Text = "Bonus";
+            // 
+            // dtDateEnd
+            // 
+            this.dtDateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateEnd.Location = new System.Drawing.Point(111, 552);
+            this.dtDateEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.dtDateEnd.Name = "dtDateEnd";
+            this.dtDateEnd.Size = new System.Drawing.Size(313, 30);
+            this.dtDateEnd.TabIndex = 20;
+            // 
+            // dtDateStart
+            // 
+            this.dtDateStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateStart.Location = new System.Drawing.Point(110, 467);
+            this.dtDateStart.Margin = new System.Windows.Forms.Padding(4);
+            this.dtDateStart.Name = "dtDateStart";
+            this.dtDateStart.Size = new System.Drawing.Size(314, 30);
+            this.dtDateStart.TabIndex = 19;
             // 
             // labDateEnd
             // 
@@ -423,6 +423,7 @@
             this.ClientSize = new System.Drawing.Size(1365, 867);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FJob";
             this.Text = "JOB";

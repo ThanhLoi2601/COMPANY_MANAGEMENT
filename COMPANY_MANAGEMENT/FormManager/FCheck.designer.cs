@@ -52,6 +52,7 @@
             this.ClientSize = new System.Drawing.Size(1198, 733);
             this.Controls.Add(this.dtCheckinout);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FCheck";
             this.Text = "Check";
