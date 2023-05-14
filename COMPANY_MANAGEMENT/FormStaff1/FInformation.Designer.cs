@@ -54,7 +54,7 @@
             // textSalary
             // 
             this.textSalary.Location = new System.Drawing.Point(191, 558);
-            this.textSalary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textSalary.Margin = new System.Windows.Forms.Padding(4);
             this.textSalary.Name = "textSalary";
             this.textSalary.Size = new System.Drawing.Size(249, 27);
             this.textSalary.TabIndex = 39;
@@ -62,7 +62,7 @@
             // textManID
             // 
             this.textManID.Location = new System.Drawing.Point(191, 486);
-            this.textManID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textManID.Margin = new System.Windows.Forms.Padding(4);
             this.textManID.Name = "textManID";
             this.textManID.Size = new System.Drawing.Size(249, 27);
             this.textManID.TabIndex = 38;
@@ -90,7 +90,7 @@
             // dateOfBirth
             // 
             this.dateOfBirth.Location = new System.Drawing.Point(191, 184);
-            this.dateOfBirth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateOfBirth.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfBirth.Name = "dateOfBirth";
             this.dateOfBirth.Size = new System.Drawing.Size(249, 27);
             this.dateOfBirth.TabIndex = 34;
@@ -98,7 +98,7 @@
             // textPlace
             // 
             this.textPlace.Location = new System.Drawing.Point(191, 400);
-            this.textPlace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textPlace.Margin = new System.Windows.Forms.Padding(4);
             this.textPlace.Name = "textPlace";
             this.textPlace.Size = new System.Drawing.Size(249, 27);
             this.textPlace.TabIndex = 33;
@@ -106,7 +106,7 @@
             // textMail
             // 
             this.textMail.Location = new System.Drawing.Point(191, 315);
-            this.textMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textMail.Margin = new System.Windows.Forms.Padding(4);
             this.textMail.Name = "textMail";
             this.textMail.Size = new System.Drawing.Size(249, 27);
             this.textMail.TabIndex = 31;
@@ -114,7 +114,7 @@
             // textIDcard
             // 
             this.textIDcard.Location = new System.Drawing.Point(191, 250);
-            this.textIDcard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textIDcard.Margin = new System.Windows.Forms.Padding(4);
             this.textIDcard.Name = "textIDcard";
             this.textIDcard.Size = new System.Drawing.Size(249, 27);
             this.textIDcard.TabIndex = 30;
@@ -122,7 +122,7 @@
             // textName
             // 
             this.textName.Location = new System.Drawing.Point(191, 112);
-            this.textName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textName.Margin = new System.Windows.Forms.Padding(4);
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(249, 27);
             this.textName.TabIndex = 29;
@@ -131,7 +131,7 @@
             // 
             this.textID.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textID.Location = new System.Drawing.Point(191, 54);
-            this.textID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textID.Margin = new System.Windows.Forms.Padding(4);
             this.textID.Name = "textID";
             this.textID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textID.Size = new System.Drawing.Size(249, 27);
@@ -201,7 +201,7 @@
             // 
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUpdate.Location = new System.Drawing.Point(191, 620);
-            this.btUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(169, 54);
             this.btUpdate.TabIndex = 43;
@@ -213,7 +213,7 @@
             // 
             this.picAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picAvatar.Location = new System.Drawing.Point(584, 54);
-            this.picAvatar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picAvatar.Margin = new System.Windows.Forms.Padding(4);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(148, 156);
             this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,11 +224,11 @@
             // 
             this.btBrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBrow.Location = new System.Drawing.Point(584, 265);
-            this.btBrow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBrow.Margin = new System.Windows.Forms.Padding(4);
             this.btBrow.Name = "btBrow";
             this.btBrow.Size = new System.Drawing.Size(149, 44);
             this.btBrow.TabIndex = 45;
-            this.btBrow.Text = "Browse...";
+            this.btBrow.Text = "BROWSE...";
             this.btBrow.UseVisualStyleBackColor = true;
             this.btBrow.Click += new System.EventHandler(this.btBrow_Click);
             // 
@@ -236,11 +236,11 @@
             // 
             this.btSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSave.Location = new System.Drawing.Point(584, 361);
-            this.btSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSave.Margin = new System.Windows.Forms.Padding(4);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(149, 46);
             this.btSave.TabIndex = 47;
-            this.btSave.Text = "Save";
+            this.btSave.Text = "SAVE";
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
@@ -270,7 +270,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labID);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FInformation";
             this.Text = "Information";
             this.Load += new System.EventHandler(this.FInformation_Load);
