@@ -25,10 +25,26 @@ namespace COMPANY_MANAGEMENT
 
         private void FShowLetter_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             if(IDReceive.Contains("MAN")) 
                 dGVStaffLetter.DataSource = absenDAO.LoadAbsenStaff(IDReceive);
             else
                 dGVStaffLetter.DataSource = absenDAO.LoadAbsenManager();
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

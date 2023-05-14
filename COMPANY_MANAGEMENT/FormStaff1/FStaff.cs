@@ -42,6 +42,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void FStaff_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             dataStaff.DataSource = a.LoadList(ID);
             loadImage();
         }
@@ -118,6 +119,21 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         void loadImage()
         {
             staDao.loadImage(ID, picAvatar);
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

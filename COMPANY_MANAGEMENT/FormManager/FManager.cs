@@ -30,6 +30,7 @@ namespace COMPANY_MANAGEMENT
  
         private void FManager_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             this.LoadMyInfo();
             dGVBasic.DataSource = staDAO.LoadList(IDReceive);   
         }
@@ -198,6 +199,21 @@ namespace COMPANY_MANAGEMENT
             th = new Thread(OpenNewHome);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

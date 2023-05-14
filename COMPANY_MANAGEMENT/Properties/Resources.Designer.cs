@@ -113,6 +113,26 @@ namespace COMPANY_MANAGEMENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_window_12px {
+            get {
+                object obj = ResourceManager.GetObject("close_window_12px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_window_30px {
+            get {
+                object obj = ResourceManager.GetObject("close_window_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap commercial_26px {
             get {
                 object obj = ResourceManager.GetObject("commercial_26px", resourceCulture);
@@ -186,6 +206,26 @@ namespace COMPANY_MANAGEMENT.Properties {
         internal static System.Drawing.Bitmap leave_60px {
             get {
                 object obj = ResourceManager.GetObject("leave_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximize_window_30px {
+            get {
+                object obj = ResourceManager.GetObject("maximize_window_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimize_window_30px {
+            get {
+                object obj = ResourceManager.GetObject("minimize_window_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

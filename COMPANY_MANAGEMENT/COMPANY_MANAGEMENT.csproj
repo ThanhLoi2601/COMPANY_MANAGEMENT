@@ -347,6 +347,10 @@
     <Content Include="Inco_img\Icons8-Windows-8-Users-Administrator.ico" />
     <Content Include="Inco_img\plus_+_30px.png" />
     <Content Include="Inco_img\trash_can_30px.png" />
+    <None Include="Resources\maximize_window_30px.png" />
+    <None Include="Resources\minimize_window_30px.png" />
+    <None Include="Resources\close_window_30px.png" />
+    <None Include="Resources\close_window_12px.png" />
     <None Include="Resources\password_20px.png" />
     <None Include="Resources\user_9px.png" />
     <None Include="Resources\cash_in_hand_60px.png" />

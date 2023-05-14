@@ -68,6 +68,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btMin = new System.Windows.Forms.Button();
+            this.btMax = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             this.grBMan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListManager)).BeginInit();
             this.grBStaff.SuspendLayout();
@@ -527,6 +530,9 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.panel2.Controls.Add(this.btMin);
+            this.panel2.Controls.Add(this.btMax);
+            this.panel2.Controls.Add(this.btClose);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Location = new System.Drawing.Point(262, 1);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -537,7 +543,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // panel4
             // 
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(422, 7);
+            this.panel4.Location = new System.Drawing.Point(384, 12);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(559, 48);
@@ -577,6 +583,45 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // btMin
+            // 
+            this.btMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.btMin.FlatAppearance.BorderSize = 0;
+            this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMin.Image = global::COMPANY_MANAGEMENT.Properties.Resources.minimize_window_30px;
+            this.btMin.Location = new System.Drawing.Point(954, 16);
+            this.btMin.Name = "btMin";
+            this.btMin.Size = new System.Drawing.Size(79, 32);
+            this.btMin.TabIndex = 6;
+            this.btMin.UseVisualStyleBackColor = false;
+            this.btMin.Click += new System.EventHandler(this.btMin_Click);
+            // 
+            // btMax
+            // 
+            this.btMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.btMax.FlatAppearance.BorderSize = 0;
+            this.btMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMax.Image = global::COMPANY_MANAGEMENT.Properties.Resources.maximize_window_30px;
+            this.btMax.Location = new System.Drawing.Point(1069, 16);
+            this.btMax.Name = "btMax";
+            this.btMax.Size = new System.Drawing.Size(79, 32);
+            this.btMax.TabIndex = 5;
+            this.btMax.UseVisualStyleBackColor = false;
+            this.btMax.Click += new System.EventHandler(this.btMax_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Image = global::COMPANY_MANAGEMENT.Properties.Resources.close_window_30px;
+            this.btClose.Location = new System.Drawing.Point(1170, 16);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(79, 32);
+            this.btClose.TabIndex = 4;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // FLeader
             // 
@@ -648,5 +693,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
         private Panel panel4;
         private Label label2;
         private PictureBox pictureBox1;
+        private Button btMin;
+        private Button btMax;
+        private Button btClose;
     }
 }

@@ -151,6 +151,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
 
         private void FLeader_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             dgvLoad();
             NameReceive = txtNameLd.Text;
         }
@@ -222,6 +223,21 @@ namespace COMPANY_MANAGEMENT.FormLeader
             panel3.Controls.Add(f);
             panel3.BringToFront();
             f.Show();
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

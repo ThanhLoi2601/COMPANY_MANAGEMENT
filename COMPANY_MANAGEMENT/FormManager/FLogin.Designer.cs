@@ -40,6 +40,9 @@
             this.rbLeader = new System.Windows.Forms.RadioButton();
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btMin = new System.Windows.Forms.Button();
+            this.btMax = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -203,12 +206,54 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.panel1.Controls.Add(this.btMin);
+            this.panel1.Controls.Add(this.btMax);
+            this.panel1.Controls.Add(this.btClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(895, 42);
             this.panel1.TabIndex = 18;
+            // 
+            // btMin
+            // 
+            this.btMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.btMin.FlatAppearance.BorderSize = 0;
+            this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMin.Image = global::COMPANY_MANAGEMENT.Properties.Resources.minimize_window_30px;
+            this.btMin.Location = new System.Drawing.Point(585, 12);
+            this.btMin.Name = "btMin";
+            this.btMin.Size = new System.Drawing.Size(79, 25);
+            this.btMin.TabIndex = 6;
+            this.btMin.UseVisualStyleBackColor = false;
+            this.btMin.Click += new System.EventHandler(this.btMin_Click);
+            // 
+            // btMax
+            // 
+            this.btMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.btMax.FlatAppearance.BorderSize = 0;
+            this.btMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMax.Image = global::COMPANY_MANAGEMENT.Properties.Resources.maximize_window_30px;
+            this.btMax.Location = new System.Drawing.Point(700, 12);
+            this.btMax.Name = "btMax";
+            this.btMax.Size = new System.Drawing.Size(79, 25);
+            this.btMax.TabIndex = 5;
+            this.btMax.UseVisualStyleBackColor = false;
+            this.btMax.Click += new System.EventHandler(this.btMax_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Image = global::COMPANY_MANAGEMENT.Properties.Resources.close_window_30px;
+            this.btClose.Location = new System.Drawing.Point(801, 12);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(79, 25);
+            this.btClose.TabIndex = 4;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // label1
             // 
@@ -286,6 +331,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FLogin";
             this.Text = "LOG IN";
+            this.Load += new System.EventHandler(this.FLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -317,6 +363,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btMin;
+        private System.Windows.Forms.Button btMax;
+        private System.Windows.Forms.Button btClose;
     }
 }
 
