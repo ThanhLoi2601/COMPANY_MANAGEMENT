@@ -41,6 +41,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
         private void LoadContact()
         {
             dtGVContact.DataSource = contDAO.LoadListSent(IDReceive);
+            HighLight(dtGVContact);
         }
 
         private void btSent_Click(object sender, EventArgs e)
@@ -68,6 +69,24 @@ namespace COMPANY_MANAGEMENT.FormLeader
             rTxtContent.Text = dtGVContact.Rows[r].Cells[3].Value.ToString();
             cbBoxIDRe.DataBindings.Clear();
             cbBoxIDRe.Text = dtGVContact.Rows[r].Cells[4].Value.ToString();
+        }
+
+        private void btLoadHightLight_Click(object sender, EventArgs e)
+        {
+            HighLight(dtGVContact);
+        }
+        private void HighLight(DataGridView dtGV)
+        {
+            DateTime currentDate = DateTime.Now.Date;
+
+            foreach (DataGridViewRow row in dtGV.Rows)
+            {
+                if (row.Cells["InfoDate"].Value != null && Convert.ToDateTime(row.Cells["InfoDate"].Value).Date == currentDate)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                }
+            }
         }
     }
 }

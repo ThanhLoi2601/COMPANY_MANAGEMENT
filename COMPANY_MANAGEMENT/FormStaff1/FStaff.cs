@@ -11,6 +11,7 @@ using System.Threading;
 using COMPANY_MANAGEMENT.OOP;
 using System.Data.SqlClient;
 using System.IO;
+using System.Diagnostics;
 
 namespace COMPANY_MANAGEMENT.FormStaff1
 {
@@ -22,6 +23,8 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         StaffDAO staDao = new StaffDAO();
         string ID;
         Thread th;
+        int count = 0, Overdue = 0, Warning =0,  NotStarted=0, Inprocess =0;
+
 
         public FStaff(string ID)
         {
@@ -42,7 +45,8 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void FStaff_Load(object sender, EventArgs e)
         {
-            dataStaff.DataSource = a.LoadList(ID);
+            this.FormBorderStyle = FormBorderStyle.None;
+            LoadDtStaff_HightLight();
             loadImage();
         }
 
@@ -118,6 +122,82 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         void loadImage()
         {
             staDao.loadImage(ID, picAvatar);
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void picAvatar_DoubleClick(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = " png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string imgurl = dialog.FileName.ToString();
+                picAvatar.ImageLocation = imgurl;
+            }
+        }
+
+        private void btLoadHightLight_Click(object sender, EventArgs e)
+        {
+            LoadDtStaff_HightLight();
+        }
+
+        private void LoadDtStaff_HightLight()
+        {
+            dataStaff.DataSource = a.LoadList(ID);
+            count = 0; Overdue = 0; Warning = 0;  NotStarted = 0; Inprocess = 0;
+            foreach (DataGridViewRow row in dataStaff.Rows)
+            {
+                if (row.Cells["DateStart"].Value == null) break;
+                DateTime rowDateStart = Convert.ToDateTime(row.Cells["DateStart"].Value).Date;
+                DateTime rowDateEnd = Convert.ToDateTime(row.Cells["DateEnd"].Value).Date;
+                DateTime dtNow = DateTime.Now.Date;
+                if (dtNow > rowDateEnd)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                    Overdue++;
+                }
+                else if ((rowDateEnd - dtNow).Days <= 2)
+                {
+                    row.DefaultCellStyle.BackColor = Color.OrangeRed;
+                    Warning++;
+                }
+                else if (dtNow < rowDateStart)
+                {
+                    row.DefaultCellStyle.BackColor = Color.SkyBlue;
+                    NotStarted++;
+                }
+                else Inprocess++;
+                row.DefaultCellStyle.ForeColor = Color.Black;
+                count++;
+            }
+            LoadChart();
+        }
+        private void LoadChart()
+        {
+            Dictionary<string, int> data = new Dictionary<string, int>();
+            data.Add("Overdue", Overdue*100/count);
+            data.Add("Warning", Warning * 100 / count);
+            data.Add("NotStarted", NotStarted * 100 / count);
+            data.Add("Inprocess", Inprocess * 100 / count);
+
+            chJob.Series.Clear();
+            chJob.Series.Add("Overdue");
+            chJob.Series["Overdue"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+            foreach (var item in data)
+            {
+                if (item.Value == 0) continue;
+                chJob.Series["Overdue"].Points.AddXY(item.Key, item.Value);
+            }
         }
     }
 }

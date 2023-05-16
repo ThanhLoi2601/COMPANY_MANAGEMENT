@@ -30,6 +30,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLeader));
             this.grBMan = new System.Windows.Forms.GroupBox();
             this.dgvListManager = new System.Windows.Forms.DataGridView();
             this.grBStaff = new System.Windows.Forms.GroupBox();
@@ -38,9 +39,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDManager = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btUpdateLd = new System.Windows.Forms.Button();
-            this.btInsertLd = new System.Windows.Forms.Button();
-            this.btDeleteLd = new System.Windows.Forms.Button();
             this.txtPasswordLd = new System.Windows.Forms.TextBox();
             this.txtBasicSalaryLd = new System.Windows.Forms.TextBox();
             this.txtAddressLd = new System.Windows.Forms.TextBox();
@@ -58,16 +56,21 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.lbNameLd = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btAbsenceLetterLd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btDistributionLd = new System.Windows.Forms.Button();
-            this.btContact = new System.Windows.Forms.Button();
-            this.btMyInfor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btUpdateLd = new System.Windows.Forms.Button();
+            this.btInsertLd = new System.Windows.Forms.Button();
+            this.btDeleteLd = new System.Windows.Forms.Button();
+            this.btMin = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
+            this.btAbsenceLetterLd = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btDistributionLd = new System.Windows.Forms.Button();
+            this.btContact = new System.Windows.Forms.Button();
+            this.btMyInfor = new System.Windows.Forms.Button();
             this.grBMan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListManager)).BeginInit();
             this.grBStaff.SuspendLayout();
@@ -201,39 +204,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(403, 57);
             this.flowLayoutPanel1.TabIndex = 18;
-            // 
-            // btUpdateLd
-            // 
-            this.btUpdateLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUpdateLd.Location = new System.Drawing.Point(4, 2);
-            this.btUpdateLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btUpdateLd.Name = "btUpdateLd";
-            this.btUpdateLd.Size = new System.Drawing.Size(121, 48);
-            this.btUpdateLd.TabIndex = 0;
-            this.btUpdateLd.Text = "Update";
-            this.btUpdateLd.UseVisualStyleBackColor = true;
-            // 
-            // btInsertLd
-            // 
-            this.btInsertLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btInsertLd.Location = new System.Drawing.Point(133, 2);
-            this.btInsertLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btInsertLd.Name = "btInsertLd";
-            this.btInsertLd.Size = new System.Drawing.Size(122, 48);
-            this.btInsertLd.TabIndex = 1;
-            this.btInsertLd.Text = "Insert";
-            this.btInsertLd.UseVisualStyleBackColor = true;
-            // 
-            // btDeleteLd
-            // 
-            this.btDeleteLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDeleteLd.Location = new System.Drawing.Point(263, 2);
-            this.btDeleteLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btDeleteLd.Name = "btDeleteLd";
-            this.btDeleteLd.Size = new System.Drawing.Size(128, 48);
-            this.btDeleteLd.TabIndex = 2;
-            this.btDeleteLd.Text = "Delete";
-            this.btDeleteLd.UseVisualStyleBackColor = true;
             // 
             // txtPasswordLd
             // 
@@ -419,6 +389,132 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.panel1.Size = new System.Drawing.Size(265, 670);
             this.panel1.TabIndex = 5;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.panel2.Controls.Add(this.btMin);
+            this.panel2.Controls.Add(this.btClose);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Location = new System.Drawing.Point(262, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1260, 70);
+            this.panel2.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(384, 12);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(559, 48);
+            this.panel4.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(194, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "LEADER";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
+            this.panel3.Controls.Add(this.grbInformationLd);
+            this.panel3.Controls.Add(this.grBMan);
+            this.panel3.Location = new System.Drawing.Point(266, 64);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1256, 721);
+            this.panel3.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.business_logo_design_template_78655edda18bc1196ab28760f1535baa_screen;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btUpdateLd
+            // 
+            this.btUpdateLd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btUpdateLd.BackgroundImage")));
+            this.btUpdateLd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btUpdateLd.FlatAppearance.BorderSize = 0;
+            this.btUpdateLd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUpdateLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdateLd.Location = new System.Drawing.Point(4, 2);
+            this.btUpdateLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btUpdateLd.Name = "btUpdateLd";
+            this.btUpdateLd.Size = new System.Drawing.Size(121, 48);
+            this.btUpdateLd.TabIndex = 0;
+            this.btUpdateLd.UseVisualStyleBackColor = true;
+            this.btUpdateLd.Click += new System.EventHandler(this.btUpdateLd_Click);
+            // 
+            // btInsertLd
+            // 
+            this.btInsertLd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btInsertLd.BackgroundImage")));
+            this.btInsertLd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btInsertLd.FlatAppearance.BorderSize = 0;
+            this.btInsertLd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInsertLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInsertLd.Location = new System.Drawing.Point(133, 2);
+            this.btInsertLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btInsertLd.Name = "btInsertLd";
+            this.btInsertLd.Size = new System.Drawing.Size(122, 48);
+            this.btInsertLd.TabIndex = 1;
+            this.btInsertLd.UseVisualStyleBackColor = true;
+            this.btInsertLd.Click += new System.EventHandler(this.btInsertLd_Click);
+            // 
+            // btDeleteLd
+            // 
+            this.btDeleteLd.FlatAppearance.BorderSize = 0;
+            this.btDeleteLd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDeleteLd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeleteLd.Image = ((System.Drawing.Image)(resources.GetObject("btDeleteLd.Image")));
+            this.btDeleteLd.Location = new System.Drawing.Point(263, 2);
+            this.btDeleteLd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btDeleteLd.Name = "btDeleteLd";
+            this.btDeleteLd.Size = new System.Drawing.Size(128, 48);
+            this.btDeleteLd.TabIndex = 2;
+            this.btDeleteLd.UseVisualStyleBackColor = true;
+            this.btDeleteLd.Click += new System.EventHandler(this.btDeleteLd_Click);
+            // 
+            // btMin
+            // 
+            this.btMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.btMin.FlatAppearance.BorderSize = 0;
+            this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMin.Image = global::COMPANY_MANAGEMENT.Properties.Resources.minimize_window_30px;
+            this.btMin.Location = new System.Drawing.Point(1063, 16);
+            this.btMin.Name = "btMin";
+            this.btMin.Size = new System.Drawing.Size(79, 32);
+            this.btMin.TabIndex = 6;
+            this.btMin.UseVisualStyleBackColor = false;
+            this.btMin.Click += new System.EventHandler(this.btMin_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Image = global::COMPANY_MANAGEMENT.Properties.Resources.close_window_30px;
+            this.btClose.Location = new System.Drawing.Point(1170, 16);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(79, 32);
+            this.btClose.TabIndex = 4;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
             // btAbsenceLetterLd
             // 
             this.btAbsenceLetterLd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -524,60 +620,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.btMyInfor.UseVisualStyleBackColor = false;
             this.btMyInfor.Click += new System.EventHandler(this.btMyInfor_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(262, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1260, 70);
-            this.panel2.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(422, 7);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(559, 48);
-            this.panel4.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(194, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "LEADER";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
-            this.panel3.Controls.Add(this.grbInformationLd);
-            this.panel3.Controls.Add(this.grBMan);
-            this.panel3.Location = new System.Drawing.Point(266, 64);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1256, 721);
-            this.panel3.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::COMPANY_MANAGEMENT.Properties.Resources.business_logo_design_template_78655edda18bc1196ab28760f1535baa_screen;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // FLeader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -588,6 +630,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FLeader";
             this.Text = "FLeader";
@@ -648,5 +691,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
         private Panel panel4;
         private Label label2;
         private PictureBox pictureBox1;
+        private Button btMin;
+        private Button btClose;
     }
 }

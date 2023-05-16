@@ -58,7 +58,11 @@ namespace COMPANY_MANAGEMENT.FormStaff1
 
         private void btConfirm_Click(object sender, EventArgs e)
         {
-            this.ChangePass();
+            DialogResult result = MessageBox.Show("Are you sure to change password?", "REMIND", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.ChangePass();
+            }
         }
 
         private void FChangePassWord_Load(object sender, EventArgs e)

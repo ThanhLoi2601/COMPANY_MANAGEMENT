@@ -52,7 +52,7 @@
             // dateStart
             // 
             this.dateStart.Location = new System.Drawing.Point(206, 416);
-            this.dateStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(4);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(249, 27);
             this.dateStart.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.rbRea1.AutoSize = true;
             this.rbRea1.Location = new System.Drawing.Point(116, 189);
-            this.rbRea1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbRea1.Margin = new System.Windows.Forms.Padding(4);
             this.rbRea1.Name = "rbRea1";
             this.rbRea1.Size = new System.Drawing.Size(133, 24);
             this.rbRea1.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.rbRea2.AutoSize = true;
             this.rbRea2.Location = new System.Drawing.Point(116, 249);
-            this.rbRea2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbRea2.Margin = new System.Windows.Forms.Padding(4);
             this.rbRea2.Name = "rbRea2";
             this.rbRea2.Size = new System.Drawing.Size(161, 24);
             this.rbRea2.TabIndex = 2;
@@ -85,7 +85,7 @@
             // 
             this.rbRea3.AutoSize = true;
             this.rbRea3.Location = new System.Drawing.Point(116, 308);
-            this.rbRea3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbRea3.Margin = new System.Windows.Forms.Padding(4);
             this.rbRea3.Name = "rbRea3";
             this.rbRea3.Size = new System.Drawing.Size(337, 24);
             this.rbRea3.TabIndex = 3;
@@ -97,7 +97,7 @@
             // 
             this.rbRea4.AutoSize = true;
             this.rbRea4.Location = new System.Drawing.Point(116, 360);
-            this.rbRea4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbRea4.Margin = new System.Windows.Forms.Padding(4);
             this.rbRea4.Name = "rbRea4";
             this.rbRea4.Size = new System.Drawing.Size(67, 24);
             this.rbRea4.TabIndex = 4;
@@ -159,7 +159,7 @@
             // dateEnd
             // 
             this.dateEnd.Location = new System.Drawing.Point(206, 488);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(249, 27);
             this.dateEnd.TabIndex = 12;
@@ -167,7 +167,7 @@
             // textName
             // 
             this.textName.Location = new System.Drawing.Point(206, 26);
-            this.textName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textName.Margin = new System.Windows.Forms.Padding(4);
             this.textName.Name = "textName";
             this.textName.ReadOnly = true;
             this.textName.Size = new System.Drawing.Size(249, 27);
@@ -176,7 +176,7 @@
             // textID
             // 
             this.textID.Location = new System.Drawing.Point(206, 82);
-            this.textID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textID.Margin = new System.Windows.Forms.Padding(4);
             this.textID.Name = "textID";
             this.textID.ReadOnly = true;
             this.textID.Size = new System.Drawing.Size(249, 27);
@@ -185,7 +185,7 @@
             // textReason
             // 
             this.textReason.Location = new System.Drawing.Point(206, 356);
-            this.textReason.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textReason.Margin = new System.Windows.Forms.Padding(4);
             this.textReason.Name = "textReason";
             this.textReason.Size = new System.Drawing.Size(249, 27);
             this.textReason.TabIndex = 15;
@@ -193,13 +193,17 @@
             // 
             // btConfirm
             // 
+            this.btConfirm.FlatAppearance.BorderSize = 0;
+            this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(271, 688);
-            this.btConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btConfirm.Image = global::COMPANY_MANAGEMENT.Properties.Resources.checkmark_60px;
+            this.btConfirm.Location = new System.Drawing.Point(286, 645);
+            this.btConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btConfirm.Name = "btConfirm";
-            this.btConfirm.Size = new System.Drawing.Size(169, 54);
+            this.btConfirm.Size = new System.Drawing.Size(182, 72);
             this.btConfirm.TabIndex = 22;
             this.btConfirm.Text = "CONFIRM";
+            this.btConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btConfirm.UseVisualStyleBackColor = true;
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
@@ -216,7 +220,7 @@
             // textNghi
             // 
             this.textNghi.Location = new System.Drawing.Point(331, 549);
-            this.textNghi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNghi.Margin = new System.Windows.Forms.Padding(4);
             this.textNghi.Name = "textNghi";
             this.textNghi.ReadOnly = true;
             this.textNghi.Size = new System.Drawing.Size(124, 27);
@@ -236,7 +240,7 @@
             // textNgayNghi
             // 
             this.textNgayNghi.Location = new System.Drawing.Point(331, 610);
-            this.textNgayNghi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNgayNghi.Margin = new System.Windows.Forms.Padding(4);
             this.textNgayNghi.Name = "textNgayNghi";
             this.textNgayNghi.ReadOnly = true;
             this.textNgayNghi.Size = new System.Drawing.Size(124, 27);
@@ -268,7 +272,7 @@
             this.Controls.Add(this.rbRea1);
             this.Controls.Add(this.dateStart);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FAbsenceLetter";
             this.Text = "FAbsenceLetter";
             this.Load += new System.EventHandler(this.FAbsenceLetter_Load);

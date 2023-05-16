@@ -248,7 +248,7 @@ namespace COMPANY_MANAGEMENT.OOP
                 {
                     string id = reader.GetString(0);
                     string content = reader.GetString(1);
-                    double proc = reader.GetDouble(2);
+                    double proc = reader.GetInt32(2);
                     return new ProcessJob(id, content, proc);
                 }
             }

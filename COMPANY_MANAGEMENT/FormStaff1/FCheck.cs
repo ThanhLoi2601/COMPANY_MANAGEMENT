@@ -166,5 +166,23 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             processJobDAO.Detele(job);
             MessageBox.Show("Đã cập nhật công việc hoàn thành");
         }
+
+        private void textTienDo_TextChanged(object sender, EventArgs e)
+        {
+            if (textTienDo.Text == "") return;
+            Dictionary<string, int> data = new Dictionary<string, int>();
+            data.Add("Complete", int.Parse(textTienDo.Text));
+            data.Add("Unfinished", 100 - int.Parse(textTienDo.Text));
+
+            chProc.Series.Clear();
+            chProc.Series.Add("Complete");
+            chProc.Series["Complete"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+            foreach (var item in data)
+            {
+                if (item.Value == 0) continue;
+                chProc.Series["Complete"].Points.AddXY(item.Key, item.Value);
+            }
+        }
     }
 }

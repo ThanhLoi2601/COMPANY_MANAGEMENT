@@ -26,5 +26,23 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             this.FormBorderStyle = FormBorderStyle.None;
             dtGVAnnou.DataSource = ct.LoadListReceive(ID);
         }
+        private void HighLight(DataGridView dtGV)
+        {
+            DateTime currentDate = DateTime.Now.Date;
+
+            foreach (DataGridViewRow row in dtGV.Rows)
+            {
+                if (row.Cells["InfoDate"].Value != null && Convert.ToDateTime(row.Cells["InfoDate"].Value).Date == currentDate)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                }
+            }
+        }
+
+        private void btLoadHightLight_Click(object sender, EventArgs e)
+        {
+            HighLight(dtGVAnnou);
+        }
     }
 }

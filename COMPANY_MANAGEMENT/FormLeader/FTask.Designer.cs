@@ -29,6 +29,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTask));
             this.grbTask = new System.Windows.Forms.GroupBox();
             this.txtID_Project = new System.Windows.Forms.TextBox();
             this.cbbStatus = new System.Windows.Forms.ComboBox();
@@ -49,9 +50,13 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.gvTask = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btMin = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             this.grbTask.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvTask)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbTask
@@ -72,11 +77,11 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.grbTask.Controls.Add(this.lblName);
             this.grbTask.Controls.Add(this.lblID);
             this.grbTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
-            this.grbTask.Location = new System.Drawing.Point(2, 7);
+            this.grbTask.Location = new System.Drawing.Point(0, 44);
             this.grbTask.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.grbTask.Name = "grbTask";
             this.grbTask.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.grbTask.Size = new System.Drawing.Size(610, 558);
+            this.grbTask.Size = new System.Drawing.Size(613, 595);
             this.grbTask.TabIndex = 28;
             this.grbTask.TabStop = false;
             this.grbTask.Text = "INFORMATION";
@@ -182,37 +187,47 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // btUpdate
             // 
+            this.btUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btUpdate.BackgroundImage")));
+            this.btUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btUpdate.FlatAppearance.BorderSize = 0;
+            this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btUpdate.Location = new System.Drawing.Point(4, 2);
             this.btUpdate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(140, 43);
             this.btUpdate.TabIndex = 0;
-            this.btUpdate.Text = "Update";
+            this.btUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btUpdate.UseVisualStyleBackColor = true;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // btInsert
             // 
+            this.btInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btInsert.BackgroundImage")));
+            this.btInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btInsert.FlatAppearance.BorderSize = 0;
+            this.btInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btInsert.Location = new System.Drawing.Point(152, 2);
             this.btInsert.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btInsert.Name = "btInsert";
             this.btInsert.Size = new System.Drawing.Size(140, 43);
             this.btInsert.TabIndex = 1;
-            this.btInsert.Text = "Insert";
             this.btInsert.UseVisualStyleBackColor = true;
             this.btInsert.Click += new System.EventHandler(this.btInsert_Click);
             // 
             // btDelete
             // 
+            this.btDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btDelete.BackgroundImage")));
+            this.btDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btDelete.FlatAppearance.BorderSize = 0;
+            this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btDelete.Location = new System.Drawing.Point(300, 2);
             this.btDelete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(140, 43);
             this.btDelete.TabIndex = 2;
-            this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = true;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
@@ -276,20 +291,58 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.gvTask.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvTask.BackgroundColor = System.Drawing.Color.White;
             this.gvTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTask.Location = new System.Drawing.Point(616, 7);
+            this.gvTask.Location = new System.Drawing.Point(610, 44);
             this.gvTask.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gvTask.Name = "gvTask";
             this.gvTask.RowHeadersWidth = 51;
             this.gvTask.RowTemplate.Height = 29;
-            this.gvTask.Size = new System.Drawing.Size(890, 558);
+            this.gvTask.Size = new System.Drawing.Size(903, 595);
             this.gvTask.TabIndex = 29;
             this.gvTask.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTask_CellClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.panel1.Controls.Add(this.btMin);
+            this.panel1.Controls.Add(this.btClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1513, 46);
+            this.panel1.TabIndex = 30;
+            // 
+            // btMin
+            // 
+            this.btMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.btMin.FlatAppearance.BorderSize = 0;
+            this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMin.Image = global::COMPANY_MANAGEMENT.Properties.Resources.minimize_window_30px;
+            this.btMin.Location = new System.Drawing.Point(1300, 7);
+            this.btMin.Name = "btMin";
+            this.btMin.Size = new System.Drawing.Size(79, 32);
+            this.btMin.TabIndex = 9;
+            this.btMin.UseVisualStyleBackColor = false;
+            this.btMin.Click += new System.EventHandler(this.btMin_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(23)))), ((int)(((byte)(21)))));
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Image = global::COMPANY_MANAGEMENT.Properties.Resources.close_window_30px;
+            this.btClose.Location = new System.Drawing.Point(1412, 7);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(79, 32);
+            this.btClose.TabIndex = 7;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // FTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1513, 572);
+            this.ClientSize = new System.Drawing.Size(1513, 634);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gvTask);
             this.Controls.Add(this.grbTask);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,6 +354,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.grbTask.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvTask)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -327,5 +381,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
         private Label lblID_Project;
         private ComboBox cbbStatus;
         private TextBox txtID_Project;
+        private Panel panel1;
+        private Button btMin;
+        private Button btClose;
     }
 }

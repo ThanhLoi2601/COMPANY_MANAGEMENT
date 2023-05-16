@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FJob));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.grInfo = new System.Windows.Forms.GroupBox();
             this.txtIDWork = new System.Windows.Forms.TextBox();
             this.lbIDWork = new System.Windows.Forms.Label();
@@ -53,10 +56,20 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dGVJobStaff = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btLoadHightLight = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.btConf = new System.Windows.Forms.Button();
             this.dGVMyProject = new System.Windows.Forms.DataGridView();
+            this.chTaskProcess = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.grInfo.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -65,12 +78,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dGVJobStaff)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVMyProject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chTaskProcess)).BeginInit();
             this.SuspendLayout();
             // 
             // grInfo
             // 
             this.grInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grInfo.BackgroundImage")));
+            this.grInfo.BackColor = System.Drawing.Color.Silver;
             this.grInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grInfo.Controls.Add(this.txtIDWork);
             this.grInfo.Controls.Add(this.lbIDWork);
@@ -92,7 +106,7 @@
             this.grInfo.Margin = new System.Windows.Forms.Padding(4);
             this.grInfo.Name = "grInfo";
             this.grInfo.Padding = new System.Windows.Forms.Padding(4);
-            this.grInfo.Size = new System.Drawing.Size(449, 772);
+            this.grInfo.Size = new System.Drawing.Size(449, 752);
             this.grInfo.TabIndex = 2;
             this.grInfo.TabStop = false;
             this.grInfo.Text = "INFORMATION";
@@ -132,7 +146,7 @@
             this.flowLayoutPanel3.Controls.Add(this.btUpdate);
             this.flowLayoutPanel3.Controls.Add(this.btInsert);
             this.flowLayoutPanel3.Controls.Add(this.btDelete);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 670);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 644);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(449, 82);
@@ -140,43 +154,48 @@
             // 
             // btUpdate
             // 
-            this.btUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btUpdate.BackColor = System.Drawing.Color.Silver;
+            this.btUpdate.FlatAppearance.BorderSize = 0;
             this.btUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btUpdate.Image")));
             this.btUpdate.Location = new System.Drawing.Point(4, 4);
             this.btUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(136, 75);
             this.btUpdate.TabIndex = 0;
-            this.btUpdate.Text = "UPDATE";
+            this.btUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btUpdate.UseVisualStyleBackColor = false;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // btInsert
             // 
-            this.btInsert.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btInsert.BackColor = System.Drawing.Color.Silver;
+            this.btInsert.FlatAppearance.BorderSize = 0;
             this.btInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInsert.Image = ((System.Drawing.Image)(resources.GetObject("btInsert.Image")));
             this.btInsert.Location = new System.Drawing.Point(148, 4);
             this.btInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btInsert.Name = "btInsert";
             this.btInsert.Size = new System.Drawing.Size(140, 75);
             this.btInsert.TabIndex = 2;
-            this.btInsert.Text = "INSERT";
             this.btInsert.UseVisualStyleBackColor = false;
             this.btInsert.Click += new System.EventHandler(this.btInsert_Click);
             // 
             // btDelete
             // 
-            this.btDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btDelete.BackColor = System.Drawing.Color.Silver;
+            this.btDelete.FlatAppearance.BorderSize = 0;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDelete.Image = ((System.Drawing.Image)(resources.GetObject("btDelete.Image")));
             this.btDelete.Location = new System.Drawing.Point(296, 4);
             this.btDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(145, 75);
             this.btDelete.TabIndex = 1;
-            this.btDelete.Text = "DELETE";
+            this.btDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btDelete.UseVisualStyleBackColor = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
@@ -307,7 +326,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 780F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1216, 780);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1218, 760);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tabJobStaff
@@ -316,11 +335,11 @@
             this.tabJobStaff.Controls.Add(this.tabPage1);
             this.tabJobStaff.Controls.Add(this.tabPage2);
             this.tabJobStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabJobStaff.Location = new System.Drawing.Point(461, 7);
+            this.tabJobStaff.Location = new System.Drawing.Point(462, 4);
             this.tabJobStaff.Margin = new System.Windows.Forms.Padding(4);
             this.tabJobStaff.Name = "tabJobStaff";
             this.tabJobStaff.SelectedIndex = 0;
-            this.tabJobStaff.Size = new System.Drawing.Size(751, 766);
+            this.tabJobStaff.Size = new System.Drawing.Size(751, 752);
             this.tabJobStaff.TabIndex = 4;
             this.tabJobStaff.SelectedIndexChanged += new System.EventHandler(this.tabJobStaff_SelectedIndexChanged);
             // 
@@ -332,7 +351,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(743, 728);
+            this.tabPage1.Size = new System.Drawing.Size(743, 714);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "STAFF JOB ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -346,12 +365,22 @@
             this.dGVJobStaff.Name = "dGVJobStaff";
             this.dGVJobStaff.RowHeadersWidth = 51;
             this.dGVJobStaff.RowTemplate.Height = 24;
-            this.dGVJobStaff.Size = new System.Drawing.Size(739, 731);
+            this.dGVJobStaff.Size = new System.Drawing.Size(739, 706);
             this.dGVJobStaff.TabIndex = 4;
             this.dGVJobStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVJobStaff_CellClick);
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.chTaskProcess);
+            this.tabPage2.Controls.Add(this.btLoadHightLight);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.cbStatus);
             this.tabPage2.Controls.Add(this.btConf);
@@ -361,16 +390,105 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(743, 728);
+            this.tabPage2.Size = new System.Drawing.Size(743, 714);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MY PROJECT";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btLoadHightLight
+            // 
+            this.btLoadHightLight.FlatAppearance.BorderSize = 0;
+            this.btLoadHightLight.Image = global::COMPANY_MANAGEMENT.Properties.Resources._4b24f6325b54850adc45;
+            this.btLoadHightLight.Location = new System.Drawing.Point(538, 539);
+            this.btLoadHightLight.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btLoadHightLight.Name = "btLoadHightLight";
+            this.btLoadHightLight.Size = new System.Drawing.Size(147, 72);
+            this.btLoadHightLight.TabIndex = 45;
+            this.btLoadHightLight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLoadHightLight.UseVisualStyleBackColor = true;
+            this.btLoadHightLight.Click += new System.EventHandler(this.btLoadHightLight_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(16, 526);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 18);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Red";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(147, 528);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 18);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Overdue";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Orange;
+            this.label17.Location = new System.Drawing.Point(16, 557);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 18);
+            this.label17.TabIndex = 41;
+            this.label17.Text = "Orange";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(147, 593);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(104, 18);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "Not started yet";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(147, 557);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(179, 18);
+            this.label18.TabIndex = 42;
+            this.label18.Text = "Warning is about to expire";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(147, 631);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 18);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "Change data";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Yellow;
+            this.label19.Location = new System.Drawing.Point(16, 631);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(51, 18);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "Yellow";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.SkyBlue;
+            this.label15.Location = new System.Drawing.Point(16, 593);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(62, 18);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "SkyBlue";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 662);
+            this.label1.Location = new System.Drawing.Point(2, 662);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 25);
@@ -382,7 +500,7 @@
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(172, 659);
+            this.cbStatus.Location = new System.Drawing.Point(138, 659);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(180, 33);
@@ -391,14 +509,17 @@
             // btConf
             // 
             this.btConf.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConf.FlatAppearance.BorderSize = 0;
             this.btConf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConf.Location = new System.Drawing.Point(536, 658);
+            this.btConf.Image = global::COMPANY_MANAGEMENT.Properties.Resources.checkmark_60px;
+            this.btConf.Location = new System.Drawing.Point(538, 642);
             this.btConf.Margin = new System.Windows.Forms.Padding(4);
             this.btConf.Name = "btConf";
             this.btConf.Size = new System.Drawing.Size(187, 61);
             this.btConf.TabIndex = 5;
-            this.btConf.Text = "CONFIRM ";
+            this.btConf.Text = "STATUS";
+            this.btConf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btConf.UseVisualStyleBackColor = false;
             this.btConf.Click += new System.EventHandler(this.btConf_Click);
             // 
@@ -411,14 +532,29 @@
             this.dGVMyProject.Name = "dGVMyProject";
             this.dGVMyProject.RowHeadersWidth = 51;
             this.dGVMyProject.RowTemplate.Height = 24;
-            this.dGVMyProject.Size = new System.Drawing.Size(739, 650);
+            this.dGVMyProject.Size = new System.Drawing.Size(739, 522);
             this.dGVMyProject.TabIndex = 5;
             this.dGVMyProject.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVMyProject_CellClick);
+            // 
+            // chTaskProcess
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chTaskProcess.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chTaskProcess.Legends.Add(legend1);
+            this.chTaskProcess.Location = new System.Drawing.Point(325, 526);
+            this.chTaskProcess.Name = "chTaskProcess";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chTaskProcess.Series.Add(series1);
+            this.chTaskProcess.Size = new System.Drawing.Size(206, 181);
+            this.chTaskProcess.TabIndex = 46;
+            this.chTaskProcess.Text = "chart1";
             // 
             // FJob
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1365, 867);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -438,6 +574,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVMyProject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chTaskProcess)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,5 +609,15 @@
         private System.Windows.Forms.Label lbIDWork;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.Button btLoadHightLight;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chTaskProcess;
     }
 }

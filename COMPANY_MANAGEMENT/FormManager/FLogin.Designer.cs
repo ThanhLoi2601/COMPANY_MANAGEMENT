@@ -40,6 +40,8 @@
             this.rbLeader = new System.Windows.Forms.RadioButton();
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btMin = new System.Windows.Forms.Button();
+            this.btClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,7 +60,7 @@
             this.cbHienMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbHienMK.AutoSize = true;
             this.cbHienMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHienMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHienMK.ForeColor = System.Drawing.Color.White;
             this.cbHienMK.Location = new System.Drawing.Point(585, 291);
             this.cbHienMK.Margin = new System.Windows.Forms.Padding(4);
@@ -89,8 +91,6 @@
             // 
             // txtMK
             // 
-            this.txtMK.AccessibleDescription = "";
-            this.txtMK.AccessibleName = "";
             this.txtMK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.ForeColor = System.Drawing.Color.Gray;
@@ -171,11 +171,11 @@
             // rbStaff
             // 
             this.rbStaff.AutoSize = true;
-            this.rbStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbStaff.Location = new System.Drawing.Point(0, 26);
+            this.rbStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbStaff.Location = new System.Drawing.Point(8, 26);
             this.rbStaff.Margin = new System.Windows.Forms.Padding(4);
             this.rbStaff.Name = "rbStaff";
-            this.rbStaff.Size = new System.Drawing.Size(65, 24);
+            this.rbStaff.Size = new System.Drawing.Size(70, 24);
             this.rbStaff.TabIndex = 0;
             this.rbStaff.TabStop = true;
             this.rbStaff.Text = "Staff";
@@ -184,11 +184,11 @@
             // rbLeader
             // 
             this.rbLeader.AutoSize = true;
-            this.rbLeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbLeader.Location = new System.Drawing.Point(319, 26);
             this.rbLeader.Margin = new System.Windows.Forms.Padding(4);
             this.rbLeader.Name = "rbLeader";
-            this.rbLeader.Size = new System.Drawing.Size(82, 24);
+            this.rbLeader.Size = new System.Drawing.Size(88, 24);
             this.rbLeader.TabIndex = 3;
             this.rbLeader.TabStop = true;
             this.rbLeader.Text = "Leader";
@@ -197,11 +197,11 @@
             // rbManager
             // 
             this.rbManager.AutoSize = true;
-            this.rbManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbManager.Location = new System.Drawing.Point(139, 26);
+            this.rbManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbManager.Location = new System.Drawing.Point(147, 26);
             this.rbManager.Margin = new System.Windows.Forms.Padding(4);
             this.rbManager.Name = "rbManager";
-            this.rbManager.Size = new System.Drawing.Size(95, 24);
+            this.rbManager.Size = new System.Drawing.Size(102, 24);
             this.rbManager.TabIndex = 1;
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
@@ -210,6 +210,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.panel1.Controls.Add(this.btMin);
+            this.panel1.Controls.Add(this.btClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -217,17 +219,43 @@
             this.panel1.Size = new System.Drawing.Size(895, 42);
             this.panel1.TabIndex = 18;
             // 
+            // btMin
+            // 
+            this.btMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.btMin.FlatAppearance.BorderSize = 0;
+            this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMin.Image = global::COMPANY_MANAGEMENT.Properties.Resources.minimize_window_30px;
+            this.btMin.Location = new System.Drawing.Point(707, 3);
+            this.btMin.Name = "btMin";
+            this.btMin.Size = new System.Drawing.Size(79, 37);
+            this.btMin.TabIndex = 6;
+            this.btMin.UseVisualStyleBackColor = false;
+            this.btMin.Click += new System.EventHandler(this.btMin_Click);
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Image = global::COMPANY_MANAGEMENT.Properties.Resources.close_window_30px;
+            this.btClose.Location = new System.Drawing.Point(801, 3);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(79, 34);
+            this.btClose.TabIndex = 4;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(426, 9);
+            this.label1.Location = new System.Drawing.Point(418, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 29);
+            this.label1.Size = new System.Drawing.Size(106, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Login";
+            this.label1.Text = "LOGIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2
@@ -289,10 +317,12 @@
             this.Controls.Add(this.labMaDN);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FLogin";
             this.Text = "LOG IN";
+            this.Load += new System.EventHandler(this.FLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -324,5 +354,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btMin;
+        private System.Windows.Forms.Button btClose;
     }
 }

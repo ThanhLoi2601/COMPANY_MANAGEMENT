@@ -33,14 +33,30 @@ namespace COMPANY_MANAGEMENT
         {
             this.FormBorderStyle = FormBorderStyle.None;
             txtIDSent.Text = IDReceive;
-            txtNameSent.Text = NameReceive; 
+            txtNameSent.Text = NameReceive;
             LoadContact();
         }
 
         private void LoadContact()
         {
             dtGVSent.DataSource = contDAO.LoadListSent(IDReceive);
+            HighLight(dtGVSent);
             dtGVReceive.DataSource = contDAO.LoadListReceive(IDReceive);
+            HighLight(dtGVReceive);
+        }
+
+        private void HighLight(DataGridView dtGV)
+        {
+            DateTime currentDate = DateTime.Now.Date;
+
+            foreach (DataGridViewRow row in dtGV.Rows)
+            {
+                if (row.Cells["InfoDate"].Value != null && Convert.ToDateTime(row.Cells["InfoDate"].Value).Date == currentDate)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                }
+            }
         }
 
         private void btSent_Click(object sender, EventArgs e)
@@ -78,6 +94,11 @@ namespace COMPANY_MANAGEMENT
             rTxtContent.Text = dGV.Rows[r].Cells[3].Value.ToString();
             cbBoxIDRe.DataBindings.Clear();
             cbBoxIDRe.Text = dGV.Rows[r].Cells[4].Value.ToString();
+        }
+
+        private void btLoadHightLight_Click(object sender, EventArgs e)
+        {
+            LoadContact();
         }
     }
 }

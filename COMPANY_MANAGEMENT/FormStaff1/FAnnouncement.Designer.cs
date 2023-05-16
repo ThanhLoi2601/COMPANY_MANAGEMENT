@@ -30,11 +30,10 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.dtGVAnnou = new System.Windows.Forms.DataGridView();
+            this.btLoadHightLight = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVAnnou)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,36 +55,34 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             this.dtGVAnnou.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGVAnnou.BackgroundColor = System.Drawing.Color.White;
             this.dtGVAnnou.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtGVAnnou.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtGVAnnou.GridColor = System.Drawing.Color.Black;
             this.dtGVAnnou.Location = new System.Drawing.Point(74, 96);
             this.dtGVAnnou.Margin = new System.Windows.Forms.Padding(4);
             this.dtGVAnnou.Name = "dtGVAnnou";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGVAnnou.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGVAnnou.RowHeadersWidth = 51;
             this.dtGVAnnou.RowTemplate.Height = 24;
             this.dtGVAnnou.Size = new System.Drawing.Size(1086, 559);
             this.dtGVAnnou.TabIndex = 35;
+            // 
+            // btLoadHightLight
+            // 
+            this.btLoadHightLight.FlatAppearance.BorderSize = 0;
+            this.btLoadHightLight.Image = global::COMPANY_MANAGEMENT.Properties.Resources._4b24f6325b54850adc45;
+            this.btLoadHightLight.Location = new System.Drawing.Point(1013, 11);
+            this.btLoadHightLight.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btLoadHightLight.Name = "btLoadHightLight";
+            this.btLoadHightLight.Size = new System.Drawing.Size(147, 72);
+            this.btLoadHightLight.TabIndex = 46;
+            this.btLoadHightLight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLoadHightLight.UseVisualStyleBackColor = true;
+            this.btLoadHightLight.Click += new System.EventHandler(this.btLoadHightLight_Click);
             // 
             // FAnnouncement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 696);
+            this.Controls.Add(this.btLoadHightLight);
             this.Controls.Add(this.dtGVAnnou);
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,5 +100,6 @@ namespace COMPANY_MANAGEMENT.FormStaff1
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dtGVAnnou;
+        private System.Windows.Forms.Button btLoadHightLight;
     }
 }

@@ -29,9 +29,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btSent = new System.Windows.Forms.Button();
             this.cbBoxIDRe = new System.Windows.Forms.ComboBox();
@@ -45,12 +42,14 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtGVContact = new System.Windows.Forms.DataGridView();
+            this.btLoadHightLight = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVContact)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btLoadHightLight);
             this.groupBox1.Controls.Add(this.btSent);
             this.groupBox1.Controls.Add(this.cbBoxIDRe);
             this.groupBox1.Controls.Add(this.rTxtContent);
@@ -74,13 +73,15 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             // btSent
             // 
+            this.btSent.BackgroundImage = global::COMPANY_MANAGEMENT.Properties.Resources.c5cfbe450622d87c81331;
+            this.btSent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btSent.FlatAppearance.BorderSize = 0;
             this.btSent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSent.Location = new System.Drawing.Point(386, 617);
+            this.btSent.Location = new System.Drawing.Point(427, 583);
             this.btSent.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btSent.Name = "btSent";
-            this.btSent.Size = new System.Drawing.Size(176, 41);
+            this.btSent.Size = new System.Drawing.Size(158, 75);
             this.btSent.TabIndex = 10;
-            this.btSent.Text = "SENT";
             this.btSent.UseVisualStyleBackColor = true;
             this.btSent.Click += new System.EventHandler(this.btSent_Click);
             // 
@@ -92,7 +93,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             "All Staff",
             "All Manager",
             "All"});
-            this.cbBoxIDRe.Location = new System.Drawing.Point(160, 569);
+            this.cbBoxIDRe.Location = new System.Drawing.Point(160, 549);
             this.cbBoxIDRe.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbBoxIDRe.Name = "cbBoxIDRe";
             this.cbBoxIDRe.Size = new System.Drawing.Size(240, 30);
@@ -101,7 +102,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // rTxtContent
             // 
             this.rTxtContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTxtContent.Location = new System.Drawing.Point(24, 311);
+            this.rTxtContent.Location = new System.Drawing.Point(23, 300);
             this.rTxtContent.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.rTxtContent.Name = "rTxtContent";
             this.rTxtContent.Size = new System.Drawing.Size(482, 219);
@@ -141,7 +142,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 578);
+            this.label5.Location = new System.Drawing.Point(19, 558);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 22);
@@ -152,7 +153,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 284);
+            this.label4.Location = new System.Drawing.Point(27, 273);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 22);
@@ -195,39 +196,28 @@ namespace COMPANY_MANAGEMENT.FormLeader
             // dtGVContact
             // 
             this.dtGVContact.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGVContact.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGVContact.ColumnHeadersHeight = 29;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtGVContact.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtGVContact.Location = new System.Drawing.Point(626, 11);
             this.dtGVContact.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtGVContact.Name = "dtGVContact";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGVContact.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtGVContact.RowHeadersWidth = 51;
             this.dtGVContact.RowTemplate.Height = 29;
             this.dtGVContact.Size = new System.Drawing.Size(610, 648);
             this.dtGVContact.TabIndex = 0;
             this.dtGVContact.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVContact_CellClick);
+            // 
+            // btLoadHightLight
+            // 
+            this.btLoadHightLight.FlatAppearance.BorderSize = 0;
+            this.btLoadHightLight.Image = global::COMPANY_MANAGEMENT.Properties.Resources._4b24f6325b54850adc45;
+            this.btLoadHightLight.Location = new System.Drawing.Point(254, 583);
+            this.btLoadHightLight.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btLoadHightLight.Name = "btLoadHightLight";
+            this.btLoadHightLight.Size = new System.Drawing.Size(146, 75);
+            this.btLoadHightLight.TabIndex = 12;
+            this.btLoadHightLight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLoadHightLight.UseVisualStyleBackColor = true;
+            this.btLoadHightLight.Click += new System.EventHandler(this.btLoadHightLight_Click);
             // 
             // FContact
             // 
@@ -263,5 +253,6 @@ namespace COMPANY_MANAGEMENT.FormLeader
         private Label label2;
         private Label label1;
         private DataGridView dtGVContact;
+        private Button btLoadHightLight;
     }
 }

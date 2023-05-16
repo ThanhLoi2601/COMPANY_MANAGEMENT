@@ -13,7 +13,7 @@ namespace COMPANY_MANAGEMENT.OOP
         public void Insert(Contact cont)
         {
             string sqlStr = string.Format("INSERT INTO Contact(IDSent,NameSent,Subject,Content,IDReceive,InfoDate) values ('{0}','{1}','{2}','{3}','{4}','{5}')"
-                , cont.IDSent, cont.NameSent, cont.Subject, cont.Content, cont.IDReceive, cont.InfoDate.ToString("yyyy-MM-dd"));
+                , cont.IDSent, cont.NameSent, cont.Subject, cont.Content, cont.IDReceive, cont.InfoDate.ToString());
             dB.Executive(sqlStr);
         }
 

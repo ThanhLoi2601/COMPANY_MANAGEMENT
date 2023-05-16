@@ -39,7 +39,6 @@ namespace COMPANY_MANAGEMENT
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btSent = new System.Windows.Forms.Button();
             this.cbBoxIDRe = new System.Windows.Forms.ComboBox();
             this.rTxtContent = new System.Windows.Forms.RichTextBox();
             this.txtSub = new System.Windows.Forms.TextBox();
@@ -54,13 +53,20 @@ namespace COMPANY_MANAGEMENT
             this.dtGVReceive = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btLoadHightLight = new System.Windows.Forms.Button();
+            this.btSent = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVSent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVReceive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btLoadHightLight);
             this.groupBox1.Controls.Add(this.btSent);
             this.groupBox1.Controls.Add(this.cbBoxIDRe);
             this.groupBox1.Controls.Add(this.rTxtContent);
@@ -77,21 +83,10 @@ namespace COMPANY_MANAGEMENT
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.groupBox1.Size = new System.Drawing.Size(495, 743);
+            this.groupBox1.Size = new System.Drawing.Size(495, 728);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMATION";
-            // 
-            // btSent
-            // 
-            this.btSent.Location = new System.Drawing.Point(286, 687);
-            this.btSent.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btSent.Name = "btSent";
-            this.btSent.Size = new System.Drawing.Size(176, 41);
-            this.btSent.TabIndex = 10;
-            this.btSent.Text = "SENT";
-            this.btSent.UseVisualStyleBackColor = true;
-            this.btSent.Click += new System.EventHandler(this.btSent_Click);
             // 
             // cbBoxIDRe
             // 
@@ -235,11 +230,59 @@ namespace COMPANY_MANAGEMENT
             this.label7.TabIndex = 11;
             this.label7.Text = "RECEIVE";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::COMPANY_MANAGEMENT.Properties.Resources._22f71249fb2e25707c3f;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Location = new System.Drawing.Point(1096, 585);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(62, 63);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::COMPANY_MANAGEMENT.Properties.Resources.commercial_64px;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(550, 237);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 63);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btLoadHightLight
+            // 
+            this.btLoadHightLight.FlatAppearance.BorderSize = 0;
+            this.btLoadHightLight.Image = global::COMPANY_MANAGEMENT.Properties.Resources._4b24f6325b54850adc45;
+            this.btLoadHightLight.Location = new System.Drawing.Point(22, 650);
+            this.btLoadHightLight.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btLoadHightLight.Name = "btLoadHightLight";
+            this.btLoadHightLight.Size = new System.Drawing.Size(146, 71);
+            this.btLoadHightLight.TabIndex = 11;
+            this.btLoadHightLight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btLoadHightLight.UseVisualStyleBackColor = true;
+            this.btLoadHightLight.Click += new System.EventHandler(this.btLoadHightLight_Click);
+            // 
+            // btSent
+            // 
+            this.btSent.FlatAppearance.BorderSize = 0;
+            this.btSent.Image = global::COMPANY_MANAGEMENT.Properties.Resources.c5cfbe450622d87c81331;
+            this.btSent.Location = new System.Drawing.Point(327, 650);
+            this.btSent.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btSent.Name = "btSent";
+            this.btSent.Size = new System.Drawing.Size(146, 71);
+            this.btSent.TabIndex = 10;
+            this.btSent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btSent.UseVisualStyleBackColor = true;
+            this.btSent.Click += new System.EventHandler(this.btSent_Click);
+            // 
             // FContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 733);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtGVReceive);
@@ -255,6 +298,8 @@ namespace COMPANY_MANAGEMENT
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVSent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVReceive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +323,8 @@ namespace COMPANY_MANAGEMENT
         private DataGridView dtGVReceive;
         private Label label6;
         private Label label7;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Button btLoadHightLight;
     }
 }

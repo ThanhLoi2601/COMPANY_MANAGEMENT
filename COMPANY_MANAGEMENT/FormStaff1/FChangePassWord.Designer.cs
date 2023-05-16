@@ -52,7 +52,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 46);
+            this.label1.Location = new System.Drawing.Point(40, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 20);
@@ -62,7 +62,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 109);
+            this.label2.Location = new System.Drawing.Point(40, 94);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 20);
@@ -72,7 +72,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 170);
+            this.label3.Location = new System.Drawing.Point(40, 155);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 20);
@@ -82,7 +82,7 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 232);
+            this.label4.Location = new System.Drawing.Point(40, 217);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 20);
@@ -91,8 +91,8 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             // 
             // textMaDN
             // 
-            this.textMaDN.Location = new System.Drawing.Point(212, 42);
-            this.textMaDN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textMaDN.Location = new System.Drawing.Point(223, 27);
+            this.textMaDN.Margin = new System.Windows.Forms.Padding(4);
             this.textMaDN.Name = "textMaDN";
             this.textMaDN.ReadOnly = true;
             this.textMaDN.Size = new System.Drawing.Size(278, 27);
@@ -100,37 +100,41 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             // 
             // textOldPass
             // 
-            this.textOldPass.Location = new System.Drawing.Point(212, 101);
-            this.textOldPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textOldPass.Location = new System.Drawing.Point(223, 86);
+            this.textOldPass.Margin = new System.Windows.Forms.Padding(4);
             this.textOldPass.Name = "textOldPass";
             this.textOldPass.Size = new System.Drawing.Size(278, 27);
             this.textOldPass.TabIndex = 5;
             // 
             // textNewPass
             // 
-            this.textNewPass.Location = new System.Drawing.Point(212, 170);
-            this.textNewPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNewPass.Location = new System.Drawing.Point(223, 155);
+            this.textNewPass.Margin = new System.Windows.Forms.Padding(4);
             this.textNewPass.Name = "textNewPass";
             this.textNewPass.Size = new System.Drawing.Size(278, 27);
             this.textNewPass.TabIndex = 6;
             // 
             // textNewPassConfirm
             // 
-            this.textNewPassConfirm.Location = new System.Drawing.Point(212, 229);
-            this.textNewPassConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNewPassConfirm.Location = new System.Drawing.Point(223, 214);
+            this.textNewPassConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.textNewPassConfirm.Name = "textNewPassConfirm";
             this.textNewPassConfirm.Size = new System.Drawing.Size(278, 27);
             this.textNewPassConfirm.TabIndex = 7;
             // 
             // btConfirm
             // 
+            this.btConfirm.FlatAppearance.BorderSize = 0;
+            this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(402, 264);
-            this.btConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btConfirm.Image = global::COMPANY_MANAGEMENT.Properties.Resources.checkmark_60px;
+            this.btConfirm.Location = new System.Drawing.Point(402, 249);
+            this.btConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btConfirm.Name = "btConfirm";
-            this.btConfirm.Size = new System.Drawing.Size(169, 54);
+            this.btConfirm.Size = new System.Drawing.Size(169, 69);
             this.btConfirm.TabIndex = 23;
             this.btConfirm.Text = "CONFIRM";
+            this.btConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btConfirm.UseVisualStyleBackColor = true;
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 
@@ -149,9 +153,9 @@ namespace COMPANY_MANAGEMENT.FormStaff1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FChangePassWord";
-            this.Text = "Change passworf";
+            this.Text = "Change password";
             this.Load += new System.EventHandler(this.FChangePassWord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

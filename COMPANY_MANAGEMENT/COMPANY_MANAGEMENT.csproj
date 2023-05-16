@@ -51,6 +51,7 @@
     </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -75,12 +76,6 @@
     </Compile>
     <Compile Include="FormLeader\FContact.Designer.cs">
       <DependentUpon>FContact.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLeader\FInformation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLeader\FInformation.Designer.cs">
-      <DependentUpon>FInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLeader\FLeader.cs">
       <SubType>Form</SubType>
@@ -229,9 +224,6 @@
     <EmbeddedResource Include="FormLeader\FContact.resx">
       <DependentUpon>FContact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLeader\FInformation.resx">
-      <DependentUpon>FInformation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLeader\FLeader.resx">
       <DependentUpon>FLeader.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,10 +335,20 @@
     <Content Include="Inco_img\Aha-Soft-Security-Secrecy.ico" />
     <Content Include="Inco_img\BackgrInfo1.jpg" />
     <Content Include="Inco_img\backgrLogin.jpg" />
+    <None Include="Resources\c0674586a8e076be2ff1.jpg" />
+    <None Include="Resources\4b24f6325b54850adc45.jpg" />
+    <None Include="Resources\22f71249fb2e25707c3f.jpg" />
+    <None Include="Resources\c5cfbe450622d87c81331.jpg" />
+    <None Include="Resources\c5cfbe450622d87c8133.jpg" />
+    <None Include="Inco_img\dd5e1bfc049bdac5838a.jpg" />
     <Content Include="Inco_img\edit_30px.png" />
     <Content Include="Inco_img\Icons8-Windows-8-Users-Administrator.ico" />
     <Content Include="Inco_img\plus_+_30px.png" />
     <Content Include="Inco_img\trash_can_30px.png" />
+    <None Include="Resources\maximize_window_30px.png" />
+    <None Include="Resources\minimize_window_30px.png" />
+    <None Include="Resources\close_window_30px.png" />
+    <None Include="Resources\close_window_12px.png" />
     <None Include="Resources\password_20px.png" />
     <None Include="Resources\user_9px.png" />
     <None Include="Resources\cash_in_hand_60px.png" />

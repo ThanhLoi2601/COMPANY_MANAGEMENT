@@ -29,9 +29,24 @@ namespace COMPANY_MANAGEMENT.FormLeader
 
         private void FTask_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             cbbStatus.DataSource = Enum.GetValues(typeof(Task.TaskStatus));
             gvTask.DataSource = tksDao.LoadList(id_Project);
             txtID_Project.Text = this.id_Project; 
+        }
+
+        private void HighlightRowWithDGV(DataGridView dGV)
+        {
+            foreach (DataGridViewRow row in dGV.Rows)
+            {
+                string rowId = Convert.ToString(row.Cells["ID"].Value);
+                if (rowId == txtID.Text)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    break;
+                }
+            }
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
@@ -39,6 +54,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             Task tks = new Task(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Task.TaskStatus)cbbStatus.SelectedItem, txtID_Project.Text);
             tksDao.Update(tks);
             gvTask.DataSource = tksDao.LoadList(id_Project);
+            HighlightRowWithDGV(gvTask);
         }
 
         private void btInsert_Click(object sender, EventArgs e)
@@ -52,6 +68,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
                 Task tks = new Task(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Task.TaskStatus)cbbStatus.SelectedItem, txtID_Project.Text);
                 tksDao.Insert(tks);
                 gvTask.DataSource = tksDao.LoadList(id_Project);
+                HighlightRowWithDGV(gvTask);
             }
         }
 
@@ -81,6 +98,21 @@ namespace COMPANY_MANAGEMENT.FormLeader
             rtxtContent.Text = gvTask.Rows[r].Cells[4].Value.ToString();
             cbbStatus.DataBindings.Clear();
             cbbStatus.Text = gvTask.Rows[r].Cells[5].Value.ToString();
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

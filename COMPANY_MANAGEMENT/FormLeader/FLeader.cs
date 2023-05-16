@@ -33,13 +33,30 @@ namespace COMPANY_MANAGEMENT.FormLeader
             {
                 Manager man = new Manager(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                 manDAO.Update(man);
+                dgvLoad();
+                HighlightRowWithDGV(dgvListManager);
             }
             else
             {
                 Staff sta = new Staff(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                 staDAO.Update(sta);
+                dgvLoad();
+                HighlightRowWithDGV(dgvListStaff);
+            }        
+        }
+
+        private void HighlightRowWithDGV(DataGridView dGV)
+        {
+            foreach (DataGridViewRow row in dGV.Rows)
+            {
+                string rowId = Convert.ToString(row.Cells["ID"].Value);
+                if (rowId == txtID.Text)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    break;
+                }
             }
-            dgvLoad();
         }
 
         private void btInsertLd_Click(object sender, EventArgs e)
@@ -54,12 +71,16 @@ namespace COMPANY_MANAGEMENT.FormLeader
                 {
                     Manager man = new Manager(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                     manDAO.Insert(man);
+                    dgvLoad();
+                    HighlightRowWithDGV(dgvListManager);
                 }
             }
             else if(txtID.Text.Contains("EMP"))
             {
                 Staff sta = new Staff(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                 staDAO.Insert(sta);
+                dgvLoad();
+                HighlightRowWithDGV(dgvListStaff);
             }
             else
             {
@@ -151,6 +172,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
 
         private void FLeader_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             dgvLoad();
             NameReceive = txtNameLd.Text;
         }
@@ -222,6 +244,21 @@ namespace COMPANY_MANAGEMENT.FormLeader
             panel3.Controls.Add(f);
             panel3.BringToFront();
             f.Show();
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

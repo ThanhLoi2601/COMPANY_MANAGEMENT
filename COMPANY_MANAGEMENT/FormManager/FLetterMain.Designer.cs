@@ -53,14 +53,17 @@
             // btConfirm
             // 
             this.btConfirm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btConfirm.FlatAppearance.BorderSize = 0;
             this.btConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btConfirm.Location = new System.Drawing.Point(342, 164);
+            this.btConfirm.Image = global::COMPANY_MANAGEMENT.Properties.Resources.checkmark_60px;
+            this.btConfirm.Location = new System.Drawing.Point(342, 156);
             this.btConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btConfirm.Name = "btConfirm";
-            this.btConfirm.Size = new System.Drawing.Size(170, 52);
+            this.btConfirm.Size = new System.Drawing.Size(170, 60);
             this.btConfirm.TabIndex = 11;
             this.btConfirm.Text = "CONFIRM";
+            this.btConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btConfirm.UseVisualStyleBackColor = false;
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
             // 

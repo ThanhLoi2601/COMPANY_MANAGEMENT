@@ -99,6 +99,26 @@ namespace COMPANY_MANAGEMENT
             catch { }
         }
 
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void txtMaDN_Enter(object sender, EventArgs e)
         {
             if (txtMaDN.Text == "")

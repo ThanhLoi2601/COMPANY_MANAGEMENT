@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using Task = COMPANY_MANAGEMENT.OOP.Task;
 
 namespace COMPANY_MANAGEMENT.FormLeader
@@ -20,6 +23,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
         TaskDAO taskDao = new TaskDAO();
         DBConn dB = new DBConn();
         private string proID = "";
+        int count = 0, Overdue = 0, Warning = 0, NotStarted = 0, Inprocess = 0;
         public FProject()
         {
             InitializeComponent();
@@ -65,6 +69,16 @@ namespace COMPANY_MANAGEMENT.FormLeader
                 dB.Executive(sqlStr);
             }
             dgvLoad(proID);
+            foreach (DataGridViewRow row in dgvProject.Rows)
+            {
+                string rowId = Convert.ToString(row.Cells["ID"].Value);
+                if (rowId == txtID.Text)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    break;
+                }
+            }
         }
 
         private void btInsertProject_Click(object sender, EventArgs e)
@@ -72,13 +86,27 @@ namespace COMPANY_MANAGEMENT.FormLeader
             Project pro = new Project(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Project.ProjectStatus)cbbStatus.SelectedItem);
             proDao.Insert(pro);
             dgvLoad(pro.Id);
+            foreach (DataGridViewRow row in dgvProject.Rows)
+            {
+                string rowId = Convert.ToString(row.Cells["ID"].Value);
+                if (rowId == txtID.Text)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                    break;
+                }
+            }
         }
 
         private void btDeleteProject_Click(object sender, EventArgs e)
         {
-            Project pro = new Project(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Project.ProjectStatus)cbbStatus.SelectedItem);
-            proDao.Delete(pro);
-            dgvLoad(pro.Id);
+            DialogResult result = MessageBox.Show("Are you sure to delete?", "REMIND", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Project pro = new Project(txtID.Text, txtName.Text, dtDateStart.Value, dtDateEnd.Value, rtxtContent.Text, (Project.ProjectStatus)cbbStatus.SelectedItem);
+                proDao.Delete(pro);
+                dgvLoad(pro.Id);
+            }
         }
         private void btTask_Click(object sender, EventArgs e)
         {
@@ -111,6 +139,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             this.proID = dgvProject.Rows[r].Cells[0].Value.ToString();
             dgvTask.DataSource = taskDao.LoadList(this.proID);
             grbListTask.Text = "List Tasks of " + this.proID;
+            RowHightLight(dgvTask,chTask);
         }
 
         private void dgvTask_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -133,6 +162,63 @@ namespace COMPANY_MANAGEMENT.FormLeader
         {
             dgvProject.DataSource = proDao.LoadList();
             dgvTask.DataSource = taskDao.LoadList(proid);
+        }
+
+        private void btLoadHightLight_Click(object sender, EventArgs e)
+        {
+            RowHightLight(dgvProject,chProj);
+            RowHightLight(dgvTask,chTask);
+        }
+
+        private void LoadChart(Chart ch)
+        {
+            if (count == 0) count = 1;
+            Dictionary<string, int> data = new Dictionary<string, int>();
+            data.Add("Overdue", Overdue * 100 / count);
+            data.Add("Warning", Warning * 100 / count);
+            data.Add("NotStarted", NotStarted * 100 / count);
+            data.Add("Inprocess", Inprocess * 100 / count);
+
+            ch.Series.Clear();
+            ch.Series.Add("Overdue");
+            ch.Series["Overdue"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+            foreach (var item in data)
+            {
+                if (item.Value == 0) continue;
+                ch.Series["Overdue"].Points.AddXY(item.Key, item.Value);
+            }
+        }
+
+        private void RowHightLight(DataGridView dtGV, Chart ch)
+        {
+            count = 0; Overdue = 0; Warning = 0; NotStarted = 0; Inprocess = 0;
+            foreach (DataGridViewRow row in dtGV.Rows)
+            {
+                if (row.Cells["StartDate"].Value == null) break;
+                DateTime rowDateStart = Convert.ToDateTime(row.Cells["StartDate"].Value).Date;
+                DateTime rowDateEnd = Convert.ToDateTime(row.Cells["EndDate"].Value).Date;
+                DateTime dtNow = DateTime.Now.Date;
+                if (dtNow > rowDateEnd)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                    Overdue++;
+                }
+                else if ((rowDateEnd - dtNow).Days <= 2)
+                {
+                    row.DefaultCellStyle.BackColor = Color.OrangeRed;
+                    Warning++;
+                }
+                else if (dtNow < rowDateStart)
+                {
+                    row.DefaultCellStyle.BackColor = Color.SkyBlue;
+                    NotStarted++;
+                }
+                else Inprocess++;
+                row.DefaultCellStyle.ForeColor = Color.Black;
+                count++;
+            }
+            LoadChart(ch);
         }
     }
 }

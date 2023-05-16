@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace COMPANY_MANAGEMENT.FormLeader
 {
@@ -19,6 +22,8 @@ namespace COMPANY_MANAGEMENT.FormLeader
         ManagerDAO manDAO = new ManagerDAO();
         DistributionDAO disDAO = new DistributionDAO();
         ProcessJobDAO procDAO = new ProcessJobDAO();
+        int count = 0, Overdue = 0, Warning = 0, NotStarted = 0, Inprocess = 0;
+
         public DistributionLD()
         {
             InitializeComponent();
@@ -123,9 +128,54 @@ namespace COMPANY_MANAGEMENT.FormLeader
             return false;
         }
 
-        private void dgvProject_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btLoadHightLight_Click(object sender, EventArgs e)
         {
+            count = 0; Overdue = 0; Warning = 0; NotStarted = 0; Inprocess = 0;
+            foreach (DataGridViewRow row in dgvDistribution.Rows)
+            {
+                if (row.Cells["StartDate"].Value == null) break;
+                DateTime rowDateStart = Convert.ToDateTime(row.Cells["StartDate"].Value).Date;
+                DateTime rowDateEnd = Convert.ToDateTime(row.Cells["EndDate"].Value).Date;
+                DateTime dtNow = DateTime.Now.Date;
+                if (dtNow > rowDateEnd)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                    Overdue++;
+                }
+                else if ((rowDateEnd - dtNow).Days <= 2)
+                {
+                    row.DefaultCellStyle.BackColor = Color.OrangeRed;
+                    Warning++;
+                }
+                else if (dtNow < rowDateStart)
+                {
+                    row.DefaultCellStyle.BackColor = Color.SkyBlue;
+                    NotStarted++;
+                }
+                else Inprocess++;
+                row.DefaultCellStyle.ForeColor = Color.Black;
+                count++;
+            }
+            LoadChart();
+        }
+        private void LoadChart()
+        {
+            if (count == 0) count = 1;
+            Dictionary<string, int> data = new Dictionary<string, int>();
+            data.Add("Overdue", Overdue * 100 / count);
+            data.Add("Warning", Warning * 100 / count);
+            data.Add("NotStarted", NotStarted * 100 / count);
+            data.Add("Inprocess", Inprocess * 100 / count);
 
+            chDis.Series.Clear();
+            chDis.Series.Add("Overdue");
+            chDis.Series["Overdue"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+            foreach (var item in data)
+            {
+                if (item.Value == 0) continue;
+                chDis.Series["Overdue"].Points.AddXY(item.Key, item.Value);
+            }
         }
     }
 }

@@ -30,6 +30,7 @@ namespace COMPANY_MANAGEMENT
  
         private void FManager_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
             this.LoadMyInfo();
             dGVBasic.DataSource = staDAO.LoadList(IDReceive);   
         }
@@ -86,7 +87,19 @@ namespace COMPANY_MANAGEMENT
             if (txtID.Text.Contains("MAN"))
                 ChangeInfo(manDAO.Update);
             else
+            {
                 ChangeInfo(staDAO.Update);
+                foreach (DataGridViewRow row in dGVBasic.Rows)
+                {
+                    string rowId = Convert.ToString(row.Cells["ID"].Value);
+                    if (rowId == txtID.Text)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
+                        break;
+                    }
+                }
+            }
         }
 
         private void btInsert_Click(object sender, EventArgs e)
@@ -94,7 +107,19 @@ namespace COMPANY_MANAGEMENT
             if (txtID.Text.Contains("MAN"))
                 MessageBox.Show("You're not allowed to add management !!", "ANNOUNCEMENT", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
+            {
                 ChangeInfo(staDAO.Insert);
+                foreach (DataGridViewRow row in dGVBasic.Rows)
+                {
+                    string rowId = Convert.ToString(row.Cells["ID"].Value);
+                    if (rowId == txtID.Text)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
+                        break;
+                    }
+                }
+            }
         }
 
         private void btDelete_Click(object sender, EventArgs e)
@@ -198,6 +223,21 @@ namespace COMPANY_MANAGEMENT
             th = new Thread(OpenNewHome);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
