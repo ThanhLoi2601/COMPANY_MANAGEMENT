@@ -77,7 +77,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             }
             else if(txtID.Text.Contains("EMP"))
             {
-                Staff sta = new Staff(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, IDReceive, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
+                Staff sta = new Staff(txtID.Text, txtNameLd.Text, dtpkDateOfBirthLd.Value, txtIDCardLd.Text, txtEmailLd.Text, txtAddressLd.Text, txtIDManager.Text, int.Parse(txtBasicSalaryLd.Text), txtPasswordLd.Text);
                 staDAO.Insert(sta);
                 dgvLoad();
                 HighlightRowWithDGV(dgvListStaff);

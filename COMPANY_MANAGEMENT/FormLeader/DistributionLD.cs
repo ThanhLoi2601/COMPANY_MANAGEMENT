@@ -92,6 +92,16 @@ namespace COMPANY_MANAGEMENT.FormLeader
                     procDAO.Insert(t);
                 }
                 dgvDistribution.DataSource = disDAO.LoadListDisTask(proid);
+                foreach (DataGridViewRow row in dgvDistribution.Rows)
+                {
+                    string rowId = Convert.ToString(row.Cells["IDJob"].Value);
+                    if (rowId == txtIDTask.Text)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Yellow;
+                        row.DefaultCellStyle.ForeColor = Color.Black;
+                        break;
+                    }
+                }
             }    
         }
 
@@ -158,6 +168,7 @@ namespace COMPANY_MANAGEMENT.FormLeader
             }
             LoadChart();
         }
+
         private void LoadChart()
         {
             if (count == 0) count = 1;
