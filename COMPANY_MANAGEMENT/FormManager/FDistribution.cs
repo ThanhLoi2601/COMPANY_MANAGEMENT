@@ -22,7 +22,7 @@ namespace COMPANY_MANAGEMENT
         DistributionDAO disDAO = new DistributionDAO();
         ProcessJobDAO procDAO = new ProcessJobDAO();
         TaskDAO tksDAO = new TaskDAO();
-        int count = 0, Overdue = 0, Warning = 0, NotStarted = 0, Inprocess = 0;
+        int count = 0, Overdue = 0, Warning = 0, NotStarted = 0, Inprocess = 0, AvgProc = 0;
 
         public FDistribution(string ID)
         {
@@ -45,13 +45,14 @@ namespace COMPANY_MANAGEMENT
             dGVJob.DataSource = disDAO.LoadListJob(IDReceive);
             dGVDistribution.DataSource = disDAO.LoadListDis(IDReceive);
             LoadCbTask();
-            count = 0; Overdue = 0; Warning = 0; NotStarted = 0; Inprocess = 0;
+            count = 0; Overdue = 0; Warning = 0; NotStarted = 0; Inprocess = 0; AvgProc = 0;
             foreach (DataGridViewRow row in dGVDistribution.Rows)
             {
                 if (row.Cells["DateStart"].Value == null) break;
                 DateTime rowDateStart = Convert.ToDateTime(row.Cells["DateStart"].Value).Date;
                 DateTime rowDateEnd = Convert.ToDateTime(row.Cells["DateEnd"].Value).Date;
                 DateTime dtNow = DateTime.Now.Date;
+                AvgProc += Convert.ToInt32(row.Cells["Process"].Value);
                 if (dtNow > rowDateEnd)
                 {
                     row.DefaultCellStyle.BackColor = Color.Red;
@@ -71,9 +72,27 @@ namespace COMPANY_MANAGEMENT
                 row.DefaultCellStyle.ForeColor = Color.Black;
                 count++;
             }
+            AvgProc = AvgProc / count;
             LoadChart();
+            LoadChartAvgProc();
         }
 
+        private void LoadChartAvgProc()
+        {
+            Dictionary<string, int> data = new Dictionary<string, int>();
+            data.Add("Complete", AvgProc);
+            data.Add("Unfinished", 100 - AvgProc);
+
+            chAgvProc.Series.Clear();
+            chAgvProc.Series.Add("Complete");
+            chAgvProc.Series["Complete"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+            foreach (var item in data)
+            {
+                if (item.Value == 0) continue;
+                chAgvProc.Series["Complete"].Points.AddXY(item.Key, item.Value);
+            }
+        }
         private void LoadChart()
         {
             Dictionary<string, int> data = new Dictionary<string, int>();

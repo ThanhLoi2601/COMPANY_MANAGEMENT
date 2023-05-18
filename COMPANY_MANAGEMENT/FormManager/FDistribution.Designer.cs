@@ -35,6 +35,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDistribution));
             this.cbTask = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,6 +74,7 @@
             this.lbNameStaff = new System.Windows.Forms.Label();
             this.tbHelp = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chJob = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btLoadHightLight = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -81,7 +85,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.dGVDistribution = new System.Windows.Forms.DataGridView();
-            this.chJob = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tbProcessAvg = new System.Windows.Forms.TabPage();
+            this.chAgvProc = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJob)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVStaff)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,8 +96,10 @@
             this.tbDis.SuspendLayout();
             this.tbHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDistribution)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chJob)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDistribution)).BeginInit();
+            this.tbProcessAvg.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chAgvProc)).BeginInit();
             this.SuspendLayout();
             // 
             // cbTask
@@ -323,6 +330,7 @@
             // 
             this.tabControl1.Controls.Add(this.tbDis);
             this.tabControl1.Controls.Add(this.tbHelp);
+            this.tabControl1.Controls.Add(this.tbProcessAvg);
             this.tabControl1.Location = new System.Drawing.Point(585, 14);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -564,6 +572,22 @@
             this.groupBox4.TabIndex = 37;
             this.groupBox4.TabStop = false;
             // 
+            // chJob
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chJob.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chJob.Legends.Add(legend1);
+            this.chJob.Location = new System.Drawing.Point(301, 12);
+            this.chJob.Name = "chJob";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chJob.Series.Add(series1);
+            this.chJob.Size = new System.Drawing.Size(284, 220);
+            this.chJob.TabIndex = 37;
+            this.chJob.Text = "chart1";
+            // 
             // btLoadHightLight
             // 
             this.btLoadHightLight.FlatAppearance.BorderSize = 0;
@@ -667,21 +691,31 @@
             this.dGVDistribution.TabIndex = 0;
             this.dGVDistribution.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVDistribution_CellClick);
             // 
-            // chJob
+            // tbProcessAvg
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chJob.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chJob.Legends.Add(legend1);
-            this.chJob.Location = new System.Drawing.Point(301, 12);
-            this.chJob.Name = "chJob";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chJob.Series.Add(series1);
-            this.chJob.Size = new System.Drawing.Size(284, 220);
-            this.chJob.TabIndex = 37;
-            this.chJob.Text = "chart1";
+            this.tbProcessAvg.Controls.Add(this.chAgvProc);
+            this.tbProcessAvg.Location = new System.Drawing.Point(4, 27);
+            this.tbProcessAvg.Name = "tbProcessAvg";
+            this.tbProcessAvg.Size = new System.Drawing.Size(597, 250);
+            this.tbProcessAvg.TabIndex = 2;
+            this.tbProcessAvg.Text = "Avg process";
+            this.tbProcessAvg.UseVisualStyleBackColor = true;
+            // 
+            // chAgvProc
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chAgvProc.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chAgvProc.Legends.Add(legend2);
+            this.chAgvProc.Location = new System.Drawing.Point(3, 3);
+            this.chAgvProc.Name = "chAgvProc";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chAgvProc.Series.Add(series2);
+            this.chAgvProc.Size = new System.Drawing.Size(591, 244);
+            this.chAgvProc.TabIndex = 0;
+            this.chAgvProc.Text = "chart1";
             // 
             // FDistribution
             // 
@@ -712,8 +746,10 @@
             this.tbHelp.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVDistribution)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chJob)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVDistribution)).EndInit();
+            this.tbProcessAvg.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chAgvProc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -765,5 +801,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btLoadHightLight;
         private System.Windows.Forms.DataVisualization.Charting.Chart chJob;
+        private System.Windows.Forms.TabPage tbProcessAvg;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chAgvProc;
     }
 }
